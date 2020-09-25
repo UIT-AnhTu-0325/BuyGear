@@ -13,6 +13,7 @@ Hiện nay nhu cầu mua hàng, trong đó có hàng điện tử qua các trang
 * Những người có nhu cầu mua, tham khảo đồ điện tử.
 
 ## Tính Năng
+
 1. __DANH MỤC__ (chứa các sản phẩm đang bán trên cửa hàng)
   	* Liệt kê ra các sản phẩm như: Chuột, Bàn phím, Tai Nghe...
   	* Trong từng sản phẩm sẽ hiện thị các thông tin như:
@@ -33,8 +34,7 @@ Hiện nay nhu cầu mua hàng, trong đó có hàng điện tử qua các trang
   		* Hiển thị các sản phẩm đã mua
 		* Tính năng đánh giá chất lượng sản phẩm (1 đến 5 sao)
   	* Quà tặng (các voucher giảm giá nhận được khi mua hàng)
- 	* Đăng xuất
-
+ 	  * Đăng xuất
 ## Tác Giả
 * Đặng Anh Tú - 19520325 
 * Lâm Văn Hồng - 19520094
