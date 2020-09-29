@@ -27,14 +27,17 @@ Hiện nay nhu cầu mua hàng, trong đó có hàng điện tử qua các trang
   	* Tổng tiền
  	* Thanh toán
   	* Chọn áp dụng voucher giảm giá
-4. __ĐĂNG NHẬP__ (NHẬP VÀO TÀI KHOẢN MẬT KHẨU)
+4. __ĐĂNG NHẬP__ 
+	* Đăng nhập bằng tài khoản và mật khẩu
+	* Đăng ký tài khoản mới
 5. __TÀI KHOẢN__
   	* Thông tin khách hàng (họ tên, địa chỉ, số điện thoại,...)
   	* Lịch sử mua hàng 
   		* Hiển thị các sản phẩm đã mua
 		* Tính năng đánh giá chất lượng sản phẩm (1 đến 5 sao)
   	* Quà tặng (các voucher giảm giá nhận được khi mua hàng)
- 	  * Đăng xuất
+	* Nạp tiền
+ 	* Đăng xuất
 ## Tác Giả
 * Đặng Anh Tú - 19520325 
 * Lâm Văn Hồng - 19520094
