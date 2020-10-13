@@ -1,7 +1,7 @@
-CREATE DATABASE BuyGearDemo
+CREATE DATABASE BuyGear
 GO
 
-USE BuyGearDemo
+USE BuyGear
 GO
 
 CREATE TABLE Account
