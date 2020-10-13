@@ -25,7 +25,7 @@ namespace BuyGear
             }
         }
         private Account() { }
-        public string userName;
+        public string userName = "";
         public string passWord;
         public string Encode(string password)
         {
@@ -42,8 +42,6 @@ namespace BuyGear
         }
         public int Login(string username, string password)
         {
-            userName = username;
-            passWord = password;
             string hashPass = Account.instance.Encode(password);
             string query = @"EXEC dbo.Pro_Account @username , @password";
             int count = Data.Instance.ExcuteQuery(query, new object[] { username, hashPass }).Rows.Count;

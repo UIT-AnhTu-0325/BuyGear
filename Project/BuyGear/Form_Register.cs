@@ -5,7 +5,7 @@ namespace BuyGear
 {
     public partial class Form_Register : Form
     {
-        public Form_Register(Form_Login fPar)
+        public Form_Register()
         {
             InitializeComponent();
         }
@@ -20,7 +20,10 @@ namespace BuyGear
             {
                 Account.Instance.InsertAcc(txtUsername.Text, txtPassword.Text);
                 if (MessageBox.Show("Đăng ký thành công", "Thông báo", MessageBoxButtons.OK) == System.Windows.Forms.DialogResult.OK)
+                {
+                    Account.Instance.userName = txtUsername.Text;
                     this.Close();
+                }
             }
             else
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin !", "Thông báo", MessageBoxButtons.OK);

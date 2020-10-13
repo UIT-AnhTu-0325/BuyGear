@@ -18,10 +18,8 @@ namespace BuyGear
         {
             if (Account.Instance.Login(txtUsername.Text, txtPass.Text) > 0)
             {
-                Form_Main fMain = new Form_Main();
-                this.Hide();
-                fMain.ShowDialog();
-                this.Show();
+                Account.Instance.userName = txtUsername.Text;
+                this.Close();
             }
             else
             {
@@ -49,8 +47,7 @@ namespace BuyGear
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn thoát ứng dụng ?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
-                Application.Exit();
+                this.Close();
         }
 
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
