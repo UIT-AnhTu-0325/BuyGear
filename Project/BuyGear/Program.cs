@@ -16,7 +16,7 @@ namespace BuyGear
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fLogin());
+            Application.Run(new Form_Login());
         }
     }
 }

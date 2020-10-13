@@ -48,43 +48,43 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Data.cs" />
-    <Compile Include="fLogin.cs">
+    <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
-      <DependentUpon>fLogin.cs</DependentUpon>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMain.cs">
+    <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMain.Designer.cs">
-      <DependentUpon>fMain.cs</DependentUpon>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_Infor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_Infor.Designer.cs">
+      <DependentUpon>Form_Infor.cs</DependentUpon>
     </Compile>
-    <Compile Include="fRegister.cs">
+    <Compile Include="Form_Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fRegister.Designer.cs">
-      <DependentUpon>fRegister.cs</DependentUpon>
+    <Compile Include="Form_Register.Designer.cs">
+      <DependentUpon>Form_Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fLogin.resx">
-      <DependentUpon>fLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMain.resx">
-      <DependentUpon>fMain.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Infor.resx">
+      <DependentUpon>Form_Infor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fRegister.resx">
-      <DependentUpon>fRegister.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Register.resx">
+      <DependentUpon>Form_Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

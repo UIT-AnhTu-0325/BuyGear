@@ -28,7 +28,7 @@ namespace BuyGear
 
         private Data() { }
 
-        private string connectionStr = @"Data Source=LAPTOP-R6R9E215;Initial Catalog=BuyGearDemo;Integrated Security=True";
+        private string connectionStr = @"Data Source=LAPTOP-414NHSFG\SQLEXPRESS;Initial Catalog=BuyGear;Integrated Security=True";
 
         public DataTable ExcuteQuery(string query, object[] parameters = null)
         {

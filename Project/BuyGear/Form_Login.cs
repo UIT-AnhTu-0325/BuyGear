@@ -1,26 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BuyGear
 {
-    public partial class fLogin : Form
+    public partial class Form_Login : Form
     {
-        public fLogin()
+        public Form_Login()
         {
             InitializeComponent();
         }
-        private void btnLogin_Click(object sender, EventArgs e)
+
+        //
+        //Các hàm đặc biệt
+        //
+
+        private void do_Login()
         {
-            if (Account.Instance.Login(tboxusername.Text, tboxpassword.Text) > 0)
-            {             
-                fMain fMain = new fMain();
+            if (Account.Instance.Login(txtUsername.Text, txtPass.Text) > 0)
+            {
+                Form_Main fMain = new Form_Main();
                 this.Hide();
                 fMain.ShowDialog();
                 this.Show();
@@ -31,9 +29,18 @@ namespace BuyGear
             }
         }
 
+        //
+        //Các Envent của Control
+        //
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            do_Login();
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            fRegister f = new fRegister();
+            Form_Register f = new Form_Register();
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -46,9 +53,9 @@ namespace BuyGear
                 Application.Exit();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            tboxpassword.UseSystemPasswordChar = !tboxpassword.UseSystemPasswordChar;
+            txtPass.UseSystemPasswordChar = !txtPass.UseSystemPasswordChar;
         }
     }
 }
