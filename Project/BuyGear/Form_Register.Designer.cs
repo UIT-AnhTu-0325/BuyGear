@@ -66,10 +66,10 @@
             // 
             this.pnlSelect.Controls.Add(this.btnExit);
             this.pnlSelect.Controls.Add(this.btnRegister);
-            this.pnlSelect.Location = new System.Drawing.Point(10, 405);
-            this.pnlSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSelect.Location = new System.Drawing.Point(13, 498);
+            this.pnlSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSelect.Name = "pnlSelect";
-            this.pnlSelect.Size = new System.Drawing.Size(398, 121);
+            this.pnlSelect.Size = new System.Drawing.Size(531, 149);
             this.pnlSelect.TabIndex = 14;
             // 
             // btnExit
@@ -84,10 +84,10 @@
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(236, 30);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(315, 37);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(104, 60);
+            this.btnExit.Size = new System.Drawing.Size(139, 74);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Thoát";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,10 +106,10 @@
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnRegister.Image = ((System.Drawing.Image)(resources.GetObject("btnRegister.Image")));
             this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegister.Location = new System.Drawing.Point(94, 30);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Location = new System.Drawing.Point(108, 37);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(107, 59);
+            this.btnRegister.Size = new System.Drawing.Size(143, 73);
             this.btnRegister.TabIndex = 1;
             this.btnRegister.Text = "Đăng ký";
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -123,10 +123,10 @@
             this.pnlPassWord.Controls.Add(this.lblPassWord);
             this.pnlPassWord.Controls.Add(this.picPassWord);
             this.pnlPassWord.Controls.Add(this.pnlTextPassWord);
-            this.pnlPassWord.Location = new System.Drawing.Point(9, 209);
-            this.pnlPassWord.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPassWord.Location = new System.Drawing.Point(12, 257);
+            this.pnlPassWord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPassWord.Name = "pnlPassWord";
-            this.pnlPassWord.Size = new System.Drawing.Size(398, 65);
+            this.pnlPassWord.Size = new System.Drawing.Size(531, 80);
             this.pnlPassWord.TabIndex = 13;
             // 
             // txtPassword
@@ -135,10 +135,10 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtPassword.Location = new System.Drawing.Point(206, 24);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(275, 30);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(180, 22);
+            this.txtPassword.Size = new System.Drawing.Size(240, 27);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
@@ -148,10 +148,9 @@
             this.lblPassWord.AutoSize = true;
             this.lblPassWord.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblPassWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPassWord.Location = new System.Drawing.Point(49, 28);
-            this.lblPassWord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassWord.Location = new System.Drawing.Point(65, 34);
             this.lblPassWord.Name = "lblPassWord";
-            this.lblPassWord.Size = new System.Drawing.Size(82, 21);
+            this.lblPassWord.Size = new System.Drawing.Size(102, 28);
             this.lblPassWord.TabIndex = 2;
             this.lblPassWord.Text = "Mật khẩu";
             // 
@@ -159,10 +158,10 @@
             // 
             this.picPassWord.ErrorImage = null;
             this.picPassWord.Image = ((System.Drawing.Image)(resources.GetObject("picPassWord.Image")));
-            this.picPassWord.Location = new System.Drawing.Point(3, 14);
-            this.picPassWord.Margin = new System.Windows.Forms.Padding(2);
+            this.picPassWord.Location = new System.Drawing.Point(4, 17);
+            this.picPassWord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picPassWord.Name = "picPassWord";
-            this.picPassWord.Size = new System.Drawing.Size(41, 49);
+            this.picPassWord.Size = new System.Drawing.Size(55, 60);
             this.picPassWord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPassWord.TabIndex = 1;
             this.picPassWord.TabStop = false;
@@ -170,10 +169,10 @@
             // pnlTextPassWord
             // 
             this.pnlTextPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlTextPassWord.Location = new System.Drawing.Point(206, 50);
-            this.pnlTextPassWord.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlTextPassWord.Location = new System.Drawing.Point(275, 62);
+            this.pnlTextPassWord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTextPassWord.Name = "pnlTextPassWord";
-            this.pnlTextPassWord.Size = new System.Drawing.Size(180, 1);
+            this.pnlTextPassWord.Size = new System.Drawing.Size(240, 1);
             this.pnlTextPassWord.TabIndex = 0;
             // 
             // pnlUserName
@@ -184,20 +183,19 @@
             this.pnlUserName.Controls.Add(this.lblUserName);
             this.pnlUserName.Controls.Add(this.picUserName);
             this.pnlUserName.Controls.Add(this.pnlTextUserName);
-            this.pnlUserName.Location = new System.Drawing.Point(10, 106);
-            this.pnlUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlUserName.Location = new System.Drawing.Point(13, 130);
+            this.pnlUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlUserName.Name = "pnlUserName";
-            this.pnlUserName.Size = new System.Drawing.Size(398, 98);
+            this.pnlUserName.Size = new System.Drawing.Size(531, 121);
             this.pnlUserName.TabIndex = 12;
             // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbUsername.Location = new System.Drawing.Point(206, 64);
-            this.lbUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUsername.Location = new System.Drawing.Point(275, 79);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(0, 19);
+            this.lbUsername.Size = new System.Drawing.Size(0, 23);
             this.lbUsername.TabIndex = 4;
             // 
             // txtUsername
@@ -206,10 +204,10 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtUsername.Location = new System.Drawing.Point(206, 24);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Location = new System.Drawing.Point(275, 30);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(180, 22);
+            this.txtUsername.Size = new System.Drawing.Size(240, 27);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
@@ -218,10 +216,9 @@
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblUserName.Location = new System.Drawing.Point(48, 28);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserName.Location = new System.Drawing.Point(64, 34);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(84, 21);
+            this.lblUserName.Size = new System.Drawing.Size(103, 28);
             this.lblUserName.TabIndex = 2;
             this.lblUserName.Text = "Tài khoản";
             // 
@@ -229,10 +226,10 @@
             // 
             this.picUserName.ErrorImage = null;
             this.picUserName.Image = ((System.Drawing.Image)(resources.GetObject("picUserName.Image")));
-            this.picUserName.Location = new System.Drawing.Point(2, 12);
-            this.picUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.picUserName.Location = new System.Drawing.Point(3, 15);
+            this.picUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picUserName.Name = "picUserName";
-            this.picUserName.Size = new System.Drawing.Size(41, 39);
+            this.picUserName.Size = new System.Drawing.Size(55, 48);
             this.picUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUserName.TabIndex = 1;
             this.picUserName.TabStop = false;
@@ -240,19 +237,19 @@
             // pnlTextUserName
             // 
             this.pnlTextUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlTextUserName.Location = new System.Drawing.Point(206, 50);
-            this.pnlTextUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlTextUserName.Location = new System.Drawing.Point(275, 62);
+            this.pnlTextUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTextUserName.Name = "pnlTextUserName";
-            this.pnlTextUserName.Size = new System.Drawing.Size(180, 1);
+            this.pnlTextUserName.Size = new System.Drawing.Size(240, 1);
             this.pnlTextUserName.TabIndex = 0;
             // 
             // pnlHeader
             // 
             this.pnlHeader.Controls.Add(this.lblHeader);
-            this.pnlHeader.Location = new System.Drawing.Point(9, 10);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlHeader.Location = new System.Drawing.Point(12, 12);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(398, 92);
+            this.pnlHeader.Size = new System.Drawing.Size(531, 113);
             this.pnlHeader.TabIndex = 15;
             // 
             // lblHeader
@@ -260,10 +257,9 @@
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblHeader.Location = new System.Drawing.Point(119, 26);
-            this.lblHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHeader.Location = new System.Drawing.Point(159, 32);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(158, 47);
+            this.lblHeader.Size = new System.Drawing.Size(192, 59);
             this.lblHeader.TabIndex = 3;
             this.lblHeader.Text = "Đăng ký";
             // 
@@ -276,20 +272,20 @@
             this.pnlRePass.Controls.Add(this.lblRePass);
             this.pnlRePass.Controls.Add(this.picRePass);
             this.pnlRePass.Controls.Add(this.pnlTextRePass);
-            this.pnlRePass.Location = new System.Drawing.Point(10, 279);
-            this.pnlRePass.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlRePass.Location = new System.Drawing.Point(13, 343);
+            this.pnlRePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlRePass.Name = "pnlRePass";
-            this.pnlRePass.Size = new System.Drawing.Size(398, 122);
+            this.pnlRePass.Size = new System.Drawing.Size(531, 150);
             this.pnlRePass.TabIndex = 16;
             // 
             // chkShowPass
             // 
             this.chkShowPass.AutoSize = true;
             this.chkShowPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkShowPass.Location = new System.Drawing.Point(278, 90);
-            this.chkShowPass.Margin = new System.Windows.Forms.Padding(2);
+            this.chkShowPass.Location = new System.Drawing.Point(371, 111);
+            this.chkShowPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkShowPass.Name = "chkShowPass";
-            this.chkShowPass.Size = new System.Drawing.Size(118, 23);
+            this.chkShowPass.Size = new System.Drawing.Size(144, 27);
             this.chkShowPass.TabIndex = 6;
             this.chkShowPass.Text = "Hiện mật khẩu";
             this.chkShowPass.UseVisualStyleBackColor = true;
@@ -299,10 +295,9 @@
             // 
             this.lbConfirm.AutoSize = true;
             this.lbConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbConfirm.Location = new System.Drawing.Point(206, 66);
-            this.lbConfirm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbConfirm.Location = new System.Drawing.Point(275, 81);
             this.lbConfirm.Name = "lbConfirm";
-            this.lbConfirm.Size = new System.Drawing.Size(0, 19);
+            this.lbConfirm.Size = new System.Drawing.Size(0, 23);
             this.lbConfirm.TabIndex = 5;
             // 
             // txtRePass
@@ -311,10 +306,10 @@
             this.txtRePass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRePass.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtRePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtRePass.Location = new System.Drawing.Point(206, 24);
-            this.txtRePass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRePass.Location = new System.Drawing.Point(275, 30);
+            this.txtRePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRePass.Name = "txtRePass";
-            this.txtRePass.Size = new System.Drawing.Size(180, 22);
+            this.txtRePass.Size = new System.Drawing.Size(240, 27);
             this.txtRePass.TabIndex = 3;
             this.txtRePass.UseSystemPasswordChar = true;
             this.txtRePass.TextChanged += new System.EventHandler(this.txtRePass_TextChanged);
@@ -324,10 +319,9 @@
             this.lblRePass.AutoSize = true;
             this.lblRePass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblRePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRePass.Location = new System.Drawing.Point(48, 28);
-            this.lblRePass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRePass.Location = new System.Drawing.Point(64, 34);
             this.lblRePass.Name = "lblRePass";
-            this.lblRePass.Size = new System.Drawing.Size(151, 21);
+            this.lblRePass.Size = new System.Drawing.Size(187, 28);
             this.lblRePass.TabIndex = 2;
             this.lblRePass.Text = "Nhập lại mật khẩu";
             // 
@@ -335,10 +329,10 @@
             // 
             this.picRePass.ErrorImage = null;
             this.picRePass.Image = ((System.Drawing.Image)(resources.GetObject("picRePass.Image")));
-            this.picRePass.Location = new System.Drawing.Point(2, 14);
-            this.picRePass.Margin = new System.Windows.Forms.Padding(2);
+            this.picRePass.Location = new System.Drawing.Point(3, 17);
+            this.picRePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picRePass.Name = "picRePass";
-            this.picRePass.Size = new System.Drawing.Size(41, 49);
+            this.picRePass.Size = new System.Drawing.Size(55, 60);
             this.picRePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picRePass.TabIndex = 1;
             this.picRePass.TabStop = false;
@@ -346,25 +340,25 @@
             // pnlTextRePass
             // 
             this.pnlTextRePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlTextRePass.Location = new System.Drawing.Point(206, 50);
-            this.pnlTextRePass.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlTextRePass.Location = new System.Drawing.Point(275, 62);
+            this.pnlTextRePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTextRePass.Name = "pnlTextRePass";
-            this.pnlTextRePass.Size = new System.Drawing.Size(180, 1);
+            this.pnlTextRePass.Size = new System.Drawing.Size(240, 1);
             this.pnlTextRePass.TabIndex = 0;
             // 
             // Form_Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(417, 536);
+            this.ClientSize = new System.Drawing.Size(556, 660);
             this.Controls.Add(this.pnlRePass);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlSelect);
             this.Controls.Add(this.pnlPassWord);
             this.Controls.Add(this.pnlUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fRegister";
