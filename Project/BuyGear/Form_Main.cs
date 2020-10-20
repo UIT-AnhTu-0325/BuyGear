@@ -9,6 +9,14 @@ namespace BuyGear
         {
             InitializeComponent();
         }
+        // hien thi thong tin
+        private void NameThongTin()
+        {
+            if (btnMyInfor.Visible)
+            {
+                btnMyInfor.Text ="Xin chào "+ Account.Instance.userName;
+            }
+        }
 
         //
         //Các hàm đặc trưng
@@ -20,9 +28,10 @@ namespace BuyGear
 
         private void btnMyInfor_Click(object sender, EventArgs e)
         {
-            Form_Infor f = new Form_Infor();
-            f.ShowDialog();
-            
+            if (!pnl_TheoDoiDonHang.Visible)
+                pnl_TheoDoiDonHang.Visible = true;
+            else
+                pnl_TheoDoiDonHang.Visible = false;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -30,8 +39,9 @@ namespace BuyGear
             if (MessageBox.Show("Bạn muốn đăng xuất khỏi tài khoản ?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 Account.Instance.userName = "";
-                pnlInfo.Visible = false;
-                pnlRegister.Visible = true;
+                btnMyInfor.Visible = false;
+                pnl_TheoDoiDonHang.Visible = false;
+                btnLogin.Visible = true;
             }
                 
         }
@@ -42,8 +52,10 @@ namespace BuyGear
             f.ShowDialog();
             if (Account.Instance.userName != "")
             {
-                pnlInfo.Visible = true;
-                pnlRegister.Visible = false;
+                btnLogin.Visible = false;
+                btnMyInfor.Visible = true;
+                NameThongTin();
+
             }
         }
 
@@ -53,8 +65,9 @@ namespace BuyGear
             f.ShowDialog();
             if (Account.Instance.userName != "")
             {
-                pnlInfo.Visible = true;
-                pnlRegister.Visible = false;
+                btnLogin.Visible = false;
+                btnMyInfor.Visible = true;
+                NameThongTin();
             }
         }
 
@@ -64,6 +77,13 @@ namespace BuyGear
             {
                 this.Close();
             }
+        }
+
+        private void btn_SuaThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            Form_Infor f = new Form_Infor();
+            f.ShowDialog();
+            pnl_TheoDoiDonHang.Visible = false;
         }
     }
 }

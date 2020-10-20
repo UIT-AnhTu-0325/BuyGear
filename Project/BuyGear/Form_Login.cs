@@ -54,5 +54,12 @@ namespace BuyGear
         {
             txtPass.UseSystemPasswordChar = !txtPass.UseSystemPasswordChar;
         }
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
+        {
+            Form_Register f = new Form_Register();
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }
