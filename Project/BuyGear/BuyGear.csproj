@@ -253,6 +253,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="uc\ucLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucLoading.Designer.cs">
+      <DependentUpon>ucLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc\ucTabSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -328,12 +334,6 @@
     <Compile Include="uc\ucSanPhamTrongGio_DatHang.Designer.cs">
       <DependentUpon>ucSanPhamTrongGio_DatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="zz.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="zz.Designer.cs">
-      <DependentUpon>zz.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form_AddSanPham.resx">
       <DependentUpon>Form_AddSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,6 +381,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucLoading.resx">
+      <DependentUpon>ucLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uc\ucTabSanPham.resx">
       <DependentUpon>ucTabSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,9 +419,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc\ucSanPhamTrongGio_DatHang.resx">
       <DependentUpon>ucSanPhamTrongGio_DatHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="zz.resx">
-      <DependentUpon>zz.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="conect_API.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

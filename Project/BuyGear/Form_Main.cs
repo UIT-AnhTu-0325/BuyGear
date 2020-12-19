@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using BuyGear.DAO;
 using BuyGear.DTO;
+using BuyGear.uc;
+
 namespace BuyGear
 {
     public partial class Form_Main : Form
@@ -27,6 +29,10 @@ namespace BuyGear
             pnlDanhMucLeft.Visible = true;
             pnlDanhMucLeft.Width = 80;
             lblBuyGear.Text = "BG";
+
+            fpnlProduct.Controls.Clear();
+            topEvent();
+
             //some infor
             if (Account.Instance.id == "")
                 this.btnSoSp.Text = "0";
@@ -317,26 +323,13 @@ namespace BuyGear
             fpnlProduct.Controls.Clear();
             CheckSearch(1);
         }
-        private void topEvent()
-        {
-            ucTopMain uctop = new ucTopMain();
-            fpnlProduct.Controls.Add(uctop);
-            ucTabSanPham ucsp_tab = new ucTabSanPham(this,"Sản phẩm bán chạy: ","top");
-            fpnlProduct.Controls.Add(ucsp_tab);
-            ucTabSanPham ucsp_ta1b = new ucTabSanPham(this,"Giá sốc hôm nay: ", "top");
-            fpnlProduct.Controls.Add(ucsp_ta1b);
-            ucTabSanPham ucsp_ta2b = new ucTabSanPham(this,"Dành riêng cho bạn: ","top");
-            fpnlProduct.Controls.Add(ucsp_ta2b);
-            ucTabSanPham ucsp_ta3b = new ucTabSanPham(this,"Các sản phẩm đã xem: ", "daxem");
-            fpnlProduct.Controls.Add(ucsp_ta3b);
-        }
+       
         private void SearchButtonClear()
         {
             this.fpnlChiTiet.BringToFront();
             fpnlChiTiet.Visible = false;
             fpnlProduct.Visible = true;
             fpnlProduct.Controls.Clear();
-            topEvent();
             CheckSearch(2);
 
         }
@@ -489,10 +482,51 @@ namespace BuyGear
             Form_BanHang b = new Form_BanHang(int.Parse(Account.Instance.id));
             b.Show();
         }
-
         private void bunifuLabel2_Click(object sender, EventArgs e)
         {
-            SearchButtonClear();
+            fpnlProduct.Controls.Clear();
+            topEvent();
+        }
+        ucTopMain uctop;
+        bool iscomplete = false;
+        private void topEvent()
+        {
+
+            fpnlProduct.Controls.Add(new ucLoading());
+            bkgrnd_do_topevent.RunWorkerAsync();
+            timer_do_topevent.Start();
+
+
+           /* ucTabSanPham ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
+            fpnlProduct.Controls.Add(ucsp_tab);
+            ucTabSanPham ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "top");
+            fpnlProduct.Controls.Add(ucsp_ta1b);
+            ucTabSanPham ucsp_ta2b = new ucTabSanPham(this, "Dành riêng cho bạn: ", "top");
+            fpnlProduct.Controls.Add(ucsp_ta2b);
+            ucTabSanPham ucsp_ta3b = new ucTabSanPham(this, "Các sản phẩm đã xem: ", "daxem");
+            fpnlProduct.Controls.Add(ucsp_ta3b);
+            fpnlProduct.Visible = true;*/
+        }
+       
+
+        private void bkgrnd_do_topevent_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            uctop = new ucTopMain();
+        }
+
+        private void bkgrnd_do_topevent_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            iscomplete = true;
+        }
+
+        private void timer_do_topevent_Tick(object sender, EventArgs e)
+        {
+            if(iscomplete)
+            {
+                fpnlProduct.Controls.Clear();
+                fpnlProduct.Controls.Add(uctop);
+            }
+            timer_do_topevent.Stop();
         }
     }
 }
