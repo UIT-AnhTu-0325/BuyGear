@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
-
+using BuyGear.DAO;
+using BuyGear.DTO;
 namespace BuyGear
 {
     public partial class Form_Infor : Form
     {
+        Form_Main parent;
         public Form_Infor()
         {
+            InitializeComponent();
+        }
+        public Form_Infor(Form_Main parent)
+        {
+            this.parent = parent;
             InitializeComponent();
         }
 
@@ -17,8 +24,7 @@ namespace BuyGear
         //
         private void Form_Load(object sender, EventArgs e)
         {
-            string sqlQuery = @"SELECT * FROM dbo.Infor WHERE username = N'" + Account.Instance.userName + "'";
-            DataTable dataTable = Data.Instance.ExcuteQuery(sqlQuery);
+            DataTable dataTable = Account.Instance.Load_Info();
             DataRow row = dataTable.Rows[0];
             txtName.Text = row["name"].ToString();
             txtAddress.Text = row["address"].ToString();
@@ -69,20 +75,16 @@ namespace BuyGear
                     rdoNam.Enabled = rdoNu.Enabled = false;
                     chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = false;
                     btnUpdate.Text = "Chỉnh sửa";
-                    string sqlQuery = "UPDATE dbo.Infor SET name = N'" + txtName.Text + "',address = N'" + txtAddress.Text + "',email = N'" + txtEmail.Text + "',numberphone = N'" + txtSDT.Text + "' WHERE username = N'" + Account.Instance.userName + "'";
-                    Data.Instance.ExcuteQuery(sqlQuery);
+                    Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
                     if (rdoNam.Checked)
                     {
-                        sqlQuery = "UPDATE dbo.Infor SET sexual = N'Nam' WHERE username = N'" + Account.Instance.userName + "'";
-                        Data.Instance.ExcuteQuery(sqlQuery);
+                        Account.Instance.UpdateSexual("Nam");
                     }
                     else if (rdoNu.Checked)
                     {
-                        sqlQuery = "UPDATE dbo.Infor SET sexual = N'Nữ' WHERE username = N'" + Account.Instance.userName + "'";
-                        Data.Instance.ExcuteQuery(sqlQuery);
+                        Account.Instance.UpdateSexual("Nữ");
                     }
-                    sqlQuery = "UPDATE dbo.Infor SET birthday = N'" + chkNam.Text + "-" + chkThang.Text + "-" + chkNgay.Text + "' WHERE username = N'" + Account.Instance.userName + "'";
-                    Data.Instance.ExcuteQuery(sqlQuery);
+                    Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
                 }
                 else
                 {
@@ -184,9 +186,7 @@ namespace BuyGear
                 if (txtOldPass.Text == Account.Instance.passWord)
                 {
                     Account.Instance.passWord = txtNewPass.Text;
-                    string sqlQuery = "EXEC Pro_UpdatePass  @password , @username";
-                    string hashPass = Account.Instance.Encode(txtNewPass.Text);
-                    Data.Instance.ExcuteQuery(sqlQuery, new object[] { hashPass, Account.Instance.userName });
+                    Account.Instance.UpdatePassword(txtNewPass.Text);
                     MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK);
                     txtOldPass.Text = "";
                     txtNewPass.Text = "";
