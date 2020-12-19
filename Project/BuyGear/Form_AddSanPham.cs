@@ -107,10 +107,11 @@ namespace BuyGear
                         txtVat.Text = _spnow.VAT.ToString();
                         txtChiTiet.Text = _spnow.chitiet;
                         txtMaSP.Enabled = false;
-                        image_1.Image = Images.BinaryToImage(_spnow.link_image[0]);
-                        image_2.Image = Images.BinaryToImage(_spnow.link_image[1]);
-                        image_3.Image = Images.BinaryToImage(_spnow.link_image[2]);
-                        image_4.Image = Images.BinaryToImage(_spnow.link_image[3]);
+
+                        image_1.Image = Picture.LoadImage_by_ID(_spnow.link_image[0]);
+                        image_2.Image = Picture.LoadImage_by_ID(_spnow.link_image[1]);
+                        image_3.Image = Picture.LoadImage_by_ID(_spnow.link_image[2]);
+                        image_4.Image = Picture.LoadImage_by_ID(_spnow.link_image[3]);
                         break;
 
                     }
@@ -288,10 +289,10 @@ namespace BuyGear
             s.setData(this.txtMaSP.Text, this.txtTenSP.Text, _loaisp, this.txtDVT.Text, this.txtXuatXu.Text, this.txtNhaSX.Text,
                 Int32.Parse(this.txtSoLuong.Text), Int32.Parse(this.txtGiaBan.Text), this.txtChiTiet.Text, "0:0:0",
                 "chua kiem duyet", parent._ID_me, 0, 0, 0);
-            s.link_image.Add(Images.ImageToBinary(this.image_1.Image));
+            /*s.link_image.Add(Images.ImageToBinary(this.image_1.Image));
             s.link_image.Add(Images.ImageToBinary(this.image_2.Image));
             s.link_image.Add(Images.ImageToBinary(this.image_3.Image));
-            s.link_image.Add(Images.ImageToBinary(this.image_4.Image));
+            s.link_image.Add(Images.ImageToBinary(this.image_4.Image));*/
             if (toDo == "them")
             {
                 Data.Instance.UpSanPham(s);

@@ -25,7 +25,7 @@ namespace BuyGear
         }
         void set()
         {
-            picHinhAnh.Image = Images.BinaryToImage(_sp.link_image[0]);
+            picHinhAnh.Image = Picture.LoadImage_by_ID(_sp.link_image[0]);
             lblName.Text = _sp.TenSP;
             lblSoluongConLai.Text = "Số lượng còn lại: "+_sp.SoLuong.ToString();
             lblSoLuongDaBan.Text = "Số lượng đã bán: "+Data.Instance.countSoLuongDaBan(_sp.MASP).ToString();

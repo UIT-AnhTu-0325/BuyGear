@@ -14,7 +14,7 @@ namespace BuyGear.DTO
         //Phương Thức
         public SanPham()
         {
-            link_image = new List<byte[]>();
+            link_image = new List<string>();
         }
 
         //Phương Thức
@@ -80,7 +80,7 @@ namespace BuyGear.DTO
             get { return _gia; }
             set { _gia = value; }
         }
-        public List<byte[]> link_image
+        public List<string> link_image
         {
             get { return _link_image; }
             set { _link_image = value; }
@@ -130,7 +130,7 @@ namespace BuyGear.DTO
         protected string _nhasx;
         protected Int32 _soluong;
         protected Int32 _gia;
-        protected List<byte[]> _link_image;
+        protected List<string> _link_image;
         protected string _chitiet;
         protected Int32 _gia_nhap;
         protected Int32 _gia_banbuon;

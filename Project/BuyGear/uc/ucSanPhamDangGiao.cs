@@ -20,12 +20,12 @@ namespace BuyGear
             InitializeComponent();
         }
         public string _masp;
-        public void SetData(string masp, string tensp , int gia, List<byte[]> link_image)
+        public void SetData(string masp, string tensp , int gia, List<string> link_image)
         {
             this.lblName.Text = tensp;
             this.lblGia.Text = Data.Instance.giaFix(gia);
             _masp = masp;
-             this.picHinhAnh.Image = (Images.BinaryToImage(link_image[0]));
+            this.picHinhAnh.Image = Picture.LoadImage_by_ID(link_image[0]);
         }
         public void Click(object sender, EventArgs e)
         {

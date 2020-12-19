@@ -19,7 +19,7 @@ namespace BuyGear
             this.parent = parent;
             InitializeComponent();
         }
-        public void set(string masp, string tensp, string loaisp, string dvt, string xuatxu, string nhasx, int soluong, int gia, string giafix, List<byte[]> link_image)
+        public void set(string masp, string tensp, string loaisp, string dvt, string xuatxu, string nhasx, int soluong, int gia, string giafix, List<string> link_image)
         {
             _masp = masp;
             _tensp = tensp;
@@ -32,7 +32,7 @@ namespace BuyGear
             this.lbName.Text = tensp;
             this.lbPrice.Text = giafix;
             this._link_image = link_image;
-            this.picProduct.Image = (Images.BinaryToImage(link_image[0]));
+            this.picProduct.Image = Picture.LoadImage_by_ID(link_image[0]);
         }
         private void picProduct_Click(object sender, EventArgs e)
         {
@@ -54,7 +54,7 @@ namespace BuyGear
         public string _nhasx;
         public Int32 _soluong;
         public Int32 _gia;
-        public List<byte[]> _link_image;
+        public List<string> _link_image;
 
         private void btn_AddSanPham(object sender, EventArgs e)
         {

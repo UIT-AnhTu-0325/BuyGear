@@ -120,7 +120,7 @@ namespace BuyGear.DAO
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
                 foreach (DataRow row1 in dataTable1.Rows)
                 {
-                    sp.link_image.Add((byte[])row1["data"]);
+                    sp.link_image.Add(row1["data"].ToString());
                 }
                 listSP.Add(sp);
             }
@@ -143,7 +143,7 @@ namespace BuyGear.DAO
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
                 foreach (DataRow row1 in dataTable1.Rows)
                 {
-                    sp.link_image.Add((byte[])row1["data"]);
+                    sp.link_image.Add(row1["data"].ToString());
                 }
                 listSP.Add(sp);
             }
@@ -167,7 +167,7 @@ namespace BuyGear.DAO
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
                 foreach (DataRow row1 in dataTable1.Rows)
                 {
-                    sp.link_image.Add((byte[])row1["data"]);
+                    sp.link_image.Add(row1["data"].ToString());
                 }
                 listSP.Add(sp);
 
@@ -205,7 +205,7 @@ namespace BuyGear.DAO
             DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
             foreach (DataRow rowx in dataTable1.Rows)
             {
-                s.link_image.Add((byte[])rowx["data"]);
+                s.link_image.Add(rowx["data"].ToString());
             }
             return s;
         }
@@ -286,7 +286,7 @@ namespace BuyGear.DAO
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
                 foreach (DataRow row1 in dataTable1.Rows)
                 {
-                    sp.link_image.Add((byte[])row1["data"]);
+                    sp.link_image.Add(row1["data"].ToString());
                 }
 
                 listSP.Add(sp);
@@ -342,7 +342,7 @@ namespace BuyGear.DAO
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery2, new object[] { row["main_image"].ToString() });
                 listSP.Add(new HoaDon(row["name"].ToString(), int.Parse(row["ID"].ToString()), row["nghd"].ToString(),
                     row["tensp"].ToString(), int.Parse(row["sl"].ToString()), long.Parse(row["trigia"].ToString()),
-                    row["diachi"].ToString(), (byte[])dataTable1.Rows[0]["data"], int.Parse(row["sohd"].ToString()), row["masp"].ToString()));
+                    row["diachi"].ToString(), dataTable1.Rows[0]["data"].ToString(), int.Parse(row["sohd"].ToString()), row["masp"].ToString()));
 
             }
             return listSP;

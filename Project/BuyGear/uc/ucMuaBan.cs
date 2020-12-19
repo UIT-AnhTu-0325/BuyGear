@@ -30,7 +30,7 @@ namespace BuyGear
             lblSoLuong.Text += _h.Soluong.ToString();
             lblTriGia.Text += _h.Trigia.ToString();
             lbltenngmua.Text += _h.Tenngmua;
-            picHinhAnh.Image = Images.BinaryToImage(_h.Image_sp);
+            picHinhAnh.Image = Picture.LoadImage_by_ID(_h.Image_sp);
             switch (_type)
             {
                 case 1:

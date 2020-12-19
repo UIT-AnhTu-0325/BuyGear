@@ -30,9 +30,9 @@ namespace BuyGear
         public Int32 _gia;
         public Int32 _soluongtronggio;
         public bool _isSelect;
-        public List<byte[]> _link_image;
+        public List<string> _link_image;
 
-        public void set(string masp, string tensp,  int soluong, int gia,  List<byte[]> link_image, bool isSelect)
+        public void set(string masp, string tensp,  int soluong, int gia,  List<string> link_image, bool isSelect)
         {
             _masp = masp;
             _tensp = tensp;          
@@ -45,7 +45,7 @@ namespace BuyGear
             this.lblName.Text = tensp;
             this.lblGia.Text = Data.Instance.giaFix(gia);
             this._link_image = link_image;
-            this.picHinhAnh.Image = (Images.BinaryToImage(link_image[0]));
+            this.picHinhAnh.Image = Picture.LoadImage_by_ID(link_image[0]);
         }
         private void picProduct_Click(object sender, EventArgs e)
         {

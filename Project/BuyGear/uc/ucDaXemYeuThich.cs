@@ -21,7 +21,7 @@ namespace BuyGear
             InitializeComponent();            
         }
         public string _masp;
-        public void SetData(string masp, string tensp, int gia, List<byte[]> link_image)
+        public void SetData(string masp, string tensp, int gia, List<string> link_image)
         {
             this.lblName.Text = tensp;
             this.lblGia.Text = Data.Instance.giaFix(gia);

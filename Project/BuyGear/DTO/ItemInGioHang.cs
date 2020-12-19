@@ -17,7 +17,7 @@ namespace BuyGear.DTO
             SoLuongTrongGio = soluongtronggio;
             Gia = gia;
             IsSelect = isselect;
-           // Link_image = new List<byte[]>();
+            Link_image = new List<string>();
         }
 
         // properties
@@ -41,7 +41,7 @@ namespace BuyGear.DTO
             get { return _gia; }
             set { this._gia = value; }
         }
-        public List<byte[]> Link_image
+        public List<string> Link_image
         {
             get { return _link_image; }
             set { this._link_image = value; }
@@ -57,7 +57,7 @@ namespace BuyGear.DTO
         protected string _tensp;
         protected Int32 _soluongtronggio;
         protected Int32 _gia;
-        protected List<byte[]> _link_image;
+        protected List<string> _link_image;
         protected bool _isSelect;
     }
 }

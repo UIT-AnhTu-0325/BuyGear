@@ -176,7 +176,7 @@ namespace BuyGear.DAO
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
                 foreach (DataRow row1 in dataTable1.Rows)
                 {
-                    item.Link_image.Add((byte[])row1["data"]);
+                    item.Link_image.Add(row1["data"].ToString());
                 }
                 listSPTrongGio.Add(item);
             }
@@ -198,7 +198,7 @@ namespace BuyGear.DAO
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
                 foreach (DataRow row1 in dataTable1.Rows)
                 {
-                    item.Link_image.Add((byte[])row1["data"]);
+                    item.Link_image.Add(row1["data"].ToString());
                 }
                 listSPTrongGio.Add(item);
             }
@@ -225,7 +225,7 @@ namespace BuyGear.DAO
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
                 foreach (DataRow row1 in dataTable1.Rows)
                 {
-                    item.Link_image.Add((byte[])row1["data"]);
+                    item.Link_image.Add(row1["data"].ToString());
                 }
                 listSP.Add(item);
             }

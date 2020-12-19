@@ -8,7 +8,7 @@ namespace BuyGear
 {
     public class HoaDon
     {
-       public HoaDon(string tenngmua, int id_ngmua, string nghdon, string tensp, int soluong, long trigia, string diachi , byte[] image, int sohd, string masp)
+       public HoaDon(string tenngmua, int id_ngmua, string nghdon, string tensp, int soluong, long trigia, string diachi , string image, int sohd, string masp)
         {
             ID_ngmua = id_ngmua;
             Nghdon = nghdon;
@@ -29,7 +29,7 @@ namespace BuyGear
         protected int soluong;
         protected long trigia;
         protected string diachi;
-        protected byte[] image_sp;
+        protected string image_sp;
         protected int sohd;
         protected string masp;
 
@@ -40,7 +40,7 @@ namespace BuyGear
         public int Soluong { get => soluong; set => soluong = value; }
         public long Trigia { get => trigia; set => trigia = value; }
         public string Diachi { get => diachi; set => diachi = value; }
-        public byte[] Image_sp { get => image_sp; set => image_sp = value; }
+        public string Image_sp { get => image_sp; set => image_sp = value; }
         public int Sohd { get => sohd; set => sohd = value; }
         public string Masp { get => masp; set => masp = value; }
     }
