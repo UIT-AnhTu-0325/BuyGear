@@ -20,6 +20,7 @@ namespace BuyGear.uc
             colors.Add(Color.FromArgb(63, 81, 181));
             colors.Add(Color.FromArgb(156,39,176));
             bunifuCircleProgressbar1.ProgressColor = colors[cur_color];
+
         }
         int dir = 1;
         List<Color> colors = new List<Color>();

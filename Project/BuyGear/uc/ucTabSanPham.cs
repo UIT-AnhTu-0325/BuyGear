@@ -40,7 +40,7 @@ namespace BuyGear
             {
                 ucSanPham userControl = new ucSanPham(this.parent);
                 userControl.set(sp.MASP, sp.TenSP, sp.LoaiSP, sp.DVT, sp.XuatXu,
-                    sp.NhaSX, sp.SoLuong, sp.Gia, Data.Instance.giaFix(sp.Gia), sp.link_image);
+                sp.NhaSX, sp.SoLuong, sp.Gia, Data.Instance.giaFix(sp.Gia), sp.link_image);
                 fpnlSanPhamBanChay.Controls.Add(userControl);
             }
         }

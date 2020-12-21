@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using BuyGear.DAO;
 using BuyGear.DTO;
+using System.Drawing;
 namespace BuyGear
 {
     public partial class Form_Infor : Form
@@ -17,6 +18,9 @@ namespace BuyGear
         {
             this.parent = parent;
             InitializeComponent();
+            txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = true;
+            rdoNam.Enabled = rdoNu.Enabled = true;
+            chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = true;
         }
 
         //
@@ -24,6 +28,7 @@ namespace BuyGear
         //
         private void Form_Load(object sender, EventArgs e)
         {
+            btnUpdate.PerformClick();
             DataTable dataTable = Account.Instance.Load_Info();
             DataRow row = dataTable.Rows[0];
             txtName.Text = row["name"].ToString();
@@ -57,17 +62,15 @@ namespace BuyGear
 
             this.Close();
         }
-
+       
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (btnUpdate.Text == "Chỉnh sửa")
+            //if (btnUpdate.Text == "Chỉnh sửa")
             {
-                txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = true;
-                rdoNam.Enabled = rdoNu.Enabled = true;
-                chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = true;
+                
                 btnUpdate.Text = "Cập nhật";
             }
-            else
+          //  else
             {
                 if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
                 {
@@ -191,6 +194,8 @@ namespace BuyGear
                     txtOldPass.Text = "";
                     txtNewPass.Text = "";
                     txtConfirm.Text = "";
+                    MessageBox_form frm = new MessageBox_form();
+                    frm.Show();
                 }
                 else
                     MessageBox.Show("Mật khẩu cũ chưa chính xác !"+'\n'+txtOldPass.Text+'\n'+Account.Instance.passWord, "Thông báo", MessageBoxButtons.OK);
@@ -233,5 +238,70 @@ namespace BuyGear
         public List<string> list_29 = new List<string>() { "Ngày", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29" };
         public List<string> list_28 = new List<string>() { "Ngày", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28" };
 
+        private void bunifuButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private Color colnew = Color.FromArgb(150, 145, 187);
+        private Color coldefault = Color.White;
+        private void btnThongTin_Click(object sender, EventArgs e)
+        {
+            pageTab.SetPage(0);
+        }
+
+        private void btnThongTin_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnThongTin.OnIdleState.BorderColor = colnew;
+            btnThongTin.OnIdleState.FillColor = colnew;
+            btnThongTin.OnIdleState.ForeColor = Color.White;
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
+            {
+                MessageBox_form frm = new MessageBox_form();
+                frm.Show();
+                btnUpdate.Text = "Chỉnh sửa";
+                Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
+                if (rdoNam.Checked)
+                {
+                    Account.Instance.UpdateSexual("Nam");
+                }
+                else if (rdoNu.Checked)
+                {
+                    Account.Instance.UpdateSexual("Nữ");
+                }
+                Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin !");
+            }
+        }
+
+       
+
+        private void btnThoats_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void chkChangePass_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            pageTab.SetPage(1);
+        }
+
+        private void ckbHienMatKhau_OnChange(object sender, EventArgs e)
+        {
+            txtOldPass.UseSystemPasswordChar = !txtOldPass.UseSystemPasswordChar;
+            txtNewPass.UseSystemPasswordChar = !txtNewPass.UseSystemPasswordChar;
+            txtConfirm.UseSystemPasswordChar = !txtConfirm.UseSystemPasswordChar;
+        }
     }
 }

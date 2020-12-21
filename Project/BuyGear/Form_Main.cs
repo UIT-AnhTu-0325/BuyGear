@@ -65,6 +65,7 @@ namespace BuyGear
             };
             this.fpnlChiTiet.Visible = true;
             this.fpnlProduct.Visible = false;
+            this.pnlChiTietChange.Visible = true;
             this.fpnlChiTiet.Controls.Clear();
             this.fpnlChiTiet.Controls.Add(frm);
             frm.Show();
@@ -487,17 +488,16 @@ namespace BuyGear
             fpnlProduct.Controls.Clear();
             topEvent();
         }
-        ucTopMain uctop;
+        ucTopMain uctop; ucTabSanPham ucsp_tab; ucTabSanPham ucsp_ta1b;
+        ucTabSanPham ucsp_ta2b; ucTabSanPham ucsp_ta3b;
         bool iscomplete = false;
         private void topEvent()
         {
-
-            fpnlProduct.Controls.Add(new ucLoading());
-            bkgrnd_do_topevent.RunWorkerAsync();
-            timer_do_topevent.Start();
-
-
-           /* ucTabSanPham ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
+            // bkgrnd_do_topevent.RunWorkerAsync();
+            //timer_do_topevent.Start();
+            uctop = new ucTopMain();
+            fpnlProduct.Controls.Add(uctop);
+            ucTabSanPham ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
             fpnlProduct.Controls.Add(ucsp_tab);
             ucTabSanPham ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "top");
             fpnlProduct.Controls.Add(ucsp_ta1b);
@@ -505,13 +505,23 @@ namespace BuyGear
             fpnlProduct.Controls.Add(ucsp_ta2b);
             ucTabSanPham ucsp_ta3b = new ucTabSanPham(this, "Các sản phẩm đã xem: ", "daxem");
             fpnlProduct.Controls.Add(ucsp_ta3b);
-            fpnlProduct.Visible = true;*/
+            fpnlProduct.Visible = true;
         }
-       
+
 
         private void bkgrnd_do_topevent_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            uctop = new ucTopMain();
+            //ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
+            //uctop = new ucTopMain();
+            // ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
+            //  fpnlProduct.Controls.Add(ucsp_tab);
+            // ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "top");
+            //  fpnlProduct.Controls.Add(ucsp_ta1b);
+            //  ucsp_ta2b = new ucTabSanPham(this, "Dành riêng cho bạn: ", "top");
+            //  fpnlProduct.Controls.Add(ucsp_ta2b);
+            // ucsp_ta3b = new ucTabSanPham(this, "Các sản phẩm đã xem: ", "daxem");
+            // fpnlProduct.Controls.Add(ucsp_ta3b);
+            // fpnlProduct.Visible = true;
         }
 
         private void bkgrnd_do_topevent_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
@@ -523,8 +533,13 @@ namespace BuyGear
         {
             if(iscomplete)
             {
+                fpnlProduct.Visible = true;
                 fpnlProduct.Controls.Clear();
                 fpnlProduct.Controls.Add(uctop);
+                fpnlProduct.Controls.Add(ucsp_tab);
+               // fpnlProduct.Controls.Add(ucsp_ta1b);
+                //fpnlProduct.Controls.Add(ucsp_ta2b);
+                //fpnlProduct.Controls.Add(ucsp_ta3b);
             }
             timer_do_topevent.Stop();
         }

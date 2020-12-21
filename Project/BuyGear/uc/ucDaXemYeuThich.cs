@@ -26,7 +26,7 @@ namespace BuyGear
             this.lblName.Text = tensp;
             this.lblGia.Text = Data.Instance.giaFix(gia);
             _masp = masp;
-            // this.picHinhAnh.Image = (Images.BinaryToImage(link_image[0]));
+             this.picHinhAnh.Image = Picture.LoadImage_by_ID(link_image[0]);
         }
         public void dClick(object sender, EventArgs e)
         {

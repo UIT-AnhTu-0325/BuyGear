@@ -133,12 +133,12 @@ namespace BuyGear
             {
                 this.Size = this.parent.Size;
                // pnlBottomLeft.Size = new Size(pnlBottomLeft.Size.Width, this.parent.fpnlChitiet.Size.Height * 2 / 3);
-                pnlBottomRight.Size = new Size(pnlBottomLeft.Size.Width, this.parent.fpnlChiTiet.Size.Height * 2 / 4);
+                pnlBottomRight.Size = new Size(pnlBottomLeft.Size.Width, this.parent.fpnlChiTiet.Size.Height * 3/ 8);
                 picAnh1.Size = new Size(picAnh1.Width, pnlSanPhamNoMainPicture.Size.Height / 3);
                 picAnh2.Size = new Size(picAnh2.Width, pnlSanPhamNoMainPicture.Size.Height / 3);
                 picAnh3.Size = new Size(picAnh3.Width, pnlSanPhamNoMainPicture.Size.Height / 3);
                 pnlSanPhamNoMainPicture.Size = new Size(pnlSanPhamMainPicture.Size.Width / 4, pnlSanPhamNoMainPicture.Height);
-                pnlChiTietRight.Size = new Size((this.parent.fpnlChiTiet.Size.Width) * 3 / 5, pnlChiTietRight.Size.Height);
+                pnlChiTietRight.Size = new Size((this.parent.fpnlChiTiet.Size.Width) * 4 / 5, pnlChiTietRight.Size.Height);
                 fpnlNhanXet.Size = new Size(this.fpnlLeftTotal.Size.Width, fpnlNhanXet.Size.Height);
                 //
                 if (this.parent.Size.Height > 800)
