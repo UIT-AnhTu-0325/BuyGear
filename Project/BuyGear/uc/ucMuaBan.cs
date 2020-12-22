@@ -28,7 +28,7 @@ namespace BuyGear
             lblName.Text += h.Tensp;
             lblNgaymua.Text += _h.Nghdon;
             lblSoLuong.Text += _h.Soluong.ToString();
-            lblTriGia.Text += _h.Trigia.ToString();
+            lblTriGia.Text += _h.TongCong.ToString();
             lbltenngmua.Text += _h.Tenngmua;
             picHinhAnh.Image = Picture.LoadImage_by_ID(_h.Image_sp);
             switch (_type)
@@ -78,7 +78,9 @@ namespace BuyGear
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            string hd = "Cua hang BUYGEAR" +
+            Invoice i = new Invoice(_h);
+            i.PrintMe();
+            /*string hd = "Cua hang BUYGEAR" +
                 "\nSố hóa đơn: " + _h.Sohd +
                 "\nNgười mua: " + _h.Tenngmua +
                 "\nNgày mua: " + _h.Nghdon +
@@ -90,7 +92,7 @@ namespace BuyGear
             svg.ShowDialog();
             File.Create(svg.FileName + ".txt").Close();
             byte[] buffer = Encoding.ASCII.GetBytes(hd);
-            File.WriteAllBytes(svg.FileName+".txt", buffer);
+            File.WriteAllBytes(svg.FileName+".txt", buffer);*/
              
         }
     }

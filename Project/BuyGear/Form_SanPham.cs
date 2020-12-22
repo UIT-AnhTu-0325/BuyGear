@@ -34,11 +34,11 @@ namespace BuyGear
                 picSanPhamMain.SizeMode = PictureBoxSizeMode.Zoom;
                 picSanPhamMain.Image = Picture.LoadImage_by_ID(sp.link_image[0]); 
                 picAnh1.SizeMode = PictureBoxSizeMode.Zoom;
-                picAnh1.Image = Picture.LoadImage_by_ID(sp.link_image[0]);
+                picAnh1.Image = Picture.LoadImage_by_ID(sp.link_image[1]);
                 picAnh2.SizeMode = PictureBoxSizeMode.Zoom;
-                picAnh2.Image = Picture.LoadImage_by_ID(sp.link_image[0]);
+                picAnh2.Image = Picture.LoadImage_by_ID(sp.link_image[2]);
                 picAnh3.SizeMode = PictureBoxSizeMode.Zoom;
-                picAnh3.Image = Picture.LoadImage_by_ID(sp.link_image[0]);
+                picAnh3.Image = Picture.LoadImage_by_ID(sp.link_image[3]);
 
             }
 

@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using BuyGear.DTO;
 using System.Data;
+using System.Drawing;
+using System.Windows;
+
 namespace BuyGear.DAO
 {
     class Account
@@ -186,6 +189,25 @@ namespace BuyGear.DAO
                 return true;
             }
             return false;
+        }
+        public Image getAvatar()
+        {
+            string query = "select dataAva from Infor where username = @username ";
+            DataTable v = Data.Instance.ExcuteQuery(query, new Object[] { this.userName });
+            if (v.Rows[0]["dataAva"] == DBNull.Value)
+            {
+                return Image.FromFile("../../Resources/usericon2.png");
+            }
+            return Picture.LoadImage_by_ID(v.Rows[0]["dataAva"].ToString());
+           
+        }
+        public void changeAvatar(string path)
+        {
+            Picture.DeletePicture_by_ID(Picture.GetIDPicturebyName(this.userName));
+            Picture.UpPicture(path, userName);
+            string ID = Picture.GetIDPicturebyName(userName);
+            string query = "update Infor set dataAva = @data where username = @username ";
+            Data.Instance.ExcuteQuery(query, new Object[] { ID, this.userName });
         }
         #endregion
     }

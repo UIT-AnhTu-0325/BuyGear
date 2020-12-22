@@ -17,7 +17,7 @@ namespace BuyGear
     {
         static protected string[] Scopes = { DriveService.Scope.Drive };
         static protected string ApplicationName = "Up Image BuyGear";
-        static public void UpPicture(string PictureName = "")
+        static public void UpPicture(string path,string PictureName = "")
         {
             UserCredential credential;
             credential = GetCredentials();
@@ -26,25 +26,11 @@ namespace BuyGear
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,
             });
-            string folderid = "1cLmyNnZPvlbo6DdF77VW5OO0oGkmxBQ7";
-            OpenFileDialog select = new OpenFileDialog();
-            if (select.ShowDialog() == DialogResult.OK)
-            {
-                foreach (string filename in select.FileNames)
-                {
-                    Thread thread = new Thread(() =>
-                    {
-                        UploadImage(filename, service, folderid, PictureName);
-                    });
-                    thread.IsBackground = true;
-                    thread.Start();
-                }
-            }
+            string folderid = "1xFrywthrka6T7WYxKxgZCUdD0nLhqYHh";
+            UploadImage(path, service, folderid, PictureName);
         }
 
-
-
-        static public void ListPicture()
+        static public string GetIDPicturebyName(string pictureName)
         {
             UserCredential credential;
             credential = GetCredentials();
@@ -53,15 +39,38 @@ namespace BuyGear
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,
             });
-            string folderid = "1cLmyNnZPvlbo6DdF77VW5OO0oGkmxBQ7";
+            string folderid = "1xFrywthrka6T7WYxKxgZCUdD0nLhqYHh";
             FilesResource.ListRequest request = service.Files.List();
             request.Q = "'" + folderid + "' in parents and trashed=false";
             request.Fields = "nextPageToken, files(*)";
             IList<File> files = request.Execute().Files;
-            var stream = new System.IO.MemoryStream();
-            var rq = service.Files.Get(files[0].Id);
-            rq.Download(stream);
-            SaveStream(stream, "../../Temp_DataPicture/" + files[0].Name);
+            foreach(var v in files)
+            {
+                if(v.Name.Contains(pictureName))
+                {
+                    return v.Id;
+                }
+            }
+            return null;
+        }
+        static public void DeletePicture_by_ID(string ID)
+        {
+            UserCredential credential;
+            credential = GetCredentials();
+            var service = new DriveService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = ApplicationName,
+            });
+            string folderid = ID;
+            try
+            {
+                service.Files.Delete(folderid).Execute();
+            }
+            catch
+            {
+
+            }
         }
         static public Image LoadImage_by_ID(string ID)
         {
@@ -110,7 +119,7 @@ namespace BuyGear
                     new FileDataStore(credPath, true)).Result;
             }
             return credential;
-        }       
+        }
         static private void UploadImage(string path, DriveService service, string folderUpload, string PictureName)
         {
             var fileMetadata = new Google.Apis.Drive.v3.Data.File();
@@ -135,6 +144,26 @@ namespace BuyGear
                 request.Fields = "id";
                 request.Upload();
             }
+        }
+        static public string getLinkFromDialog()
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                return open.FileName;
+            }
+            else
+            {
+                return "";
+            }
+        }
+        static public Image FromFile(string path)
+        {
+            var bytes = System.IO.File.ReadAllBytes(path);
+            var ms = new MemoryStream(bytes);
+            var img = Image.FromStream(ms);
+            return img;
         }
     }
 

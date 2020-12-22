@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using BuyGear.DAO;
 using BuyGear.DTO;
 using System.Drawing;
+using System.IO;
+
 namespace BuyGear
 {
     public partial class Form_Infor : Form
@@ -17,6 +19,7 @@ namespace BuyGear
         public Form_Infor(Form_Main parent)
         {
             this.parent = parent;
+
             InitializeComponent();
             txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = true;
             rdoNam.Enabled = rdoNu.Enabled = true;
@@ -28,28 +31,36 @@ namespace BuyGear
         //
         private void Form_Load(object sender, EventArgs e)
         {
-            btnUpdate.PerformClick();
-            DataTable dataTable = Account.Instance.Load_Info();
-            DataRow row = dataTable.Rows[0];
-            txtName.Text = row["name"].ToString();
-            txtAddress.Text = row["address"].ToString();
-            txtEmail.Text = row["email"].ToString();
-            txtSDT.Text = row["numberphone"].ToString();
-            string gioiTinh = row["sexual"].ToString();
-            if (gioiTinh == "Nam")
+            //btnUpdate.PerformClick();
+            try
             {
-                rdoNam.Checked = true;
+                DataTable dataTable = Account.Instance.Load_Info();
+                DataRow row = dataTable.Rows[0];
+                txtName.Text = row["name"].ToString();
+                txtAddress.Text = row["address"].ToString();
+                txtEmail.Text = row["email"].ToString();
+                txtSDT.Text = row["numberphone"].ToString();
+                string gioiTinh = row["sexual"].ToString();
+                if (gioiTinh == "Nam")
+                {
+                    rdoNam.Checked = true;
+                }
+                else if (gioiTinh == "Nữ")
+                {
+                    rdoNu.Checked = true;
+                }
+                if (row["birthday"].ToString() != "")
+                {
+                    string[] ngaySinh = row["birthday"].ToString().Split('/', ' ');
+                    chkThang.Text = ngaySinh[0];
+                    chkNgay.Text = ngaySinh[1];
+                    chkNam.Text = ngaySinh[2];
+                }
+                this.picAvatar.Image = Account.Instance.getAvatar();
             }
-            else if (gioiTinh == "Nữ")
+            catch
             {
-                rdoNu.Checked = true;
-            }
-            if (row["birthday"].ToString() != "")
-            {
-                string[] ngaySinh = row["birthday"].ToString().Split('/', ' ');
-                chkThang.Text = ngaySinh[0];
-                chkNgay.Text = ngaySinh[1];
-                chkNam.Text = ngaySinh[2];
+
             }
 
         }
@@ -62,119 +73,10 @@ namespace BuyGear
 
             this.Close();
         }
-       
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            //if (btnUpdate.Text == "Chỉnh sửa")
-            {
-                
-                btnUpdate.Text = "Cập nhật";
-            }
-          //  else
-            {
-                if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
-                {
-                    txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = false;
-                    rdoNam.Enabled = rdoNu.Enabled = false;
-                    chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = false;
-                    btnUpdate.Text = "Chỉnh sửa";
-                    Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
-                    if (rdoNam.Checked)
-                    {
-                        Account.Instance.UpdateSexual("Nam");
-                    }
-                    else if (rdoNu.Checked)
-                    {
-                        Account.Instance.UpdateSexual("Nữ");
-                    }
-                    Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng nhập đủ thông tin !");
-                }
-
-            }
-        }
-
-        private void chkNam_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (chkThang.SelectedIndex == 2)
-            {
-                if (chkNam.SelectedIndex % 4 == 3)
-                {
-                    int i = chkNgay.SelectedIndex;
-                    chkNgay.DataSource = list_29;
-                    if (i > 29)
-                        chkNgay.SelectedIndex = 0;
-                    else
-                        chkNgay.SelectedIndex = i;
-                }
-                else
-                {
-                    int i = chkNgay.SelectedIndex;
-                    chkNgay.DataSource = list_28;
-                    if (i > 28)
-                        chkNgay.SelectedIndex = 0;
-                    else
-                        chkNgay.SelectedIndex = i;
-                }
-            }
-            else if (chkThang.SelectedIndex == 1 || chkThang.SelectedIndex == 3 || chkThang.SelectedIndex == 5 || chkThang.SelectedIndex == 7 || chkThang.SelectedIndex == 8 || chkThang.SelectedIndex == 10 || chkThang.SelectedIndex == 12 || chkThang.SelectedIndex == 0)
-            {
-                int i = chkNgay.SelectedIndex;
-                chkNgay.DataSource = list_30;
-                chkNgay.SelectedIndex = i;
-            }
-            else
-            {
-                int i = chkNgay.SelectedIndex;
-                chkNgay.DataSource = list_30;
-                if (i > 30)
-                    chkNgay.SelectedIndex = 0;
-                else
-                    chkNgay.SelectedIndex = i;
-            }
-        }
 
         private void chkThang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (chkThang.SelectedIndex == 2)
-            {
-                if (chkNam.SelectedIndex % 4 == 3)
-                {
-                    int i = chkNgay.SelectedIndex;
-                    chkNgay.DataSource = list_29;
-                    if (i > 29)
-                        chkNgay.SelectedIndex = 0;
-                    else
-                        chkNgay.SelectedIndex = i;
-                }
-                else
-                {
-                    int i = chkNgay.SelectedIndex;
-                    chkNgay.DataSource = list_28;
-                    if (i > 28)
-                        chkNgay.SelectedIndex = 0;
-                    else
-                        chkNgay.SelectedIndex = i;
-                }
-            }
-            else if (chkThang.SelectedIndex == 1 || chkThang.SelectedIndex == 3 || chkThang.SelectedIndex == 5 || chkThang.SelectedIndex == 7 || chkThang.SelectedIndex == 8 || chkThang.SelectedIndex == 10 || chkThang.SelectedIndex == 12 || chkThang.SelectedIndex == 0)
-            {
-                int i = chkNgay.SelectedIndex;
-                chkNgay.DataSource = list_30;
-                chkNgay.SelectedIndex = i;
-            }
-            else
-            {
-                int i = chkNgay.SelectedIndex;
-                chkNgay.DataSource = list_30;
-                if (i > 30)
-                    chkNgay.SelectedIndex = 0;
-                else
-                    chkNgay.SelectedIndex = i;
-            }
+
         }
 
         private void chkChangePass_CheckedChanged(object sender, EventArgs e)
@@ -258,25 +160,32 @@ namespace BuyGear
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
+            try
             {
-                MessageBox_form frm = new MessageBox_form();
-                frm.Show();
-                btnUpdate.Text = "Chỉnh sửa";
-                Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
-                if (rdoNam.Checked)
+                if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
                 {
-                    Account.Instance.UpdateSexual("Nam");
+                    MessageBox_form frm = new MessageBox_form();
+                    frm.Show();
+                    //btnUpdate.Text = "Chỉnh sửa";
+                    Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
+                    if (rdoNam.Checked)
+                    {
+                        Account.Instance.UpdateSexual("Nam");
+                    }
+                    else if (rdoNu.Checked)
+                    {
+                        Account.Instance.UpdateSexual("Nữ");
+                    }
+                    Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
                 }
-                else if (rdoNu.Checked)
+                else
                 {
-                    Account.Instance.UpdateSexual("Nữ");
+                    MessageBox.Show("Vui lòng nhập đủ thông tin !");
                 }
-                Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
             }
-            else
+            catch
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin !");
+
             }
         }
 
@@ -302,6 +211,23 @@ namespace BuyGear
             txtOldPass.UseSystemPasswordChar = !txtOldPass.UseSystemPasswordChar;
             txtNewPass.UseSystemPasswordChar = !txtNewPass.UseSystemPasswordChar;
             txtConfirm.UseSystemPasswordChar = !txtConfirm.UseSystemPasswordChar;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!(Account.Instance.userName == ""))
+            {
+                string path = Picture.getLinkFromDialog();
+                try
+                {
+                    picAvatar.Image = Picture.FromFile(path);
+                    Account.Instance.changeAvatar(path);
+                }
+                catch
+                {
+
+                }
+            }
         }
     }
 }

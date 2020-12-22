@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using BuyGear.DAO;
 using BuyGear.DTO;
 using System.Diagnostics;
+using System.IO;
+
 namespace BuyGear
 {
     public partial class Form_AddSanPham : Form
@@ -17,6 +19,7 @@ namespace BuyGear
         Form_BanHang parent;
         string toDo = "";
         SanPham _spnow;
+        List<string> linkPicture = new List<string>(0);
         public Form_AddSanPham(Form_BanHang parent)
         {
             toDo = "them";
@@ -28,7 +31,10 @@ namespace BuyGear
             pnl_ThongTin.Visible = true;
             picL_ThongTin.Visible = true;
             btnExit.Visible = false;
-
+            linkPicture.Add("");
+            linkPicture.Add("");
+            linkPicture.Add("");
+            linkPicture.Add("");
         }
         public Form_AddSanPham(SanPham s,Form_BanHang parent)
         {
@@ -42,8 +48,10 @@ namespace BuyGear
             unvisibleALLPicL();
             pnl_ThongTin.Visible = true;
             picL_ThongTin.Visible = true;
-            
-            
+            foreach(var v in s.link_image)
+            {
+                Picture.DeletePicture_by_ID(v);
+            }
         }
         public void Loadsp()
         {
@@ -166,23 +174,9 @@ namespace BuyGear
             picL_HinhAnh.Visible = true;
         }
 
-        string getLink()
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                return open.FileName;
-            }
-            else
-            {
-                return "";
-            } 
-        }
-
         void addPicture(int i)
         {
-            string link = this.getLink();
+            string link = Picture.getLinkFromDialog();
             if (link == "")
             {
                 return;
@@ -193,22 +187,26 @@ namespace BuyGear
                 {
                     case 1:
                         {
-                            image_1.Image = new Bitmap(link);
+                            image_1.Image = Picture.FromFile(link);
+                            linkPicture[0] = link;
                             break;
                         }
                     case 2:
                         {
-                            image_2.Image = new Bitmap(link);
+                            image_2.Image = Picture.FromFile(link);
+                            linkPicture[1] = link;
                             break;
                         }
                     case 3:
                         {
-                            image_3.Image = new Bitmap(link);
+                            image_3.Image = Picture.FromFile(link);
+                            linkPicture[2] = link;
                             break;
                         }
                     case 4:
                         {
-                            image_4.Image = new Bitmap(link);
+                            image_4.Image = Picture.FromFile(link);
+                            linkPicture[3] = link;
                             break;
                         }
                     default:
@@ -289,13 +287,9 @@ namespace BuyGear
             s.setData(this.txtMaSP.Text, this.txtTenSP.Text, _loaisp, this.txtDVT.Text, this.txtXuatXu.Text, this.txtNhaSX.Text,
                 Int32.Parse(this.txtSoLuong.Text), Int32.Parse(this.txtGiaBan.Text), this.txtChiTiet.Text, "0:0:0",
                 "chua kiem duyet", parent._ID_me, 0, 0, 0);
-            /*s.link_image.Add(Images.ImageToBinary(this.image_1.Image));
-            s.link_image.Add(Images.ImageToBinary(this.image_2.Image));
-            s.link_image.Add(Images.ImageToBinary(this.image_3.Image));
-            s.link_image.Add(Images.ImageToBinary(this.image_4.Image));*/
             if (toDo == "them")
             {
-                Data.Instance.UpSanPham(s);
+                Data.Instance.UpSanPham(s,linkPicture);
                 MessageBox.Show("Đăng bán sản phẩm thành công!!\n " +
                          "Sản phẩm sẽ được duyệt và bán!!");
             }
@@ -303,7 +297,7 @@ namespace BuyGear
             if(toDo=="sua")
             {
                 MessageBox.Show("Sửa thành công !!");
-                Data.Instance.FixSanPham(s);
+                Data.Instance.FixSanPham(s, linkPicture);
                 parent.LoadDS();          
                 this.Close();
             }
@@ -352,6 +346,49 @@ namespace BuyGear
         {
             e.Handled = !isValid(e.KeyChar);
         }
-        
+
+        private void txtLoaiSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string masp = "";
+            switch (txtLoaiSP.Text)
+            {
+                case "Màn Hình":
+                    {
+                        masp = "MH";
+                        break;
+                    }
+                case "Bàn Phím":
+                    {
+                        masp = "BP";
+                        break;
+                    }
+                case "Ổ Cứng":
+                    {
+                        masp = "OC";
+                        break;
+                    }
+                case "USB":
+                    {
+                        masp = "USB";
+                        break;
+                    }
+                case "Chuột":
+                    {
+                        masp = "C";
+                        break;
+                    }
+                case "Tản Nhiệt":
+                    {
+                        masp = "TN";
+                        break;
+                    }
+                default:
+                    {
+                        masp = "K";
+                        break;
+                    }
+            }
+            txtMaSP.Text = masp + Data.Instance.getlastIDSanPham().ToString();
+        }
     }
 }

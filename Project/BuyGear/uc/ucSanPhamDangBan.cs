@@ -45,6 +45,10 @@ namespace BuyGear
         private void btnXoa_Click(object sender, EventArgs e)
         {
             Data.Instance.DeleteSanPham(_sp);
+            foreach(var v in _sp.link_image)
+            {
+                Picture.DeletePicture_by_ID(v);
+            }    
             MessageBox.Show("Xóa thành công!");
             _par.LoadDS();
         }

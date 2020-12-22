@@ -120,12 +120,12 @@
             // 
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
             this.bunifuLabel4.Location = new System.Drawing.Point(522, 11);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(165, 31);
+            this.bunifuLabel4.Size = new System.Drawing.Size(160, 31);
             this.bunifuLabel4.TabIndex = 18;
             this.bunifuLabel4.Text = "CONTACT US";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -135,12 +135,12 @@
             // 
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
             this.bunifuLabel3.Location = new System.Drawing.Point(323, 10);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(130, 31);
+            this.bunifuLabel3.Size = new System.Drawing.Size(125, 31);
             this.bunifuLabel3.TabIndex = 18;
             this.bunifuLabel3.Text = "ABOUT US";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -150,12 +150,12 @@
             // 
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
             this.bunifuLabel2.Location = new System.Drawing.Point(177, 10);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(91, 31);
+            this.bunifuLabel2.Size = new System.Drawing.Size(79, 31);
             this.bunifuLabel2.TabIndex = 18;
             this.bunifuLabel2.Text = "ADMIN";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -165,12 +165,12 @@
             // 
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
             this.bunifuLabel1.Location = new System.Drawing.Point(21, 11);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(82, 31);
+            this.bunifuLabel1.Size = new System.Drawing.Size(75, 31);
             this.bunifuLabel1.TabIndex = 18;
             this.bunifuLabel1.Text = "HOME";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -393,7 +393,7 @@
             // picPassWord
             // 
             this.picPassWord.ErrorImage = null;
-            this.picPassWord.Image = global::BuyGear.Properties.Resources.usericon;
+            this.picPassWord.Image = global::BuyGear.Properties.Resources.usericon2;
             this.picPassWord.Location = new System.Drawing.Point(28, 28);
             this.picPassWord.Margin = new System.Windows.Forms.Padding(2);
             this.picPassWord.Name = "picPassWord";

@@ -210,7 +210,7 @@ namespace BuyGear.DAO
             return s;
         }
 
-        public void UpSanPham(SanPham s)
+        public void UpSanPham(SanPham s, List<string> linkimage)
         {
             string sqlQuery = "Insert into SanPham(ma_sp,tensp,loaisp,dvt,xuatxu,nhasx,soluong,gia,chitiet,trangthaikiemduyet,ID_ngban,gia_nhap," +
                 "gia_banbuon,VAT) values ( @masp , @tensp , @loaisp , @dvt , @xuatxu , @nhasx , @soluong , @gia , @chitiet , @trangthaikiemduyet , "
@@ -219,10 +219,13 @@ namespace BuyGear.DAO
             s.ID_nguoiban,s.gia_nhap,s.gia_banbuon,s.VAT});
             for (int i = 0; i < 4; i++)
             {
+                Picture.UpPicture(linkimage[i], s.MASP + "_" + i);
+                string id = Picture.GetIDPicturebyName(s.MASP + "_" + i);
                 string sqlQuery1 = "Insert into HinhAnh(name,data,ma_sp) values ( @name , @data , @ma_sp )";
-                this.ExcuteQuery(sqlQuery1, new object[] { "demo", s.link_image[i], s.MASP });
+                this.ExcuteQuery(sqlQuery1, new object[] { "demo", id, s.MASP });
             }
         }
+
 
         #region HOAI
 
@@ -301,7 +304,7 @@ namespace BuyGear.DAO
             int.TryParse(this.ExcuteQuery(sqlQuery, new object[] { masp }).Rows[0]["sl"].ToString(), out soluongdaban);
             return soluongdaban;
         }
-        public void FixSanPham(SanPham s)
+        public void FixSanPham(SanPham s, List<string> linkimage)
         {
             string sqlQuery = "Update SanPham "
                    + "Set tensp = @tensp , loaisp = @loaisp , dvt = @dvt , xuatxu = @xuatxu , nhasx = @nhasx , " +
@@ -312,10 +315,12 @@ namespace BuyGear.DAO
             s.chitiet, s.trangthaikiemduyet, s.ID_nguoiban, s.gia_nhap, s.gia_banbuon, s.VAT, s.MASP});
             for (int i = 0; i < 4; i++)
             {
+                Picture.UpPicture(linkimage[i], s.MASP + "_" + i);
+                string id = Picture.GetIDPicturebyName(s.MASP + "_" + i);
                 string sqlQuery1 = "update HinhAnh " +
                     "set data = @data " +
                     "where ma_sp = @masp ";
-                this.ExcuteQuery(sqlQuery1, new object[] { s.link_image[i], s.MASP });
+                this.ExcuteQuery(sqlQuery1, new object[] { id, s.MASP });
             }
         }
         public void DeleteSanPham(SanPham s)
@@ -336,24 +341,46 @@ namespace BuyGear.DAO
 
             DataTable dataTable = Data.Instance.ExcuteQuery(sqlQuery, new object[] { id_ngban, trangthai });
 
+            string sqlQuerysdt = "select numberphone " +
+                 " from account a, infor i where a.id = @id and i.username =a.username";
+            string sdtShop = Data.Instance.ExcuteQuery(sqlQuerysdt, new object[] { id_ngban }).Rows[0]["numberphone"].ToString();
+
             foreach (DataRow row in dataTable.Rows)
             {
                 string sqlQuery2 = "select data from hinhanh where ma_image= @ma_image ";
                 DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery2, new object[] { row["main_image"].ToString() });
                 listSP.Add(new HoaDon(row["name"].ToString(), int.Parse(row["ID"].ToString()), row["nghd"].ToString(),
                     row["tensp"].ToString(), int.Parse(row["sl"].ToString()), long.Parse(row["trigia"].ToString()),
-                    row["diachi"].ToString(), dataTable1.Rows[0]["data"].ToString(), int.Parse(row["sohd"].ToString()), row["masp"].ToString()));
+                    row["diachi"].ToString(), dataTable1.Rows[0]["data"].ToString(), int.Parse(row["sohd"].ToString()), row["masp"].ToString(), sdtShop));
 
             }
             return listSP;
         }
         public void changetrangthai(int sohd, string masp, string trangthai)
         {
-            string sqlQuery = "update cthd " +
-                 "set trangthai = @trangthai " +
-                "where sohd = @sohd and masp = @masp ";
-            Data.Instance.ExcuteQuery(sqlQuery, new object[] { trangthai, sohd, masp });
+            if (trangthai == "dang giao hang")
+            {
+                DateTime today = DateTime.Now;
+                string sqlQuery = "update cthd " +
+                     "set trangthai = @trangthai , ngaybatdaugiao = @ngaybd " +
+                    "where sohd = @sohd and masp = @masp ";
+                Data.Instance.ExcuteQuery(sqlQuery, new object[] { trangthai, today.ToString(), sohd, masp });
+            }
+            else if (trangthai == "da giao hang")
+            {
+                DateTime today = DateTime.Now;
+                string sqlQuery = "update cthd " +
+                     "set trangthai = @trangthai , ngayhoanthanh = @ngayht " +
+                    "where sohd = @sohd and masp = @masp ";
+                Data.Instance.ExcuteQuery(sqlQuery, new object[] { trangthai, today.ToString(), sohd, masp });
+            }
         }
+        public int getlastIDSanPham()
+        {
+            string query = "select count(ma_sp) as mx from sanpham";
+            return int.Parse(Data.Instance.ExcuteQuery(query).Rows[0]["mx"].ToString());
+        }
+
         #endregion
     }
 

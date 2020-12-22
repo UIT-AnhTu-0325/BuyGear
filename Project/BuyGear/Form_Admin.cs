@@ -416,7 +416,7 @@ namespace BuyGear
             f.Size = this.Size;
             f.Location = this.Location;
             f.chkChangePass.Visible = false;
-            f.btnUpdate.Visible = false;
+            //f.btnUpdate.Visible = false;
             f.ShowDialog();
         }
 
@@ -427,7 +427,7 @@ namespace BuyGear
             f.Size = this.Size;
             f.Location = this.Location;
             f.chkChangePass.Visible = false;
-            f.btnUpdate.Visible = false;
+            //f.btnUpdate.Visible = false;
             f.ShowDialog();
         }
 

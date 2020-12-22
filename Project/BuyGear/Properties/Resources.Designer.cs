@@ -123,6 +123,16 @@ namespace BuyGear.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap changeava {
+            get {
+                object obj = ResourceManager.GetObject("changeava", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cpu {
             get {
                 object obj = ResourceManager.GetObject("cpu", resourceCulture);
@@ -766,6 +776,26 @@ namespace BuyGear.Properties {
         internal static System.Drawing.Bitmap usericon {
             get {
                 object obj = ResourceManager.GetObject("usericon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usericon1 {
+            get {
+                object obj = ResourceManager.GetObject("usericon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usericon2 {
+            get {
+                object obj = ResourceManager.GetObject("usericon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

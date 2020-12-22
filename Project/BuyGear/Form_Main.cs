@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using BuyGear.DAO;
 using BuyGear.DTO;
 using BuyGear.uc;
+using System.IO;
 
 namespace BuyGear
 {
@@ -36,6 +37,7 @@ namespace BuyGear
             //some infor
             if (Account.Instance.id == "")
                 this.btnSoSp.Text = "0";
+            
 
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -106,6 +108,8 @@ namespace BuyGear
             this.fpnlChiTiet.Visible = true;
             this.fpnlProduct.Visible = true;
             this.pnlChiTietChange.Visible = false;
+            //Loadavtar
+            LoadAvatar();
         }
 
         private void btnEditInfor_Click(object sender, EventArgs e)
@@ -126,6 +130,8 @@ namespace BuyGear
                 //btnMyInfor.Visible = false;
                 //  pnl_TheoDoiDonHang.Visible = false;
                 //btnLogin.Visible = true;
+                this.picAvaMini.Image = Picture.FromFile("../../Resources/usericon2.png");
+                this.picAvatar.Image = Picture.FromFile("../../Resources/usericon2.png");
                 this.pnl_TheoDoiDonHang.Visible = !this.pnl_TheoDoiDonHang.Visible;
                 this.fpnlChiTiet.Controls.Clear();
             }
@@ -543,6 +549,25 @@ namespace BuyGear
             }
             timer_do_topevent.Stop();
         }
+        private void LoadAvatar()
+        {
+            if (!(Account.Instance.userName == ""))
+            {
+                picAvaMini.Image= Account.Instance.getAvatar();
+                picAvatar.Image = Account.Instance.getAvatar();
+            }
+        }
+        private void btnChangeAvatar_Click(object sender, EventArgs e)
+        {
+            if (!(Account.Instance.userName == ""))
+            {
+                string path = Picture.getLinkFromDialog();
+                picAvaMini.Image = Picture.FromFile(path);
+                picAvatar.Image = Picture.FromFile(path);
+                Account.Instance.changeAvatar(path);
+            }
+        }
+
     }
 }
 

@@ -110,8 +110,8 @@
             this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panelDB4 = new PanelDB();
             this.lblName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.picAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.btnChangeAvatar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panelDB3 = new PanelDB();
             this.btnBanHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -145,7 +145,7 @@
             this.btnSoSp = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.picAvaMini = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -168,7 +168,7 @@
             this.pnlAccountRight.SuspendLayout();
             this.panelDB5.SuspendLayout();
             this.panelDB4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.panelDB3.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_nguoiVanChuyen)).BeginInit();
@@ -181,7 +181,7 @@
             this.fpnlChiTiet1.SuspendLayout();
             this.panelDB2.SuspendLayout();
             this.pnlTabGioHangThongBao.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvaMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -1052,8 +1052,8 @@
             // panelDB4
             // 
             this.panelDB4.Controls.Add(this.lblName);
-            this.panelDB4.Controls.Add(this.bunifuPictureBox1);
-            this.panelDB4.Controls.Add(this.bunifuButton1);
+            this.panelDB4.Controls.Add(this.picAvatar);
+            this.panelDB4.Controls.Add(this.btnChangeAvatar);
             this.panelDB4.Controls.Add(this.bunifuButton2);
             this.transDanhmuc.SetDecoration(this.panelDB4, BunifuAnimatorNS.DecorationType.None);
             this.transDanhmucOpen.SetDecoration(this.panelDB4, BunifuAnimatorNS.DecorationType.None);
@@ -1083,64 +1083,64 @@
             this.lblName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lblName.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // bunifuPictureBox1
+            // picAvatar
             // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox1.BorderRadius = 60;
-            this.transDanhmuc.SetDecoration(this.bunifuPictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.transDanhmucOpen.SetDecoration(this.bunifuPictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
-            this.bunifuPictureBox1.IsCircle = false;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(37, 6);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(118, 118);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 10;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.picAvatar.AllowFocused = false;
+            this.picAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picAvatar.BorderRadius = 60;
+            this.transDanhmuc.SetDecoration(this.picAvatar, BunifuAnimatorNS.DecorationType.None);
+            this.transDanhmucOpen.SetDecoration(this.picAvatar, BunifuAnimatorNS.DecorationType.None);
+            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
+            this.picAvatar.IsCircle = false;
+            this.picAvatar.Location = new System.Drawing.Point(37, 6);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(118, 118);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 10;
+            this.picAvatar.TabStop = false;
+            this.picAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
             // 
-            // bunifuButton1
+            // btnChangeAvatar
             // 
-            this.bunifuButton1.AllowToggling = false;
-            this.bunifuButton1.AnimationSpeed = 200;
-            this.bunifuButton1.AutoGenerateColors = false;
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "Thay hình";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.ColorContrastOnClick = 45;
-            this.bunifuButton1.ColorContrastOnHover = 45;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeAvatar.AllowToggling = false;
+            this.btnChangeAvatar.AnimationSpeed = 200;
+            this.btnChangeAvatar.AutoGenerateColors = false;
+            this.btnChangeAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.btnChangeAvatar.BackColor1 = System.Drawing.Color.Transparent;
+            this.btnChangeAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangeAvatar.BackgroundImage")));
+            this.btnChangeAvatar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnChangeAvatar.ButtonText = "Thay hình";
+            this.btnChangeAvatar.ButtonTextMarginLeft = 0;
+            this.btnChangeAvatar.ColorContrastOnClick = 45;
+            this.btnChangeAvatar.ColorContrastOnHover = 45;
+            this.btnChangeAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges7.BottomLeft = true;
             borderEdges7.BottomRight = true;
             borderEdges7.TopLeft = true;
             borderEdges7.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges7;
-            this.transDanhmuc.SetDecoration(this.bunifuButton1, BunifuAnimatorNS.DecorationType.None);
-            this.transDanhmucOpen.SetDecoration(this.bunifuButton1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 7F);
-            this.bunifuButton1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IconMarginLeft = 11;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.White;
-            this.bunifuButton1.IdleBorderRadius = 10;
-            this.bunifuButton1.IdleBorderThickness = 1;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.IdleIconLeftImage = null;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(69, 129);
-            this.bunifuButton1.Name = "bunifuButton1";
+            this.btnChangeAvatar.CustomizableEdges = borderEdges7;
+            this.transDanhmuc.SetDecoration(this.btnChangeAvatar, BunifuAnimatorNS.DecorationType.None);
+            this.transDanhmucOpen.SetDecoration(this.btnChangeAvatar, BunifuAnimatorNS.DecorationType.None);
+            this.btnChangeAvatar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnChangeAvatar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnChangeAvatar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnChangeAvatar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnChangeAvatar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnChangeAvatar.Font = new System.Drawing.Font("Segoe UI Semibold", 7F);
+            this.btnChangeAvatar.ForeColor = System.Drawing.Color.Black;
+            this.btnChangeAvatar.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeAvatar.IconMarginLeft = 11;
+            this.btnChangeAvatar.IconPadding = 10;
+            this.btnChangeAvatar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeAvatar.IdleBorderColor = System.Drawing.Color.White;
+            this.btnChangeAvatar.IdleBorderRadius = 10;
+            this.btnChangeAvatar.IdleBorderThickness = 1;
+            this.btnChangeAvatar.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnChangeAvatar.IdleIconLeftImage = null;
+            this.btnChangeAvatar.IdleIconRightImage = null;
+            this.btnChangeAvatar.IndicateFocus = false;
+            this.btnChangeAvatar.Location = new System.Drawing.Point(69, 129);
+            this.btnChangeAvatar.Name = "btnChangeAvatar";
             stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties13.BorderRadius = 10;
             stateProperties13.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -1149,7 +1149,7 @@
             stateProperties13.ForeColor = System.Drawing.Color.White;
             stateProperties13.IconLeftImage = null;
             stateProperties13.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties13;
+            this.btnChangeAvatar.onHoverState = stateProperties13;
             stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties14.BorderRadius = 10;
             stateProperties14.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -1158,12 +1158,13 @@
             stateProperties14.ForeColor = System.Drawing.Color.White;
             stateProperties14.IconLeftImage = null;
             stateProperties14.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties14;
-            this.bunifuButton1.Size = new System.Drawing.Size(58, 17);
-            this.bunifuButton1.TabIndex = 11;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.TextMarginLeft = 0;
-            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.btnChangeAvatar.OnPressedState = stateProperties14;
+            this.btnChangeAvatar.Size = new System.Drawing.Size(58, 17);
+            this.btnChangeAvatar.TabIndex = 11;
+            this.btnChangeAvatar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnChangeAvatar.TextMarginLeft = 0;
+            this.btnChangeAvatar.UseDefaultRadiusAndThickness = true;
+            this.btnChangeAvatar.Click += new System.EventHandler(this.btnChangeAvatar_Click);
             // 
             // bunifuButton2
             // 
@@ -1846,7 +1847,7 @@
             this.pnlTabGioHangThongBao.Controls.Add(this.btnSoSp);
             this.pnlTabGioHangThongBao.Controls.Add(this.bunifuButton10);
             this.pnlTabGioHangThongBao.Controls.Add(this.bunifuButton8);
-            this.pnlTabGioHangThongBao.Controls.Add(this.bunifuPictureBox2);
+            this.pnlTabGioHangThongBao.Controls.Add(this.picAvaMini);
             this.pnlTabGioHangThongBao.Controls.Add(this.bunifuButton4);
             this.pnlTabGioHangThongBao.Controls.Add(this.button3);
             this.transDanhmuc.SetDecoration(this.pnlTabGioHangThongBao, BunifuAnimatorNS.DecorationType.None);
@@ -2118,23 +2119,23 @@
             this.bunifuButton8.UseDefaultRadiusAndThickness = true;
             this.bunifuButton8.Click += new System.EventHandler(this.btnGioHang_click);
             // 
-            // bunifuPictureBox2
+            // picAvaMini
             // 
-            this.bunifuPictureBox2.AllowFocused = false;
-            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuPictureBox2.BorderRadius = 20;
-            this.transDanhmuc.SetDecoration(this.bunifuPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.transDanhmucOpen.SetDecoration(this.bunifuPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
-            this.bunifuPictureBox2.IsCircle = false;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(317, 15);
-            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(39, 39);
-            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox2.TabIndex = 10;
-            this.bunifuPictureBox2.TabStop = false;
-            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.picAvaMini.AllowFocused = false;
+            this.picAvaMini.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picAvaMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picAvaMini.BorderRadius = 20;
+            this.transDanhmuc.SetDecoration(this.picAvaMini, BunifuAnimatorNS.DecorationType.None);
+            this.transDanhmucOpen.SetDecoration(this.picAvaMini, BunifuAnimatorNS.DecorationType.None);
+            this.picAvaMini.Image = ((System.Drawing.Image)(resources.GetObject("picAvaMini.Image")));
+            this.picAvaMini.IsCircle = false;
+            this.picAvaMini.Location = new System.Drawing.Point(317, 15);
+            this.picAvaMini.Name = "picAvaMini";
+            this.picAvaMini.Size = new System.Drawing.Size(39, 39);
+            this.picAvaMini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvaMini.TabIndex = 10;
+            this.picAvaMini.TabStop = false;
+            this.picAvaMini.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
             // 
             // bunifuButton4
             // 
@@ -2348,7 +2349,7 @@
             this.pnlAccountRight.ResumeLayout(false);
             this.panelDB5.ResumeLayout(false);
             this.panelDB4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.panelDB3.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_nguoiVanChuyen)).EndInit();
@@ -2364,7 +2365,7 @@
             this.panelDB2.ResumeLayout(false);
             this.panelDB2.PerformLayout();
             this.pnlTabGioHangThongBao.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvaMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -2407,7 +2408,7 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSoSp;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton10;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton8;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
+        private Bunifu.UI.WinForms.BunifuPictureBox picAvaMini;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtSearch;
@@ -2424,8 +2425,8 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBanHang;
         private PanelDB panelDB4;
         public Bunifu.UI.WinForms.BunifuLabel lblName;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuPictureBox picAvatar;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnChangeAvatar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private PanelDB panelDB5;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton6;

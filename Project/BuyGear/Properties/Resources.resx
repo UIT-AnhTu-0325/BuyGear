@@ -178,6 +178,9 @@
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="usericon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -244,6 +247,9 @@
   <data name="logoutIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoutIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ui.return1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ui.return1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="setting1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setting1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -301,6 +307,9 @@
   <data name="locationshop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\locationshop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="usericon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cpu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cpu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -328,7 +337,7 @@
   <data name="solid1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\solid1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ui.return1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ui.return1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="changeava" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\changeava.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

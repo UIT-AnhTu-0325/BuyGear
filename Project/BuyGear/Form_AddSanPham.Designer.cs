@@ -59,10 +59,10 @@
             this.picL_ThongTin = new System.Windows.Forms.PictureBox();
             this.picL_MoTa = new System.Windows.Forms.PictureBox();
             this.picL_HinhAnh = new System.Windows.Forms.PictureBox();
-            this.pnl_ThongTin = new PanelDB();
             this.panelDB1 = new PanelDB();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.pnl_ThongTin = new PanelDB();
             this.panelDB11 = new PanelDB();
             this.label10 = new System.Windows.Forms.Label();
             this.txtXuatXu = new System.Windows.Forms.TextBox();
@@ -109,8 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picL_ThongTin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picL_MoTa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picL_HinhAnh)).BeginInit();
-            this.pnl_ThongTin.SuspendLayout();
             this.panelDB1.SuspendLayout();
+            this.pnl_ThongTin.SuspendLayout();
             this.panelDB11.SuspendLayout();
             this.panelDB10.SuspendLayout();
             this.panelDB9.SuspendLayout();
@@ -389,29 +389,11 @@
             this.picL_HinhAnh.TabIndex = 10;
             this.picL_HinhAnh.TabStop = false;
             // 
-            // pnl_ThongTin
-            // 
-            this.pnl_ThongTin.Controls.Add(this.panelDB1);
-            this.pnl_ThongTin.Controls.Add(this.panelDB11);
-            this.pnl_ThongTin.Controls.Add(this.panelDB10);
-            this.pnl_ThongTin.Controls.Add(this.panelDB9);
-            this.pnl_ThongTin.Controls.Add(this.panelDB8);
-            this.pnl_ThongTin.Controls.Add(this.panelDB7);
-            this.pnl_ThongTin.Controls.Add(this.panelDB6);
-            this.pnl_ThongTin.Controls.Add(this.panelDB5);
-            this.pnl_ThongTin.Controls.Add(this.panelDB4);
-            this.pnl_ThongTin.Controls.Add(this.pnl_1_2);
-            this.pnl_ThongTin.Controls.Add(this.pnl_1_1);
-            this.pnl_ThongTin.Location = new System.Drawing.Point(10, 78);
-            this.pnl_ThongTin.Name = "pnl_ThongTin";
-            this.pnl_ThongTin.Size = new System.Drawing.Size(1064, 448);
-            this.pnl_ThongTin.TabIndex = 5;
-            // 
             // panelDB1
             // 
             this.panelDB1.Controls.Add(this.label1);
             this.panelDB1.Controls.Add(this.txtMaSP);
-            this.panelDB1.Location = new System.Drawing.Point(3, 78);
+            this.panelDB1.Location = new System.Drawing.Point(3, 139);
             this.panelDB1.Name = "panelDB1";
             this.panelDB1.Size = new System.Drawing.Size(541, 37);
             this.panelDB1.TabIndex = 12;
@@ -429,11 +411,31 @@
             // txtMaSP
             // 
             this.txtMaSP.BackColor = System.Drawing.Color.White;
+            this.txtMaSP.Enabled = false;
             this.txtMaSP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSP.Location = new System.Drawing.Point(206, 3);
             this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.ReadOnly = true;
             this.txtMaSP.Size = new System.Drawing.Size(311, 29);
             this.txtMaSP.TabIndex = 1;
+            // 
+            // pnl_ThongTin
+            // 
+            this.pnl_ThongTin.Controls.Add(this.panelDB1);
+            this.pnl_ThongTin.Controls.Add(this.panelDB11);
+            this.pnl_ThongTin.Controls.Add(this.panelDB10);
+            this.pnl_ThongTin.Controls.Add(this.panelDB9);
+            this.pnl_ThongTin.Controls.Add(this.panelDB8);
+            this.pnl_ThongTin.Controls.Add(this.panelDB7);
+            this.pnl_ThongTin.Controls.Add(this.panelDB6);
+            this.pnl_ThongTin.Controls.Add(this.panelDB5);
+            this.pnl_ThongTin.Controls.Add(this.panelDB4);
+            this.pnl_ThongTin.Controls.Add(this.pnl_1_2);
+            this.pnl_ThongTin.Controls.Add(this.pnl_1_1);
+            this.pnl_ThongTin.Location = new System.Drawing.Point(10, 78);
+            this.pnl_ThongTin.Name = "pnl_ThongTin";
+            this.pnl_ThongTin.Size = new System.Drawing.Size(1064, 448);
+            this.pnl_ThongTin.TabIndex = 5;
             // 
             // panelDB11
             // 
@@ -672,7 +674,7 @@
             // 
             this.pnl_1_2.Controls.Add(this.txtLoaiSP);
             this.pnl_1_2.Controls.Add(this.label2);
-            this.pnl_1_2.Location = new System.Drawing.Point(3, 139);
+            this.pnl_1_2.Location = new System.Drawing.Point(3, 78);
             this.pnl_1_2.Name = "pnl_1_2";
             this.pnl_1_2.Size = new System.Drawing.Size(541, 37);
             this.pnl_1_2.TabIndex = 3;
@@ -692,6 +694,7 @@
             this.txtLoaiSP.Name = "txtLoaiSP";
             this.txtLoaiSP.Size = new System.Drawing.Size(311, 29);
             this.txtLoaiSP.TabIndex = 1;
+            this.txtLoaiSP.SelectedIndexChanged += new System.EventHandler(this.txtLoaiSP_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -1169,9 +1172,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picL_ThongTin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picL_MoTa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picL_HinhAnh)).EndInit();
-            this.pnl_ThongTin.ResumeLayout(false);
             this.panelDB1.ResumeLayout(false);
             this.panelDB1.PerformLayout();
+            this.pnl_ThongTin.ResumeLayout(false);
             this.panelDB11.ResumeLayout(false);
             this.panelDB11.PerformLayout();
             this.panelDB10.ResumeLayout(false);
