@@ -257,7 +257,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select count (masp) as sl from CTHD C, hoadon H where H.nghd <= @dateto and nghd >= @datefrom " +
                 "and C.masp in(select ma_sp from sanpham  where ID_ngban = @id ) and C.sohd = H.sohd ";
             int sl = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+           // int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
         public static int CountSoSPDangBan(int ID)
@@ -274,7 +274,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select sum (trigia) as sl from CTHD where trangthai = 'da giao hang' and ngayhoanthanh <= @dateto and ngayhoanthanh >= @datefrom " +
                 "and masp in(select ma_sp from sanpham  where ID_ngban = @id )";
             int sl = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            //int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
 

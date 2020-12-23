@@ -25,11 +25,12 @@ namespace BuyGear
             this._ID_me = ID_me;
             InitializeComponent();
             bunifuPages1.PageIndex = 2;
-            loadDataHome(); 
+            loadDataHome(); bunifuPages1.PageIndex = 0;
+            this.picAvatar.Image = Account.Instance.getAvatar();
         }
         public void LoadDS()
         {
-            bunifuPages1.PageIndex = 1;
+            bunifuPages1.PageIndex = 2;
             pageDS.Show();
             pageDS.Controls.Clear();
             pageDS.Controls.Add(pnlDS);
@@ -47,7 +48,7 @@ namespace BuyGear
         }
         private void btnAddSP_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 0;
+            bunifuPages1.PageIndex = 1;
             Form_AddSanPham frm = new Form_AddSanPham(this)
             {
                 TopMost = true,
@@ -67,7 +68,7 @@ namespace BuyGear
         
         public void loadSanPham(string trangthai)
         {
-            bunifuPages1.PageIndex = 1;
+            bunifuPages1.PageIndex = 2;
             pageDS.Controls.Clear();
             pageDS.Controls.Add(pnlDS);
             pnlDS.Controls.Clear();
@@ -171,12 +172,14 @@ namespace BuyGear
                 dtFrom = new DateTime(1900, 1, 1);
                 dtTo = new DateTime(3000, 1, 1);
                 pnlSelectMonth.Visible = false;
+                pnlTrang_Sort.Visible = false;
             }
             else
             {
                 dtFrom = datePickFrom.Value.Date;
                 dtTo = datePickTo.Value.Date;
                 pnlSelectMonth.Visible = true;
+                pnlTrang_Sort.Visible = true;
             }
            
         }
@@ -191,7 +194,7 @@ namespace BuyGear
         }
         private void datePickTo_ValueChanged(object sender, EventArgs e)
         {
-            if(datePickTo.Value.Date<datePickFrom.Value.Date)
+            if(datePickTo.Value.Date< datePickFrom.Value.Date)
             {
                 datePickTo.Value = datePickFrom.Value.Date;
             }
@@ -280,7 +283,7 @@ namespace BuyGear
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 2;
+            bunifuPages1.PageIndex = 0;
             loadDataHome();
         }
         private void loadDataHome()

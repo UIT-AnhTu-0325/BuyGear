@@ -57,7 +57,7 @@
             this.gradientPanelDB1 = new GradientPanelDB();
             this.pageTab = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.picAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlPhone = new System.Windows.Forms.Panel();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -105,7 +105,13 @@
             this.txtOldPass = new System.Windows.Forms.TextBox();
             this.lblOldPass = new System.Windows.Forms.Label();
             this.pnlTextOldPass = new System.Windows.Forms.Panel();
+            this.bunifuShadowPanel2 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
             this.panelDB1 = new PanelDB();
+            this.bunifuShadowPanel3 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
+            this.picAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnThoats = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDoiMatKhau = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -113,11 +119,9 @@
             this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.gradientPanelDB1.SuspendLayout();
             this.pageTab.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.pnlPhone.SuspendLayout();
             this.pnlName.SuspendLayout();
             this.pnlSex.SuspendLayout();
@@ -132,6 +136,8 @@
             this.pnlNewPass.SuspendLayout();
             this.pnlOldPass.SuspendLayout();
             this.panelDB1.SuspendLayout();
+            this.bunifuShadowPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // gradientPanelDB1
@@ -139,6 +145,7 @@
             this.gradientPanelDB1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gradientPanelDB1.BackgroundImage")));
             this.gradientPanelDB1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gradientPanelDB1.Controls.Add(this.pageTab);
+            this.gradientPanelDB1.Controls.Add(this.bunifuShadowPanel2);
             this.gradientPanelDB1.Controls.Add(this.panelDB1);
             this.gradientPanelDB1.Controls.Add(this.bunifuButton5);
             this.gradientPanelDB1.Controls.Add(this.bunifuButton1);
@@ -160,7 +167,7 @@
             this.pageTab.AllowTransitions = true;
             this.pageTab.Controls.Add(this.tabPage3);
             this.pageTab.Controls.Add(this.tabPage4);
-            this.pageTab.Location = new System.Drawing.Point(377, 113);
+            this.pageTab.Location = new System.Drawing.Point(382, 116);
             this.pageTab.Multiline = true;
             this.pageTab.Name = "pageTab";
             this.pageTab.Page = this.tabPage3;
@@ -168,8 +175,8 @@
             this.pageTab.PageName = "tabPage3";
             this.pageTab.PageTitle = "tabPage3";
             this.pageTab.SelectedIndex = 0;
-            this.pageTab.Size = new System.Drawing.Size(896, 674);
-            this.pageTab.TabIndex = 18;
+            this.pageTab.Size = new System.Drawing.Size(735, 674);
+            this.pageTab.TabIndex = 20;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -191,7 +198,6 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.picAvatar);
             this.tabPage3.Controls.Add(this.pnlPhone);
             this.tabPage3.Controls.Add(this.pnlName);
             this.tabPage3.Controls.Add(this.pnlSex);
@@ -202,25 +208,22 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(888, 648);
+            this.tabPage3.Size = new System.Drawing.Size(727, 648);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // picAvatar
+            // button1
             // 
-            this.picAvatar.AllowFocused = false;
-            this.picAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picAvatar.BorderRadius = 60;
-            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
-            this.picAvatar.IsCircle = false;
-            this.picAvatar.Location = new System.Drawing.Point(531, 22);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(330, 300);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAvatar.TabIndex = 11;
-            this.picAvatar.TabStop = false;
-            this.picAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(600, 523);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Thay hình";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             // 
             // pnlPhone
             // 
@@ -411,7 +414,7 @@
             this.pnlTextEmail.Location = new System.Drawing.Point(150, 50);
             this.pnlTextEmail.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTextEmail.Name = "pnlTextEmail";
-            this.pnlTextEmail.Size = new System.Drawing.Size(297, 1);
+            this.pnlTextEmail.Size = new System.Drawing.Size(397, 1);
             this.pnlTextEmail.TabIndex = 0;
             // 
             // pnlBirth
@@ -686,7 +689,6 @@
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
             this.bunifuButton2.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton2.Click += new System.EventHandler(this.bunifuButton2_Click);
             // 
             // pnlAdress
             // 
@@ -741,7 +743,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(888, 648);
+            this.tabPage4.Size = new System.Drawing.Size(727, 648);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -809,7 +811,6 @@
             this.ckbHienMatKhau.Name = "ckbHienMatKhau";
             this.ckbHienMatKhau.Size = new System.Drawing.Size(20, 20);
             this.ckbHienMatKhau.TabIndex = 7;
-            this.ckbHienMatKhau.OnChange += new System.EventHandler(this.ckbHienMatKhau_OnChange);
             // 
             // lbConfirm
             // 
@@ -926,7 +927,6 @@
             this.bunifuButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton6.TextMarginLeft = 0;
             this.bunifuButton6.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton6.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // pnlNewPass
             // 
@@ -1020,9 +1020,21 @@
             this.pnlTextOldPass.Size = new System.Drawing.Size(180, 1);
             this.pnlTextOldPass.TabIndex = 0;
             // 
+            // bunifuShadowPanel2
+            // 
+            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(2152, 132);
+            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
+            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Empty;
+            this.bunifuShadowPanel2.ShadowDept = 2;
+            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(345, 536);
+            this.bunifuShadowPanel2.TabIndex = 19;
+            // 
             // panelDB1
             // 
             this.panelDB1.BackColor = System.Drawing.Color.White;
+            this.panelDB1.Controls.Add(this.bunifuShadowPanel3);
             this.panelDB1.Controls.Add(this.btnThoats);
             this.panelDB1.Controls.Add(this.bunifuButton4);
             this.panelDB1.Controls.Add(this.btnDoiMatKhau);
@@ -1031,6 +1043,72 @@
             this.panelDB1.Name = "panelDB1";
             this.panelDB1.Size = new System.Drawing.Size(218, 685);
             this.panelDB1.TabIndex = 15;
+            // 
+            // bunifuShadowPanel3
+            // 
+            this.bunifuShadowPanel3.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel3.Controls.Add(this.picAvatar);
+            this.bunifuShadowPanel3.Controls.Add(this.label2);
+            this.bunifuShadowPanel3.Controls.Add(this.label3);
+            this.bunifuShadowPanel3.Controls.Add(this.label4);
+            this.bunifuShadowPanel3.Location = new System.Drawing.Point(15, 15);
+            this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
+            this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.Empty;
+            this.bunifuShadowPanel3.ShadowDept = 2;
+            this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel3.Size = new System.Drawing.Size(193, 193);
+            this.bunifuShadowPanel3.TabIndex = 16;
+            // 
+            // picAvatar
+            // 
+            this.picAvatar.AllowFocused = false;
+            this.picAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picAvatar.BorderRadius = 45;
+            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
+            this.picAvatar.IsCircle = false;
+            this.picAvatar.Location = new System.Drawing.Point(46, 17);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(92, 93);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 11;
+            this.picAvatar.TabStop = false;
+            this.picAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.2F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(39, 128);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Welcome LamHong";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.2F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(44, 153);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Status :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.2F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(90, 153);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Online";
             // 
             // btnThoats
             // 
@@ -1133,7 +1211,7 @@
             this.bunifuButton4.IdleIconLeftImage = null;
             this.bunifuButton4.IdleIconRightImage = null;
             this.bunifuButton4.IndicateFocus = false;
-            this.bunifuButton4.Location = new System.Drawing.Point(13, 137);
+            this.bunifuButton4.Location = new System.Drawing.Point(12, 366);
             this.bunifuButton4.Name = "bunifuButton4";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties7.BorderRadius = 33;
@@ -1196,7 +1274,7 @@
             this.btnDoiMatKhau.IdleIconLeftImage = null;
             this.btnDoiMatKhau.IdleIconRightImage = null;
             this.btnDoiMatKhau.IndicateFocus = false;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(13, 76);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(12, 305);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties9.BorderRadius = 33;
@@ -1260,7 +1338,7 @@
             this.btnThongTin.IdleIconLeftImage = null;
             this.btnThongTin.IdleIconRightImage = null;
             this.btnThongTin.IndicateFocus = false;
-            this.btnThongTin.Location = new System.Drawing.Point(13, 16);
+            this.btnThongTin.Location = new System.Drawing.Point(12, 245);
             this.btnThongTin.Name = "btnThongTin";
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties11.BorderRadius = 33;
@@ -1427,18 +1505,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Cài đặt";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(662, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Thay hình";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form_Infor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1456,7 +1522,6 @@
             this.gradientPanelDB1.PerformLayout();
             this.pageTab.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.pnlPhone.ResumeLayout(false);
             this.pnlPhone.PerformLayout();
             this.pnlName.ResumeLayout(false);
@@ -1481,6 +1546,9 @@
             this.pnlOldPass.ResumeLayout(false);
             this.pnlOldPass.PerformLayout();
             this.panelDB1.ResumeLayout(false);
+            this.bunifuShadowPanel3.ResumeLayout(false);
+            this.bunifuShadowPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1495,8 +1563,15 @@
         private GradientPanelDB gradientPanelDB1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton5;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnThoats;
+        private Bunifu.UI.WinForms.BunifuPictureBox picAvatar;
+        private Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel bunifuShadowPanel2;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel bunifuShadowPanel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuPages pageTab;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Panel pnlPhone;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label lblPhone;
@@ -1524,13 +1599,18 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblAdress;
         private System.Windows.Forms.Panel pnlTextAdress;
+        public System.Windows.Forms.TabPage tabPage4;
+        public System.Windows.Forms.CheckBox chkChangePass;
         public System.Windows.Forms.Panel pnlChangePass;
         private System.Windows.Forms.Panel pnlRePass;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.Framework.UI.BunifuCheckbox ckbHienMatKhau;
         private System.Windows.Forms.Label lbConfirm;
         private System.Windows.Forms.TextBox txtConfirm;
         private System.Windows.Forms.Label lblRePass;
         private System.Windows.Forms.Panel pnlTextRePass;
         private System.Windows.Forms.Panel pnlOk;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton6;
         private System.Windows.Forms.Panel pnlNewPass;
         private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label lblNewPass;
@@ -1539,13 +1619,6 @@
         private System.Windows.Forms.TextBox txtOldPass;
         private System.Windows.Forms.Label lblOldPass;
         private System.Windows.Forms.Panel pnlTextOldPass;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton6;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.Framework.UI.BunifuCheckbox ckbHienMatKhau;
-        public System.Windows.Forms.TabPage tabPage4;
-        public System.Windows.Forms.CheckBox chkChangePass;
-        private Bunifu.UI.WinForms.BunifuPictureBox picAvatar;
-        private System.Windows.Forms.Button button1;
     }
 }
 
