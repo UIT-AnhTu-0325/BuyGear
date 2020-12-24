@@ -43,28 +43,9 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlChiTietRight = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlSanPhamLeft = new PanelDB();
-            this.pnlChiTietPicLeft = new PanelDB();
-            this.fpnlLeftTotal = new FlowPanelDB();
-            this.pnlSanPhamMainPicture = new PanelDB();
-            this.panelDB6 = new PanelDB();
-            this.pnlSanPhamNoMainPicture = new PanelDB();
-            this.panelDB8 = new PanelDB();
-            this.pnlBottomLeft = new PanelDB();
-            this.pnlHeadLoc = new PanelDB();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panelDB11 = new PanelDB();
-            this.bunifuRating6 = new Bunifu.Framework.UI.BunifuRating();
-            this.bunifuRating5 = new Bunifu.Framework.UI.BunifuRating();
-            this.bunifuRating4 = new Bunifu.Framework.UI.BunifuRating();
-            this.bunifuRating3 = new Bunifu.Framework.UI.BunifuRating();
-            this.bunifuRating2 = new Bunifu.Framework.UI.BunifuRating();
-            this.rate1 = new Bunifu.Framework.UI.BunifuRating();
-            this.lblSoNguoiVote = new System.Windows.Forms.Label();
-            this.lblNumberVote = new System.Windows.Forms.Label();
-            this.lblReviews = new System.Windows.Forms.Label();
-            this.pnlAboveReviews = new PanelDB();
+            this.panelDB3 = new PanelDB();
+            this.panelDB7 = new PanelDB();
+            this.pnlAboveGioiThieu = new PanelDB();
             this.fpnlThongTinSP = new FlowPanelDB();
             this.panelDB4 = new PanelDB();
             this.label9 = new System.Windows.Forms.Label();
@@ -76,43 +57,9 @@
             this.panelDB5 = new PanelDB();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.fpnlNhanXet = new FlowPanelDB();
-            this.panelDB9 = new PanelDB();
-            this.fpnlChiTietLeft = new FlowPanelDB();
-            this.panelDB3 = new PanelDB();
-            this.panelDB7 = new PanelDB();
-            this.pnlAboveGioiThieu = new PanelDB();
             this.pnlBottomRight = new PanelDB();
             this.panelDB13 = new PanelDB();
             this.fpnlSanPhamTuongTu = new FlowPanelDB();
-            this.pnlBelowSanPhamTuongTu = new PanelDB();
-            this.panelDB2 = new PanelDB();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pnlCTR_above = new PanelDB();
-            this.lblTenSanPham = new Bunifu.UI.WinForms.BunifuLabel();
-            this.panelDB1 = new PanelDB();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblGia = new Bunifu.UI.WinForms.BunifuLabel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.rateMain = new Bunifu.Framework.UI.BunifuRating();
-            this.picSanPhamMain = new System.Windows.Forms.PictureBox();
-            this.picAnh1 = new System.Windows.Forms.PictureBox();
-            this.picAnh2 = new System.Windows.Forms.PictureBox();
-            this.picAnh3 = new System.Windows.Forms.PictureBox();
-            this.btn1Star = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn2Star = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn3Star = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn4Star = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn5Star = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.voteBar1 = new Bunifu.UI.Winforms.BunifuProgressBar();
-            this.voteBar2 = new Bunifu.UI.Winforms.BunifuProgressBar();
-            this.voteBar3 = new Bunifu.UI.Winforms.BunifuProgressBar();
-            this.voteBar4 = new Bunifu.UI.Winforms.BunifuProgressBar();
-            this.voteBar5 = new Bunifu.UI.Winforms.BunifuProgressBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -120,35 +67,71 @@
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pnlBelowSanPhamTuongTu = new PanelDB();
+            this.panelDB2 = new PanelDB();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlCTR_above = new PanelDB();
             this.bunifuVScrollBar2 = new Bunifu.UI.WinForms.BunifuVScrollBar();
+            this.fpnlLeftTotal = new FlowPanelDB();
+            this.pnlSanPhamMainPicture = new PanelDB();
+            this.panelDB6 = new PanelDB();
+            this.picSanPhamMain = new System.Windows.Forms.PictureBox();
+            this.pnlSanPhamNoMainPicture = new PanelDB();
+            this.picAnh1 = new System.Windows.Forms.PictureBox();
+            this.picAnh2 = new System.Windows.Forms.PictureBox();
+            this.picAnh3 = new System.Windows.Forms.PictureBox();
+            this.panelDB8 = new PanelDB();
+            this.pnlBottomLeft = new PanelDB();
+            this.pnlHeadLoc = new PanelDB();
+            this.btn1Star = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn2Star = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn3Star = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn4Star = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn5Star = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panelDB11 = new PanelDB();
+            this.voteBar1 = new Bunifu.UI.Winforms.BunifuProgressBar();
+            this.voteBar2 = new Bunifu.UI.Winforms.BunifuProgressBar();
+            this.voteBar3 = new Bunifu.UI.Winforms.BunifuProgressBar();
+            this.voteBar4 = new Bunifu.UI.Winforms.BunifuProgressBar();
+            this.voteBar5 = new Bunifu.UI.Winforms.BunifuProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuRating6 = new Bunifu.Framework.UI.BunifuRating();
+            this.bunifuRating5 = new Bunifu.Framework.UI.BunifuRating();
+            this.bunifuRating4 = new Bunifu.Framework.UI.BunifuRating();
+            this.bunifuRating3 = new Bunifu.Framework.UI.BunifuRating();
+            this.bunifuRating2 = new Bunifu.Framework.UI.BunifuRating();
+            this.rate1 = new Bunifu.Framework.UI.BunifuRating();
+            this.lblSoNguoiVote = new System.Windows.Forms.Label();
+            this.lblNumberVote = new System.Windows.Forms.Label();
+            this.lblReviews = new System.Windows.Forms.Label();
+            this.pnlAboveReviews = new PanelDB();
+            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
+            this.fpnlNhanXet = new FlowPanelDB();
+            this.panelDB9 = new PanelDB();
+            this.lblTenSanPham = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnYeuThich = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panelDB1 = new PanelDB();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblGia = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnBackMain = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.rateMain = new Bunifu.Framework.UI.BunifuRating();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnlSanPhamLeft = new PanelDB();
+            this.pnlChiTietPicLeft = new PanelDB();
+            this.fpnlChiTietLeft = new FlowPanelDB();
             this.pnlChiTietRight.SuspendLayout();
-            this.pnlSanPhamLeft.SuspendLayout();
-            this.pnlChiTietPicLeft.SuspendLayout();
-            this.fpnlLeftTotal.SuspendLayout();
-            this.pnlSanPhamMainPicture.SuspendLayout();
-            this.panelDB6.SuspendLayout();
-            this.pnlSanPhamNoMainPicture.SuspendLayout();
-            this.pnlBottomLeft.SuspendLayout();
-            this.pnlHeadLoc.SuspendLayout();
-            this.panelDB11.SuspendLayout();
+            this.panelDB3.SuspendLayout();
             this.fpnlThongTinSP.SuspendLayout();
             this.panelDB4.SuspendLayout();
             this.panelDB5.SuspendLayout();
-            this.panelDB3.SuspendLayout();
             this.pnlBottomRight.SuspendLayout();
             this.fpnlSanPhamTuongTu.SuspendLayout();
-            this.pnlBelowSanPhamTuongTu.SuspendLayout();
-            this.pnlCTR_above.SuspendLayout();
-            this.panelDB1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSanPhamMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -156,8 +139,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            this.pnlBelowSanPhamTuongTu.SuspendLayout();
+            this.pnlCTR_above.SuspendLayout();
+            this.fpnlLeftTotal.SuspendLayout();
+            this.pnlSanPhamMainPicture.SuspendLayout();
+            this.panelDB6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSanPhamMain)).BeginInit();
+            this.pnlSanPhamNoMainPicture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh3)).BeginInit();
+            this.pnlBottomLeft.SuspendLayout();
+            this.pnlHeadLoc.SuspendLayout();
+            this.panelDB11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnYeuThich)).BeginInit();
+            this.panelDB1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackMain)).BeginInit();
+            this.pnlSanPhamLeft.SuspendLayout();
+            this.pnlChiTietPicLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlChiTietRight
@@ -173,252 +173,36 @@
             this.pnlChiTietRight.Size = new System.Drawing.Size(584, 700);
             this.pnlChiTietRight.TabIndex = 0;
             // 
-            // timer1
+            // panelDB3
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.panelDB3.BackColor = System.Drawing.Color.Transparent;
+            this.panelDB3.Controls.Add(this.panelDB7);
+            this.panelDB3.Controls.Add(this.pnlAboveGioiThieu);
+            this.panelDB3.Controls.Add(this.fpnlThongTinSP);
+            this.panelDB3.Controls.Add(this.pnlBottomRight);
+            this.panelDB3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDB3.Location = new System.Drawing.Point(0, 193);
+            this.panelDB3.Name = "panelDB3";
+            this.panelDB3.Size = new System.Drawing.Size(584, 507);
+            this.panelDB3.TabIndex = 12;
             // 
-            // pnlSanPhamLeft
+            // panelDB7
             // 
-            this.pnlSanPhamLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnlSanPhamLeft.Controls.Add(this.pnlChiTietPicLeft);
-            this.pnlSanPhamLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSanPhamLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlSanPhamLeft.Name = "pnlSanPhamLeft";
-            this.pnlSanPhamLeft.Size = new System.Drawing.Size(597, 700);
-            this.pnlSanPhamLeft.TabIndex = 6;
+            this.panelDB7.BackColor = System.Drawing.Color.White;
+            this.panelDB7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelDB7.Location = new System.Drawing.Point(0, 277);
+            this.panelDB7.Name = "panelDB7";
+            this.panelDB7.Size = new System.Drawing.Size(584, 5);
+            this.panelDB7.TabIndex = 15;
             // 
-            // pnlChiTietPicLeft
+            // pnlAboveGioiThieu
             // 
-            this.pnlChiTietPicLeft.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pnlChiTietPicLeft.Controls.Add(this.fpnlLeftTotal);
-            this.pnlChiTietPicLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlChiTietPicLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlChiTietPicLeft.Name = "pnlChiTietPicLeft";
-            this.pnlChiTietPicLeft.Size = new System.Drawing.Size(597, 700);
-            this.pnlChiTietPicLeft.TabIndex = 6;
-            // 
-            // fpnlLeftTotal
-            // 
-            this.fpnlLeftTotal.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fpnlLeftTotal.Controls.Add(this.pnlSanPhamMainPicture);
-            this.fpnlLeftTotal.Controls.Add(this.pnlBottomLeft);
-            this.fpnlLeftTotal.Controls.Add(this.fpnlNhanXet);
-            this.fpnlLeftTotal.Controls.Add(this.panelDB9);
-            this.fpnlLeftTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fpnlLeftTotal.Location = new System.Drawing.Point(0, 0);
-            this.fpnlLeftTotal.Name = "fpnlLeftTotal";
-            this.fpnlLeftTotal.Size = new System.Drawing.Size(597, 700);
-            this.fpnlLeftTotal.TabIndex = 3;
-            // 
-            // pnlSanPhamMainPicture
-            // 
-            this.pnlSanPhamMainPicture.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnlSanPhamMainPicture.Controls.Add(this.panelDB6);
-            this.pnlSanPhamMainPicture.Controls.Add(this.pnlSanPhamNoMainPicture);
-            this.pnlSanPhamMainPicture.Controls.Add(this.panelDB8);
-            this.pnlSanPhamMainPicture.Location = new System.Drawing.Point(3, 3);
-            this.pnlSanPhamMainPicture.Name = "pnlSanPhamMainPicture";
-            this.pnlSanPhamMainPicture.Size = new System.Drawing.Size(573, 413);
-            this.pnlSanPhamMainPicture.TabIndex = 2;
-            // 
-            // panelDB6
-            // 
-            this.panelDB6.BackColor = System.Drawing.Color.White;
-            this.panelDB6.Controls.Add(this.picSanPhamMain);
-            this.panelDB6.Location = new System.Drawing.Point(132, 50);
-            this.panelDB6.Name = "panelDB6";
-            this.panelDB6.Size = new System.Drawing.Size(425, 360);
-            this.panelDB6.TabIndex = 11;
-            // 
-            // pnlSanPhamNoMainPicture
-            // 
-            this.pnlSanPhamNoMainPicture.BackColor = System.Drawing.Color.White;
-            this.pnlSanPhamNoMainPicture.Controls.Add(this.picAnh1);
-            this.pnlSanPhamNoMainPicture.Controls.Add(this.picAnh2);
-            this.pnlSanPhamNoMainPicture.Controls.Add(this.picAnh3);
-            this.pnlSanPhamNoMainPicture.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSanPhamNoMainPicture.Location = new System.Drawing.Point(0, 50);
-            this.pnlSanPhamNoMainPicture.Name = "pnlSanPhamNoMainPicture";
-            this.pnlSanPhamNoMainPicture.Size = new System.Drawing.Size(106, 363);
-            this.pnlSanPhamNoMainPicture.TabIndex = 32;
-            // 
-            // panelDB8
-            // 
-            this.panelDB8.BackColor = System.Drawing.Color.White;
-            this.panelDB8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDB8.Location = new System.Drawing.Point(0, 0);
-            this.panelDB8.Name = "panelDB8";
-            this.panelDB8.Size = new System.Drawing.Size(573, 50);
-            this.panelDB8.TabIndex = 1;
-            this.panelDB8.TabStop = true;
-            // 
-            // pnlBottomLeft
-            // 
-            this.pnlBottomLeft.BackColor = System.Drawing.Color.White;
-            this.pnlBottomLeft.Controls.Add(this.pnlHeadLoc);
-            this.pnlBottomLeft.Controls.Add(this.panelDB11);
-            this.pnlBottomLeft.Controls.Add(this.pnlAboveReviews);
-            this.pnlBottomLeft.Controls.Add(this.bunifuVScrollBar1);
-            this.pnlBottomLeft.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlBottomLeft.Location = new System.Drawing.Point(3, 422);
-            this.pnlBottomLeft.Name = "pnlBottomLeft";
-            this.pnlBottomLeft.Size = new System.Drawing.Size(597, 242);
-            this.pnlBottomLeft.TabIndex = 3;
-            // 
-            // pnlHeadLoc
-            // 
-            this.pnlHeadLoc.Controls.Add(this.btn1Star);
-            this.pnlHeadLoc.Controls.Add(this.btn2Star);
-            this.pnlHeadLoc.Controls.Add(this.btn3Star);
-            this.pnlHeadLoc.Controls.Add(this.btn4Star);
-            this.pnlHeadLoc.Controls.Add(this.btn5Star);
-            this.pnlHeadLoc.Controls.Add(this.label6);
-            this.pnlHeadLoc.Controls.Add(this.bunifuButton4);
-            this.pnlHeadLoc.Controls.Add(this.bunifuButton3);
-            this.pnlHeadLoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeadLoc.Location = new System.Drawing.Point(0, 164);
-            this.pnlHeadLoc.Name = "pnlHeadLoc";
-            this.pnlHeadLoc.Size = new System.Drawing.Size(597, 53);
-            this.pnlHeadLoc.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(17, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 21);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Lọc theo:";
-            // 
-            // panelDB11
-            // 
-            this.panelDB11.Controls.Add(this.voteBar1);
-            this.panelDB11.Controls.Add(this.voteBar2);
-            this.panelDB11.Controls.Add(this.voteBar3);
-            this.panelDB11.Controls.Add(this.voteBar4);
-            this.panelDB11.Controls.Add(this.voteBar5);
-            this.panelDB11.Controls.Add(this.pictureBox1);
-            this.panelDB11.Controls.Add(this.bunifuRating6);
-            this.panelDB11.Controls.Add(this.bunifuRating5);
-            this.panelDB11.Controls.Add(this.bunifuRating4);
-            this.panelDB11.Controls.Add(this.bunifuRating3);
-            this.panelDB11.Controls.Add(this.bunifuRating2);
-            this.panelDB11.Controls.Add(this.rate1);
-            this.panelDB11.Controls.Add(this.lblSoNguoiVote);
-            this.panelDB11.Controls.Add(this.lblNumberVote);
-            this.panelDB11.Controls.Add(this.lblReviews);
-            this.panelDB11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDB11.Location = new System.Drawing.Point(0, 10);
-            this.panelDB11.Name = "panelDB11";
-            this.panelDB11.Size = new System.Drawing.Size(597, 154);
-            this.panelDB11.TabIndex = 14;
-            this.panelDB11.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDB11_Paint);
-            // 
-            // bunifuRating6
-            // 
-            this.bunifuRating6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRating6.ForeColor = System.Drawing.Color.Gold;
-            this.bunifuRating6.Location = new System.Drawing.Point(159, 126);
-            this.bunifuRating6.Name = "bunifuRating6";
-            this.bunifuRating6.Size = new System.Drawing.Size(62, 15);
-            this.bunifuRating6.TabIndex = 1;
-            this.bunifuRating6.Value = 1;
-            // 
-            // bunifuRating5
-            // 
-            this.bunifuRating5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRating5.ForeColor = System.Drawing.Color.Gold;
-            this.bunifuRating5.Location = new System.Drawing.Point(159, 100);
-            this.bunifuRating5.Name = "bunifuRating5";
-            this.bunifuRating5.Size = new System.Drawing.Size(62, 15);
-            this.bunifuRating5.TabIndex = 1;
-            this.bunifuRating5.Value = 2;
-            // 
-            // bunifuRating4
-            // 
-            this.bunifuRating4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRating4.ForeColor = System.Drawing.Color.Gold;
-            this.bunifuRating4.Location = new System.Drawing.Point(159, 75);
-            this.bunifuRating4.Name = "bunifuRating4";
-            this.bunifuRating4.Size = new System.Drawing.Size(62, 15);
-            this.bunifuRating4.TabIndex = 1;
-            this.bunifuRating4.Value = 3;
-            // 
-            // bunifuRating3
-            // 
-            this.bunifuRating3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRating3.ForeColor = System.Drawing.Color.Gold;
-            this.bunifuRating3.Location = new System.Drawing.Point(159, 51);
-            this.bunifuRating3.Name = "bunifuRating3";
-            this.bunifuRating3.Size = new System.Drawing.Size(62, 15);
-            this.bunifuRating3.TabIndex = 1;
-            this.bunifuRating3.Value = 4;
-            // 
-            // bunifuRating2
-            // 
-            this.bunifuRating2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRating2.ForeColor = System.Drawing.Color.Gold;
-            this.bunifuRating2.Location = new System.Drawing.Point(159, 24);
-            this.bunifuRating2.Name = "bunifuRating2";
-            this.bunifuRating2.Size = new System.Drawing.Size(62, 15);
-            this.bunifuRating2.TabIndex = 1;
-            this.bunifuRating2.Value = 5;
-            // 
-            // rate1
-            // 
-            this.rate1.BackColor = System.Drawing.Color.Transparent;
-            this.rate1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.rate1.Location = new System.Drawing.Point(18, 103);
-            this.rate1.Name = "rate1";
-            this.rate1.Size = new System.Drawing.Size(82, 20);
-            this.rate1.TabIndex = 1;
-            this.rate1.Value = 5;
-            // 
-            // lblSoNguoiVote
-            // 
-            this.lblSoNguoiVote.AutoSize = true;
-            this.lblSoNguoiVote.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblSoNguoiVote.ForeColor = System.Drawing.Color.Gray;
-            this.lblSoNguoiVote.Location = new System.Drawing.Point(25, 131);
-            this.lblSoNguoiVote.Name = "lblSoNguoiVote";
-            this.lblSoNguoiVote.Size = new System.Drawing.Size(68, 13);
-            this.lblSoNguoiVote.TabIndex = 0;
-            this.lblSoNguoiVote.Text = "60 nhận xét";
-            // 
-            // lblNumberVote
-            // 
-            this.lblNumberVote.AutoSize = true;
-            this.lblNumberVote.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold);
-            this.lblNumberVote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNumberVote.Location = new System.Drawing.Point(39, 58);
-            this.lblNumberVote.Name = "lblNumberVote";
-            this.lblNumberVote.Size = new System.Drawing.Size(46, 31);
-            this.lblNumberVote.TabIndex = 0;
-            this.lblNumberVote.Text = "4.9";
-            // 
-            // lblReviews
-            // 
-            this.lblReviews.AutoSize = true;
-            this.lblReviews.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold);
-            this.lblReviews.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(174)))));
-            this.lblReviews.Location = new System.Drawing.Point(12, 13);
-            this.lblReviews.Name = "lblReviews";
-            this.lblReviews.Size = new System.Drawing.Size(124, 31);
-            this.lblReviews.TabIndex = 0;
-            this.lblReviews.Text = "Nhận xét :";
-            // 
-            // pnlAboveReviews
-            // 
-            this.pnlAboveReviews.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlAboveReviews.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAboveReviews.Location = new System.Drawing.Point(0, 0);
-            this.pnlAboveReviews.Name = "pnlAboveReviews";
-            this.pnlAboveReviews.Size = new System.Drawing.Size(597, 10);
-            this.pnlAboveReviews.TabIndex = 13;
+            this.pnlAboveGioiThieu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlAboveGioiThieu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAboveGioiThieu.Location = new System.Drawing.Point(0, 0);
+            this.pnlAboveGioiThieu.Name = "pnlAboveGioiThieu";
+            this.pnlAboveGioiThieu.Size = new System.Drawing.Size(584, 5);
+            this.pnlAboveGioiThieu.TabIndex = 14;
             // 
             // fpnlThongTinSP
             // 
@@ -546,63 +330,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = resources.GetString("label7.Text");
             // 
-            // fpnlNhanXet
-            // 
-            this.fpnlNhanXet.AutoScroll = true;
-            this.fpnlNhanXet.BackColor = System.Drawing.Color.White;
-            this.fpnlNhanXet.Location = new System.Drawing.Point(3, 670);
-            this.fpnlNhanXet.Name = "fpnlNhanXet";
-            this.fpnlNhanXet.Size = new System.Drawing.Size(557, 659);
-            this.fpnlNhanXet.TabIndex = 16;
-            // 
-            // panelDB9
-            // 
-            this.panelDB9.BackColor = System.Drawing.Color.White;
-            this.panelDB9.Location = new System.Drawing.Point(3, 1335);
-            this.panelDB9.Name = "panelDB9";
-            this.panelDB9.Size = new System.Drawing.Size(540, 121);
-            this.panelDB9.TabIndex = 17;
-            // 
-            // fpnlChiTietLeft
-            // 
-            this.fpnlChiTietLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.fpnlChiTietLeft.Dock = System.Windows.Forms.DockStyle.Right;
-            this.fpnlChiTietLeft.Location = new System.Drawing.Point(597, 0);
-            this.fpnlChiTietLeft.Name = "fpnlChiTietLeft";
-            this.fpnlChiTietLeft.Size = new System.Drawing.Size(10, 700);
-            this.fpnlChiTietLeft.TabIndex = 5;
-            // 
-            // panelDB3
-            // 
-            this.panelDB3.BackColor = System.Drawing.Color.Transparent;
-            this.panelDB3.Controls.Add(this.panelDB7);
-            this.panelDB3.Controls.Add(this.pnlAboveGioiThieu);
-            this.panelDB3.Controls.Add(this.fpnlThongTinSP);
-            this.panelDB3.Controls.Add(this.pnlBottomRight);
-            this.panelDB3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDB3.Location = new System.Drawing.Point(0, 193);
-            this.panelDB3.Name = "panelDB3";
-            this.panelDB3.Size = new System.Drawing.Size(584, 507);
-            this.panelDB3.TabIndex = 12;
-            // 
-            // panelDB7
-            // 
-            this.panelDB7.BackColor = System.Drawing.Color.White;
-            this.panelDB7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDB7.Location = new System.Drawing.Point(0, 277);
-            this.panelDB7.Name = "panelDB7";
-            this.panelDB7.Size = new System.Drawing.Size(584, 5);
-            this.panelDB7.TabIndex = 15;
-            // 
-            // pnlAboveGioiThieu
-            // 
-            this.pnlAboveGioiThieu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlAboveGioiThieu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAboveGioiThieu.Location = new System.Drawing.Point(0, 0);
-            this.pnlAboveGioiThieu.Name = "pnlAboveGioiThieu";
-            this.pnlAboveGioiThieu.Size = new System.Drawing.Size(584, 5);
-            this.pnlAboveGioiThieu.TabIndex = 14;
-            // 
             // pnlBottomRight
             // 
             this.pnlBottomRight.BackColor = System.Drawing.Color.White;
@@ -641,6 +368,76 @@
             this.fpnlSanPhamTuongTu.Size = new System.Drawing.Size(831, 163);
             this.fpnlSanPhamTuongTu.TabIndex = 4;
             this.fpnlSanPhamTuongTu.WrapContents = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(137, 76);
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(146, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(137, 76);
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(289, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(137, 76);
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Location = new System.Drawing.Point(432, 3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(137, 76);
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
+            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox15.Location = new System.Drawing.Point(575, 3);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(137, 76);
+            this.pictureBox15.TabIndex = 0;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
+            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox16.Location = new System.Drawing.Point(718, 3);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(137, 76);
+            this.pictureBox16.TabIndex = 0;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox17.Location = new System.Drawing.Point(861, 3);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(137, 76);
+            this.pictureBox17.TabIndex = 0;
+            this.pictureBox17.TabStop = false;
             // 
             // pnlBelowSanPhamTuongTu
             // 
@@ -687,82 +484,77 @@
             this.pnlCTR_above.Size = new System.Drawing.Size(584, 193);
             this.pnlCTR_above.TabIndex = 11;
             // 
-            // lblTenSanPham
+            // bunifuVScrollBar2
             // 
-            this.lblTenSanPham.AutoEllipsis = false;
-            this.lblTenSanPham.AutoSize = false;
-            this.lblTenSanPham.CursorType = null;
-            this.lblTenSanPham.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTenSanPham.Location = new System.Drawing.Point(32, 61);
-            this.lblTenSanPham.Name = "lblTenSanPham";
-            this.lblTenSanPham.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTenSanPham.Size = new System.Drawing.Size(461, 51);
-            this.lblTenSanPham.TabIndex = 19;
-            this.lblTenSanPham.Text = "Tên sản phẩm nè mấy thèn ml";
-            this.lblTenSanPham.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblTenSanPham.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuVScrollBar2.AllowCursorChanges = true;
+            this.bunifuVScrollBar2.AllowHomeEndKeysDetection = false;
+            this.bunifuVScrollBar2.AllowIncrementalClickMoves = true;
+            this.bunifuVScrollBar2.AllowMouseDownEffects = true;
+            this.bunifuVScrollBar2.AllowMouseHoverEffects = true;
+            this.bunifuVScrollBar2.AllowScrollingAnimations = true;
+            this.bunifuVScrollBar2.AllowScrollKeysDetection = true;
+            this.bunifuVScrollBar2.AllowScrollOptionsMenu = true;
+            this.bunifuVScrollBar2.AllowShrinkingOnFocusLost = false;
+            this.bunifuVScrollBar2.BackgroundColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar2.BackgroundImage")));
+            this.bunifuVScrollBar2.BindingContainer = this.fpnlLeftTotal;
+            this.bunifuVScrollBar2.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar2.BorderRadius = 14;
+            this.bunifuVScrollBar2.BorderThickness = 1;
+            this.bunifuVScrollBar2.DurationBeforeShrink = 2000;
+            this.bunifuVScrollBar2.LargeChange = 10;
+            this.bunifuVScrollBar2.Location = new System.Drawing.Point(7, 80);
+            this.bunifuVScrollBar2.Maximum = 100;
+            this.bunifuVScrollBar2.Minimum = 0;
+            this.bunifuVScrollBar2.MinimumThumbLength = 18;
+            this.bunifuVScrollBar2.Name = "bunifuVScrollBar2";
+            this.bunifuVScrollBar2.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar2.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.bunifuVScrollBar2.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar2.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar2.ScrollBarColor = System.Drawing.Color.Silver;
+            this.bunifuVScrollBar2.ShrinkSizeLimit = 3;
+            this.bunifuVScrollBar2.Size = new System.Drawing.Size(0, 200);
+            this.bunifuVScrollBar2.SmallChange = 1;
+            this.bunifuVScrollBar2.TabIndex = 20;
+            this.bunifuVScrollBar2.ThumbColor = System.Drawing.Color.Gray;
+            this.bunifuVScrollBar2.ThumbLength = 19;
+            this.bunifuVScrollBar2.ThumbMargin = 1;
+            this.bunifuVScrollBar2.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
+            this.bunifuVScrollBar2.Value = 0;
             // 
-            // panelDB1
+            // fpnlLeftTotal
             // 
-            this.panelDB1.BackColor = System.Drawing.Color.Transparent;
-            this.panelDB1.Controls.Add(this.label2);
-            this.panelDB1.Controls.Add(this.lblGia);
-            this.panelDB1.Controls.Add(this.btnBackMain);
-            this.panelDB1.Controls.Add(this.label11);
-            this.panelDB1.Controls.Add(this.rateMain);
-            this.panelDB1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDB1.Location = new System.Drawing.Point(0, 0);
-            this.panelDB1.Name = "panelDB1";
-            this.panelDB1.Size = new System.Drawing.Size(584, 53);
-            this.panelDB1.TabIndex = 11;
+            this.fpnlLeftTotal.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.fpnlLeftTotal.Controls.Add(this.pnlSanPhamMainPicture);
+            this.fpnlLeftTotal.Controls.Add(this.pnlBottomLeft);
+            this.fpnlLeftTotal.Controls.Add(this.fpnlNhanXet);
+            this.fpnlLeftTotal.Controls.Add(this.panelDB9);
+            this.fpnlLeftTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fpnlLeftTotal.Location = new System.Drawing.Point(0, 0);
+            this.fpnlLeftTotal.Name = "fpnlLeftTotal";
+            this.fpnlLeftTotal.Size = new System.Drawing.Size(597, 700);
+            this.fpnlLeftTotal.TabIndex = 3;
             // 
-            // label2
+            // pnlSanPhamMainPicture
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(152)))), ((int)(((byte)(122)))));
-            this.label2.Location = new System.Drawing.Point(456, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 16);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "lblGiaGoc";
-            this.label2.Visible = false;
+            this.pnlSanPhamMainPicture.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlSanPhamMainPicture.Controls.Add(this.panelDB6);
+            this.pnlSanPhamMainPicture.Controls.Add(this.pnlSanPhamNoMainPicture);
+            this.pnlSanPhamMainPicture.Controls.Add(this.panelDB8);
+            this.pnlSanPhamMainPicture.Location = new System.Drawing.Point(3, 3);
+            this.pnlSanPhamMainPicture.Name = "pnlSanPhamMainPicture";
+            this.pnlSanPhamMainPicture.Size = new System.Drawing.Size(573, 413);
+            this.pnlSanPhamMainPicture.TabIndex = 2;
             // 
-            // lblGia
+            // panelDB6
             // 
-            this.lblGia.AutoEllipsis = false;
-            this.lblGia.CursorType = null;
-            this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.15F, System.Drawing.FontStyle.Bold);
-            this.lblGia.Location = new System.Drawing.Point(346, 20);
-            this.lblGia.Name = "lblGia";
-            this.lblGia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblGia.Size = new System.Drawing.Size(97, 19);
-            this.lblGia.TabIndex = 11;
-            this.lblGia.Text = "bunifuLabel2";
-            this.lblGia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblGia.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.DarkGray;
-            this.label11.Location = new System.Drawing.Point(226, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 17);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "255 reviews";
-            // 
-            // rateMain
-            // 
-            this.rateMain.BackColor = System.Drawing.Color.Transparent;
-            this.rateMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.rateMain.Location = new System.Drawing.Point(62, 11);
-            this.rateMain.Name = "rateMain";
-            this.rateMain.Size = new System.Drawing.Size(148, 30);
-            this.rateMain.TabIndex = 1;
-            this.rateMain.Value = 5;
+            this.panelDB6.BackColor = System.Drawing.Color.White;
+            this.panelDB6.Controls.Add(this.picSanPhamMain);
+            this.panelDB6.Location = new System.Drawing.Point(132, 50);
+            this.panelDB6.Name = "panelDB6";
+            this.panelDB6.Size = new System.Drawing.Size(425, 360);
+            this.panelDB6.TabIndex = 11;
             // 
             // picSanPhamMain
             // 
@@ -773,6 +565,18 @@
             this.picSanPhamMain.TabIndex = 0;
             this.picSanPhamMain.TabStop = false;
             this.picSanPhamMain.Click += new System.EventHandler(this.picMouseDemo_Click);
+            // 
+            // pnlSanPhamNoMainPicture
+            // 
+            this.pnlSanPhamNoMainPicture.BackColor = System.Drawing.Color.White;
+            this.pnlSanPhamNoMainPicture.Controls.Add(this.picAnh1);
+            this.pnlSanPhamNoMainPicture.Controls.Add(this.picAnh2);
+            this.pnlSanPhamNoMainPicture.Controls.Add(this.picAnh3);
+            this.pnlSanPhamNoMainPicture.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSanPhamNoMainPicture.Location = new System.Drawing.Point(0, 50);
+            this.pnlSanPhamNoMainPicture.Name = "pnlSanPhamNoMainPicture";
+            this.pnlSanPhamNoMainPicture.Size = new System.Drawing.Size(106, 363);
+            this.pnlSanPhamNoMainPicture.TabIndex = 32;
             // 
             // picAnh1
             // 
@@ -803,6 +607,45 @@
             this.picAnh3.Size = new System.Drawing.Size(106, 100);
             this.picAnh3.TabIndex = 0;
             this.picAnh3.TabStop = false;
+            // 
+            // panelDB8
+            // 
+            this.panelDB8.BackColor = System.Drawing.Color.White;
+            this.panelDB8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDB8.Location = new System.Drawing.Point(0, 0);
+            this.panelDB8.Name = "panelDB8";
+            this.panelDB8.Size = new System.Drawing.Size(573, 50);
+            this.panelDB8.TabIndex = 1;
+            this.panelDB8.TabStop = true;
+            // 
+            // pnlBottomLeft
+            // 
+            this.pnlBottomLeft.BackColor = System.Drawing.Color.White;
+            this.pnlBottomLeft.Controls.Add(this.pnlHeadLoc);
+            this.pnlBottomLeft.Controls.Add(this.panelDB11);
+            this.pnlBottomLeft.Controls.Add(this.pnlAboveReviews);
+            this.pnlBottomLeft.Controls.Add(this.bunifuVScrollBar1);
+            this.pnlBottomLeft.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlBottomLeft.Location = new System.Drawing.Point(3, 422);
+            this.pnlBottomLeft.Name = "pnlBottomLeft";
+            this.pnlBottomLeft.Size = new System.Drawing.Size(597, 242);
+            this.pnlBottomLeft.TabIndex = 3;
+            // 
+            // pnlHeadLoc
+            // 
+            this.pnlHeadLoc.Controls.Add(this.btn1Star);
+            this.pnlHeadLoc.Controls.Add(this.btn2Star);
+            this.pnlHeadLoc.Controls.Add(this.btn3Star);
+            this.pnlHeadLoc.Controls.Add(this.btn4Star);
+            this.pnlHeadLoc.Controls.Add(this.btn5Star);
+            this.pnlHeadLoc.Controls.Add(this.label6);
+            this.pnlHeadLoc.Controls.Add(this.bunifuButton4);
+            this.pnlHeadLoc.Controls.Add(this.bunifuButton3);
+            this.pnlHeadLoc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeadLoc.Location = new System.Drawing.Point(0, 164);
+            this.pnlHeadLoc.Name = "pnlHeadLoc";
+            this.pnlHeadLoc.Size = new System.Drawing.Size(597, 53);
+            this.pnlHeadLoc.TabIndex = 15;
             // 
             // btn1Star
             // 
@@ -984,6 +827,17 @@
             this.btn5Star.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5Star.Click += new System.EventHandler(this.btn5Star_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(17, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 21);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Lọc theo:";
+            // 
             // bunifuButton4
             // 
             this.bunifuButton4.AllowToggling = false;
@@ -1110,6 +964,30 @@
             this.bunifuButton3.TextMarginLeft = 0;
             this.bunifuButton3.UseDefaultRadiusAndThickness = true;
             // 
+            // panelDB11
+            // 
+            this.panelDB11.Controls.Add(this.voteBar1);
+            this.panelDB11.Controls.Add(this.voteBar2);
+            this.panelDB11.Controls.Add(this.voteBar3);
+            this.panelDB11.Controls.Add(this.voteBar4);
+            this.panelDB11.Controls.Add(this.voteBar5);
+            this.panelDB11.Controls.Add(this.pictureBox1);
+            this.panelDB11.Controls.Add(this.bunifuRating6);
+            this.panelDB11.Controls.Add(this.bunifuRating5);
+            this.panelDB11.Controls.Add(this.bunifuRating4);
+            this.panelDB11.Controls.Add(this.bunifuRating3);
+            this.panelDB11.Controls.Add(this.bunifuRating2);
+            this.panelDB11.Controls.Add(this.rate1);
+            this.panelDB11.Controls.Add(this.lblSoNguoiVote);
+            this.panelDB11.Controls.Add(this.lblNumberVote);
+            this.panelDB11.Controls.Add(this.lblReviews);
+            this.panelDB11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDB11.Location = new System.Drawing.Point(0, 10);
+            this.panelDB11.Name = "panelDB11";
+            this.panelDB11.Size = new System.Drawing.Size(597, 154);
+            this.panelDB11.TabIndex = 14;
+            this.panelDB11.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDB11_Paint);
+            // 
             // voteBar1
             // 
             this.voteBar1.Animation = 0;
@@ -1214,6 +1092,108 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // bunifuRating6
+            // 
+            this.bunifuRating6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRating6.ForeColor = System.Drawing.Color.Gold;
+            this.bunifuRating6.Location = new System.Drawing.Point(159, 126);
+            this.bunifuRating6.Name = "bunifuRating6";
+            this.bunifuRating6.Size = new System.Drawing.Size(62, 15);
+            this.bunifuRating6.TabIndex = 1;
+            this.bunifuRating6.Value = 1;
+            // 
+            // bunifuRating5
+            // 
+            this.bunifuRating5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRating5.ForeColor = System.Drawing.Color.Gold;
+            this.bunifuRating5.Location = new System.Drawing.Point(159, 100);
+            this.bunifuRating5.Name = "bunifuRating5";
+            this.bunifuRating5.Size = new System.Drawing.Size(62, 15);
+            this.bunifuRating5.TabIndex = 1;
+            this.bunifuRating5.Value = 2;
+            // 
+            // bunifuRating4
+            // 
+            this.bunifuRating4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRating4.ForeColor = System.Drawing.Color.Gold;
+            this.bunifuRating4.Location = new System.Drawing.Point(159, 75);
+            this.bunifuRating4.Name = "bunifuRating4";
+            this.bunifuRating4.Size = new System.Drawing.Size(62, 15);
+            this.bunifuRating4.TabIndex = 1;
+            this.bunifuRating4.Value = 3;
+            // 
+            // bunifuRating3
+            // 
+            this.bunifuRating3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRating3.ForeColor = System.Drawing.Color.Gold;
+            this.bunifuRating3.Location = new System.Drawing.Point(159, 51);
+            this.bunifuRating3.Name = "bunifuRating3";
+            this.bunifuRating3.Size = new System.Drawing.Size(62, 15);
+            this.bunifuRating3.TabIndex = 1;
+            this.bunifuRating3.Value = 4;
+            // 
+            // bunifuRating2
+            // 
+            this.bunifuRating2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRating2.ForeColor = System.Drawing.Color.Gold;
+            this.bunifuRating2.Location = new System.Drawing.Point(159, 24);
+            this.bunifuRating2.Name = "bunifuRating2";
+            this.bunifuRating2.Size = new System.Drawing.Size(62, 15);
+            this.bunifuRating2.TabIndex = 1;
+            this.bunifuRating2.Value = 5;
+            // 
+            // rate1
+            // 
+            this.rate1.BackColor = System.Drawing.Color.Transparent;
+            this.rate1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.rate1.Location = new System.Drawing.Point(18, 103);
+            this.rate1.Name = "rate1";
+            this.rate1.Size = new System.Drawing.Size(82, 20);
+            this.rate1.TabIndex = 1;
+            this.rate1.Value = 5;
+            // 
+            // lblSoNguoiVote
+            // 
+            this.lblSoNguoiVote.AutoSize = true;
+            this.lblSoNguoiVote.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblSoNguoiVote.ForeColor = System.Drawing.Color.Gray;
+            this.lblSoNguoiVote.Location = new System.Drawing.Point(25, 131);
+            this.lblSoNguoiVote.Name = "lblSoNguoiVote";
+            this.lblSoNguoiVote.Size = new System.Drawing.Size(68, 13);
+            this.lblSoNguoiVote.TabIndex = 0;
+            this.lblSoNguoiVote.Text = "60 nhận xét";
+            // 
+            // lblNumberVote
+            // 
+            this.lblNumberVote.AutoSize = true;
+            this.lblNumberVote.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold);
+            this.lblNumberVote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNumberVote.Location = new System.Drawing.Point(39, 58);
+            this.lblNumberVote.Name = "lblNumberVote";
+            this.lblNumberVote.Size = new System.Drawing.Size(46, 31);
+            this.lblNumberVote.TabIndex = 0;
+            this.lblNumberVote.Text = "4.9";
+            // 
+            // lblReviews
+            // 
+            this.lblReviews.AutoSize = true;
+            this.lblReviews.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold);
+            this.lblReviews.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(174)))));
+            this.lblReviews.Location = new System.Drawing.Point(12, 13);
+            this.lblReviews.Name = "lblReviews";
+            this.lblReviews.Size = new System.Drawing.Size(124, 31);
+            this.lblReviews.TabIndex = 0;
+            this.lblReviews.Text = "Nhận xét :";
+            // 
+            // pnlAboveReviews
+            // 
+            this.pnlAboveReviews.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlAboveReviews.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAboveReviews.Location = new System.Drawing.Point(0, 0);
+            this.pnlAboveReviews.Name = "pnlAboveReviews";
+            this.pnlAboveReviews.Size = new System.Drawing.Size(597, 10);
+            this.pnlAboveReviews.TabIndex = 13;
+            // 
             // bunifuVScrollBar1
             // 
             this.bunifuVScrollBar1.AllowCursorChanges = true;
@@ -1255,114 +1235,37 @@
             this.bunifuVScrollBar1.Value = 0;
             this.bunifuVScrollBar1.Scroll += new System.EventHandler<Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs>(this.bunifuVScrollBar1_Scroll);
             // 
-            // pictureBox7
+            // fpnlNhanXet
             // 
-            this.pictureBox7.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(137, 76);
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
+            this.fpnlNhanXet.AutoScroll = true;
+            this.fpnlNhanXet.BackColor = System.Drawing.Color.White;
+            this.fpnlNhanXet.Location = new System.Drawing.Point(3, 670);
+            this.fpnlNhanXet.Name = "fpnlNhanXet";
+            this.fpnlNhanXet.Size = new System.Drawing.Size(557, 659);
+            this.fpnlNhanXet.TabIndex = 16;
             // 
-            // pictureBox5
+            // panelDB9
             // 
-            this.pictureBox5.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(146, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(137, 76);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.panelDB9.BackColor = System.Drawing.Color.White;
+            this.panelDB9.Location = new System.Drawing.Point(3, 1335);
+            this.panelDB9.Name = "panelDB9";
+            this.panelDB9.Size = new System.Drawing.Size(540, 121);
+            this.panelDB9.TabIndex = 17;
             // 
-            // pictureBox6
+            // lblTenSanPham
             // 
-            this.pictureBox6.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(289, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(137, 76);
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(432, 3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(137, 76);
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
-            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox15.Location = new System.Drawing.Point(575, 3);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(137, 76);
-            this.pictureBox15.TabIndex = 0;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
-            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox16.Location = new System.Drawing.Point(718, 3);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(137, 76);
-            this.pictureBox16.TabIndex = 0;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackgroundImage = global::BuyGear.Properties.Resources.mh1;
-            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox17.Location = new System.Drawing.Point(861, 3);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(137, 76);
-            this.pictureBox17.TabIndex = 0;
-            this.pictureBox17.TabStop = false;
-            // 
-            // bunifuVScrollBar2
-            // 
-            this.bunifuVScrollBar2.AllowCursorChanges = true;
-            this.bunifuVScrollBar2.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar2.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar2.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar2.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar2.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar2.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar2.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar2.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar2.BackgroundColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar2.BackgroundImage")));
-            this.bunifuVScrollBar2.BindingContainer = this.fpnlLeftTotal;
-            this.bunifuVScrollBar2.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.BorderRadius = 14;
-            this.bunifuVScrollBar2.BorderThickness = 1;
-            this.bunifuVScrollBar2.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar2.LargeChange = 10;
-            this.bunifuVScrollBar2.Location = new System.Drawing.Point(7, 80);
-            this.bunifuVScrollBar2.Maximum = 100;
-            this.bunifuVScrollBar2.Minimum = 0;
-            this.bunifuVScrollBar2.MinimumThumbLength = 18;
-            this.bunifuVScrollBar2.Name = "bunifuVScrollBar2";
-            this.bunifuVScrollBar2.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar2.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.ScrollBarColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar2.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar2.Size = new System.Drawing.Size(0, 200);
-            this.bunifuVScrollBar2.SmallChange = 1;
-            this.bunifuVScrollBar2.TabIndex = 20;
-            this.bunifuVScrollBar2.ThumbColor = System.Drawing.Color.Gray;
-            this.bunifuVScrollBar2.ThumbLength = 19;
-            this.bunifuVScrollBar2.ThumbMargin = 1;
-            this.bunifuVScrollBar2.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.bunifuVScrollBar2.Value = 0;
+            this.lblTenSanPham.AutoEllipsis = false;
+            this.lblTenSanPham.AutoSize = false;
+            this.lblTenSanPham.CursorType = null;
+            this.lblTenSanPham.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTenSanPham.Location = new System.Drawing.Point(32, 61);
+            this.lblTenSanPham.Name = "lblTenSanPham";
+            this.lblTenSanPham.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTenSanPham.Size = new System.Drawing.Size(461, 51);
+            this.lblTenSanPham.TabIndex = 19;
+            this.lblTenSanPham.Text = "Tên sản phẩm nè mấy thèn ml";
+            this.lblTenSanPham.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTenSanPham.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnYeuThich
             // 
@@ -1510,6 +1413,46 @@
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
+            // panelDB1
+            // 
+            this.panelDB1.BackColor = System.Drawing.Color.Transparent;
+            this.panelDB1.Controls.Add(this.label2);
+            this.panelDB1.Controls.Add(this.lblGia);
+            this.panelDB1.Controls.Add(this.btnBackMain);
+            this.panelDB1.Controls.Add(this.label11);
+            this.panelDB1.Controls.Add(this.rateMain);
+            this.panelDB1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDB1.Location = new System.Drawing.Point(0, 0);
+            this.panelDB1.Name = "panelDB1";
+            this.panelDB1.Size = new System.Drawing.Size(584, 53);
+            this.panelDB1.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(152)))), ((int)(((byte)(122)))));
+            this.label2.Location = new System.Drawing.Point(456, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "lblGiaGoc";
+            this.label2.Visible = false;
+            // 
+            // lblGia
+            // 
+            this.lblGia.AutoEllipsis = false;
+            this.lblGia.CursorType = null;
+            this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.15F, System.Drawing.FontStyle.Bold);
+            this.lblGia.Location = new System.Drawing.Point(346, 20);
+            this.lblGia.Name = "lblGia";
+            this.lblGia.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblGia.Size = new System.Drawing.Size(97, 19);
+            this.lblGia.TabIndex = 11;
+            this.lblGia.Text = "bunifuLabel2";
+            this.lblGia.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblGia.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // btnBackMain
             // 
             this.btnBackMain.BackColor = System.Drawing.Color.Transparent;
@@ -1523,6 +1466,63 @@
             this.btnBackMain.TabStop = false;
             this.btnBackMain.Zoom = 10;
             this.btnBackMain.Click += new System.EventHandler(this.btnReturn_main_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.DarkGray;
+            this.label11.Location = new System.Drawing.Point(226, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 17);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "255 reviews";
+            // 
+            // rateMain
+            // 
+            this.rateMain.BackColor = System.Drawing.Color.Transparent;
+            this.rateMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.rateMain.Location = new System.Drawing.Point(62, 11);
+            this.rateMain.Name = "rateMain";
+            this.rateMain.Size = new System.Drawing.Size(148, 30);
+            this.rateMain.TabIndex = 1;
+            this.rateMain.Value = 5;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pnlSanPhamLeft
+            // 
+            this.pnlSanPhamLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlSanPhamLeft.Controls.Add(this.pnlChiTietPicLeft);
+            this.pnlSanPhamLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSanPhamLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlSanPhamLeft.Name = "pnlSanPhamLeft";
+            this.pnlSanPhamLeft.Size = new System.Drawing.Size(597, 700);
+            this.pnlSanPhamLeft.TabIndex = 6;
+            // 
+            // pnlChiTietPicLeft
+            // 
+            this.pnlChiTietPicLeft.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnlChiTietPicLeft.Controls.Add(this.fpnlLeftTotal);
+            this.pnlChiTietPicLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChiTietPicLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlChiTietPicLeft.Name = "pnlChiTietPicLeft";
+            this.pnlChiTietPicLeft.Size = new System.Drawing.Size(597, 700);
+            this.pnlChiTietPicLeft.TabIndex = 6;
+            // 
+            // fpnlChiTietLeft
+            // 
+            this.fpnlChiTietLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.fpnlChiTietLeft.Dock = System.Windows.Forms.DockStyle.Right;
+            this.fpnlChiTietLeft.Location = new System.Drawing.Point(597, 0);
+            this.fpnlChiTietLeft.Name = "fpnlChiTietLeft";
+            this.fpnlChiTietLeft.Size = new System.Drawing.Size(10, 700);
+            this.fpnlChiTietLeft.TabIndex = 5;
             // 
             // Form_SanPham
             // 
@@ -1543,34 +1543,14 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form_SanPham_Load);
             this.pnlChiTietRight.ResumeLayout(false);
-            this.pnlSanPhamLeft.ResumeLayout(false);
-            this.pnlChiTietPicLeft.ResumeLayout(false);
-            this.fpnlLeftTotal.ResumeLayout(false);
-            this.pnlSanPhamMainPicture.ResumeLayout(false);
-            this.panelDB6.ResumeLayout(false);
-            this.pnlSanPhamNoMainPicture.ResumeLayout(false);
-            this.pnlBottomLeft.ResumeLayout(false);
-            this.pnlHeadLoc.ResumeLayout(false);
-            this.pnlHeadLoc.PerformLayout();
-            this.panelDB11.ResumeLayout(false);
-            this.panelDB11.PerformLayout();
+            this.panelDB3.ResumeLayout(false);
             this.fpnlThongTinSP.ResumeLayout(false);
             this.panelDB4.ResumeLayout(false);
             this.panelDB4.PerformLayout();
             this.panelDB5.ResumeLayout(false);
             this.panelDB5.PerformLayout();
-            this.panelDB3.ResumeLayout(false);
             this.pnlBottomRight.ResumeLayout(false);
             this.fpnlSanPhamTuongTu.ResumeLayout(false);
-            this.pnlBelowSanPhamTuongTu.ResumeLayout(false);
-            this.pnlCTR_above.ResumeLayout(false);
-            this.panelDB1.ResumeLayout(false);
-            this.panelDB1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSanPhamMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAnh3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -1578,8 +1558,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            this.pnlBelowSanPhamTuongTu.ResumeLayout(false);
+            this.pnlCTR_above.ResumeLayout(false);
+            this.fpnlLeftTotal.ResumeLayout(false);
+            this.pnlSanPhamMainPicture.ResumeLayout(false);
+            this.panelDB6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picSanPhamMain)).EndInit();
+            this.pnlSanPhamNoMainPicture.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAnh3)).EndInit();
+            this.pnlBottomLeft.ResumeLayout(false);
+            this.pnlHeadLoc.ResumeLayout(false);
+            this.pnlHeadLoc.PerformLayout();
+            this.panelDB11.ResumeLayout(false);
+            this.panelDB11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnYeuThich)).EndInit();
+            this.panelDB1.ResumeLayout(false);
+            this.panelDB1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackMain)).EndInit();
+            this.pnlSanPhamLeft.ResumeLayout(false);
+            this.pnlChiTietPicLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1605,8 +1605,6 @@
         private FlowPanelDB fpnlThongTinSP;
         private PanelDB panelDB4;
         private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.Framework.UI.BunifuImageButton btnBackMain;
         private System.Windows.Forms.Timer timer1;
         private PanelDB pnlSanPhamLeft;
@@ -1668,6 +1666,8 @@
         private Bunifu.UI.WinForms.BunifuLabel lblGia;
         private PanelDB panelDB2;
         private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar2;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }
 }
 

@@ -51,12 +51,24 @@
             this.rdoKhong = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.rdoCo = new System.Windows.Forms.RadioButton();
+            this.picName = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnlSelect.SuspendLayout();
             this.pnlSex.SuspendLayout();
             this.pnlAdress.SuspendLayout();
             this.pnlName.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSelect
@@ -78,13 +90,13 @@
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExit.ForeColor = System.Drawing.Color.Navy;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(254, 15);
+            this.btnExit.Location = new System.Drawing.Point(254, 23);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(142, 88);
+            this.btnExit.Size = new System.Drawing.Size(142, 80);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "   Thoát";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,7 +113,7 @@
             this.btnDangKy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangKy.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDangKy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDangKy.ForeColor = System.Drawing.Color.Navy;
             this.btnDangKy.Image = ((System.Drawing.Image)(resources.GetObject("btnDangKy.Image")));
             this.btnDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangKy.Location = new System.Drawing.Point(28, 15);
@@ -117,7 +129,7 @@
             // cboxDiaChi
             // 
             this.cboxDiaChi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboxDiaChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.cboxDiaChi.BackColor = System.Drawing.Color.Aqua;
             this.cboxDiaChi.DropDownHeight = 80;
             this.cboxDiaChi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxDiaChi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -337,6 +349,7 @@
             // pnlSex
             // 
             this.pnlSex.BackColor = System.Drawing.Color.White;
+            this.pnlSex.Controls.Add(this.pictureBox1);
             this.pnlSex.Controls.Add(this.rdoCongTy);
             this.pnlSex.Controls.Add(this.lblSex);
             this.pnlSex.Controls.Add(this.rdoCaNhan);
@@ -350,7 +363,7 @@
             // 
             this.rdoCongTy.AutoSize = true;
             this.rdoCongTy.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdoCongTy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rdoCongTy.ForeColor = System.Drawing.Color.Navy;
             this.rdoCongTy.Location = new System.Drawing.Point(246, 24);
             this.rdoCongTy.Margin = new System.Windows.Forms.Padding(2);
             this.rdoCongTy.Name = "rdoCongTy";
@@ -365,7 +378,7 @@
             // 
             this.lblSex.AutoSize = true;
             this.lblSex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblSex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSex.ForeColor = System.Drawing.Color.Navy;
             this.lblSex.Location = new System.Drawing.Point(61, 28);
             this.lblSex.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSex.Name = "lblSex";
@@ -377,7 +390,7 @@
             // 
             this.rdoCaNhan.AutoSize = true;
             this.rdoCaNhan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdoCaNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rdoCaNhan.ForeColor = System.Drawing.Color.Navy;
             this.rdoCaNhan.Location = new System.Drawing.Point(150, 25);
             this.rdoCaNhan.Margin = new System.Windows.Forms.Padding(2);
             this.rdoCaNhan.Name = "rdoCaNhan";
@@ -391,6 +404,7 @@
             // pnlAdress
             // 
             this.pnlAdress.BackColor = System.Drawing.Color.White;
+            this.pnlAdress.Controls.Add(this.pictureBox3);
             this.pnlAdress.Controls.Add(this.lblAdress);
             this.pnlAdress.Controls.Add(this.cboxDiaChi);
             this.pnlAdress.Location = new System.Drawing.Point(77, 344);
@@ -403,7 +417,7 @@
             // 
             this.lblAdress.AutoSize = true;
             this.lblAdress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblAdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblAdress.ForeColor = System.Drawing.Color.Navy;
             this.lblAdress.Location = new System.Drawing.Point(61, 28);
             this.lblAdress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdress.Name = "lblAdress";
@@ -414,6 +428,7 @@
             // pnlName
             // 
             this.pnlName.BackColor = System.Drawing.Color.White;
+            this.pnlName.Controls.Add(this.picName);
             this.pnlName.Controls.Add(this.txtTenCH);
             this.pnlName.Controls.Add(this.lblName);
             this.pnlName.Controls.Add(this.pnlTextName);
@@ -428,7 +443,7 @@
             this.txtTenCH.BackColor = System.Drawing.Color.White;
             this.txtTenCH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenCH.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenCH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtTenCH.ForeColor = System.Drawing.Color.Navy;
             this.txtTenCH.Location = new System.Drawing.Point(185, 28);
             this.txtTenCH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenCH.Name = "txtTenCH";
@@ -440,7 +455,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblName.ForeColor = System.Drawing.Color.Navy;
             this.lblName.Location = new System.Drawing.Point(61, 28);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
@@ -450,7 +465,7 @@
             // 
             // pnlTextName
             // 
-            this.pnlTextName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlTextName.BackColor = System.Drawing.Color.Navy;
             this.pnlTextName.Location = new System.Drawing.Point(185, 50);
             this.pnlTextName.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTextName.Name = "pnlTextName";
@@ -461,7 +476,7 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblHeader.ForeColor = System.Drawing.Color.Navy;
             this.lblHeader.Location = new System.Drawing.Point(227, 35);
             this.lblHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHeader.Name = "lblHeader";
@@ -472,6 +487,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.chkDongY);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(77, 429);
@@ -484,7 +500,7 @@
             // 
             this.chkDongY.AutoSize = true;
             this.chkDongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkDongY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.chkDongY.ForeColor = System.Drawing.Color.Navy;
             this.chkDongY.Location = new System.Drawing.Point(156, 35);
             this.chkDongY.Margin = new System.Windows.Forms.Padding(2);
             this.chkDongY.Name = "chkDongY";
@@ -498,7 +514,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(62, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -509,6 +525,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.rdoKhong);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.rdoCo);
@@ -522,7 +539,7 @@
             // 
             this.rdoKhong.AutoSize = true;
             this.rdoKhong.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdoKhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rdoKhong.ForeColor = System.Drawing.Color.Navy;
             this.rdoKhong.Location = new System.Drawing.Point(246, 41);
             this.rdoKhong.Margin = new System.Windows.Forms.Padding(2);
             this.rdoKhong.Name = "rdoKhong";
@@ -537,7 +554,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(61, 13);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -549,7 +566,7 @@
             // 
             this.rdoCo.AutoSize = true;
             this.rdoCo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdoCo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rdoCo.ForeColor = System.Drawing.Color.Navy;
             this.rdoCo.Location = new System.Drawing.Point(150, 41);
             this.rdoCo.Margin = new System.Windows.Forms.Padding(2);
             this.rdoCo.Name = "rdoCo";
@@ -560,12 +577,79 @@
             this.rdoCo.UseVisualStyleBackColor = true;
             this.rdoCo.CheckedChanged += new System.EventHandler(this.rdoCaNhan_CheckedChanged);
             // 
+            // picName
+            // 
+            this.picName.Image = ((System.Drawing.Image)(resources.GetObject("picName.Image")));
+            this.picName.Location = new System.Drawing.Point(4, 14);
+            this.picName.Margin = new System.Windows.Forms.Padding(2);
+            this.picName.Name = "picName";
+            this.picName.Size = new System.Drawing.Size(54, 49);
+            this.picName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picName.TabIndex = 4;
+            this.picName.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(4, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 49);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 14);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(54, 49);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(4, 7);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(54, 49);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(121, 11);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(113, 73);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
             // Form_DKBH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(621, 647);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlSelect);
@@ -590,6 +674,12 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,5 +709,11 @@
         public System.Windows.Forms.CheckBox chkDongY;
         public System.Windows.Forms.RadioButton rdoKhong;
         public System.Windows.Forms.RadioButton rdoCo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picName;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

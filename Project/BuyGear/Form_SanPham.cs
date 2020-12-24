@@ -158,13 +158,7 @@ namespace BuyGear
         }
 
         #region HOAI
-        Form_Admin grandparent;
-        public Form_SanPham(string masp, Form_Admin grandparent)
-        {
-            this.grandparent = grandparent;
-            InitializeComponent();
-            this._masp = masp;
-        }
+        Form_Admin2 grandparent;
         #endregion
 
         private void bunifuButton1_Click(object sender, EventArgs e)
@@ -408,5 +402,21 @@ namespace BuyGear
                 btnYeuThich.Image = BuyGear.Properties.Resources.love2;
             }
         }
+        #region HOAI
+        int c = 0;
+        public Form_SanPham(string masp, Form_Admin2 grandparent)
+        {
+            this.grandparent = grandparent;
+            InitializeComponent();
+            this._masp = masp;
+        }
+        public Form_SanPham(string masp, Form_Admin2 grandparent, int x)
+        {
+            this.grandparent = grandparent;
+            InitializeComponent();
+            this._masp = masp;
+            c = 1;
+        }
+        #endregion
     }
 }

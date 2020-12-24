@@ -39,7 +39,7 @@ namespace BuyGear
                 Account.Instance.userName = txtUsername.Text;
                 Account.Instance.passWord = txtPass.Text;
                 this.Hide();
-                Form_Admin f = new Form_Admin();
+                Form_Admin2 f = new Form_Admin2();
                 f.ShowDialog();
                 this.Show();
             }

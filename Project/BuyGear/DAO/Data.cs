@@ -236,12 +236,12 @@ namespace BuyGear.DAO
 
         public DataTable GetTaiKhoan()
         {
-            return Data.instance.ExcuteQuery("select a.id as 'ID', i.username as 'Username', i.thu as N'Thu' , i.chi as N'Chi', i.isduocban as N'Quyền được bán', i.isactive as N'Quyền hoạt động' from dbo.infor as i, dbo.account as a where a.username = i.username and a.type = 0");
+            return Data.instance.ExcuteQuery("select a.id , i.username , i.thu , i.chi, i.isduocban, i.isactive from dbo.infor as i, dbo.account as a where a.username = i.username and a.type = 0");
         }
 
         public DataTable GetKiemDuyet()
         {
-            return Data.instance.ExcuteQuery("select ID_ngban as N'ID người bán', ma_sp N'Mã sản phẩm', soluong as N'Số lượng', gia as N'Giá', thoigian as N'Thời gian', trangthaikiemduyet as N'Trạng thái' from sanpham");
+            return Data.instance.ExcuteQuery("select ID_ngban, ma_sp, soluong, gia, thoigian, trangthaikiemduyet from sanpham");
         }
 
         public void CapNhatQuyenTaiKhoan(DataGridView d)
@@ -267,6 +267,44 @@ namespace BuyGear.DAO
                 string ma_sp = d.Rows[i].Cells[1].Value.ToString();
                 Data.instance.ExcuteQuery("update SanPham set trangthaikiemduyet = N'" + trangthai + "' where ma_sp = N'" + ma_sp + "'");
             }
+        }
+
+
+
+        public void CapNhatQuyenHD(string username, string isactive)
+        {
+            Data.instance.ExcuteQuery("update infor set isactive = N'" + isactive + "' where username = N'" + username + "'");
+        }
+        public void XoaQuyenBH()
+        {
+            Data.Instance.ExcuteQuery("delete from TTCH where id = " + Account.Instance.id);
+            Data.Instance.ExcuteQuery("update infor set isduocban = N'" + "khong" + "' where username = N'" + Account.Instance.userName + "'");
+        }
+        public void CapNhatQuyenBH()
+        {
+            Data.Instance.ExcuteQuery("update infor set isduocban = N'" + "co" + "' where username = N'" + Account.Instance.userName + "'");
+        }
+        public void CapNhatTrangThaiSP(string trangthai, string ma_sp)
+        {
+            Data.instance.ExcuteQuery("update SanPham set trangthaikiemduyet = N'" + trangthai + "' where ma_sp = N'" + ma_sp + "'");
+        }
+        public string[] LoadSoLuong()
+        {
+            string[] str = new string[4];
+            str[0] = Data.instance.ExcuteQuery("select count(*) from dbo.infor as i, dbo.account as a where a.username = i.username and a.type = 0").Rows[0][0].ToString();
+            str[1] = Data.instance.ExcuteQuery("select count(*) from dbo.infor as i, dbo.account as a where a.username = i.username and a.type = 0 and isduocban = N'cho xac nhan'").Rows[0][0].ToString();
+            str[2] = Data.instance.ExcuteQuery("select count(*) from sanpham where trangthaikiemduyet = N'cho xac nhan'").Rows[0][0].ToString();
+            str[3] = Data.instance.ExcuteQuery("select count(*) from sanpham as s, cthd as c, hoadon as h where h.sohd = c.sohd and c.masp = s.ma_sp").Rows[0][0].ToString();
+            return str;
+        }
+
+        public DataTable loadSlLoaiSP(string loai)
+        {
+            return Data.instance.ExcuteQuery("select sum(ct.sl) from sanpham as sp, CTHD as ct where sp.ma_sp = ct.masp and ct.trangthai = N'da giao hang' and sp.loaisp = N'" + loai + "'");
+        }
+        public DataTable loadTop(string str)
+        {
+            return Data.instance.ExcuteQuery("select top(3) with ties a.id,a.username,i.isactive,i.isduocban from infor as i, account as a where a.username = i.username order by i." + str + " desc ");
         }
         #endregion
 

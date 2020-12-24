@@ -568,6 +568,10 @@ namespace BuyGear
             }
         }
 
+        private void fpnlChiTiet1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

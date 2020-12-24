@@ -34,76 +34,76 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.Core.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPages">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
-      <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -149,6 +149,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -185,11 +186,11 @@
     <Compile Include="Form_AddSanPham.Designer.cs">
       <DependentUpon>Form_AddSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Admin.cs">
+    <Compile Include="Form_Admin2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Admin.Designer.cs">
-      <DependentUpon>Form_Admin.cs</DependentUpon>
+    <Compile Include="Form_Admin2.Designer.cs">
+      <DependentUpon>Form_Admin2.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_BanHang.cs">
       <SubType>Form</SubType>
@@ -215,6 +216,12 @@
     <Compile Include="Form_GioHang.Designer.cs">
       <DependentUpon>Form_GioHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Infor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Infor2.Designer.cs">
+      <DependentUpon>Form_Infor2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_MuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +233,12 @@
     </Compile>
     <Compile Include="Form_NhanXet.Designer.cs">
       <DependentUpon>Form_NhanXet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Setting.Designer.cs">
+      <DependentUpon>Form_Setting.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_ThanhToanThanhCong.cs">
       <SubType>Form</SubType>
@@ -288,6 +301,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBanHang.Designer.cs">
+      <DependentUpon>ucBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDuyetSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDuyetSP.Designer.cs">
+      <DependentUpon>ucDuyetSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTaiKhoan.Designer.cs">
+      <DependentUpon>ucTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="uc\ucLoading.cs">
       <SubType>UserControl</SubType>
@@ -376,8 +407,8 @@
     <EmbeddedResource Include="Form_AddSanPham.resx">
       <DependentUpon>Form_AddSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Admin.resx">
-      <DependentUpon>Form_Admin.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Admin2.resx">
+      <DependentUpon>Form_Admin2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_BanHang.resx">
       <DependentUpon>Form_BanHang.cs</DependentUpon>
@@ -390,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_GioHang.resx">
       <DependentUpon>Form_GioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Infor2.resx">
+      <DependentUpon>Form_Infor2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
@@ -412,6 +446,9 @@
     <EmbeddedResource Include="Form_SanPham.resx">
       <DependentUpon>Form_SanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Setting.resx">
+      <DependentUpon>Form_Setting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_ThanhToanThanhCong.resx">
       <DependentUpon>Form_ThanhToanThanhCong.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +462,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBanHang.resx">
+      <DependentUpon>ucBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDuyetSP.resx">
+      <DependentUpon>ucDuyetSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTaiKhoan.resx">
+      <DependentUpon>ucTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc\ucLoading.resx">
       <DependentUpon>ucLoading.cs</DependentUpon>
@@ -484,20 +530,45 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Image\1.png" />
+    <Content Include="Image\120432393_2608457889406826_5564424658962382122_n.png" />
+    <Content Include="Image\2.png" />
+    <Content Include="Image\3.png" />
+    <Content Include="Image\4.png" />
+    <Content Include="Image\5.png" />
+    <Content Include="Image\account.png" />
     <Content Include="Image\address.png" />
+    <Content Include="Image\avatar.png" />
+    <Content Include="Image\avatar2.png" />
     <Content Include="Image\B.png" />
     <Content Include="Image\birthday.png" />
+    <Content Include="Image\caidat.png" />
     <Content Include="Image\capnhat.png" />
+    <Content Include="Image\chi.png" />
+    <Content Include="Image\chichi.png" />
+    <Content Include="Image\cuahang.png" />
+    <Content Include="Image\d.png" />
     <Content Include="Image\dangky.png" />
+    <Content Include="Image\dangkyad.png" />
     <Content Include="Image\dangnhap.png" />
     <Content Include="Image\dangnhap2.png" />
     <Content Include="Image\dangnhap3.png" />
+    <Content Include="Image\dangxuatad.png" />
+    <Content Include="Image\daux.png" />
     <Content Include="Image\diachi.png" />
+    <Content Include="Image\doanhthu.png" />
+    <Content Include="Image\dongy.png" />
+    <Content Include="Image\dongy2.png" />
+    <Content Include="Image\down.png" />
+    <Content Include="Image\duyetsp.png" />
     <Content Include="Image\email.png" />
     <Content Include="Image\exit.png" />
     <Content Include="Image\female.png" />
+    <Content Include="Image\find.png" />
     <Content Include="Image\gioitinh.png" />
+    <Content Include="Image\history.png" />
     <Content Include="Image\hoten.png" />
+    <Content Include="Image\huy.png" />
     <Content Include="Image\icons8_contact_details_30px.png" />
     <Content Include="Image\icons8_contact_details_80px_3.png" />
     <Content Include="Image\icons8_exit_100px.png" />
@@ -512,21 +583,38 @@
     <Content Include="Image\InMain\searchIcon.png" />
     <Content Include="Image\InMain\storage.png" />
     <Content Include="Image\InMain\usb.png" />
+    <Content Include="Image\link.png" />
+    <Content Include="Image\ls.png" />
     <Content Include="Image\mail.png" />
     <Content Include="Image\male.png" />
+    <Content Include="Image\management.png" />
     <Content Include="Image\matkhau.png" />
     <Content Include="Image\matkhau2.png" />
     <Content Include="Image\matkhau3.png" />
+    <Content Include="Image\menu.png" />
     <Content Include="Image\name.png" />
     <Content Include="Image\ngaysinh.png" />
+    <Content Include="Image\nguoiban.png" />
     <Content Include="Image\ok.png" />
+    <Content Include="Image\per.png" />
     <Content Include="Image\phone.png" />
+    <Content Include="Image\product.png" />
     <Content Include="Image\profile.png" />
+    <Content Include="Image\quanly.png" />
     <Content Include="Image\redcircle.png" />
     <Content Include="Image\sdt.png" />
     <Content Include="Image\sexual.png" />
+    <Content Include="Image\sign_out.png" />
+    <Content Include="Image\store.png" />
     <Content Include="Image\tentaikhoan.png" />
     <Content Include="Image\thongtin.png" />
+    <Content Include="Image\thu.png" />
+    <Content Include="Image\timkiem.png" />
+    <Content Include="Image\tk.png" />
+    <Content Include="Image\trash.png" />
+    <Content Include="Image\ttch.png" />
+    <Content Include="Image\tuchoi.png" />
+    <Content Include="Image\up.png" />
     <Content Include="Image\Update.png" />
     <Content Include="Image\update2.png" />
     <Content Include="Image\x.png" />
@@ -583,6 +671,7 @@
     <None Include="Resources\B.dashboard.png" />
     <None Include="Resources\B.hienban.png" />
     <None Include="Resources\B.order.png" />
+    <Content Include="Image\yc.png" />
     <Content Include="Tools\Bunifu_UI_v1.5.3.dll" />
     <None Include="Resources\search1.png" />
     <None Include="Resources\search.png" />
