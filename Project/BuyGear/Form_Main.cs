@@ -325,6 +325,7 @@ namespace BuyGear
         }
         private void SearchButton()
         {
+            this.fpnlChiTiet.BringToFront();
             fpnlChiTiet.Visible = false;
             fpnlProduct.Visible = true;
             fpnlProduct.Controls.Clear();
@@ -491,6 +492,8 @@ namespace BuyGear
         }
         private void bunifuLabel2_Click(object sender, EventArgs e)
         {
+            UnvisionAll();
+            fpnlProduct.Visible = true;
             fpnlProduct.Controls.Clear();
             topEvent();
         }
@@ -505,9 +508,9 @@ namespace BuyGear
             fpnlProduct.Controls.Add(uctop);
             ucTabSanPham ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
             fpnlProduct.Controls.Add(ucsp_tab);
-            ucTabSanPham ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "top");
+            ucTabSanPham ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "daxem");
             fpnlProduct.Controls.Add(ucsp_ta1b);
-            ucTabSanPham ucsp_ta2b = new ucTabSanPham(this, "Dành riêng cho bạn: ", "top");
+            ucTabSanPham ucsp_ta2b = new ucTabSanPham(this, "Dành riêng cho bạn: ", "recommend");
             fpnlProduct.Controls.Add(ucsp_ta2b);
             ucTabSanPham ucsp_ta3b = new ucTabSanPham(this, "Các sản phẩm đã xem: ", "daxem");
             fpnlProduct.Controls.Add(ucsp_ta3b);
@@ -568,10 +571,6 @@ namespace BuyGear
             }
         }
 
-        private void fpnlChiTiet1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
 

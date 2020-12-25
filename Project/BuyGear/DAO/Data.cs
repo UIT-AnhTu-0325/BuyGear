@@ -103,12 +103,68 @@ namespace BuyGear.DAO
                 where sp.ma_sp=xx.masp";
                 dataTable = Data.Instance.ExcuteQuery(sqlQuery);
             }
-            else//if (type == "daxem")
+            else if (type == "daxem")
             {
-                string query = "select * from dbo.sanpham sp, dbo.sanphamdaxem yt where yt.ma_sp=sp.ma_sp and yt.idnguoimua= @id ";
+                string query = "select * from dbo.sanpham sp, dbo.sanphamdaxem yt where yt.ma_sp=sp.ma_sp and yt.idnguoimua= @id" +
+                    " order by yt.ma_sanphamdaxem desc ";
                 dataTable = Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id });
             }
-            
+            else if (type == "recommend")
+            {
+                string query = "select top 2 sp.ma_sp from sanphamdaxem dx, sanpham sp where idnguoimua= @id and  " +
+                    "sp.ma_sp = dx.ma_sp and " +
+                    " day(getdate()- thoigian_daxem)< 20 order by solanxem desc";
+                dataTable = Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id });
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    List<SanPhamRecommend> listsp_re = loadRecommend(row["ma_sp"].ToString());
+                    string query11 = "select * from sanpham where ma_sp= @masp5 ";
+                    DataTable dataTable11 = Data.Instance.ExcuteQuery(query11, new object[] { row["ma_sp"].ToString() });
+                    foreach (DataRow row1 in dataTable11.Rows)
+                    {
+                        SanPham sp = new SanPham();
+                        sp.setData(row1["ma_sp"].ToString(), row1["tensp"].ToString(), row1["loaisp"].ToString(), row1["dvt"].ToString(), row1["xuatxu"].ToString(), row1["nhasx"].ToString(),
+                        Int32.Parse(row1["soluong"].ToString()), Int32.Parse(row1["gia"].ToString()), row1["chitiet"].ToString(), row1["thoigian"].ToString(),
+                        row1["trangthaikiemduyet"].ToString(), Int32.Parse(row1["ID_ngban"].ToString()), Int32.Parse(row1["gia_nhap"].ToString()),
+                        Int32.Parse(row1["gia_banbuon"].ToString()), Int32.Parse(row1["VAT"].ToString()));
+                        string sqlQuery1 = @"SELECT * FROM dbo.HinhAnh where ma_sp='" + row1["ma_sp"].ToString() + "'";
+                        DataTable dataTable2 = Data.Instance.ExcuteQuery(sqlQuery1);
+                        foreach (DataRow row2 in dataTable2.Rows)
+                        {
+                            sp.link_image.Add(row2["data"].ToString());
+                        }
+                        listSP.Add(sp);
+                    }
+                    foreach (SanPhamRecommend spre in listsp_re)
+                    {
+                        string query1 = "select * from sanpham where ma_sp= @masp1 ";
+                        DataTable dataTable1 = Data.Instance.ExcuteQuery(query1, new object[] { spre.Masp });
+                        foreach (DataRow row1 in dataTable1.Rows)
+                        {
+                            SanPham sp = new SanPham();
+                            sp.setData(row1["ma_sp"].ToString(), row1["tensp"].ToString(), row1["loaisp"].ToString(), row1["dvt"].ToString(), row1["xuatxu"].ToString(), row1["nhasx"].ToString(),
+                            Int32.Parse(row1["soluong"].ToString()), Int32.Parse(row1["gia"].ToString()), row1["chitiet"].ToString(), row1["thoigian"].ToString(),
+                            row1["trangthaikiemduyet"].ToString(), Int32.Parse(row1["ID_ngban"].ToString()), Int32.Parse(row1["gia_nhap"].ToString()),
+                            Int32.Parse(row1["gia_banbuon"].ToString()), Int32.Parse(row1["VAT"].ToString()));
+                            string sqlQuery1 = @"SELECT * FROM dbo.HinhAnh where ma_sp='" + row1["ma_sp"].ToString() + "'";
+                            DataTable dataTable2 = Data.Instance.ExcuteQuery(sqlQuery1);
+                            foreach (DataRow row2 in dataTable2.Rows)
+                            {
+                                sp.link_image.Add(row2["data"].ToString());
+                            }
+                            listSP.Add(sp);
+                        }
+                    }
+
+                }
+                return listSP;
+            }
+            else
+            {
+                string query = "";
+                dataTable = Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id });
+            }
+
             foreach (DataRow row in dataTable.Rows)
             {
                 SanPham sp = new SanPham();
@@ -150,6 +206,55 @@ namespace BuyGear.DAO
             return listSP;
         }
 
+        #region InSanPham,chitiet
+        public List<SanPhamRecommend> loadRecommend(string masp)
+        {
+            List<SanPhamRecommend> listSp = new List<SanPhamRecommend>();
+            string query = "select tensp, loaisp, gia, ma_sp from sanpham sp where (sp.gia between " +
+                "(select 75* sp1.gia/100 from sanpham sp1 where sp1.ma_sp = @masp ) and " +
+                "(select sp2.gia * 125 / 100 from sanpham sp2 where sp2.ma_sp = @masp1 ) and " +
+                " sp.ma_sp <> @masp2 and sp.loaisp = (select sp3.loaisp from sanpham sp3 " +
+                " where sp3.ma_sp = @masp3 )) or(sp.nhasx = (select sp1.nhasx from sanpham " +
+                " sp1 where sp1.ma_sp = @masp4 ) and sp.ma_sp <> @masp5 ) order by newid()";
+            DataTable dataTable = Data.instance.ExcuteQuery(query, new object[] { masp, masp, masp, masp, masp, masp });
+            foreach (DataRow row in dataTable.Rows)
+            {
+                SanPhamRecommend sp = new SanPhamRecommend(row["ma_sp"].ToString(), row["tensp"].ToString(),
+                    row["gia"].ToString());
+                string sqlQuery1 = @"SELECT * FROM dbo.HinhAnh where ma_sp='" + row["ma_sp"].ToString() + "'";
+                DataTable dataTable1 = Data.Instance.ExcuteQuery(sqlQuery1);
+                foreach (DataRow row1 in dataTable1.Rows)
+                {
+                    sp.Link_Image.Add(row1["data"].ToString());
+                }
+                listSp.Add(sp);
+            }
+            return listSp;
+        }
+        public List<string> listMoTa(string masp)
+        {
+            string query = "select mota from motachitiet where ma_sp = @masp ";
+            DataTable dataTable = this.ExcuteQuery(query, new object[] { masp });
+            List<string> listmt = new List<string>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                listmt.Add(row["mota"].ToString());
+            }
+            return listmt;
+        }
+        public List<string> listImageLink(string masp)
+        {
+            string query = "select dulieu from hinhanhchitiet where ma_sp = @masp ";
+            DataTable dataTable = this.ExcuteQuery(query, new object[] { masp });
+            List<string> list_iml = new List<string>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                list_iml.Add(row["dulieu"].ToString());
+            }
+            return list_iml;
+        }
+
+        #endregion
         public List<SanPham> loadDataSanPham(string loaisp)
         {
             List<SanPham> listSP = new List<SanPham>();
@@ -210,12 +315,12 @@ namespace BuyGear.DAO
             return s;
         }
 
-        public void UpSanPham(SanPham s, List<string> linkimage)
+        public void UpSanPham(SanPham s, List<string> linkimage, List<string> linkImageMoTa, List<string> mota)
         {
             string sqlQuery = "Insert into SanPham(ma_sp,tensp,loaisp,dvt,xuatxu,nhasx,soluong,gia,chitiet,trangthaikiemduyet,ID_ngban,gia_nhap," +
-                "gia_banbuon,VAT) values ( @masp , @tensp , @loaisp , @dvt , @xuatxu , @nhasx , @soluong , @gia , @chitiet , @trangthaikiemduyet , "
+                "gia_banbuon,VAT) values ( @masp , @tensp , @loaisp , @dvt , @xuatxu , @nhasx , @soluong , @gia , @indexmota , @trangthaikiemduyet , "
                 + "@ID_ngban , @gia_nhap , @gia_banbuon , @VAT )";
-            this.ExcuteQuery(sqlQuery, new object[] {s.MASP,s.TenSP, s.LoaiSP, s.DVT, s.XuatXu, s.NhaSX, s.SoLuong, s.Gia, s.chitiet, s.trangthaikiemduyet,
+            this.ExcuteQuery(sqlQuery, new object[] {s.MASP,s.TenSP, s.LoaiSP, s.DVT, s.XuatXu, s.NhaSX, s.SoLuong, s.Gia, s.IndexMoTa, s.trangthaikiemduyet,
             s.ID_nguoiban,s.gia_nhap,s.gia_banbuon,s.VAT});
             for (int i = 0; i < 4; i++)
             {
@@ -224,6 +329,19 @@ namespace BuyGear.DAO
                 string sqlQuery1 = "Insert into HinhAnh(name,data,ma_sp) values ( @name , @data , @ma_sp )";
                 this.ExcuteQuery(sqlQuery1, new object[] { "demo", id, s.MASP });
             }
+            for (int i = 0; i < linkImageMoTa.Count; i++)
+            {
+                Picture.UpPicture(linkImageMoTa[i], s.MASP + "_mt" + i);
+                string id = Picture.GetIDPicturebyName(s.MASP + "_mt" + i);
+                string query2 = "insert into hinhanhchitiet (ma_sp, dulieu) values ( @masp , @data )";
+                this.ExcuteQuery(query2, new object[] { s.MASP, id });
+            }
+            for (int i = 0; i < mota.Count; i++)
+            {
+                string query2 = "insert into motachitiet (ma_sp, mota) values ( @masp , @mota )";
+                this.ExcuteQuery(query2, new object[] { s.MASP, mota[i] });
+            }
+
         }
 
 
@@ -350,7 +468,7 @@ namespace BuyGear.DAO
                    "ID_ngban = @idnguoiban , gia_nhap = @gia_nhap , gia_banbuon = @gia_banbuon , VAT = @VAT " +
                    "where ma_sp = @masp ";
             this.ExcuteQuery(sqlQuery, new object[] { s.TenSP, s.LoaiSP, s.DVT, s.XuatXu, s.NhaSX, s.SoLuong, s.Gia,
-            s.chitiet, s.trangthaikiemduyet, s.ID_nguoiban, s.gia_nhap, s.gia_banbuon, s.VAT, s.MASP});
+            s.IndexMoTa, s.trangthaikiemduyet, s.ID_nguoiban, s.gia_nhap, s.gia_banbuon, s.VAT, s.MASP});
             for (int i = 0; i < 4; i++)
             {
                 Picture.UpPicture(linkimage[i], s.MASP + "_" + i);

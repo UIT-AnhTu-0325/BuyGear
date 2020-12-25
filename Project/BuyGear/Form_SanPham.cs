@@ -5,11 +5,16 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms.BunifuTextbox;
+using Bunifu.UI.WinForms;
+
+
 namespace BuyGear
 {
     public partial class Form_SanPham : Form
     {
         Form_Main parent;
+        SanPham sp;
         public Form_SanPham(string masp, Form_Main parent)
         {
             this.parent = parent;
@@ -25,14 +30,14 @@ namespace BuyGear
             if (dataTable.Rows[0] != null)
             {
                 DataRow row = dataTable.Rows[0];
-                SanPham sp = new SanPham();
+                sp = new SanPham();
                 sp = Data.Instance.Load_SP_byMaSP(_masp);
                 lblTenSanPham.Text = sp.TenSP;
-                lblThuongHieuText.Text = sp.NhaSX;
+                //lblThuongHieuText.Text = sp.NhaSX;
                 lblGia.Text = giaFix(sp.Gia);
-                lblXuatXu.Text = sp.XuatXu;
+                //lblXuatXu.Text = sp.XuatXu;
                 picSanPhamMain.SizeMode = PictureBoxSizeMode.Zoom;
-                picSanPhamMain.Image = Picture.LoadImage_by_ID(sp.link_image[0]); 
+                picSanPhamMain.Image = Picture.LoadImage_by_ID(sp.link_image[0]);
                 picAnh1.SizeMode = PictureBoxSizeMode.Zoom;
                 picAnh1.Image = Picture.LoadImage_by_ID(sp.link_image[1]);
                 picAnh2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -41,8 +46,75 @@ namespace BuyGear
                 picAnh3.Image = Picture.LoadImage_by_ID(sp.link_image[3]);
 
             }
+            List<SanPhamRecommend> listsp_re = Data.Instance.loadRecommend(_masp);
+            foreach (SanPhamRecommend sp in listsp_re)
+            {
+                ucRecommendSanPham uc = new ucRecommendSanPham(this.parent, sp.Masp, sp.Ten, sp.Gia, sp.Link_Image);
+                this.fpnlSanPhamTuongTu.Controls.Add(uc);
+            }
+            /*for (int j = 0; j < 2; j++)
+            {
+                ucRecommendSanPham uc = new ucRecommendSanPham();
+                this.fpnlSanPhamTuongTu.Controls.Add(uc);
+            }*/
+            for (int x = 0; x < 2; x++)
+            {
+                ucRecommendSanPham uc = new ucRecommendSanPham();
+                this.fpnlSanPhamTuongTu.Controls.Add(uc);
+            }
+
+            //load mo ta chi tiet
+            List<string> listmota = new List<string>();
+            List<string> listHinhAnh = new List<string>();
+            List<object> listObject = new List<object>();
+            listmota = Data.Instance.listMoTa(sp.MASP);
+            listHinhAnh = Data.Instance.listImageLink(sp.MASP);
+            int index = 0, i = 0, j = 0;
+            int.TryParse(sp.IndexMoTa, out index);
+            while (index != 0)
+            {
+                if (index % 10 == 1)
+                {
+                    index = index / 10;
+                    BunifuTextBox txtChiTietAdd = new BunifuTextBox();
+                    string s = listmota[i++];
+                    //   txtChiTietAdd.Text = listmota[i++];
+                    listObject.Add(s);
 
 
+                }
+                else if (index % 10 == 2)
+                {
+                    index = index / 10;
+                    Image picLink = Picture.LoadImage_by_ID(listHinhAnh[j++]);
+                    listObject.Add(picLink);
+
+                }
+            }
+            fpnlThongTinSP.Controls.Clear();
+            foreach (object ob in listObject)
+            {
+
+                if (ob is string)
+                {
+                    BunifuLabel lblmt = new BunifuLabel();
+                    lblmt.MaximumSize = new Size(fpnlThongTinSP.Size.Width + 300, 1000);
+                    string temp = (string)ob;
+                    lblmt.Font = new Font("Arial", 15, FontStyle.Regular);
+                    lblmt.Text = temp;
+                    this.fpnlThongTinSP.Controls.Add(lblmt);
+                }
+                else if (ob is Image)
+                {
+                    PictureBox pic = new PictureBox();
+                    Image img = (Image)ob;
+                    pic.Size = new Size((fpnlThongTinSP.Size.Width + 300), (fpnlThongTinSP.Size.Width + 300) * img.Size.Height / img.Size.Width);
+                    pic.Image = img;
+                    pic.SizeMode = PictureBoxSizeMode.Zoom;
+                    this.fpnlThongTinSP.Controls.Add(pic);
+                }
+            }
+            // fpnlThongTinSP.VerticalScroll.Value = fpnlThongTinSP.VerticalScroll.Maximum;
         }
         private string giaFix(int gia)
         {
@@ -73,7 +145,7 @@ namespace BuyGear
             if (this.parent != null)
             {
                 this.parent.fpnlChiTiet.Visible = false;
-                this.parent.fpnlProduct.Visible = true; 
+                this.parent.fpnlProduct.Visible = true;
                 this.parent.pnlChiTietChange.Visible = false;
                 this.Close();
             }
@@ -132,8 +204,13 @@ namespace BuyGear
             if (this.parent != null)
             {
                 this.Size = this.parent.Size;
-               // pnlBottomLeft.Size = new Size(pnlBottomLeft.Size.Width, this.parent.fpnlChitiet.Size.Height * 2 / 3);
-                pnlBottomRight.Size = new Size(pnlBottomLeft.Size.Width, this.parent.fpnlChiTiet.Size.Height * 3/ 8);
+                // pnlBottomLeft.Size = new Size(pnlBottomLeft.Size.Width, this.parent.fpnlChitiet.Size.Height * 2 / 3);
+                if (!checkMinustab)
+                    pnlBottomRight.Size = new Size(pnlBottomLeft.Size.Width, this.parent.fpnlChiTiet.Size.Height * 4 / 8);
+                else
+                {
+                    pnlBottomRight.Size = new Size(pnlBottomRight.Size.Width, 255);
+                }
                 picAnh1.Size = new Size(picAnh1.Width, pnlSanPhamNoMainPicture.Size.Height / 3);
                 picAnh2.Size = new Size(picAnh2.Width, pnlSanPhamNoMainPicture.Size.Height / 3);
                 picAnh3.Size = new Size(picAnh3.Width, pnlSanPhamNoMainPicture.Size.Height / 3);
@@ -157,9 +234,7 @@ namespace BuyGear
 
         }
 
-        #region HOAI
-        Form_Admin2 grandparent;
-        #endregion
+        
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
@@ -207,13 +282,13 @@ namespace BuyGear
             {
                 bStar[i] = false;
             }
-            for(int i=0; i<6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 listvoting[i] = new List<NhanXet>();
             }
             foreach (NhanXet nx in listNhanXet)
             {
-                
+
                 sum++;
                 nrating += nx.Vote;
                 switch (nx.Vote)
@@ -257,20 +332,20 @@ namespace BuyGear
             {
                 voteBar1.Value = 0;
                 voteBar2.Value = 0;
-                voteBar3.Value = 0; 
+                voteBar3.Value = 0;
                 voteBar4.Value = 0;
                 voteBar5.Value = 0;
                 lblNumberVote.Text = 0.ToString();
-            }   
+            }
             lblSoNguoiVote.Text = sum.ToString() + " nhận xét";
-           
-            
+
+
         }
         private bool[] bStar = new bool[5];
         private List<NhanXet>[] listvoting = new List<NhanXet>[6];
         private void returnInitiateColor()
         {
-            for(int i=0; i<5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 bStar[i] = false;
             }
@@ -283,10 +358,10 @@ namespace BuyGear
         private void btnStar_click(int index)
         {
             List<byte[]> linkimage = new List<byte[]>();
-            if (!bStar[index-1])
+            if (!bStar[index - 1])
             {
                 returnInitiateColor();
-                switch(index)
+                switch (index)
                 {
                     case 1:
                         btn1Star.Normalcolor = Color.FromArgb(0, 192, 192);
@@ -321,7 +396,7 @@ namespace BuyGear
             else
             {
                 returnInitiateColor();
-                switch(index)
+                switch (index)
                 {
                     case 1:
                         btn1Star.Normalcolor = Color.WhiteSmoke;
@@ -402,8 +477,23 @@ namespace BuyGear
                 btnYeuThich.Image = BuyGear.Properties.Resources.love2;
             }
         }
+        private bool checkMinustab = false;
+        private void btnMinusTab_Click(object sender, EventArgs e)
+        {
+            if (checkMinustab)
+            {
+                btnMinusTab.Image = BuyGear.Properties.Resources.ui_down;
+                checkMinustab = false;
+            }
+            else
+            {
+                btnMinusTab.Image = BuyGear.Properties.Resources.ui_up;
+                checkMinustab = true;
+            }
+        }
         #region HOAI
         int c = 0;
+        Form_Admin2 grandparent;
         public Form_SanPham(string masp, Form_Admin2 grandparent)
         {
             this.grandparent = grandparent;

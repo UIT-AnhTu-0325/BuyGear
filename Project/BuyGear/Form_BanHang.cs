@@ -26,7 +26,7 @@ namespace BuyGear
             InitializeComponent();
             bunifuPages1.PageIndex = 2;
             loadDataHome(); bunifuPages1.PageIndex = 0;
-            this.picAvatar.Image = Account.Instance.getAvatar();
+           // this.picAvatar.Image = Account.Instance.getAvatar();
         }
         public void LoadDS()
         {

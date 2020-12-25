@@ -1051,12 +1051,12 @@
             this.bunifuShadowPanel3.Controls.Add(this.label2);
             this.bunifuShadowPanel3.Controls.Add(this.label3);
             this.bunifuShadowPanel3.Controls.Add(this.label4);
-            this.bunifuShadowPanel3.Location = new System.Drawing.Point(15, 15);
+            this.bunifuShadowPanel3.Location = new System.Drawing.Point(0, 0);
             this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
             this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.Empty;
             this.bunifuShadowPanel3.ShadowDept = 2;
             this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel3.Size = new System.Drawing.Size(193, 193);
+            this.bunifuShadowPanel3.Size = new System.Drawing.Size(218, 214);
             this.bunifuShadowPanel3.TabIndex = 16;
             // 
             // picAvatar
@@ -1066,7 +1066,7 @@
             this.picAvatar.BorderRadius = 45;
             this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
             this.picAvatar.IsCircle = false;
-            this.picAvatar.Location = new System.Drawing.Point(46, 17);
+            this.picAvatar.Location = new System.Drawing.Point(59, 28);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.Size = new System.Drawing.Size(92, 93);
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1079,7 +1079,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(39, 128);
+            this.label2.Location = new System.Drawing.Point(54, 139);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 13);
@@ -1091,7 +1091,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(44, 153);
+            this.label3.Location = new System.Drawing.Point(59, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
@@ -1103,7 +1103,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(90, 153);
+            this.label4.Location = new System.Drawing.Point(105, 164);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);

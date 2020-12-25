@@ -121,9 +121,25 @@ namespace BuyGear.DAO
         }
         public void AddDaXem(string masp)
         {
-            string query = "insert into dbo.sanphamdaxem (idnguoimua, ma_sp) " +
-                " values ( @id , @masp ) ";
-            Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id, masp });
+            string query1 = "select sum(solanxem) as c from dbo.sanphamdaxem where " +
+                " idnguoimua= @id and ma_sp= @masp ";
+            int c = 0;
+            int.TryParse(Data.Instance.ExcuteQuery(query1, new object[] { Account.Instance.id, masp }).Rows[0]["c"].ToString(), out c);
+            if (c == 0)
+            {
+                string query = "insert into dbo.sanphamdaxem (idnguoimua, ma_sp) " +
+                    " values ( @id , @masp ) ";
+                Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id, masp });
+            }
+            else
+            {
+                string query2 = "delete from dbo.sanphamdaxem " +
+                " where idnguoimua = @id and ma_sp =  @masp ";
+                string query = "insert into dbo.sanphamdaxem (idnguoimua, ma_sp , solanxem) " +
+                    " values ( @id , @masp , @slx ) ";
+                Data.Instance.ExcuteQuery(query2, new object[] { Account.Instance.id, masp });
+                Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id, masp, c + 1 });
+            }
         }
         public void DeleteFromYeuThich(string masp)
         {
@@ -207,15 +223,16 @@ namespace BuyGear.DAO
         public List<ItemInGioHang> loadSanPhamYeuThichDaXem(string function)
         {
             List<ItemInGioHang> listSP = new List<ItemInGioHang>();
-            string query="";
-            if (function=="yeuthich")
-            query = "select sp.ma_sp, tensp, gia from dbo.sanpham sp, dbo.sanphamyeuthich yt where yt.ma_sp=sp.ma_sp and yt.idnguoimua= @id ";
-            else if(function=="daxem")
+            string query = "";
+            if (function == "yeuthich")
+                query = "select sp.ma_sp, tensp, gia from dbo.sanpham sp, dbo.sanphamyeuthich yt where yt.ma_sp=sp.ma_sp and yt.idnguoimua= @id ";
+            else if (function == "daxem")
             {
-                query = "select sp.ma_sp, tensp, gia from dbo.sanpham sp, dbo.sanphamdaxem yt where yt.ma_sp=sp.ma_sp and yt.idnguoimua= @id ";
+                query = "select sp.ma_sp, tensp, gia from dbo.sanpham sp, dbo.sanphamdaxem yt " +
+                    "where yt.ma_sp=sp.ma_sp and yt.idnguoimua= @id  order by yt.ma_sanphamdaxem desc ";
             }
             DataTable dataTable = Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id });
-            foreach( DataRow row in dataTable.Rows)
+            foreach (DataRow row in dataTable.Rows)
             {
                 ItemInGioHang item = new ItemInGioHang();
                 item.SetItem(row["ma_sp"].ToString(), row["tensp"].ToString(),
@@ -252,7 +269,7 @@ namespace BuyGear.DAO
         {
             string query = "select count(*) as kt from dbo.account ac inner join dbo.nhanxet nx on ac.id= nx.idnguoimua where " +
                 " ac.id= @id and nx.ma_sp = @masp ";
-            DataTable dataTable= Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id, masp });
+            DataTable dataTable = Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id, masp });
             int count = 0;
             int.TryParse(dataTable.Rows[0]["kt"].ToString(), out count);
             if (count > 0)

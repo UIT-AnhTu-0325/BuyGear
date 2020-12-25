@@ -18,7 +18,7 @@ namespace BuyGear.DTO
         }
 
         //Phương Thức
-        public void setData(string masp, string tensp, string loaisp, string dvt, string xuatxu, string nhasx, Int32 soluong, Int32 gia, string chitiet,
+        public void setData(string masp, string tensp, string loaisp, string dvt, string xuatxu, string nhasx, Int32 soluong, Int32 gia, string indexmota,
             string thoigian, string trangthaikiemduyet, Int32 ID_ngban, Int32 gia_nhap, Int32 gia_banbuon, Int32 VAT)
         {
             this._masp = masp;
@@ -29,7 +29,7 @@ namespace BuyGear.DTO
             this._nhasx = nhasx;
             this._soluong = soluong;
             this._gia = gia;
-            this._chitiet = chitiet;
+            this._indexMoTa = indexmota;
             this._thoigiandangban = thoigian;
             this._trangthaikiemduyet = trangthaikiemduyet;
             this._ID_nguoiban = ID_ngban;
@@ -85,10 +85,10 @@ namespace BuyGear.DTO
             get { return _link_image; }
             set { _link_image = value; }
         }
-        public string chitiet
+        public string IndexMoTa
         {
-            get { return _chitiet; }
-            set { _chitiet = value; }
+            get { return _indexMoTa; }
+            set { _indexMoTa = value; }
         }
         public Int32 gia_nhap
         {
@@ -131,7 +131,7 @@ namespace BuyGear.DTO
         protected Int32 _soluong;
         protected Int32 _gia;
         protected List<string> _link_image;
-        protected string _chitiet;
+        protected string _indexMoTa;
         protected Int32 _gia_nhap;
         protected Int32 _gia_banbuon;
         protected Int32 _VAT;

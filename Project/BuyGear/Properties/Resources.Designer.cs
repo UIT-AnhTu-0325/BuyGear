@@ -123,6 +123,16 @@ namespace BuyGear.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap B_preview {
+            get {
+                object obj = ResourceManager.GetObject("B.preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bell {
             get {
                 object obj = ResourceManager.GetObject("bell", resourceCulture);
@@ -743,6 +753,16 @@ namespace BuyGear.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ui_down {
+            get {
+                object obj = ResourceManager.GetObject("ui.down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ui_exit {
             get {
                 object obj = ResourceManager.GetObject("ui.exit", resourceCulture);
@@ -813,6 +833,16 @@ namespace BuyGear.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ui_up {
+            get {
+                object obj = ResourceManager.GetObject("ui.up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap usb {
             get {
                 object obj = ResourceManager.GetObject("usb", resourceCulture);
@@ -856,6 +886,16 @@ namespace BuyGear.Properties {
         internal static System.Drawing.Bitmap usericon2 {
             get {
                 object obj = ResourceManager.GetObject("usericon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap userLogo {
+            get {
+                object obj = ResourceManager.GetObject("userLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

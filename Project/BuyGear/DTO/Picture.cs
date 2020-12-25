@@ -17,7 +17,7 @@ namespace BuyGear
     {
         static protected string[] Scopes = { DriveService.Scope.Drive };
         static protected string ApplicationName = "Up Image BuyGear";
-        static public void UpPicture(string path,string PictureName = "")
+        static public void UpPicture(string path, string PictureName = "")
         {
             UserCredential credential;
             credential = GetCredentials();
@@ -44,9 +44,9 @@ namespace BuyGear
             request.Q = "'" + folderid + "' in parents and trashed=false";
             request.Fields = "nextPageToken, files(*)";
             IList<File> files = request.Execute().Files;
-            foreach(var v in files)
+            foreach (var v in files)
             {
-                if(v.Name.Contains(pictureName))
+                if (v.Name.Contains(pictureName))
                 {
                     return v.Id;
                 }
@@ -75,9 +75,9 @@ namespace BuyGear
         static public Image LoadImage_by_ID(string ID)
         {
             string[] allpicture = Directory.GetFiles("../../Temp_DataPicture");
-            foreach(var v in allpicture)
+            foreach (var v in allpicture)
             {
-                if(v.Contains(ID))
+                if (v.Contains(ID))
                 {
                     Image im = Image.FromFile(v);
                     return im;
@@ -148,7 +148,7 @@ namespace BuyGear
         static public string getLinkFromDialog()
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            open.Filter = "Image Files(*.jpg; *.png; *.jpeg; *.gif; *.bmp)|*.jpg; *.png;*.jpeg; *.gif; *.bmp";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 return open.FileName;
