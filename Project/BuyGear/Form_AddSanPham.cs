@@ -59,10 +59,7 @@ namespace BuyGear
             unvisibleALLPicL();
             pnl_ThongTin.Visible = true;
             picL_ThongTin.Visible = true;
-            foreach(var v in s.link_image)
-            {
-                Picture.DeletePicture_by_ID(v);
-            }
+
         }
         public void Loadsp()
         {
@@ -420,6 +417,10 @@ namespace BuyGear
             if(toDo=="sua")
             {
                 MessageBox.Show("Sửa thành công !!");
+                foreach (var v in s.link_image)
+                {
+                    Picture.DeletePicture_by_ID(v);
+                }
                 Data.Instance.FixSanPham(s, linkPicture);
                 parent.LoadDS();          
                 this.Close();
@@ -673,7 +674,5 @@ namespace BuyGear
             fpnlXemTruoc.Controls.Clear();
             btnAddtxb.PerformClick();
         }
-
-       
     }
 }

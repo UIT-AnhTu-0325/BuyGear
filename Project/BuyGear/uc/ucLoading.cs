@@ -39,8 +39,9 @@ namespace BuyGear.uc
                 bunifuCircleProgressbar1.animationIterval = 2;
                 switch_color();
             }
-            
+
             bunifuCircleProgressbar1.Value += dir;
+            //switch_color();
         }
         void switch_color()
         {

@@ -537,6 +537,17 @@ namespace BuyGear.DAO
             return int.Parse(Data.Instance.ExcuteQuery(query).Rows[0]["mx"].ToString());
         }
 
+        public void choicucsuc()
+        {
+            string query = "select data from HinhAnh h,(select  min(ma_image) as main_image,ma_sp from hinhanh group by ma_sp) t " +
+                " where h.ma_image =t.main_image ";
+            DataTable data = Data.Instance.ExcuteQuery(query);
+            foreach(DataRow row in data.Rows)
+            {
+                Picture.LoadImage_by_ID(row["data"].ToString());
+            }
+        }
+
         #endregion
     }
 
