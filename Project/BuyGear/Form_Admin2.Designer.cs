@@ -29,41 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Admin2));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Admin2));
             System.Windows.Forms.DataVisualization.Charting.TextAnnotation textAnnotation1 = new System.Windows.Forms.DataVisualization.Charting.TextAnnotation();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.fpnlItem = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlLSGD = new System.Windows.Forms.Panel();
-            this.lbKhongKQ2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pnlKQ2 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lbIndex2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lbSum2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtSearch2 = new System.Windows.Forms.TextBox();
-            this.pnlCTLS = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnXemchitiet = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.DgvLSGD = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnX2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnDown2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnSet = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnDX = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDK = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLS = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -71,7 +50,27 @@
             this.btnBan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAcc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMenu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fpnlItem = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlLSGD = new System.Windows.Forms.Panel();
+            this.lbKhongKQ2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.pnlKQ2 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbIndex2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnX2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnDown2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbSum2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtSearch2 = new System.Windows.Forms.TextBox();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pnlCTLS = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnXemchitiet = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.DgvLSGD = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlTrangChu = new PanelDB();
             this.panelDB1 = new PanelDB();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -100,16 +99,18 @@
             this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlLSGD.SuspendLayout();
             this.pnlKQ2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.pnlCTLS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLSGD)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.pnlTrangChu.SuspendLayout();
             this.panelDB1.SuspendLayout();
             this.bunifuGradientPanel6.SuspendLayout();
@@ -126,12 +127,14 @@
             this.panelDB6.SuspendLayout();
             this.bunifuGradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.pnlMenu.Controls.Add(this.btnSet);
+            this.pnlMenu.Controls.Add(this.pictureBox9);
+            this.pnlMenu.Controls.Add(this.pictureBox8);
             this.pnlMenu.Controls.Add(this.btnDX);
             this.pnlMenu.Controls.Add(this.btnDK);
             this.pnlMenu.Controls.Add(this.btnLS);
@@ -144,8 +147,308 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(206, 720);
+            this.pnlMenu.Size = new System.Drawing.Size(206, 900);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.pictureBox9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(157, 718);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(49, 47);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 11;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.pictureBox8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(0, 718);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(49, 47);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 10;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Visible = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // btnDX
+            // 
+            this.btnDX.Activecolor = System.Drawing.Color.SlateBlue;
+            this.btnDX.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDX.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.btnDX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnDX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDX.BorderRadius = 0;
+            this.btnDX.ButtonText = "     Đăng xuất";
+            this.btnDX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnDX, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnDX.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDX.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDX.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDX.Iconimage")));
+            this.btnDX.Iconimage_right = null;
+            this.btnDX.Iconimage_right_Selected = null;
+            this.btnDX.Iconimage_Selected = null;
+            this.btnDX.IconMarginLeft = 0;
+            this.btnDX.IconMarginRight = 0;
+            this.btnDX.IconRightVisible = true;
+            this.btnDX.IconRightZoom = 0D;
+            this.btnDX.IconVisible = true;
+            this.btnDX.IconZoom = 50D;
+            this.btnDX.IsTab = true;
+            this.btnDX.Location = new System.Drawing.Point(0, 541);
+            this.btnDX.Name = "btnDX";
+            this.btnDX.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnDX.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnDX.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDX.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDX.selected = false;
+            this.btnDX.Size = new System.Drawing.Size(211, 48);
+            this.btnDX.TabIndex = 8;
+            this.btnDX.Text = "     Đăng xuất";
+            this.btnDX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDX.Textcolor = System.Drawing.Color.White;
+            this.btnDX.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDX.Click += new System.EventHandler(this.btnDX_Click);
+            // 
+            // btnDK
+            // 
+            this.btnDK.Activecolor = System.Drawing.Color.SlateBlue;
+            this.btnDK.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDK.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.btnDK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnDK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDK.BorderRadius = 0;
+            this.btnDK.ButtonText = "     Đăng ký";
+            this.btnDK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnDK, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnDK.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDK.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDK.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDK.Iconimage")));
+            this.btnDK.Iconimage_right = null;
+            this.btnDK.Iconimage_right_Selected = null;
+            this.btnDK.Iconimage_Selected = null;
+            this.btnDK.IconMarginLeft = 0;
+            this.btnDK.IconMarginRight = 0;
+            this.btnDK.IconRightVisible = true;
+            this.btnDK.IconRightZoom = 0D;
+            this.btnDK.IconVisible = true;
+            this.btnDK.IconZoom = 50D;
+            this.btnDK.IsTab = true;
+            this.btnDK.Location = new System.Drawing.Point(0, 487);
+            this.btnDK.Name = "btnDK";
+            this.btnDK.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnDK.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnDK.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDK.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDK.selected = false;
+            this.btnDK.Size = new System.Drawing.Size(211, 48);
+            this.btnDK.TabIndex = 7;
+            this.btnDK.Text = "     Đăng ký";
+            this.btnDK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDK.Textcolor = System.Drawing.Color.White;
+            this.btnDK.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDK.Click += new System.EventHandler(this.btnDK_Click);
+            // 
+            // btnLS
+            // 
+            this.btnLS.Activecolor = System.Drawing.Color.SlateBlue;
+            this.btnLS.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLS.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.btnLS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnLS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLS.BorderRadius = 0;
+            this.btnLS.ButtonText = "     Lịch sử giao dịch";
+            this.btnLS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnLS, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnLS.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLS.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLS.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLS.Iconimage")));
+            this.btnLS.Iconimage_right = null;
+            this.btnLS.Iconimage_right_Selected = null;
+            this.btnLS.Iconimage_Selected = null;
+            this.btnLS.IconMarginLeft = 0;
+            this.btnLS.IconMarginRight = 0;
+            this.btnLS.IconRightVisible = true;
+            this.btnLS.IconRightZoom = 0D;
+            this.btnLS.IconVisible = true;
+            this.btnLS.IconZoom = 50D;
+            this.btnLS.IsTab = true;
+            this.btnLS.Location = new System.Drawing.Point(0, 433);
+            this.btnLS.Name = "btnLS";
+            this.btnLS.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnLS.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnLS.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLS.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnLS.selected = false;
+            this.btnLS.Size = new System.Drawing.Size(211, 48);
+            this.btnLS.TabIndex = 6;
+            this.btnLS.Text = "     Lịch sử giao dịch";
+            this.btnLS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLS.Textcolor = System.Drawing.Color.White;
+            this.btnLS.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLS.Click += new System.EventHandler(this.btnLS_Click);
+            // 
+            // btnSP
+            // 
+            this.btnSP.Activecolor = System.Drawing.Color.SlateBlue;
+            this.btnSP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSP.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.btnSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSP.BorderRadius = 0;
+            this.btnSP.ButtonText = "     Duyệt sản phẩm";
+            this.btnSP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnSP, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnSP.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSP.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSP.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSP.Iconimage")));
+            this.btnSP.Iconimage_right = null;
+            this.btnSP.Iconimage_right_Selected = null;
+            this.btnSP.Iconimage_Selected = null;
+            this.btnSP.IconMarginLeft = 0;
+            this.btnSP.IconMarginRight = 0;
+            this.btnSP.IconRightVisible = true;
+            this.btnSP.IconRightZoom = 0D;
+            this.btnSP.IconVisible = true;
+            this.btnSP.IconZoom = 50D;
+            this.btnSP.IsTab = true;
+            this.btnSP.Location = new System.Drawing.Point(0, 385);
+            this.btnSP.Name = "btnSP";
+            this.btnSP.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnSP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnSP.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnSP.selected = false;
+            this.btnSP.Size = new System.Drawing.Size(211, 48);
+            this.btnSP.TabIndex = 5;
+            this.btnSP.Text = "     Duyệt sản phẩm";
+            this.btnSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSP.Textcolor = System.Drawing.Color.White;
+            this.btnSP.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
+            // 
+            // btnBan
+            // 
+            this.btnBan.Activecolor = System.Drawing.Color.SlateBlue;
+            this.btnBan.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBan.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.btnBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnBan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBan.BorderRadius = 0;
+            this.btnBan.ButtonText = "     Yêu cầu bán hàng";
+            this.btnBan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnBan, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnBan.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBan.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBan.Iconimage")));
+            this.btnBan.Iconimage_right = null;
+            this.btnBan.Iconimage_right_Selected = null;
+            this.btnBan.Iconimage_Selected = null;
+            this.btnBan.IconMarginLeft = 0;
+            this.btnBan.IconMarginRight = 0;
+            this.btnBan.IconRightVisible = true;
+            this.btnBan.IconRightZoom = 0D;
+            this.btnBan.IconVisible = true;
+            this.btnBan.IconZoom = 50D;
+            this.btnBan.IsTab = true;
+            this.btnBan.Location = new System.Drawing.Point(0, 337);
+            this.btnBan.Name = "btnBan";
+            this.btnBan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnBan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnBan.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBan.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnBan.selected = false;
+            this.btnBan.Size = new System.Drawing.Size(211, 48);
+            this.btnBan.TabIndex = 4;
+            this.btnBan.Text = "     Yêu cầu bán hàng";
+            this.btnBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBan.Textcolor = System.Drawing.Color.White;
+            this.btnBan.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnBan.Click += new System.EventHandler(this.btnBan_Click);
+            // 
+            // btnAcc
+            // 
+            this.btnAcc.Activecolor = System.Drawing.Color.SlateBlue;
+            this.btnAcc.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAcc.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.btnAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnAcc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAcc.BorderRadius = 0;
+            this.btnAcc.ButtonText = "     Tài khoản";
+            this.btnAcc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnAcc, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnAcc.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAcc.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAcc.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAcc.Iconimage")));
+            this.btnAcc.Iconimage_right = null;
+            this.btnAcc.Iconimage_right_Selected = null;
+            this.btnAcc.Iconimage_Selected = null;
+            this.btnAcc.IconMarginLeft = 0;
+            this.btnAcc.IconMarginRight = 0;
+            this.btnAcc.IconRightVisible = true;
+            this.btnAcc.IconRightZoom = 0D;
+            this.btnAcc.IconVisible = true;
+            this.btnAcc.IconZoom = 50D;
+            this.btnAcc.IsTab = true;
+            this.btnAcc.Location = new System.Drawing.Point(0, 289);
+            this.btnAcc.Name = "btnAcc";
+            this.btnAcc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnAcc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnAcc.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAcc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAcc.selected = false;
+            this.btnAcc.Size = new System.Drawing.Size(211, 48);
+            this.btnAcc.TabIndex = 3;
+            this.btnAcc.Text = "     Tài khoản";
+            this.btnAcc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcc.Textcolor = System.Drawing.Color.White;
+            this.btnAcc.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAcc.Click += new System.EventHandler(this.btnAcc_Click);
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Activecolor = System.Drawing.Color.SlateBlue;
+            this.btnMenu.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnMenu.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMenu.BorderRadius = 0;
+            this.btnMenu.ButtonText = "     Trang chủ";
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnMenu.Iconimage")));
+            this.btnMenu.Iconimage_right = null;
+            this.btnMenu.Iconimage_right_Selected = null;
+            this.btnMenu.Iconimage_Selected = null;
+            this.btnMenu.IconMarginLeft = 0;
+            this.btnMenu.IconMarginRight = 0;
+            this.btnMenu.IconRightVisible = true;
+            this.btnMenu.IconRightZoom = 0D;
+            this.btnMenu.IconVisible = true;
+            this.btnMenu.IconZoom = 50D;
+            this.btnMenu.IsTab = true;
+            this.btnMenu.Location = new System.Drawing.Point(0, 241);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.btnMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnMenu.selected = false;
+            this.btnMenu.Size = new System.Drawing.Size(211, 48);
+            this.btnMenu.TabIndex = 2;
+            this.btnMenu.Text = "     Trang chủ";
+            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.Textcolor = System.Drawing.Color.White;
+            this.btnMenu.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // panel1
             // 
@@ -157,6 +460,21 @@
             this.panel1.Size = new System.Drawing.Size(206, 151);
             this.panel1.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuTransition1.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // fpnlItem
             // 
             this.fpnlItem.AutoScroll = true;
@@ -164,42 +482,8 @@
             this.fpnlItem.Dock = System.Windows.Forms.DockStyle.Left;
             this.fpnlItem.Location = new System.Drawing.Point(206, 0);
             this.fpnlItem.Name = "fpnlItem";
-            this.fpnlItem.Size = new System.Drawing.Size(356, 720);
+            this.fpnlItem.Size = new System.Drawing.Size(360, 900);
             this.fpnlItem.TabIndex = 0;
-            // 
-            // bunifuTransition1
-            // 
-            this.bunifuTransition1.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide;
-            this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pnlLSGD);
-            this.panel2.Controls.Add(this.pnlTrangChu);
-            this.bunifuTransition1.SetDecoration(this.panel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(718, 720);
-            this.panel2.TabIndex = 2;
             // 
             // pnlLSGD
             // 
@@ -211,7 +495,7 @@
             this.pnlLSGD.Controls.Add(this.pnlCTLS);
             this.pnlLSGD.Controls.Add(this.DgvLSGD);
             this.bunifuTransition1.SetDecoration(this.pnlLSGD, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pnlLSGD.Location = new System.Drawing.Point(5, 25);
+            this.pnlLSGD.Location = new System.Drawing.Point(35, 12);
             this.pnlLSGD.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLSGD.Name = "pnlLSGD";
             this.pnlLSGD.Size = new System.Drawing.Size(644, 222);
@@ -279,6 +563,38 @@
             this.lbIndex2.Text = "1";
             this.lbIndex2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // btnX2
+            // 
+            this.btnX2.AutoSize = true;
+            this.btnX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.bunifuTransition1.SetDecoration(this.btnX2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnX2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnX2.ForeColor = System.Drawing.Color.White;
+            this.btnX2.Image = ((System.Drawing.Image)(resources.GetObject("btnX2.Image")));
+            this.btnX2.Location = new System.Drawing.Point(227, 8);
+            this.btnX2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnX2.Name = "btnX2";
+            this.btnX2.Size = new System.Drawing.Size(27, 25);
+            this.btnX2.TabIndex = 20;
+            this.btnX2.Text = "   ";
+            this.btnX2.Click += new System.EventHandler(this.btnX2_Click);
+            // 
+            // btnDown2
+            // 
+            this.btnDown2.AutoSize = true;
+            this.btnDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.bunifuTransition1.SetDecoration(this.btnDown2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnDown2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDown2.ForeColor = System.Drawing.Color.White;
+            this.btnDown2.Image = ((System.Drawing.Image)(resources.GetObject("btnDown2.Image")));
+            this.btnDown2.Location = new System.Drawing.Point(173, 8);
+            this.btnDown2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnDown2.Name = "btnDown2";
+            this.btnDown2.Size = new System.Drawing.Size(37, 25);
+            this.btnDown2.TabIndex = 18;
+            this.btnDown2.Text = "     ";
+            this.btnDown2.Click += new System.EventHandler(this.btnDown2_Click);
+            // 
             // lbSum2
             // 
             this.lbSum2.AutoSize = true;
@@ -293,6 +609,22 @@
             this.lbSum2.TabIndex = 16;
             this.lbSum2.Text = "400";
             // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel8.Image = ((System.Drawing.Image)(resources.GetObject("bunifuCustomLabel8.Image")));
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(130, 8);
+            this.bunifuCustomLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(32, 25);
+            this.bunifuCustomLabel8.TabIndex = 17;
+            this.bunifuCustomLabel8.Text = "    ";
+            this.bunifuCustomLabel8.Click += new System.EventHandler(this.bunifuCustomLabel8_Click);
+            // 
             // txtSearch2
             // 
             this.txtSearch2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -303,6 +635,21 @@
             this.txtSearch2.Size = new System.Drawing.Size(308, 32);
             this.txtSearch2.TabIndex = 18;
             this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.InitialImage = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(3, 29);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(45, 40);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 19;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
             // 
             // pnlCTLS
             // 
@@ -495,410 +842,39 @@
             this.DgvLSGD.SelectionChanged += new System.EventHandler(this.DgvLSGD_SelectionChanged);
             this.DgvLSGD.Sorted += new System.EventHandler(this.DgvLSGD_Sorted);
             // 
-            // panel3
+            // bunifuTransition1
             // 
-            this.panel3.Controls.Add(this.panel2);
-            this.bunifuTransition1.SetDecoration(this.panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(562, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(718, 720);
-            this.panel3.TabIndex = 3;
+            this.bunifuTransition1.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide;
+            this.bunifuTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             // 
-            // timer1
+            // panel2
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnX2
-            // 
-            this.btnX2.AutoSize = true;
-            this.btnX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.bunifuTransition1.SetDecoration(this.btnX2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnX2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnX2.ForeColor = System.Drawing.Color.White;
-            this.btnX2.Image = ((System.Drawing.Image)(resources.GetObject("btnX2.Image")));
-            this.btnX2.Location = new System.Drawing.Point(227, 8);
-            this.btnX2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.btnX2.Name = "btnX2";
-            this.btnX2.Size = new System.Drawing.Size(27, 25);
-            this.btnX2.TabIndex = 20;
-            this.btnX2.Text = "   ";
-            this.btnX2.Click += new System.EventHandler(this.btnX2_Click);
-            // 
-            // btnDown2
-            // 
-            this.btnDown2.AutoSize = true;
-            this.btnDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.bunifuTransition1.SetDecoration(this.btnDown2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnDown2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDown2.ForeColor = System.Drawing.Color.White;
-            this.btnDown2.Image = ((System.Drawing.Image)(resources.GetObject("btnDown2.Image")));
-            this.btnDown2.Location = new System.Drawing.Point(173, 8);
-            this.btnDown2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.btnDown2.Name = "btnDown2";
-            this.btnDown2.Size = new System.Drawing.Size(37, 25);
-            this.btnDown2.TabIndex = 18;
-            this.btnDown2.Text = "     ";
-            this.btnDown2.Click += new System.EventHandler(this.btnDown2_Click);
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel8.Image = ((System.Drawing.Image)(resources.GetObject("bunifuCustomLabel8.Image")));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(130, 8);
-            this.bunifuCustomLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(32, 25);
-            this.bunifuCustomLabel8.TabIndex = 17;
-            this.bunifuCustomLabel8.Text = "    ";
-            this.bunifuCustomLabel8.Click += new System.EventHandler(this.bunifuCustomLabel8_Click);
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
-            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.InitialImage = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(3, 29);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(45, 40);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 19;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // btnSet
-            // 
-            this.btnSet.Activecolor = System.Drawing.Color.SlateBlue;
-            this.btnSet.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnSet.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSet.BorderRadius = 0;
-            this.btnSet.ButtonText = "     Cài đặt";
-            this.btnSet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnSet, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnSet.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSet.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSet.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSet.Iconimage")));
-            this.btnSet.Iconimage_right = null;
-            this.btnSet.Iconimage_right_Selected = null;
-            this.btnSet.Iconimage_Selected = null;
-            this.btnSet.IconMarginLeft = 0;
-            this.btnSet.IconMarginRight = 0;
-            this.btnSet.IconRightVisible = true;
-            this.btnSet.IconRightZoom = 0D;
-            this.btnSet.IconVisible = true;
-            this.btnSet.IconZoom = 50D;
-            this.btnSet.IsTab = true;
-            this.btnSet.Location = new System.Drawing.Point(3, 397);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnSet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnSet.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSet.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnSet.selected = false;
-            this.btnSet.Size = new System.Drawing.Size(211, 48);
-            this.btnSet.TabIndex = 9;
-            this.btnSet.Text = "     Cài đặt";
-            this.btnSet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSet.Textcolor = System.Drawing.Color.White;
-            this.btnSet.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // btnDX
-            // 
-            this.btnDX.Activecolor = System.Drawing.Color.SlateBlue;
-            this.btnDX.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnDX.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnDX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnDX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDX.BorderRadius = 0;
-            this.btnDX.ButtonText = "     Đăng xuất";
-            this.btnDX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnDX, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnDX.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDX.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDX.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDX.Iconimage")));
-            this.btnDX.Iconimage_right = null;
-            this.btnDX.Iconimage_right_Selected = null;
-            this.btnDX.Iconimage_Selected = null;
-            this.btnDX.IconMarginLeft = 0;
-            this.btnDX.IconMarginRight = 0;
-            this.btnDX.IconRightVisible = true;
-            this.btnDX.IconRightZoom = 0D;
-            this.btnDX.IconVisible = true;
-            this.btnDX.IconZoom = 50D;
-            this.btnDX.IsTab = true;
-            this.btnDX.Location = new System.Drawing.Point(-5, 505);
-            this.btnDX.Name = "btnDX";
-            this.btnDX.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnDX.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnDX.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDX.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnDX.selected = false;
-            this.btnDX.Size = new System.Drawing.Size(211, 48);
-            this.btnDX.TabIndex = 8;
-            this.btnDX.Text = "     Đăng xuất";
-            this.btnDX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDX.Textcolor = System.Drawing.Color.White;
-            this.btnDX.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDX.Click += new System.EventHandler(this.btnDX_Click);
-            // 
-            // btnDK
-            // 
-            this.btnDK.Activecolor = System.Drawing.Color.SlateBlue;
-            this.btnDK.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnDK.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnDK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnDK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDK.BorderRadius = 0;
-            this.btnDK.ButtonText = "     Đăng ký";
-            this.btnDK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnDK, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnDK.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDK.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDK.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDK.Iconimage")));
-            this.btnDK.Iconimage_right = null;
-            this.btnDK.Iconimage_right_Selected = null;
-            this.btnDK.Iconimage_Selected = null;
-            this.btnDK.IconMarginLeft = 0;
-            this.btnDK.IconMarginRight = 0;
-            this.btnDK.IconRightVisible = true;
-            this.btnDK.IconRightZoom = 0D;
-            this.btnDK.IconVisible = true;
-            this.btnDK.IconZoom = 50D;
-            this.btnDK.IsTab = true;
-            this.btnDK.Location = new System.Drawing.Point(0, 451);
-            this.btnDK.Name = "btnDK";
-            this.btnDK.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnDK.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnDK.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDK.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnDK.selected = false;
-            this.btnDK.Size = new System.Drawing.Size(211, 48);
-            this.btnDK.TabIndex = 7;
-            this.btnDK.Text = "     Đăng ký";
-            this.btnDK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDK.Textcolor = System.Drawing.Color.White;
-            this.btnDK.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDK.Click += new System.EventHandler(this.btnDK_Click);
-            // 
-            // btnLS
-            // 
-            this.btnLS.Activecolor = System.Drawing.Color.SlateBlue;
-            this.btnLS.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnLS.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnLS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnLS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLS.BorderRadius = 0;
-            this.btnLS.ButtonText = "     Lịch sử giao dịch";
-            this.btnLS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnLS, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnLS.DisabledColor = System.Drawing.Color.Gray;
-            this.btnLS.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLS.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLS.Iconimage")));
-            this.btnLS.Iconimage_right = null;
-            this.btnLS.Iconimage_right_Selected = null;
-            this.btnLS.Iconimage_Selected = null;
-            this.btnLS.IconMarginLeft = 0;
-            this.btnLS.IconMarginRight = 0;
-            this.btnLS.IconRightVisible = true;
-            this.btnLS.IconRightZoom = 0D;
-            this.btnLS.IconVisible = true;
-            this.btnLS.IconZoom = 50D;
-            this.btnLS.IsTab = true;
-            this.btnLS.Location = new System.Drawing.Point(0, 343);
-            this.btnLS.Name = "btnLS";
-            this.btnLS.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnLS.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnLS.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnLS.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnLS.selected = false;
-            this.btnLS.Size = new System.Drawing.Size(211, 48);
-            this.btnLS.TabIndex = 6;
-            this.btnLS.Text = "     Lịch sử giao dịch";
-            this.btnLS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLS.Textcolor = System.Drawing.Color.White;
-            this.btnLS.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLS.Click += new System.EventHandler(this.btnLS_Click);
-            // 
-            // btnSP
-            // 
-            this.btnSP.Activecolor = System.Drawing.Color.SlateBlue;
-            this.btnSP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnSP.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSP.BorderRadius = 0;
-            this.btnSP.ButtonText = "     Duyệt sản phẩm";
-            this.btnSP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnSP, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnSP.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSP.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSP.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSP.Iconimage")));
-            this.btnSP.Iconimage_right = null;
-            this.btnSP.Iconimage_right_Selected = null;
-            this.btnSP.Iconimage_Selected = null;
-            this.btnSP.IconMarginLeft = 0;
-            this.btnSP.IconMarginRight = 0;
-            this.btnSP.IconRightVisible = true;
-            this.btnSP.IconRightZoom = 0D;
-            this.btnSP.IconVisible = true;
-            this.btnSP.IconZoom = 50D;
-            this.btnSP.IsTab = true;
-            this.btnSP.Location = new System.Drawing.Point(0, 295);
-            this.btnSP.Name = "btnSP";
-            this.btnSP.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnSP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnSP.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnSP.selected = false;
-            this.btnSP.Size = new System.Drawing.Size(211, 48);
-            this.btnSP.TabIndex = 5;
-            this.btnSP.Text = "     Duyệt sản phẩm";
-            this.btnSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSP.Textcolor = System.Drawing.Color.White;
-            this.btnSP.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
-            // 
-            // btnBan
-            // 
-            this.btnBan.Activecolor = System.Drawing.Color.SlateBlue;
-            this.btnBan.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBan.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnBan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBan.BorderRadius = 0;
-            this.btnBan.ButtonText = "     Yêu cầu bán hàng";
-            this.btnBan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnBan, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnBan.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBan.Iconimage")));
-            this.btnBan.Iconimage_right = null;
-            this.btnBan.Iconimage_right_Selected = null;
-            this.btnBan.Iconimage_Selected = null;
-            this.btnBan.IconMarginLeft = 0;
-            this.btnBan.IconMarginRight = 0;
-            this.btnBan.IconRightVisible = true;
-            this.btnBan.IconRightZoom = 0D;
-            this.btnBan.IconVisible = true;
-            this.btnBan.IconZoom = 50D;
-            this.btnBan.IsTab = true;
-            this.btnBan.Location = new System.Drawing.Point(0, 247);
-            this.btnBan.Name = "btnBan";
-            this.btnBan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnBan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnBan.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBan.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnBan.selected = false;
-            this.btnBan.Size = new System.Drawing.Size(211, 48);
-            this.btnBan.TabIndex = 4;
-            this.btnBan.Text = "     Yêu cầu bán hàng";
-            this.btnBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBan.Textcolor = System.Drawing.Color.White;
-            this.btnBan.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnBan.Click += new System.EventHandler(this.btnBan_Click);
-            // 
-            // btnAcc
-            // 
-            this.btnAcc.Activecolor = System.Drawing.Color.SlateBlue;
-            this.btnAcc.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAcc.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnAcc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAcc.BorderRadius = 0;
-            this.btnAcc.ButtonText = "     Tài khoản";
-            this.btnAcc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnAcc, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnAcc.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAcc.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAcc.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAcc.Iconimage")));
-            this.btnAcc.Iconimage_right = null;
-            this.btnAcc.Iconimage_right_Selected = null;
-            this.btnAcc.Iconimage_Selected = null;
-            this.btnAcc.IconMarginLeft = 0;
-            this.btnAcc.IconMarginRight = 0;
-            this.btnAcc.IconRightVisible = true;
-            this.btnAcc.IconRightZoom = 0D;
-            this.btnAcc.IconVisible = true;
-            this.btnAcc.IconZoom = 50D;
-            this.btnAcc.IsTab = true;
-            this.btnAcc.Location = new System.Drawing.Point(0, 199);
-            this.btnAcc.Name = "btnAcc";
-            this.btnAcc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnAcc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnAcc.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAcc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAcc.selected = false;
-            this.btnAcc.Size = new System.Drawing.Size(211, 48);
-            this.btnAcc.TabIndex = 3;
-            this.btnAcc.Text = "     Tài khoản";
-            this.btnAcc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAcc.Textcolor = System.Drawing.Color.White;
-            this.btnAcc.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnAcc.Click += new System.EventHandler(this.btnAcc_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Activecolor = System.Drawing.Color.SlateBlue;
-            this.btnMenu.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnMenu.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMenu.BorderRadius = 0;
-            this.btnMenu.ButtonText = "     Trang chủ";
-            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnMenu.DisabledColor = System.Drawing.Color.Gray;
-            this.btnMenu.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnMenu.Iconimage")));
-            this.btnMenu.Iconimage_right = null;
-            this.btnMenu.Iconimage_right_Selected = null;
-            this.btnMenu.Iconimage_Selected = null;
-            this.btnMenu.IconMarginLeft = 0;
-            this.btnMenu.IconMarginRight = 0;
-            this.btnMenu.IconRightVisible = true;
-            this.btnMenu.IconRightZoom = 0D;
-            this.btnMenu.IconVisible = true;
-            this.btnMenu.IconZoom = 50D;
-            this.btnMenu.IsTab = true;
-            this.btnMenu.Location = new System.Drawing.Point(0, 151);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
-            this.btnMenu.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnMenu.selected = false;
-            this.btnMenu.Size = new System.Drawing.Size(211, 48);
-            this.btnMenu.TabIndex = 2;
-            this.btnMenu.Text = "     Trang chủ";
-            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Textcolor = System.Drawing.Color.White;
-            this.btnMenu.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTransition1.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pnlLSGD);
+            this.panel2.Controls.Add(this.pnlTrangChu);
+            this.bunifuTransition1.SetDecoration(this.panel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(934, 900);
+            this.panel2.TabIndex = 2;
             // 
             // pnlTrangChu
             // 
@@ -911,9 +887,9 @@
             this.pnlTrangChu.Controls.Add(this.chart1);
             this.pnlTrangChu.Controls.Add(this.panelDB6);
             this.bunifuTransition1.SetDecoration(this.pnlTrangChu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pnlTrangChu.Location = new System.Drawing.Point(55, 283);
+            this.pnlTrangChu.Location = new System.Drawing.Point(19, 227);
             this.pnlTrangChu.Name = "pnlTrangChu";
-            this.pnlTrangChu.Size = new System.Drawing.Size(624, 425);
+            this.pnlTrangChu.Size = new System.Drawing.Size(893, 587);
             this.pnlTrangChu.TabIndex = 3;
             // 
             // panelDB1
@@ -921,9 +897,9 @@
             this.panelDB1.Controls.Add(this.flowLayoutPanel2);
             this.panelDB1.Controls.Add(this.bunifuGradientPanel6);
             this.bunifuTransition1.SetDecoration(this.panelDB1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.panelDB1.Location = new System.Drawing.Point(520, 361);
+            this.panelDB1.Location = new System.Drawing.Point(365, 418);
             this.panelDB1.Name = "panelDB1";
-            this.panelDB1.Size = new System.Drawing.Size(336, 347);
+            this.panelDB1.Size = new System.Drawing.Size(340, 347);
             this.panelDB1.TabIndex = 14;
             // 
             // flowLayoutPanel2
@@ -932,7 +908,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 50);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(336, 297);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(340, 297);
             this.flowLayoutPanel2.TabIndex = 3;
             // 
             // bunifuGradientPanel6
@@ -951,7 +927,7 @@
             this.bunifuGradientPanel6.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel6.Name = "bunifuGradientPanel6";
             this.bunifuGradientPanel6.Quality = 10;
-            this.bunifuGradientPanel6.Size = new System.Drawing.Size(336, 50);
+            this.bunifuGradientPanel6.Size = new System.Drawing.Size(340, 50);
             this.bunifuGradientPanel6.TabIndex = 1;
             // 
             // pictureBox7
@@ -988,13 +964,13 @@
             this.bunifuGradientPanel4.Controls.Add(this.label8);
             this.bunifuTransition1.SetDecoration(this.bunifuGradientPanel4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.Red;
-            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.Violet;
             this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.Location = new System.Drawing.Point(262, 202);
+            this.bunifuGradientPanel4.Location = new System.Drawing.Point(939, 82);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(150, 150);
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(230, 230);
             this.bunifuGradientPanel4.TabIndex = 13;
             this.bunifuGradientPanel4.Click += new System.EventHandler(this.btnLS_Click);
             // 
@@ -1003,14 +979,14 @@
             this.lbLS.AutoSize = true;
             this.lbLS.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.lbLS, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.lbLS.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbLS.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbLS.ForeColor = System.Drawing.Color.Red;
-            this.lbLS.Location = new System.Drawing.Point(54, 107);
+            this.lbLS.Location = new System.Drawing.Point(77, 153);
             this.lbLS.Name = "lbLS";
-            this.lbLS.Size = new System.Drawing.Size(49, 37);
+            this.lbLS.Size = new System.Drawing.Size(69, 54);
             this.lbLS.TabIndex = 2;
             this.lbLS.Text = "10";
-            this.lbLS.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbLS.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lbLS.Click += new System.EventHandler(this.btnLS_Click);
             // 
             // pictureBox5
@@ -1018,9 +994,9 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.pictureBox5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(50, 13);
+            this.pictureBox5.Location = new System.Drawing.Point(80, 29);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox5.Size = new System.Drawing.Size(66, 73);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -1033,7 +1009,7 @@
             this.bunifuTransition1.SetDecoration(this.label8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(11, 86);
+            this.label8.Location = new System.Drawing.Point(46, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 21);
             this.label8.TabIndex = 1;
@@ -1048,14 +1024,14 @@
             this.bunifuGradientPanel3.Controls.Add(this.pictureBox4);
             this.bunifuGradientPanel3.Controls.Add(this.label6);
             this.bunifuTransition1.SetDecoration(this.bunifuGradientPanel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.Green;
-            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.Chartreuse;
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(79, 202);
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(343, 82);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(150, 150);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(230, 230);
             this.bunifuGradientPanel3.TabIndex = 12;
             this.bunifuGradientPanel3.Click += new System.EventHandler(this.btnSP_Click);
             // 
@@ -1064,14 +1040,14 @@
             this.lbDuyet.AutoSize = true;
             this.lbDuyet.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.lbDuyet, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.lbDuyet.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbDuyet.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbDuyet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbDuyet.Location = new System.Drawing.Point(54, 107);
+            this.lbDuyet.Location = new System.Drawing.Point(80, 153);
             this.lbDuyet.Name = "lbDuyet";
-            this.lbDuyet.Size = new System.Drawing.Size(49, 37);
+            this.lbDuyet.Size = new System.Drawing.Size(69, 54);
             this.lbDuyet.TabIndex = 2;
             this.lbDuyet.Text = "10";
-            this.lbDuyet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbDuyet.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lbDuyet.Click += new System.EventHandler(this.btnSP_Click);
             // 
             // pictureBox4
@@ -1079,9 +1055,9 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.pictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(41, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(68, 12);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox4.Size = new System.Drawing.Size(81, 94);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -1094,7 +1070,7 @@
             this.bunifuTransition1.SetDecoration(this.label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(13, 86);
+            this.label6.Location = new System.Drawing.Point(51, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 21);
             this.label6.TabIndex = 1;
@@ -1110,13 +1086,13 @@
             this.bunifuGradientPanel2.Controls.Add(this.label4);
             this.bunifuTransition1.SetDecoration(this.bunifuGradientPanel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.Blue;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(262, 21);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(641, 82);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(150, 150);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(230, 230);
             this.bunifuGradientPanel2.TabIndex = 11;
             this.bunifuGradientPanel2.Click += new System.EventHandler(this.btnBan_Click);
             // 
@@ -1125,14 +1101,14 @@
             this.lbBan.AutoSize = true;
             this.lbBan.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.lbBan, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.lbBan.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbBan.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbBan.ForeColor = System.Drawing.Color.Blue;
-            this.lbBan.Location = new System.Drawing.Point(54, 106);
+            this.lbBan.Location = new System.Drawing.Point(82, 153);
             this.lbBan.Name = "lbBan";
-            this.lbBan.Size = new System.Drawing.Size(49, 37);
+            this.lbBan.Size = new System.Drawing.Size(69, 54);
             this.lbBan.TabIndex = 2;
             this.lbBan.Text = "10";
-            this.lbBan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbBan.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lbBan.Click += new System.EventHandler(this.btnBan_Click);
             // 
             // pictureBox3
@@ -1140,9 +1116,9 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(54, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(88, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(49, 70);
+            this.pictureBox3.Size = new System.Drawing.Size(63, 94);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -1155,7 +1131,7 @@
             this.bunifuTransition1.SetDecoration(this.label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(11, 85);
+            this.label4.Location = new System.Drawing.Point(47, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 21);
             this.label4.TabIndex = 1;
@@ -1171,13 +1147,13 @@
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuTransition1.SetDecoration(this.bunifuGradientPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Yellow;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Red;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(79, 21);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(51, 82);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(150, 150);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(230, 230);
             this.bunifuGradientPanel1.TabIndex = 10;
             this.bunifuGradientPanel1.Click += new System.EventHandler(this.btnAcc_Click);
             // 
@@ -1186,14 +1162,14 @@
             this.lbTK.AutoSize = true;
             this.lbTK.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.lbTK, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.lbTK.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTK.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbTK.ForeColor = System.Drawing.Color.Gold;
-            this.lbTK.Location = new System.Drawing.Point(54, 106);
+            this.lbTK.Location = new System.Drawing.Point(84, 153);
             this.lbTK.Name = "lbTK";
-            this.lbTK.Size = new System.Drawing.Size(49, 37);
+            this.lbTK.Size = new System.Drawing.Size(69, 54);
             this.lbTK.TabIndex = 5;
             this.lbTK.Text = "10";
-            this.lbTK.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbTK.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lbTK.Click += new System.EventHandler(this.btnAcc_Click);
             // 
             // label1
@@ -1203,7 +1179,7 @@
             this.bunifuTransition1.SetDecoration(this.label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(37, 81);
+            this.label1.Location = new System.Drawing.Point(76, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 4;
@@ -1215,9 +1191,9 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(41, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(69, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(84, 94);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -1234,14 +1210,15 @@
             this.bunifuTransition1.SetDecoration(this.chart1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(463, 12);
+            this.chart1.Location = new System.Drawing.Point(718, 404);
             this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
             series1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             series1.Legend = "Legend1";
             series1.Name = "Loại sản phẩm";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(593, 331);
+            this.chart1.Size = new System.Drawing.Size(554, 362);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -1250,9 +1227,9 @@
             this.panelDB6.Controls.Add(this.fpnlThu);
             this.panelDB6.Controls.Add(this.bunifuGradientPanel5);
             this.bunifuTransition1.SetDecoration(this.panelDB6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.panelDB6.Location = new System.Drawing.Point(154, 361);
+            this.panelDB6.Location = new System.Drawing.Point(16, 419);
             this.panelDB6.Name = "panelDB6";
-            this.panelDB6.Size = new System.Drawing.Size(336, 347);
+            this.panelDB6.Size = new System.Drawing.Size(340, 347);
             this.panelDB6.TabIndex = 9;
             // 
             // fpnlThu
@@ -1261,7 +1238,7 @@
             this.fpnlThu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fpnlThu.Location = new System.Drawing.Point(0, 50);
             this.fpnlThu.Name = "fpnlThu";
-            this.fpnlThu.Size = new System.Drawing.Size(336, 297);
+            this.fpnlThu.Size = new System.Drawing.Size(340, 297);
             this.fpnlThu.TabIndex = 2;
             // 
             // bunifuGradientPanel5
@@ -1280,7 +1257,7 @@
             this.bunifuGradientPanel5.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel5.Name = "bunifuGradientPanel5";
             this.bunifuGradientPanel5.Quality = 10;
-            this.bunifuGradientPanel5.Size = new System.Drawing.Size(336, 50);
+            this.bunifuGradientPanel5.Size = new System.Drawing.Size(340, 50);
             this.bunifuGradientPanel5.TabIndex = 1;
             // 
             // pictureBox6
@@ -1308,12 +1285,22 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "TOP THU";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel2);
+            this.bunifuTransition1.SetDecoration(this.panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(566, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(934, 900);
+            this.panel3.TabIndex = 3;
+            // 
             // Form_Admin2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.fpnlItem);
             this.Controls.Add(this.pnlMenu);
@@ -1324,17 +1311,18 @@
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.btnMenu_Click);
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlLSGD.ResumeLayout(false);
             this.pnlLSGD.PerformLayout();
             this.pnlKQ2.ResumeLayout(false);
             this.pnlKQ2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.pnlCTLS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvLSGD)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.pnlTrangChu.ResumeLayout(false);
             this.panelDB1.ResumeLayout(false);
             this.bunifuGradientPanel6.ResumeLayout(false);
@@ -1357,6 +1345,7 @@
             this.bunifuGradientPanel5.ResumeLayout(false);
             this.bunifuGradientPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1366,7 +1355,6 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuTransition bunifuTransition1;
-        private System.Windows.Forms.Timer timer1;
         public Bunifu.Framework.UI.BunifuFlatButton btnMenu;
         public System.Windows.Forms.Panel panel1;
         public Bunifu.Framework.UI.BunifuFlatButton btnBan;
@@ -1422,6 +1410,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel fpnlThu;
         private System.Windows.Forms.Panel panel3;
-        public Bunifu.Framework.UI.BunifuFlatButton btnSet;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

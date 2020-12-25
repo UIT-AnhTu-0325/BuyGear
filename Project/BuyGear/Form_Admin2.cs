@@ -21,30 +21,7 @@ namespace BuyGear
 
         bool expand = false;
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (!bunifuTransition1.IsCompleted) return;
-            if (pnlMenu.ClientRectangle.Contains(PointToClient(Control.MousePosition)))
-            {
-                if (!expand)
-                {
-                    expand = true;
-                    pnlMenu.Visible = false;
-                    pnlMenu.Width = 206;
-                    bunifuTransition1.Show(pnlMenu);
-                }
-            }
-            else
-            {
-                if (expand)
-                {
-                    expand = false;
-                    pnlMenu.Visible = false;
-                    pnlMenu.Width = 46;
-                    bunifuTransition1.Show(pnlMenu);
-                }
-            }
-        }
+
         
         #region TAIKHOAN
         ucTaiKhoan InfoUc(string id, string username, string hoatdong)
@@ -326,14 +303,20 @@ namespace BuyGear
             fpnlItem.Controls.Clear();
             fpnlItem.Visible = false;
 
-            Form_Register f = new Form_Register();
+            Form_Register f = new Form_Register()
+            {
+                TopLevel = false,
+                TopMost = true
+            }; 
             f.timer1.Enabled = false;
             f.btnDangkyAdmin.Visible = f.btnThoat.Visible = true;
             f.btnDangky.Visible = false;
             f.bunifuLabel1.Visible = f.bunifuLabel2.Visible = f.bunifuLabel3.Visible = f.bunifuLabel4.Visible = false;
             f.label1.Visible = f.lblDangNhap.Visible = false;
-
-            f.ShowDialog();
+            fpnlItem.Controls.Clear();
+            panel2.Controls.Clear();
+            panel2.Controls.Add(f);
+            f.Show();
         }
 
         private void btnDX_Click(object sender, EventArgs e)
@@ -350,7 +333,8 @@ namespace BuyGear
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
-        {           
+        {
+            DoubleBuffered = true;
             fpnlItem.Visible = false;
             fpnlItem.Controls.Clear();
             panel2.Controls.Clear();
@@ -375,10 +359,26 @@ namespace BuyGear
             
         }
 
-        private void btnSet_Click(object sender, EventArgs e)
+
+
+
+        private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Form_Setting f = new Form_Setting();
-            f.ShowDialog();
+            expand = true;
+            pnlMenu.Visible = false;
+            pnlMenu.Width = 206;
+            bunifuTransition1.Show(pnlMenu);
+            pictureBox8.Visible = false;
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            expand = false;
+            pnlMenu.Visible = false;
+            pnlMenu.Width = 46;
+            bunifuTransition1.Show(pnlMenu);
+            pictureBox8.Visible = true;
+        }
+
     }
 }
