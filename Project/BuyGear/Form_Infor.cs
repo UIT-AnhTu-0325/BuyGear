@@ -229,5 +229,19 @@ namespace BuyGear
                 }
             }
         }
+
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            pageTab.SetPage(2);
+            List<ItemThongBao> listThongBao = Data.Instance.listItemThongBao();
+            foreach(ItemThongBao item in listThongBao)
+            {
+                ucThongBaoDonHang uc = new ucThongBaoDonHang(item);
+                this.fpnlThongBao.Controls.Add(uc);
+            }
+            Data.Instance.CheckThongBao("thongbaoxacnhan_xem", true);
+            Data.Instance.CheckThongBao("thongbaodagiao_xem", true);
+            Account.Instance.numberNotify = 0;
+        }
     }
 }

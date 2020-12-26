@@ -206,7 +206,7 @@ namespace BuyGear.DAO
             return listSP;
         }
 
-        #region InSanPham,chitiet
+        #region InSanPham,chitiet , thong bao
         public List<SanPhamRecommend> loadRecommend(string masp)
         {
             List<SanPhamRecommend> listSp = new List<SanPhamRecommend>();
@@ -253,8 +253,71 @@ namespace BuyGear.DAO
             }
             return list_iml;
         }
+        public List<ItemThongBao> listItemThongBao()
+        {
+            string query = "select ct.trigia, ct.sohd, thoigianxacnhan, trangthai, masp  " +
+                " , ct.thongbaoxacnhan_xem , ct.thongbaodagiao_xem " +
+                "from cthd ct, hoadon hd where ct.sohd = hd.sohd and id_ngmua = @id and " +
+                " thoigianxacnhan is not null and(ct.trangthai = 'dang giao hang' or " +
+                " ct.trangthai = 'da giao hang') order by thoigianxacnhan desc";
+            List<ItemThongBao> listThongBao = new List<ItemThongBao>();
+            DataTable dataTable = this.ExcuteQuery(query, new object[] { Account.Instance.id });
+            foreach(DataRow row in dataTable.Rows)
+            {
+                int temp = -1;
+                if (row["thongbaoxacnhan_xem"].ToString() == "False" || row["thongbaodagiao_xem"].ToString()=="False")
+                    temp = 0;
+                else temp = 1;
+                ItemThongBao item = new ItemThongBao(Int32.Parse(row["trigia"].ToString()),
+                    row["sohd"].ToString(), DateTime.Parse(row["thoigianxacnhan"].ToString())
+                    , row["trangthai"].ToString(), row["masp"].ToString(), temp);
+                listThongBao.Add(item);
+            }
+            return listThongBao;
+        }
+        public int CheckThongBao(string type, bool check)
+        {
+            string loaigiaohang = "";
+            if (type == "thongbaoxacnhan" || type=="thongbaoxacnhan_xem")
+            {
+                loaigiaohang = "dang giao hang";
+            }
+            else if(type=="thongbaodagiao" || type=="thongbaodagiao_xem")
+            {
+                loaigiaohang = "da giao hang";
+            }
+            List<ThongBao> list = new List<ThongBao>();
+            string query = "select ct.sohd, masp from cthd ct, hoadon hd " +
+                " where hd.sohd = ct.sohd and hd.id_ngmua = @id and " +
+                " trangthai = '"+loaigiaohang +"' and "+ type+" = 0";
+            DataTable datatable = this.ExcuteQuery(query, new object[] { Account.Instance.id });
+            foreach(DataRow row in datatable.Rows)
+            {
+                ThongBao tb = new ThongBao(row["sohd"].ToString(), row["masp"].ToString());
+                list.Add(tb);
+            }
+            if (list.Count > 0 ) 
+            {
+                if(type == "thongbaoxacnhan" || type=="thongbaodagiao")
+                ChangeListThongBao(list,type);
+                if ((type == "thongbaoxacnhan_xem" || type=="thongbaodagiao_xem") && check )
+                    ChangeListThongBao(list, type);
+                return list.Count;
+            }
+            else return 0;
+        }
 
-        #endregion
+
+        public void ChangeListThongBao(List<ThongBao> listthongbao , string type)
+        {
+            foreach(ThongBao tb in listthongbao)
+            {
+                string query = "update cthd set "+type +" = 1 where sohd = @sohd and masp = @masp ";
+                this.ExcuteQuery(query, new object[] { tb.Mahd, tb.Masp });
+            }
+        }
+
+        #endregion 
         public List<SanPham> loadDataSanPham(string loaisp)
         {
             List<SanPham> listSP = new List<SanPham>();

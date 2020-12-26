@@ -32,6 +32,9 @@ namespace BuyGear
                 Account.Instance.passWord = txtPass.Text;
                 this.parent.lblName.Text= "Xin chào " + Account.Instance.userName;
                 this.parent.ThongTinGioHang();
+                Account.Instance.numberNotify = 
+                    Data.Instance.CheckThongBao("thongbaoxacnhan_xem",false);
+
                 this.Close();
             }
             else if (Account.Instance.Login(txtUsername.Text, txtPass.Text) > 0 && Account.Instance.CheckType(txtUsername.Text) == true)

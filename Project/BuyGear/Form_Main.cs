@@ -8,6 +8,7 @@ using BuyGear.DAO;
 using BuyGear.DTO;
 using BuyGear.uc;
 using System.IO;
+using System.Media;
 
 namespace BuyGear
 {
@@ -35,6 +36,7 @@ namespace BuyGear
             topEvent();
 
             //some infor
+            
             if (Account.Instance.id == "")
                 this.btnSoSp.Text = "0";
             
@@ -430,7 +432,13 @@ namespace BuyGear
         {
             Data.Instance.Setx(this.fpnlChiTiet.Size.Width);
             Data.Instance.Sety(this.fpnlChiTiet.Size.Height);
-
+            if (Account.Instance.numberNotify > 0)
+            {
+                lblSothongbao.Visible = true;
+                lblSothongbao.Text = Account.Instance.numberNotify.ToString();
+            }
+            else
+                lblSothongbao.Visible = false;
         }
 
         private void bunifuButton4_Click(object sender, EventArgs e)
@@ -570,7 +578,49 @@ namespace BuyGear
                 Account.Instance.changeAvatar(path);
             }
         }
+            
+        private void timer_thongbao_Tick(object sender, EventArgs e)
+        {
+            if (Account.Instance.id != "")
+            {
+                int thongbao = Data.Instance.CheckThongBao("thongbaoxacnhan", false) +
+                    Data.Instance.CheckThongBao("thongbaodagiao", false);
+                if (thongbao > 0)
+                {
+                    Account.Instance.numberNotify = Data.Instance.CheckThongBao("thongbaoxacnhan_xem", false)
+                        + Data.Instance.CheckThongBao("thongbaodagiao_xem", false);
 
+                    playSimpleSound();
+
+                }
+            }
+            
+        }
+        private void playSimpleSound()
+        {
+            SoundPlayer simpleSound = new SoundPlayer("../../AudioFolder/notify.wav");
+            simpleSound.Play();
+        }
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+           
+            if (Account.Instance.userName == "")
+                return;
+
+            //open infor
+            Form_Infor frm = new Form_Infor(this)
+            {
+                TopLevel = false,
+                TopMost = true
+            };
+            this.fpnlChiTiet.Visible = true;
+            this.fpnlProduct.Visible = false;
+            this.pnlChiTietChange.Visible = true;
+            this.fpnlChiTiet.Controls.Clear();
+            this.fpnlChiTiet.Controls.Add(frm);            
+            frm.Show();
+            frm.btnThongBao.PerformClick();
+        }
     }
 }
 

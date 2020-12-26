@@ -29,6 +29,7 @@ namespace BuyGear.DAO
             }
         }
         private Account() { }
+        public int numberNotify = 0;// Data.Instance.CheckThongBao("thongbaoxacnhan_xem");
         public string userName = "";
         public string id = "";
         public string passWord;
