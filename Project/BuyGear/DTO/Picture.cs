@@ -9,6 +9,7 @@ using System.Net;
 using System.Threading;
 using System.Windows.Forms;
 using File = Google.Apis.Drive.v3.Data.File;
+using System.Configuration;
 
 namespace BuyGear
 {
@@ -26,7 +27,7 @@ namespace BuyGear
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,
             });
-            string folderid = "1xFrywthrka6T7WYxKxgZCUdD0nLhqYHh";
+            string folderid = ConfigurationManager.AppSettings["ID_Driver"].ToString();
             UploadImage(path, service, folderid, PictureName);
         }
 
@@ -39,7 +40,7 @@ namespace BuyGear
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,
             });
-            string folderid = "1xFrywthrka6T7WYxKxgZCUdD0nLhqYHh";
+            string folderid = ConfigurationManager.AppSettings["ID_Driver"].ToString();
             FilesResource.ListRequest request = service.Files.List();
             request.Q = "'" + folderid + "' in parents and trashed=false";
             request.Fields = "nextPageToken, files(*)";

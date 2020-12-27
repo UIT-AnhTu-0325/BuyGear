@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BuyGear.DTO;
+using System.Configuration;
 
 namespace BuyGear.DAO
 {
@@ -58,7 +59,7 @@ namespace BuyGear.DAO
         protected static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(GetConnectionString());
         private static string GetConnectionString()
         {
-            return "Server=buygear-sever.database.windows.net;Database=BuyGear;UID=mini0212;Pwd=gaugau@123";
+            return System.Configuration.ConfigurationManager.ConnectionStrings["SeverConection"].ConnectionString;
         }
 
         public DataTable ExcuteQuery (string query, object[] parameters = null)
