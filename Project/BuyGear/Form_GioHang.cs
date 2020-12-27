@@ -20,11 +20,21 @@ namespace BuyGear
             InitializeComponent();
             LoadSanPhamTrongGio();
         }
-        public Form_GioHang(Form_Main parent)
+        public Form_GioHang(Form_Main parent,int type=1)
         {
             this.parent = parent;
             InitializeComponent();
-            LoadSanPhamTrongGio();
+            if (type == 1)
+            {
+                LoadSanPhamTrongGio();
+            }
+            else
+            {
+                pageTab.SetPage(1);
+                UnsetPaVisible();
+                paDangGiao.Visible = true;
+                loadSanPhamDangGiao();
+            }
             InitiateFunction();
             LoadInfor();
         }

@@ -584,6 +584,46 @@ namespace BuyGear
             frmGiohang.YeuThichclick();
             this.pnlAddThanhCong.Visible = false;
         }
+
+        private void bunifuButton5_Click(object sender, EventArgs e)
+        {
+            if (Account.Instance.userName == "")
+            {
+                MessageBox.Show("Vui lòng đăng nhập để vào giỏ hàng");
+                return;
+            }
+            Form_GioHang frmGiohang = new Form_GioHang(this,2)
+            {
+                TopLevel = false,
+                TopMost = true
+            };
+            this.fpnlChiTiet.Controls.Clear();
+            this.fpnlProduct.Visible = false;
+            this.pnlChiTietChange.Visible = true;
+            this.fpnlChiTiet.Visible = true;
+            this.fpnlChiTiet.Controls.Add(frmGiohang);
+            frmGiohang.Show();
+            this.pnlAddThanhCong.Visible = false;
+        }
+
+        private void bunifuButton6_Click(object sender, EventArgs e)
+        {
+            if (Account.Instance.userName == "")
+                return;
+
+            //open infor
+            Form_Infor frm = new Form_Infor(this)
+            {
+                TopLevel = false,
+                TopMost = true
+            };
+            this.fpnlChiTiet.Visible = true;
+            this.fpnlProduct.Visible = false;
+            this.pnlChiTietChange.Visible = true;
+            this.fpnlChiTiet.Controls.Clear();
+            this.fpnlChiTiet.Controls.Add(frm);
+            frm.Show();
+        }
     }
 }
 

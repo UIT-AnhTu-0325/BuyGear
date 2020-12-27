@@ -111,13 +111,13 @@ namespace BuyGear
             UserCredential credential;
             using (var stream = new FileStream("conect_API.json", FileMode.Open, FileAccess.Read))
             {
-                string credPath = "../../BuyGear.exe".Replace("BuyGear.exe","Json");
+                string credPath = "../../BuyGear.exe".Replace("BuyGear.exe", "client_secreta.json");
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
                     Scopes,
                     "user",
                     CancellationToken.None,
-                    new FileDataStore("../../BuyGear.exe".Replace("BuyGear.exe", "Json"), true)).Result;
+                    new FileDataStore("../../BuyGear.exe".Replace("BuyGear.exe", "client_secreta.json"), true)).Result;
             }
             return credential;
         }

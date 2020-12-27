@@ -73,7 +73,10 @@ namespace BuyGear
                     {
                         break;
                     }
+                   
             }
+            _par.pnlThongBao.Visible = true;
+            timer1.Start();
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
@@ -94,6 +97,12 @@ namespace BuyGear
             byte[] buffer = Encoding.ASCII.GetBytes(hd);
             File.WriteAllBytes(svg.FileName+".txt", buffer);*/
              
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            _par.pnlThongBao.Visible = false;
+            timer1.Stop();
         }
     }
 }
