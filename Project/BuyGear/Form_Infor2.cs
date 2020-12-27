@@ -59,41 +59,6 @@ namespace BuyGear
             this.Close();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (btnUpdate.Text == "Chỉnh sửa")
-            {
-                txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = true;
-                rdoNam.Enabled = rdoNu.Enabled = true;
-                chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = true;
-                btnUpdate.Text = "Cập nhật";
-            }
-            else
-            {
-                if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
-                {
-                    txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = false;
-                    rdoNam.Enabled = rdoNu.Enabled = false;
-                    chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = false;
-                    btnUpdate.Text = "Chỉnh sửa";
-                    Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
-                    if (rdoNam.Checked)
-                    {
-                        Account.Instance.UpdateSexual("Nam");
-                    }
-                    else if (rdoNu.Checked)
-                    {
-                        Account.Instance.UpdateSexual("Nữ");
-                    }
-                    Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng nhập đủ thông tin !");
-                }
-
-            }
-        }
 
         private void chkNam_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -175,57 +140,8 @@ namespace BuyGear
             }
         }
 
-        private void chkChangePass_CheckedChanged(object sender, EventArgs e)
-        {
-            pnlChangePass.Visible = !pnlChangePass.Visible;
-        }
 
-        private void btnOK_Click(object sender, EventArgs e)
-        {
-            if (lbConfirm.Text == "Mật khẩu trùng khớp")
-            {
-                if (txtOldPass.Text == Account.Instance.passWord)
-                {
-                    Account.Instance.passWord = txtNewPass.Text;
-                    Account.Instance.UpdatePassword(txtNewPass.Text);
-                    MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK);
-                    txtOldPass.Text = "";
-                    txtNewPass.Text = "";
-                    txtConfirm.Text = "";
-                }
-                else
-                    MessageBox.Show("Mật khẩu cũ chưa chính xác !"+'\n'+txtOldPass.Text+'\n'+Account.Instance.passWord, "Thông báo", MessageBoxButtons.OK);
-            }
-            else
-                MessageBox.Show("Mật khẩu chưa trùng khớp !", "Thông báo", MessageBoxButtons.OK);
-        }
 
-        private void txtNewPass_TextChanged(object sender, EventArgs e)
-        {
-            string password = txtNewPass.Text;
-            if (txtConfirm.Text == "")
-                lbConfirm.Text = "";
-            if (txtConfirm.Text == password && txtConfirm.Text != "")
-                lbConfirm.Text = "Mật khẩu trùng khớp";
-            if (txtConfirm.Text != password && txtConfirm.Text != "")
-                lbConfirm.Text = "Mật khẩu chưa trùng khớp";
-        }
-
-        private void txtConfirm_TextChanged(object sender, EventArgs e)
-        {
-            string confirm = txtConfirm.Text;
-            if (confirm == "" && txtNewPass.Text == "")
-                lbConfirm.Text = "";
-            if (txtNewPass.Text != confirm)
-                lbConfirm.Text = "Mật khẩu chưa trùng khớp";
-            if (txtNewPass.Text == confirm && confirm != "")
-                lbConfirm.Text = "Mật khẩu trùng khớp";
-        }
-
-        private void chkShowPass_CheckedChanged(object sender, EventArgs e)
-        {
-            txtConfirm.UseSystemPasswordChar = txtOldPass.UseSystemPasswordChar = txtNewPass.UseSystemPasswordChar = !txtNewPass.UseSystemPasswordChar;
-        }
         //
         //Thuộc Tính
         //
@@ -238,5 +154,7 @@ namespace BuyGear
         {
             e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
         }
+
+
     }
 }

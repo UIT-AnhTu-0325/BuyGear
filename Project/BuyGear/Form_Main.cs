@@ -115,8 +115,8 @@ namespace BuyGear
                 //btnMyInfor.Visible = false;
                 //  pnl_TheoDoiDonHang.Visible = false;
                 //btnLogin.Visible = true;
-                this.picAvaMini.Image = Picture.FromFile("../../Resources/usericon2.png");
-                this.picAvatar.Image = Picture.FromFile("../../Resources/usericon2.png");
+                this.picAvaMini.Image = Picture.FromFile("../../BuyGear.exe".Replace("BuyGear.exe", "Resources/usericon2.png")); 
+                this.picAvatar.Image = Picture.FromFile("../../BuyGear.exe".Replace("BuyGear.exe", "Resources/usericon2.png"));
                 this.pnl_TheoDoiDonHang.Visible = !this.pnl_TheoDoiDonHang.Visible;
                 this.fpnlChiTiet.Controls.Clear();
             }
@@ -242,7 +242,7 @@ namespace BuyGear
             string s = text.ToLower();
             string[] arr1 = new string[] { "á", "à", "ả", "ã", "ạ", "â", "ấ", "ầ", "ẩ", "ẫ", "ậ", "ă", "ắ", "ằ", "ẳ", "ẵ", "ặ",
     "đ",
-    "é","è","ẻ","ẽ","ẹ","ê","ế","ề","ể","ễ","ề",
+    "é","è","ẻ","ẽ","ẹ","ê","ế","ề","ể","ễ","ệ",
     "í","ì","ỉ","ĩ","ị",
     "ó","ò","ỏ","õ","ọ","ô","ố","ồ","ổ","ỗ","ộ","ơ","ớ","ờ","ở","ỡ","ợ",
     "ú","ù","ủ","ũ","ụ","ư","ứ","ừ","ử","ữ","ự",
@@ -539,7 +539,7 @@ namespace BuyGear
         }
         private void playSimpleSound()
         {
-            SoundPlayer simpleSound = new SoundPlayer("../../AudioFolder/notify.wav");
+            SoundPlayer simpleSound = new SoundPlayer("../../BuyGear.exe".Replace("BuyGear.exe", "AudioFolder/notify.wav"));
             simpleSound.Play();
         }
         private void btnThongBao_Click(object sender, EventArgs e)

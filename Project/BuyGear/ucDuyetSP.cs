@@ -26,7 +26,6 @@ namespace BuyGear.uc
             Account.Instance.userName = Account.Instance.FindUsername(lbID.Text);
             Form_Infor2 f = new Form_Infor2() { TopLevel = false, TopMost = true };
             f.Dock = DockStyle.Fill;
-            f.btnUpdate.Visible = f.btnExit.Visible = f.chkChangePass.Visible = false;
             this.parent.panel2.Controls.Clear();
             this.parent.panel2.Controls.Add(f);
             f.Show();

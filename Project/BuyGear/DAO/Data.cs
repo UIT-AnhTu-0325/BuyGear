@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BuyGear.DTO;
 using System.Configuration;
-
+using System.Runtime.InteropServices;
 namespace BuyGear.DAO
 {
     class Data
@@ -65,29 +65,40 @@ namespace BuyGear.DAO
         public DataTable ExcuteQuery (string query, object[] parameters = null)
         {
             DataTable dataTable = new DataTable();
-            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            int Out;
+            if (InternetGetConnectedState(out Out, 0))
             {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                if (parameters != null)
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
-                    string[] splitPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in splitPara)
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    if (parameters != null)
                     {
-                        if (item.Contains('@'))
+                        string[] splitPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in splitPara)
                         {
-                            command.Parameters.AddWithValue(item, parameters[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameters[i]);
+                                i++;
+                            }
                         }
                     }
-                }
 
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(dataTable);
-                connection.Close();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                    connection.Close();
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Vui lòng khởi động lại chương trình", "Mất kết nối", MessageBoxButtons.OK) == System.Windows.Forms.DialogResult.OK)
+                {
+                    Application.Exit();
+                }
             }
             return dataTable;
         }
@@ -478,7 +489,7 @@ namespace BuyGear.DAO
             string[] str = new string[4];
             str[0] = Data.instance.ExcuteQuery("select count(*) from dbo.infor as i, dbo.account as a where a.username = i.username and a.type = 0").Rows[0][0].ToString();
             str[1] = Data.instance.ExcuteQuery("select count(*) from dbo.infor as i, dbo.account as a where a.username = i.username and a.type = 0 and isduocban = N'cho xac nhan'").Rows[0][0].ToString();
-            str[2] = Data.instance.ExcuteQuery("select count(*) from sanpham where trangthaikiemduyet = N'cho xac nhan'").Rows[0][0].ToString();
+            str[2] = Data.instance.ExcuteQuery("select count(*) from sanpham where trangthaikiemduyet = N'chua kiem duyet'").Rows[0][0].ToString();
             str[3] = Data.instance.ExcuteQuery("select count(*) from sanpham as s, cthd as c, hoadon as h where h.sohd = c.sohd and c.masp = s.ma_sp").Rows[0][0].ToString();
             return str;
         }
@@ -637,6 +648,8 @@ namespace BuyGear.DAO
         }
 
         #endregion
+        [DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int conn, int val);
     }
 
 }

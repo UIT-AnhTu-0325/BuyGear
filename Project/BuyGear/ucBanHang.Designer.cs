@@ -112,14 +112,13 @@
             // picBan
             // 
             this.picBan.Image = ((System.Drawing.Image)(resources.GetObject("picBan.Image")));
-            this.picBan.Location = new System.Drawing.Point(273, 14);
+            this.picBan.Location = new System.Drawing.Point(287, 19);
             this.picBan.Name = "picBan";
-            this.picBan.Size = new System.Drawing.Size(47, 46);
+            this.picBan.Size = new System.Drawing.Size(40, 40);
             this.picBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBan.TabIndex = 14;
             this.picBan.TabStop = false;
             this.picBan.Click += new System.EventHandler(this.picBan_Click);
-            this.picBan.MouseHover += new System.EventHandler(this.picBan_MouseHover);
             // 
             // pictureBox1
             // 
@@ -146,7 +145,7 @@
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ucBanHang";
-            this.Size = new System.Drawing.Size(328, 88);
+            this.Size = new System.Drawing.Size(340, 90);
             this.Click += new System.EventHandler(this.ucBanHang_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picTuChoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picChapNhan)).EndInit();

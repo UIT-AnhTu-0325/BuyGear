@@ -75,7 +75,7 @@ namespace BuyGear
         }
         static public Image LoadImage_by_ID(string ID)
         {
-            string[] allpicture = Directory.GetFiles("../../Temp_DataPicture");
+            string[] allpicture = Directory.GetFiles("../../BuyGear.exe".Replace("BuyGear.exe", "Temp_DataPicture"));
             foreach (var v in allpicture)
             {
                 if (v.Contains(ID))
@@ -94,8 +94,8 @@ namespace BuyGear
             var stream = new MemoryStream();
             var rq = service.Files.Get(ID);
             rq.Download(stream);
-            SaveStream(stream, "../../Temp_DataPicture/" + ID + ".jpg");
-            Image i = Image.FromFile("../../Temp_DataPicture/" + ID + ".jpg");
+            SaveStream(stream, "../../BuyGear.exe/".Replace("BuyGear.exe", "Temp_DataPicture") + ID + ".jpg");
+            Image i = Image.FromFile("../../BuyGear.exe/".Replace("BuyGear.exe", "Temp_DataPicture") + ID + ".jpg");
             return i;
 
         }
@@ -111,13 +111,13 @@ namespace BuyGear
             UserCredential credential;
             using (var stream = new FileStream("conect_API.json", FileMode.Open, FileAccess.Read))
             {
-                string credPath = "../../client_secreta.json";
+                string credPath = "../../BuyGear.exe".Replace("BuyGear.exe","Json");
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
                     Scopes,
                     "user",
                     CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;
+                    new FileDataStore("../../BuyGear.exe".Replace("BuyGear.exe", "Json"), true)).Result;
             }
             return credential;
         }
@@ -161,10 +161,17 @@ namespace BuyGear
         }
         static public Image FromFile(string path)
         {
-            var bytes = System.IO.File.ReadAllBytes(path);
-            var ms = new MemoryStream(bytes);
-            var img = Image.FromStream(ms);
-            return img;
+            if (path == "")
+            {
+                return null;
+            }
+            else
+            {
+                var bytes = System.IO.File.ReadAllBytes(path);
+                var ms = new MemoryStream(bytes);
+                var img = Image.FromStream(ms);
+                return img;
+            }
         }
     }
 

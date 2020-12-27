@@ -163,8 +163,7 @@ namespace BuyGear
             Form_Infor2 f = new Form_Infor2();
             f.Size = this.Size;
             f.Location = this.Location;
-            f.chkChangePass.Visible = false;
-            f.btnUpdate.Visible = false;
+
             f.ShowDialog();
         }
 

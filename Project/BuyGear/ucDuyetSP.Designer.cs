@@ -83,7 +83,7 @@
             this.lbMaSP.AutoSize = true;
             this.lbMaSP.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lbMaSP.Location = new System.Drawing.Point(152, 44);
+            this.lbMaSP.Location = new System.Drawing.Point(165, 44);
             this.lbMaSP.Name = "lbMaSP";
             this.lbMaSP.Size = new System.Drawing.Size(73, 30);
             this.lbMaSP.TabIndex = 29;
@@ -136,7 +136,7 @@
             // picBan
             // 
             this.picBan.Image = ((System.Drawing.Image)(resources.GetObject("picBan.Image")));
-            this.picBan.Location = new System.Drawing.Point(230, 6);
+            this.picBan.Location = new System.Drawing.Point(248, 7);
             this.picBan.Name = "picBan";
             this.picBan.Size = new System.Drawing.Size(71, 68);
             this.picBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -172,7 +172,7 @@
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Blue;
             this.Name = "ucDuyetSP";
-            this.Size = new System.Drawing.Size(321, 123);
+            this.Size = new System.Drawing.Size(333, 123);
             ((System.ComponentModel.ISupportInitialize)(this.picTuChoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picChapNhan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBan)).EndInit();

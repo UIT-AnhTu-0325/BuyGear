@@ -55,7 +55,7 @@ namespace BuyGear
 
         private void Form_DKBH_Load(object sender, EventArgs e)
         {
-            Account.Instance.userName = "meocon123";
+            //Account.Instance.userName = "meocon123";
         }
     }
 }

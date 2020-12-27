@@ -102,7 +102,7 @@ namespace BuyGear
                     frm.Show();
                 }
                 else
-                    MessageBox.Show("Mật khẩu cũ chưa chính xác !"+'\n'+txtOldPass.Text+'\n'+Account.Instance.passWord, "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Mật khẩu cũ chưa chính xác !" + '\n' + txtOldPass.Text + '\n' + Account.Instance.passWord, "Thông báo", MessageBoxButtons.OK);
             }
             else
                 MessageBox.Show("Mật khẩu chưa trùng khớp !", "Thông báo", MessageBoxButtons.OK);
@@ -191,7 +191,7 @@ namespace BuyGear
             }
         }
 
-       
+
 
         private void btnThoats_Click(object sender, EventArgs e)
         {
@@ -237,9 +237,9 @@ namespace BuyGear
             pageTab.SetPage(2);
             this.fpnlThongBao.Controls.Clear();
             List<ItemThongBao> listThongBao = Data.Instance.listItemThongBao();
-            foreach(ItemThongBao item in listThongBao)
+            foreach (ItemThongBao item in listThongBao)
             {
-                ucThongBaoDonHang uc = new ucThongBaoDonHang(item,this);
+                ucThongBaoDonHang uc = new ucThongBaoDonHang(item, this);
                 this.fpnlThongBao.Controls.Add(uc);
             }
             Data.Instance.CheckThongBao("thongbaoxacnhan_xem", true);
@@ -250,6 +250,30 @@ namespace BuyGear
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
+        }
+
+        private void bunifuButton2_Click_1(object sender, EventArgs e)
+        {
+            if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
+            {
+                txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = false;
+                rdoNam.Enabled = rdoNu.Enabled = false;
+                chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = false;
+                Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
+                if (rdoNam.Checked)
+                {
+                    Account.Instance.UpdateSexual("Nam");
+                }
+                else if (rdoNu.Checked)
+                {
+                    Account.Instance.UpdateSexual("Nữ");
+                }
+                Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin !");
+            }
         }
     }
 }

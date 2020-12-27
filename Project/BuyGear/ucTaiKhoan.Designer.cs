@@ -118,14 +118,12 @@
             this.picBan.Image = ((System.Drawing.Image)(resources.GetObject("picBan.Image")));
             this.picBan.Location = new System.Drawing.Point(280, 22);
             this.picBan.Name = "picBan";
-            this.picBan.Size = new System.Drawing.Size(47, 46);
+            this.picBan.Size = new System.Drawing.Size(40, 40);
             this.picBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBan.TabIndex = 5;
             this.picBan.TabStop = false;
             this.picBan.Visible = false;
             this.picBan.Click += new System.EventHandler(this.picBan_Click);
-            this.picBan.MouseLeave += new System.EventHandler(this.picBan_MouseLeave);
-            this.picBan.MouseHover += new System.EventHandler(this.picBan_MouseHover);
             // 
             // bunifuToggleSwitch1
             // 

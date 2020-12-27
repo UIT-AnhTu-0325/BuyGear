@@ -25,7 +25,6 @@ namespace BuyGear.uc
             Account.Instance.userName = this.lbUser.Text;
             Form_Infor2 f = new Form_Infor2() { TopLevel = false, TopMost = true };
             f.Dock = DockStyle.Fill;
-            f.btnUpdate.Visible = f.btnExit.Visible = f.chkChangePass.Visible = false;
             this.parent.panel2.Controls.Clear();
             this.parent.panel2.Controls.Add(f);
             f.Show();
@@ -71,9 +70,5 @@ namespace BuyGear.uc
             parent.loadYeuCau();
         }
 
-        private void picBan_MouseHover(object sender, EventArgs e)
-        {
-            picBan.Size = new Size(picBan.Size.Width + 5, picBan.Size.Height + 5);
-        }
     }
 }

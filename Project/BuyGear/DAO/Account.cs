@@ -200,18 +200,25 @@ namespace BuyGear.DAO
             DataTable v = Data.Instance.ExcuteQuery(query, new Object[] { this.userName });
             if (v.Rows.Count == 0)
             {
-                return Image.FromFile("../../Resources/usericon2.png");
+                return Image.FromFile("../../BuyGear.exe".Replace("BuyGear.exe", "Resources/usericon2.png"));
             }
             return Picture.LoadImage_by_ID(v.Rows[0]["dataAva"].ToString());
            
         }
         public void changeAvatar(string path)
         {
-            Picture.DeletePicture_by_ID(Picture.GetIDPicturebyName(this.userName));
-            Picture.UpPicture(path, userName);
-            string ID = Picture.GetIDPicturebyName(userName);
-            string query = "update Infor set dataAva = @data where username = @username ";
-            Data.Instance.ExcuteQuery(query, new Object[] { ID, this.userName });
+            if (path == "")
+            {
+                return;
+            }
+            else
+            {
+                Picture.DeletePicture_by_ID(Picture.GetIDPicturebyName(this.userName));
+                Picture.UpPicture(path, userName);
+                string ID = Picture.GetIDPicturebyName(userName);
+                string query = "update Infor set dataAva = @data where username = @username ";
+                Data.Instance.ExcuteQuery(query, new Object[] { ID, this.userName });
+            }
         }
         #endregion
     }
