@@ -211,6 +211,7 @@
             this.ckbPhuongThuc2.TabIndex = 3;
             this.ckbPhuongThuc2.ThreeState = false;
             this.ckbPhuongThuc2.ToolTipText = null;
+            this.ckbPhuongThuc2.Visible = false;
             this.ckbPhuongThuc2.Click += new System.EventHandler(this.ckbPhuongThuc2_Click);
             // 
             // bunifuLabel6
@@ -227,6 +228,7 @@
             this.bunifuLabel6.Text = "Ví điện tử MoMo";
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel6.Visible = false;
             // 
             // bunifuLabel5
             // 
@@ -321,6 +323,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(31, 32);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
             // 
             // pictureBox7
             // 

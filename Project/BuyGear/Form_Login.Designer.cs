@@ -113,7 +113,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(794, 728);
+            this.pictureBox1.Size = new System.Drawing.Size(794, 765);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -131,6 +131,7 @@
             this.bunifuLabel4.Text = "CONTACT US";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel4.Visible = false;
             // 
             // bunifuLabel3
             // 
@@ -146,6 +147,7 @@
             this.bunifuLabel3.Text = "ABOUT US";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel3.Visible = false;
             // 
             // bunifuLabel2
             // 
@@ -161,6 +163,7 @@
             this.bunifuLabel2.Text = "ADMIN";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel2.Visible = false;
             // 
             // bunifuLabel1
             // 
@@ -176,6 +179,7 @@
             this.bunifuLabel1.Text = "HOME";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel1.Visible = false;
             // 
             // lblPassWord
             // 
@@ -213,10 +217,10 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(225)))), ((int)(((byte)(243)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 48);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 11);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1341, 728);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1341, 765);
             this.bunifuGradientPanel1.TabIndex = 20;
             // 
             // panelDB1
@@ -226,7 +230,7 @@
             this.panelDB1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelDB1.Location = new System.Drawing.Point(794, 0);
             this.panelDB1.Name = "panelDB1";
-            this.panelDB1.Size = new System.Drawing.Size(547, 728);
+            this.panelDB1.Size = new System.Drawing.Size(547, 765);
             this.panelDB1.TabIndex = 19;
             // 
             // panelDB2
@@ -535,7 +539,7 @@
             this.panelDB3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDB3.Location = new System.Drawing.Point(0, 0);
             this.panelDB3.Name = "panelDB3";
-            this.panelDB3.Size = new System.Drawing.Size(1341, 48);
+            this.panelDB3.Size = new System.Drawing.Size(1341, 11);
             this.panelDB3.TabIndex = 21;
             // 
             // timer1

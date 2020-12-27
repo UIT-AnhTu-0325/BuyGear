@@ -155,7 +155,11 @@ namespace BuyGear
         {
 
         }
-        private void lblYeuthich_Click(object sender, EventArgs e)
+        public void lblYeuthich_Click(object sender, EventArgs e)
+        {
+            YeuThichclick();
+        }
+        public void YeuThichclick()
         {
             pageTab.SetPage(2);
             UnsetPaVisible();

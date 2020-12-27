@@ -33,6 +33,8 @@ namespace BuyGear
             this.fpnlXemTruoc = new FlowPanelDB();
             this.lblhong = new Bunifu.UI.WinForms.BunifuLabel();
             this.flpnl1 = new FlowPanelDB();
+            this.flowPanelDB1 = new FlowPanelDB();
+            this.flpnl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // fpnlXemTruoc
@@ -64,11 +66,19 @@ namespace BuyGear
             // flpnl1
             // 
             this.flpnl1.AutoScroll = true;
+            this.flpnl1.Controls.Add(this.flowPanelDB1);
             this.flpnl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpnl1.Location = new System.Drawing.Point(0, 0);
             this.flpnl1.Name = "flpnl1";
             this.flpnl1.Size = new System.Drawing.Size(630, 672);
             this.flpnl1.TabIndex = 0;
+            // 
+            // flowPanelDB1
+            // 
+            this.flowPanelDB1.Location = new System.Drawing.Point(3, 3);
+            this.flowPanelDB1.Name = "flowPanelDB1";
+            this.flowPanelDB1.Size = new System.Drawing.Size(200, 100);
+            this.flowPanelDB1.TabIndex = 0;
             // 
             // Form_XemTruocAddSanPham
             // 
@@ -81,6 +91,7 @@ namespace BuyGear
             this.Name = "Form_XemTruocAddSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_XemTruocAddSanPham";
+            this.flpnl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -89,5 +100,6 @@ namespace BuyGear
         private FlowPanelDB fpnlXemTruoc;
         private Bunifu.UI.WinForms.BunifuLabel lblhong;
         private FlowPanelDB flpnl1;
+        private FlowPanelDB flowPanelDB1;
     }
 }

@@ -43,6 +43,7 @@ namespace BuyGear
             }    
             NhanXet nx = new NhanXet(btnRatingSelect.Value, txtNhanXetChinh.Text, txtNhanXetChiTiet.Text);
             Data_NhanXet.Instance.upNhanXet(nx,masp );
+            Data_NhanXet.Instance.upNhanXet_anh(masp, linkPictureCmt);
             pnlComplete.Visible = true;
             pnlNhanXet.Visible = false;
         }
@@ -63,6 +64,55 @@ namespace BuyGear
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Size = new Size(this.parent.fpnlChiTiet1.Size.Width-15, this.parent.fpnlChiTiet1.Size.Height-15);
+        }
+        private int index = 1;
+        List<string> linkPictureCmt = new List<string>();
+
+        private void btnUpHinh_Click(object sender, EventArgs e)
+        {
+            string link = Picture.getLinkFromDialog();
+            if (link == "")
+            {
+                return;
+            }
+            try
+            {
+                switch(index)
+                {
+                    case 1:
+                        pic1.Visible = true;
+                        pic1.Image = Picture.FromFile(link);
+                        index++;
+                        break;
+                    case 2:
+                        pic2.Visible = true;
+                        pic2.Image = Picture.FromFile(link);
+                        index++;
+                        break;
+                    case 3:
+                        pic3.Visible = true;
+                        pic3.Image = Picture.FromFile(link);
+                        index++;
+                        break;
+                    case 4:
+                        pic4.Visible = true;
+                        pic4.Image= Picture.FromFile(link);
+                        index++;
+                        break;
+                    case 5:
+                        pic5.Visible = true;
+                        pic5.Image= Picture.FromFile(link);
+                        index++;
+                        break;
+                }
+                linkPictureCmt.Add(link);
+                btnGuiNhanXet.Location = new Point(94, 623);
+
+            }
+            catch
+            {
+                MessageBox.Show("loi");
+            }
         }
     }
 }

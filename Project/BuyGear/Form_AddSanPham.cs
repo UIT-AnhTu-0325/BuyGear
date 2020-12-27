@@ -30,15 +30,14 @@ namespace BuyGear
             this.parent = parent;
             InitializeComponent();
             Page.PageIndex = 0;
-            unvisibleALLPicL();
             pnl_ThongTin.Visible = true;
-            picL_ThongTin.Visible = true;
             addtxt();
             btnExit.Visible = false;
             linkPicture.Add("");
             linkPicture.Add("");
             linkPicture.Add("");
             linkPicture.Add("");
+            THongTin_click();
         }
         public Form_AddSanPham(SanPham s,Form_BanHang parent)
         {
@@ -49,9 +48,7 @@ namespace BuyGear
             _spnow = s;
             InitializeComponent();
             Loadsp();
-            unvisibleALLPicL();
             Page.PageIndex = 0;
-            picL_ThongTin.Visible = true;
 
         }
         public void Loadsp()
@@ -228,42 +225,52 @@ namespace BuyGear
                     }
             }
         }
-        void unvisibleALLPicL()
-        {
-            picL_HinhAnh.Visible = false;
-            picL_MoTa.Visible = false;
-            picL_ThongTin.Visible = false;
-        }
-
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.parent.LoadDS();
             this.Close();
         }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private void THongTin_click()
         {
-            unvisibleALLPicL();
-            btnXemTruoc.Visible = true;
-            picL_MoTa.Visible = true;
-            Page.PageIndex= 1;
-        }
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            unvisibleALLPicL();
-            btnXemTruoc.Visible = false;
-            picL_ThongTin.Visible = true;
             Page.PageIndex = 0;
+            picThongTin.Image = BuyGear.Properties.Resources.B_loading;
+            picThongTin.BackColor = Color.White;
+            picHinhAnh.Image = BuyGear.Properties.Resources.B_watingg;
+            picHinhAnh.BackColor = Color.DarkGray;
+            picMoTa.Image = BuyGear.Properties.Resources.B_watingg;
+            picMoTa.BackColor = Color.DarkGray;
+            pnl1.BackColor = Color.Gray;
+            pnl2.BackColor = Color.Gray;
+            btnOK.Text = "Tiếp tục";
         }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void MoTa_click()
         {
-            unvisibleALLPicL();
-            btnXemTruoc.Visible = false;
-            picL_HinhAnh.Visible = true;
-            Page.PageIndex = 2;
+            Page.PageIndex = 1;
+            picMoTa.Image = BuyGear.Properties.Resources.B_loading;
+            picMoTa.BackColor = Color.White;
+            picThongTin.Image = BuyGear.Properties.Resources.B_checkk;
+            picThongTin.BackColor = Color.White;
+            picHinhAnh.Image = BuyGear.Properties.Resources.B_watingg;
+            picHinhAnh.BackColor = Color.DarkGray;
+            pnl1.BackColor = Color.White;
+            pnl2.BackColor = Color.Gray;
+            btnOK.Text = "Tiếp tục";
         }
+        private void HinhAnh_click()
+        {
+            Page.PageIndex = 2;
+            picHinhAnh.Image = BuyGear.Properties.Resources.B_loading;
+            picHinhAnh.BackColor = Color.White;
+            picThongTin.Image = BuyGear.Properties.Resources.B_checkk;
+            picThongTin.BackColor = Color.White;
+            picMoTa.Image = BuyGear.Properties.Resources.B_checkk;
+            picMoTa.BackColor = Color.White;
+            pnl2.BackColor = Color.White;
+            pnl1.BackColor = Color.White;
+            btnOK.Text = "Đăng";
+        }
+        private int index = 0;
+        
 
         void addPicture(int i)
         {
@@ -352,6 +359,18 @@ namespace BuyGear
         
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if(index==0)
+            {
+                MoTa_click();
+                index++;
+                return;
+            }
+            else if(index==1)
+            {
+                HinhAnh_click();
+                index++;
+                return;
+            }
             if(!checkFill())
             {
                 MessageBox.Show("Bạn cần điền đủ thông tin!");
@@ -397,8 +416,8 @@ namespace BuyGear
                     }
             }
             s.setData(this.txtMaSP.Text, this.txtTenSP.Text, _loaisp, this.txtDVT.Text, this.txtXuatXu.Text, this.txtNhaSX.Text,
-                Int32.Parse(this.txtSoLuong.Text), Int32.Parse(this.txtGiaBan.Text), this.indexMota, DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt"),
-                "chua kiem duyet", parent._ID_me, int.Parse(txtGiaNhap.ToString()), int.Parse(txtGiaBanBuon.ToString()), int.Parse(txtVat.ToString()));
+                Int32.Parse(this.txtSoLuong.Text), Int32.Parse(this.txtGiaBan.Text), this.indexMota, "0:0:0",
+                "chua kiem duyet", parent._ID_me, 0, 0, 0);
             List<string> listmota = new List<string>();
             foreach (object ob in listObject)
             {
@@ -524,7 +543,7 @@ namespace BuyGear
         {
             indexMota = "1" + indexMota;
             PanelDB pnl = new PanelDB();
-            pnl.Size = new Size(865, 210);
+            pnl.Size = new Size(765, 210);
             /* BunifuImageButton btn = new BunifuImageButton();
              btn.ImageSize = new Size(50, 50);
              btn.Zoom = 10;
@@ -574,7 +593,7 @@ namespace BuyGear
             txtChiTietAdd.SelectionLength = 0;
             txtChiTietAdd.SelectionStart = 0;
             txtChiTietAdd.ShortcutsEnabled = true;
-            txtChiTietAdd.Size = new System.Drawing.Size(859, 185);
+            txtChiTietAdd.Size = new System.Drawing.Size(759, 185);
             txtChiTietAdd.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             txtChiTietAdd.TabIndex = 0;
             txtChiTietAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -593,9 +612,38 @@ namespace BuyGear
             fpnlTxt.Controls.Add(pnlAdd);
             fpnlTxt.VerticalScroll.Value = fpnlTxt.VerticalScroll.Maximum;
         }
+        private void xemtruoc()
+        {
+            fpnlXemTruoc.Controls.Clear();
+            foreach (object ob in listObject)
+            {
+
+                if (ob is BunifuTextBox)
+                {
+                    BunifuLabel lblmt = new BunifuLabel();
+                    lblmt.Size = new Size(fpnlXemTruoc.Width - 50, 1000);
+                    BunifuTextBox temp = (BunifuTextBox)ob;
+                    lblmt.Font = new Font("Arial", 12, FontStyle.Regular);
+                    lblmt.Text = temp.Text;
+                    this.fpnlXemTruoc.Controls.Add(lblmt);
+                }
+                else if (ob is Image)
+                {
+                    PictureBox pic = new PictureBox();
+                    Image img = (Image)ob;
+                    pic.Size = new Size((fpnlXemTruoc.Size.Width - 50), (fpnlXemTruoc.Size.Width - 50) * img.Size.Height / img.Size.Width);
+                    pic.Image = img;
+                    pic.SizeMode = PictureBoxSizeMode.Zoom;
+                    this.fpnlXemTruoc.Controls.Add(pic);
+                }
+            }
+            fpnlXemTruoc.VerticalScroll.Value = fpnlXemTruoc.VerticalScroll.Maximum;
+
+        }
         private void btnAddtxb_Click_1(object sender, EventArgs e)
         {
             addtxt();
+            xemtruoc();
         }
 
         private void btnAddPicture_Click_1(object sender, EventArgs e)
@@ -628,10 +676,39 @@ namespace BuyGear
                 fpnlTxt.VerticalScroll.Value = fpnlTxt.VerticalScroll.Maximum;
                 indexMota = "2" + indexMota;
                 linkPictureMoTa.Add(link);
+                xemtruoc();
+
             }
             catch
             {
                 MessageBox.Show("loi");
+            }
+        }
+        
+        private void picThongTin_Click(object sender, EventArgs e)
+        {
+            if(index==1)
+            {
+                THongTin_click();
+                index = 0;
+            }
+        }
+
+        private void picMoTa_Click(object sender, EventArgs e)
+        {
+            if(index==2)
+            {
+                MoTa_click();
+                index = 1;
+            }
+        }
+
+        private void picHinhAnh_Click(object sender, EventArgs e)
+        {
+            if(index==2)
+            {
+                index++;
+                HinhAnh_click();
             }
         }
     }

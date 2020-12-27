@@ -73,6 +73,36 @@ namespace BuyGear.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap B_addImage {
+            get {
+                object obj = ResourceManager.GetObject("B.addImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap B_addText {
+            get {
+                object obj = ResourceManager.GetObject("B.addText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap B_checkk {
+            get {
+                object obj = ResourceManager.GetObject("B.checkk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap B_dagiao {
             get {
                 object obj = ResourceManager.GetObject("B.dagiao", resourceCulture);
@@ -113,6 +143,16 @@ namespace BuyGear.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap B_loading {
+            get {
+                object obj = ResourceManager.GetObject("B.loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap B_order {
             get {
                 object obj = ResourceManager.GetObject("B.order", resourceCulture);
@@ -126,6 +166,16 @@ namespace BuyGear.Properties {
         internal static System.Drawing.Bitmap B_preview {
             get {
                 object obj = ResourceManager.GetObject("B.preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap B_watingg {
+            get {
+                object obj = ResourceManager.GetObject("B.watingg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

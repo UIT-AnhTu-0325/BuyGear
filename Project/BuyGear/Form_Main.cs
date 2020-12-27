@@ -489,8 +489,8 @@ namespace BuyGear
         ucTopMain uctop;
         private void topEvent()
         {
-            uctop = new ucTopMain();
-            fpnlProduct.Controls.Add(uctop);
+           // uctop = new ucTopMain();
+           // fpnlProduct.Controls.Add(uctop);
             ucTabSanPham ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
             fpnlProduct.Controls.Add(ucsp_tab);
             ucTabSanPham ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "daxem");
@@ -561,6 +561,28 @@ namespace BuyGear
             this.fpnlChiTiet.Controls.Add(frm);            
             frm.Show();
             frm.btnThongBao.PerformClick();
+        }
+
+        private void btnYeuThich_Click(object sender, EventArgs e)
+        {
+            if (Account.Instance.userName == "")
+            {
+                MessageBox.Show("Vui lòng đăng nhập để vào yêu thích");
+                return;
+            }
+            Form_GioHang frmGiohang = new Form_GioHang(this)
+            {
+                TopLevel = false,
+                TopMost = true
+            };
+            this.fpnlChiTiet.Controls.Clear();
+            this.fpnlProduct.Visible = false;
+            this.pnlChiTietChange.Visible = true;
+            this.fpnlChiTiet.Visible = true;
+            this.fpnlChiTiet.Controls.Add(frmGiohang);
+            frmGiohang.Show();
+            frmGiohang.YeuThichclick();
+            this.pnlAddThanhCong.Visible = false;
         }
     }
 }

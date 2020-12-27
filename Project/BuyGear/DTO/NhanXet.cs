@@ -8,13 +8,14 @@ namespace BuyGear.DTO
 {
     class NhanXet
     {
-        public NhanXet(string tenKhachHang, DateTime ngayNhanXet, int vote, string nhanXetChinh, string nhanXetChiTiet)
+        public NhanXet(string tenKhachHang, DateTime ngayNhanXet, int vote, string nhanXetChinh, string nhanXetChiTiet, string id)
         {
             this._tenKhachHang = tenKhachHang;
             this._timeNhanXet = ngayNhanXet;
             this._vote = vote;
             this._nhanXetChinh = nhanXetChinh;
             this._nhanXetChiTiet = nhanXetChiTiet;
+            this._id = id;
         }
         public NhanXet(int vote, string nhanxetChinh, string nhanxetchitiet)
         {
@@ -48,9 +49,13 @@ namespace BuyGear.DTO
             get { return _nhanXetChiTiet; }
             set { value = _nhanXetChiTiet; }
         }
-
+        public string Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
         //thuoctinh
-
+        protected string _id;
         protected string _tenKhachHang;
         protected DateTime _timeNhanXet;
         protected int _vote;

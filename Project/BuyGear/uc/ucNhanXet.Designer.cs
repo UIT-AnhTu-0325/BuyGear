@@ -276,6 +276,7 @@
             this.pic1.TabIndex = 24;
             this.pic1.TabStop = false;
             this.pic1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.pic1.Visible = false;
             // 
             // pic2
             // 
@@ -291,6 +292,7 @@
             this.pic2.TabIndex = 24;
             this.pic2.TabStop = false;
             this.pic2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.pic2.Visible = false;
             // 
             // pic3
             // 
@@ -306,6 +308,7 @@
             this.pic3.TabIndex = 24;
             this.pic3.TabStop = false;
             this.pic3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.pic3.Visible = false;
             // 
             // pic4
             // 
@@ -321,6 +324,7 @@
             this.pic4.TabIndex = 24;
             this.pic4.TabStop = false;
             this.pic4.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.pic4.Visible = false;
             // 
             // pic5
             // 
@@ -336,6 +340,7 @@
             this.pic5.TabIndex = 24;
             this.pic5.TabStop = false;
             this.pic5.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.pic5.Visible = false;
             // 
             // ucNhanXet
             // 
@@ -378,10 +383,10 @@
         private Bunifu.UI.WinForms.BunifuLabel lblDanhGiaChiTiet;
         private PanelDB panelDB1;
         private FlowPanelDB flowPanelDB1;
-        private Bunifu.UI.WinForms.BunifuPictureBox pic1;
-        private Bunifu.UI.WinForms.BunifuPictureBox pic2;
-        private Bunifu.UI.WinForms.BunifuPictureBox pic3;
-        private Bunifu.UI.WinForms.BunifuPictureBox pic4;
-        private Bunifu.UI.WinForms.BunifuPictureBox pic5;
+        public Bunifu.UI.WinForms.BunifuPictureBox pic1;
+        public Bunifu.UI.WinForms.BunifuPictureBox pic2;
+        public Bunifu.UI.WinForms.BunifuPictureBox pic3;
+        public Bunifu.UI.WinForms.BunifuPictureBox pic4;
+        public Bunifu.UI.WinForms.BunifuPictureBox pic5;
     }
 }

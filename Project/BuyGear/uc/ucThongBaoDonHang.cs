@@ -13,9 +13,13 @@ namespace BuyGear
 {
     public partial class ucThongBaoDonHang : UserControl
     {
-        public ucThongBaoDonHang(ItemThongBao thongbao)
+        Form_Infor parent;
+        public ucThongBaoDonHang(ItemThongBao thongbao, Form_Infor parent)
         {
             InitializeComponent();
+            this.parent = parent;
+            _masp = thongbao.Masp;
+            _mahd = thongbao.Madh;
             if(thongbao.Checknew==1)
             {
                 picNew.Visible = false;
@@ -34,6 +38,20 @@ namespace BuyGear
                 picTrangThai.Image = BuyGear.Properties.Resources.B_dagiao;
             }
 
+        }
+        private string _masp, _mahd;
+
+        private void lblXemChiTiet_Click(object sender, EventArgs e)
+        {
+            HoaDon hd = Data.Instance.getHoaDon(_masp, _mahd);
+            Invoice i = new Invoice(hd);
+            i.PrintMe();
+        }
+
+        private void lblXoa_Click(object sender, EventArgs e)
+        {
+            Data.Instance.DeleteItemThongBao(_mahd, _masp);
+            this.parent.btnThongBao.PerformClick();
         }
     }
 }

@@ -114,7 +114,7 @@
             this.panelDB1 = new PanelDB();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
             this.picAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnThoats = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -178,10 +178,10 @@
             this.pageTab.Location = new System.Drawing.Point(382, 116);
             this.pageTab.Multiline = true;
             this.pageTab.Name = "pageTab";
-            this.pageTab.Page = this.tabPage3;
-            this.pageTab.PageIndex = 0;
-            this.pageTab.PageName = "tabPage3";
-            this.pageTab.PageTitle = "tabPage3";
+            this.pageTab.Page = this.tabPage1;
+            this.pageTab.PageIndex = 2;
+            this.pageTab.PageName = "tabPage1";
+            this.pageTab.PageTitle = "tabPage1";
             this.pageTab.SelectedIndex = 0;
             this.pageTab.Size = new System.Drawing.Size(1069, 674);
             this.pageTab.TabIndex = 20;
@@ -1041,6 +1041,7 @@
             // 
             // fpnlThongBao
             // 
+            this.fpnlThongBao.AutoScroll = true;
             this.fpnlThongBao.Location = new System.Drawing.Point(3, 3);
             this.fpnlThongBao.Name = "fpnlThongBao";
             this.fpnlThongBao.Size = new System.Drawing.Size(1034, 642);
@@ -1075,7 +1076,7 @@
             // 
             this.bunifuShadowPanel3.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel3.Controls.Add(this.picAvatar);
-            this.bunifuShadowPanel3.Controls.Add(this.label2);
+            this.bunifuShadowPanel3.Controls.Add(this.lblWelcome);
             this.bunifuShadowPanel3.Controls.Add(this.label3);
             this.bunifuShadowPanel3.Controls.Add(this.label4);
             this.bunifuShadowPanel3.Location = new System.Drawing.Point(0, 0);
@@ -1101,17 +1102,17 @@
             this.picAvatar.TabStop = false;
             this.picAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
             // 
-            // label2
+            // lblWelcome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.2F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(54, 139);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Welcome LamHong";
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 8.2F, System.Drawing.FontStyle.Bold);
+            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblWelcome.Location = new System.Drawing.Point(54, 139);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(109, 13);
+            this.lblWelcome.TabIndex = 2;
+            this.lblWelcome.Text = "Welcome LamHong";
             // 
             // label3
             // 
@@ -1657,7 +1658,7 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnThoats;
         private Bunifu.UI.WinForms.BunifuPictureBox picAvatar;
         private Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel bunifuShadowPanel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblWelcome;
         private Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel bunifuShadowPanel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

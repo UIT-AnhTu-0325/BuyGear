@@ -41,8 +41,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panelDB1 = new PanelDB();
             this.panelDB2 = new PanelDB();
             this.btnThoat = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -71,6 +69,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtRePass = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panelDB3 = new PanelDB();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -101,10 +101,10 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(225)))), ((int)(((byte)(243)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 48);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 10);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1293, 673);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1293, 711);
             this.bunifuGradientPanel1.TabIndex = 18;
             // 
             // pictureBox1
@@ -115,21 +115,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(790, 673);
+            this.pictureBox1.Size = new System.Drawing.Size(790, 711);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 10;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // panelDB1
             // 
@@ -138,7 +126,7 @@
             this.panelDB1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelDB1.Location = new System.Drawing.Point(790, 0);
             this.panelDB1.Name = "panelDB1";
-            this.panelDB1.Size = new System.Drawing.Size(503, 673);
+            this.panelDB1.Size = new System.Drawing.Size(503, 711);
             this.panelDB1.TabIndex = 19;
             // 
             // panelDB2
@@ -677,6 +665,18 @@
             this.panel2.Size = new System.Drawing.Size(360, 2);
             this.panel2.TabIndex = 0;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // panelDB3
             // 
             this.panelDB3.Controls.Add(this.bunifuLabel4);
@@ -686,7 +686,7 @@
             this.panelDB3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDB3.Location = new System.Drawing.Point(0, 0);
             this.panelDB3.Name = "panelDB3";
-            this.panelDB3.Size = new System.Drawing.Size(1293, 48);
+            this.panelDB3.Size = new System.Drawing.Size(1293, 10);
             this.panelDB3.TabIndex = 19;
             // 
             // bunifuLabel4
@@ -703,6 +703,7 @@
             this.bunifuLabel4.Text = "CONTACT US";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel4.Visible = false;
             // 
             // bunifuLabel3
             // 
@@ -718,6 +719,7 @@
             this.bunifuLabel3.Text = "ABOUT US";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel3.Visible = false;
             // 
             // bunifuLabel2
             // 
@@ -733,6 +735,7 @@
             this.bunifuLabel2.Text = "ADMIN";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel2.Visible = false;
             // 
             // bunifuLabel1
             // 
@@ -748,6 +751,7 @@
             this.bunifuLabel1.Text = "HOME";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel1.Visible = false;
             // 
             // Form_Register
             // 

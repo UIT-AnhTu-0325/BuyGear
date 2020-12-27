@@ -57,11 +57,11 @@ namespace BuyGear
                 ucRecommendSanPham uc = new ucRecommendSanPham();
                 this.fpnlSanPhamTuongTu.Controls.Add(uc);
             }*/
-            for (int x = 0; x < 2; x++)
+           /* for (int x = 0; x < 2; x++)
             {
                 ucRecommendSanPham uc = new ucRecommendSanPham();
                 this.fpnlSanPhamTuongTu.Controls.Add(uc);
-            }
+            }*/
 
             //load mo ta chi tiet
             List<string> listmota = new List<string>();
@@ -277,7 +277,6 @@ namespace BuyGear
         {
             int sum = 0, nrating = 0, nrate1 = 0, nrate2 = 0, nrate3 = 0, nrate4 = 0, nrate5 = 0; // "n" de phan biet voi rate toolbox
             List<NhanXet> listNhanXet = Data_NhanXet.Instance.loadNhanXet(_masp);
-            List<byte[]> linkimage = new List<byte[]>();
             for (int i = 0; i < 5; i++)
             {
                 bStar[i] = false;
@@ -314,9 +313,12 @@ namespace BuyGear
                         listvoting[4].Add(nx);
                         break;
                 }
+                List<string> linkimage = Data_NhanXet.Instance.listImage(_masp, nx.Id);
+                
                 listvoting[5].Add(nx);
                 //  ucNhanXet ucnhanxet = new ucNhanXet(this, "hong", 1, "duoc", "duoc lam nha!!!",linkimage );
                 ucNhanXet ucnhanxet = new ucNhanXet(this, nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
+                
                 this.fpnlNhanXet.Controls.Add(ucnhanxet);
             }
             if (sum != 0)
@@ -357,7 +359,7 @@ namespace BuyGear
         }
         private void btnStar_click(int index)
         {
-            List<byte[]> linkimage = new List<byte[]>();
+            
             if (!bStar[index - 1])
             {
                 returnInitiateColor();
@@ -389,6 +391,7 @@ namespace BuyGear
                 fpnlNhanXet.Controls.Clear();
                 foreach (NhanXet nx in listvoting[index - 1])
                 {
+                    List<string> linkimage = Data_NhanXet.Instance.listImage(_masp, nx.Id);
                     ucNhanXet ucnhanxet = new ucNhanXet(this, nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
                     this.fpnlNhanXet.Controls.Add(ucnhanxet);
                 }
@@ -423,6 +426,7 @@ namespace BuyGear
                 fpnlNhanXet.Controls.Clear();
                 foreach (NhanXet nx in listvoting[5])
                 {
+                    List<string> linkimage = Data_NhanXet.Instance.listImage(_masp, nx.Id);
                     ucNhanXet ucnhanxet = new ucNhanXet(this, nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
                     this.fpnlNhanXet.Controls.Add(ucnhanxet);
                 }

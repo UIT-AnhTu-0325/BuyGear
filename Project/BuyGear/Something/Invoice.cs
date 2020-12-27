@@ -29,8 +29,8 @@ namespace BuyGear
             this.easyHTMLReports.Clear();
             this.easyHTMLReports.AddString("<h1>BUYGEAR</h1>");
             this.easyHTMLReports.AddString("<h3>Hóa đơn thanh toán</h3>");
-            this.easyHTMLReports.AddString(string.Format("</p>Tên: {0}</p>", _hd.Diachi));
-            this.easyHTMLReports.AddString(string.Format("</p>Địa chỉ: {0}</p>", _hd.Tenngmua));
+            this.easyHTMLReports.AddString(string.Format("</p>Tên: {0}</p>", _hd.Tenngmua));
+            this.easyHTMLReports.AddString(string.Format("</p>Địa chỉ: {0}</p>", _hd.Diachi));
             this.easyHTMLReports.AddString(string.Format("<p>Số điện thoại: </p>",_hd.SoDienThoai));
             this.easyHTMLReports.AddString(string.Format("<p>Số hóa đơn: #{0}</p>", _hd.Sohd));
             this.easyHTMLReports.AddString(string.Format("<p>Ngày đặt: {0}</p>", _hd.Nghdon));

@@ -25,6 +25,7 @@ namespace BuyGear
             txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = true;
             rdoNam.Enabled = rdoNu.Enabled = true;
             chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = true;
+            lblWelcome.Text = "Welcome " + Account.Instance.userName;
         }
 
         //
@@ -234,10 +235,11 @@ namespace BuyGear
         private void btnThongBao_Click(object sender, EventArgs e)
         {
             pageTab.SetPage(2);
+            this.fpnlThongBao.Controls.Clear();
             List<ItemThongBao> listThongBao = Data.Instance.listItemThongBao();
             foreach(ItemThongBao item in listThongBao)
             {
-                ucThongBaoDonHang uc = new ucThongBaoDonHang(item);
+                ucThongBaoDonHang uc = new ucThongBaoDonHang(item,this);
                 this.fpnlThongBao.Controls.Add(uc);
             }
             Data.Instance.CheckThongBao("thongbaoxacnhan_xem", true);

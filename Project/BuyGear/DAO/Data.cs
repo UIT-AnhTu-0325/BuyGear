@@ -251,11 +251,16 @@ namespace BuyGear.DAO
             }
             return list_iml;
         }
+        public void DeleteItemThongBao(string mahd, string masp)
+        {
+            string query = "update cthd set hienthongbao=1 where masp= @masp and sohd= @mahd ";
+            this.ExcuteQuery(query, new object[] { masp, mahd });
+        }
         public List<ItemThongBao> listItemThongBao()
         {
             string query = "select ct.trigia, ct.sohd, thoigianxacnhan, trangthai, masp  " +
                 " , ct.thongbaoxacnhan_xem , ct.thongbaodagiao_xem " +
-                "from cthd ct, hoadon hd where ct.sohd = hd.sohd and id_ngmua = @id and " +
+                "from cthd ct, hoadon hd where ct.sohd = hd.sohd and id_ngmua = @id and hienthongbao=0 and " +
                 " thoigianxacnhan is not null and(ct.trangthai = 'dang giao hang' or " +
                 " ct.trangthai = 'da giao hang') order by thoigianxacnhan desc";
             List<ItemThongBao> listThongBao = new List<ItemThongBao>();
@@ -572,6 +577,27 @@ namespace BuyGear.DAO
 
             }
             return listSP;
+        }
+        public HoaDon getHoaDon(string masp, string sohd)
+        {
+            string query = "select numberphone from account a, infor i where  " +
+                " a.id = (select id_ngban from sanpham where ma_sp = @masp ) " +
+                " and i.username = a.username";
+            string sdt = Data.instance.ExcuteQuery(query, new object[] { masp }).Rows[0]["numberphone"].ToString();
+            string query1 = "select tensp from sanpham where ma_sp= @masp ";
+            string tensp = Data.instance.ExcuteQuery(query1, new object[] { masp }).Rows[0]["tensp"].ToString();
+            string query2 = "select name, address from account a, infor i " +
+                " where a.id= @id and i.username =a.username";
+            string name = Data.instance.ExcuteQuery(query2, new object[] { Account.Instance.id }).Rows[0]["name"].ToString();
+            string diachi = Data.instance.ExcuteQuery(query2, new object[] { Account.Instance.id }).Rows[0]["address"].ToString();
+            string query3 = "select * from hoadon hd, cthd ct where hd.sohd = ct.sohd " +
+                " and ct.masp = @masp and ct.sohd = @sohd ";
+            DataRow row = Data.instance.ExcuteQuery(query3, new object[] { masp, sohd }).Rows[0];
+
+            HoaDon hd = new HoaDon(name, int.Parse(Account.Instance.id), row["nghd"].ToString(), tensp,
+                int.Parse(row["sl"].ToString()), long.Parse(row["trigia"].ToString()),
+                diachi, "", int.Parse(row["sohd"].ToString()), masp, sdt);
+            return hd;
         }
         public void changetrangthai(int sohd, string masp, string trangthai)
         {

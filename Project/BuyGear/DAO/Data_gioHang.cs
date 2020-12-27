@@ -166,7 +166,12 @@ namespace BuyGear.DAO
             Data.Instance.ExcuteQuery(query, new object[] { masp, soluong });
 
         }
-
+        public string getSohd()
+        {
+            string query = "select top 1 sohd sohd from  dbo.hoadon order by sohd desc";
+            string sohd = Data.Instance.ExcuteQuery(query).Rows[0]["sohd"].ToString();
+            return sohd; 
+        }
         public int SoSanPhamTrongGio()
         {
             int x = 0;

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BuyGear.DAO;
 namespace BuyGear
 {
     public partial class Form_ThanhToanThanhCong : Form
@@ -17,6 +17,7 @@ namespace BuyGear
         {
             this.parent = parent;
             InitializeComponent();
+            this.lblMaDonHang.Text = "BG" + Data_gioHang.Instance.getSohd();
         }
         public Form_ThanhToanThanhCong()
         {

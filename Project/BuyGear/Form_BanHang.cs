@@ -29,6 +29,7 @@ namespace BuyGear
             this.picAvatar.Image = Account.Instance.getAvatar();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            lblWelcome.Text = "Welcome " + Account.Instance.userName;
         }
         public void LoadDS()
         {

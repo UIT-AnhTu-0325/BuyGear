@@ -32,15 +32,15 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblXemChiTiet = new System.Windows.Forms.Label();
             this.lblXoa = new System.Windows.Forms.Label();
+            this.picNew = new System.Windows.Forms.PictureBox();
+            this.picTrangThai = new System.Windows.Forms.PictureBox();
             this.panelDB1 = new PanelDB();
             this.panelDB2 = new PanelDB();
             this.panelDB4 = new PanelDB();
             this.panelDB3 = new PanelDB();
-            this.picNew = new System.Windows.Forms.PictureBox();
-            this.picTrangThai = new System.Windows.Forms.PictureBox();
-            this.panelDB1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTrangThai)).BeginInit();
+            this.panelDB1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTime
@@ -67,24 +67,50 @@
             // lblXemChiTiet
             // 
             this.lblXemChiTiet.AutoSize = true;
+            this.lblXemChiTiet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblXemChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.lblXemChiTiet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblXemChiTiet.Location = new System.Drawing.Point(246, 55);
             this.lblXemChiTiet.Name = "lblXemChiTiet";
-            this.lblXemChiTiet.Size = new System.Drawing.Size(98, 20);
+            this.lblXemChiTiet.Size = new System.Drawing.Size(107, 20);
             this.lblXemChiTiet.TabIndex = 0;
-            this.lblXemChiTiet.Text = "Xem chi tiết";
+            this.lblXemChiTiet.Text = "Xem hóa đơn";
+            this.lblXemChiTiet.Click += new System.EventHandler(this.lblXemChiTiet_Click);
             // 
             // lblXoa
             // 
             this.lblXoa.AutoSize = true;
+            this.lblXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.lblXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblXoa.Location = new System.Drawing.Point(361, 55);
+            this.lblXoa.Location = new System.Drawing.Point(370, 55);
             this.lblXoa.Name = "lblXoa";
             this.lblXoa.Size = new System.Drawing.Size(38, 20);
             this.lblXoa.TabIndex = 0;
             this.lblXoa.Text = "Xóa";
+            this.lblXoa.Click += new System.EventHandler(this.lblXoa_Click);
+            // 
+            // picNew
+            // 
+            this.picNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picNew.Image = global::BuyGear.Properties.Resources.UI_new;
+            this.picNew.Location = new System.Drawing.Point(0, 3);
+            this.picNew.Name = "picNew";
+            this.picNew.Size = new System.Drawing.Size(42, 38);
+            this.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNew.TabIndex = 1;
+            this.picNew.TabStop = false;
+            // 
+            // picTrangThai
+            // 
+            this.picTrangThai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picTrangThai.Image = global::BuyGear.Properties.Resources.B_danggiao;
+            this.picTrangThai.Location = new System.Drawing.Point(164, 23);
+            this.picTrangThai.Name = "picTrangThai";
+            this.picTrangThai.Size = new System.Drawing.Size(52, 52);
+            this.picTrangThai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTrangThai.TabIndex = 1;
+            this.picTrangThai.TabStop = false;
             // 
             // panelDB1
             // 
@@ -125,28 +151,6 @@
             this.panelDB3.Size = new System.Drawing.Size(84, 4);
             this.panelDB3.TabIndex = 0;
             // 
-            // picNew
-            // 
-            this.picNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picNew.Image = global::BuyGear.Properties.Resources.UI_new;
-            this.picNew.Location = new System.Drawing.Point(0, 3);
-            this.picNew.Name = "picNew";
-            this.picNew.Size = new System.Drawing.Size(42, 38);
-            this.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picNew.TabIndex = 1;
-            this.picNew.TabStop = false;
-            // 
-            // picTrangThai
-            // 
-            this.picTrangThai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picTrangThai.Image = global::BuyGear.Properties.Resources.B_danggiao;
-            this.picTrangThai.Location = new System.Drawing.Point(164, 23);
-            this.picTrangThai.Name = "picTrangThai";
-            this.picTrangThai.Size = new System.Drawing.Size(52, 52);
-            this.picTrangThai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTrangThai.TabIndex = 1;
-            this.picTrangThai.TabStop = false;
-            // 
             // ucThongBaoDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,9 +165,9 @@
             this.Controls.Add(this.lblTime);
             this.Name = "ucThongBaoDonHang";
             this.Size = new System.Drawing.Size(1211, 112);
-            this.panelDB1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTrangThai)).EndInit();
+            this.panelDB1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
