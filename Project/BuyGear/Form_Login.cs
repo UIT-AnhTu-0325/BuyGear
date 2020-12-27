@@ -7,7 +7,7 @@ namespace BuyGear
 {
     public partial class Form_Login : Form
     {
-        Form_Main parent;
+        public Form_Main parent;
         public Form_Login()
         {
             InitializeComponent();
@@ -30,10 +30,10 @@ namespace BuyGear
             {
                 Account.Instance.userName = txtUsername.Text;
                 Account.Instance.passWord = txtPass.Text;
-                this.parent.lblName.Text= "Xin chào " + Account.Instance.userName;
+                this.parent.lblName.Text = "Xin chào " + Account.Instance.userName;
                 this.parent.ThongTinGioHang();
-                Account.Instance.numberNotify = 
-                    Data.Instance.CheckThongBao("thongbaoxacnhan_xem",false);
+                Account.Instance.numberNotify =
+                    Data.Instance.CheckThongBao("thongbaoxacnhan_xem", false);
 
                 this.Close();
             }
@@ -43,12 +43,15 @@ namespace BuyGear
                 Account.Instance.passWord = txtPass.Text;
                 this.Hide();
                 Form_Admin2 f = new Form_Admin2();
+                this.parent.Hide();
                 f.ShowDialog();
+                this.parent.Show();
                 this.Show();
+                this.txtPass.Text = "";
             }
             else
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                lblErrorLogin.Visible = true; ;
             }
         }
 
@@ -76,11 +79,6 @@ namespace BuyGear
             this.parent.fpnlChiTiet.Controls.Clear();
             this.parent.fpnlChiTiet.Controls.Add(frm);
             frm.Show();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-                this.Close();
         }
 
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
@@ -129,6 +127,7 @@ namespace BuyGear
                 txtPass.Focus();
                 checkfield2 = true;
             }
+            lblErrorLogin.Visible = false;
         }
 
         private void txtPass_KeyDown(object sender, KeyEventArgs e)
@@ -137,6 +136,7 @@ namespace BuyGear
             {
                 do_Login();
             }
+            lblErrorLogin.Visible = false;
         }
 
         private void txtUsername_Click(object sender, EventArgs e)

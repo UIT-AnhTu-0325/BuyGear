@@ -178,10 +178,10 @@
             this.pageTab.Location = new System.Drawing.Point(382, 116);
             this.pageTab.Multiline = true;
             this.pageTab.Name = "pageTab";
-            this.pageTab.Page = this.tabPage1;
-            this.pageTab.PageIndex = 2;
-            this.pageTab.PageName = "tabPage1";
-            this.pageTab.PageTitle = "tabPage1";
+            this.pageTab.Page = this.tabPage3;
+            this.pageTab.PageIndex = 0;
+            this.pageTab.PageName = "tabPage3";
+            this.pageTab.PageTitle = "tabPage3";
             this.pageTab.SelectedIndex = 0;
             this.pageTab.Size = new System.Drawing.Size(1069, 674);
             this.pageTab.TabIndex = 20;
@@ -257,6 +257,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(297, 22);
             this.txtSDT.TabIndex = 4;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // lblPhone
             // 

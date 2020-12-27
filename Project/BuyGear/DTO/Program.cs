@@ -16,7 +16,7 @@ namespace BuyGear.DTO
         {
             Application.SetCompatibleTextRenderingDefault(false);
             Application.EnableVisualStyles();
-            Application.Run(new Form_Loading());
+            Application.Run(new Form_Main());
         }
     }
 }

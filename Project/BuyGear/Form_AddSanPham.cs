@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.IO;
 using Bunifu.UI.WinForms.BunifuTextbox;
 using Bunifu.UI.WinForms;
+using BuyGear.Something;
 
 namespace BuyGear
 {
@@ -28,22 +29,16 @@ namespace BuyGear
             toDo = "them";
             this.parent = parent;
             InitializeComponent();
-            init();
-            unvisibleAllPnl();
+            Page.PageIndex = 0;
             unvisibleALLPicL();
             pnl_ThongTin.Visible = true;
             picL_ThongTin.Visible = true;
+            addtxt();
             btnExit.Visible = false;
             linkPicture.Add("");
             linkPicture.Add("");
             linkPicture.Add("");
             linkPicture.Add("");
-           
-
-            unvisibleAllPnl();
-            unvisibleALLPicL();
-            pnl_MoTa.Visible = true;
-            picL_MoTa.Visible = true;
         }
         public Form_AddSanPham(SanPham s,Form_BanHang parent)
         {
@@ -53,11 +48,9 @@ namespace BuyGear
             toDo = "sua";
             _spnow = s;
             InitializeComponent();
-            init();
             Loadsp();
-            unvisibleAllPnl();
             unvisibleALLPicL();
-            pnl_ThongTin.Visible = true;
+            Page.PageIndex = 0;
             picL_ThongTin.Visible = true;
 
         }
@@ -227,7 +220,6 @@ namespace BuyGear
                             }
                         }
                         this.indexMota = _spnow.IndexMoTa;
-                        btnXemTruoc_Click();
                         fpnlTxt.Controls.Remove(pnlAdd);
                         fpnlTxt.Controls.Add(pnlAdd);
                         fpnlTxt.VerticalScroll.Value = fpnlTxt.VerticalScroll.Maximum;
@@ -236,23 +228,11 @@ namespace BuyGear
                     }
             }
         }
-        void unvisibleAllPnl()
-        {
-            pnl_HinhAnh.Visible = false;
-            pnl_MoTa.Visible = false;
-            pnl_ThongTin.Visible = false;
-        }
         void unvisibleALLPicL()
         {
             picL_HinhAnh.Visible = false;
             picL_MoTa.Visible = false;
             picL_ThongTin.Visible = false;
-        }
-        void init()
-        {
-            this.Controls.Add(pnl_ThongTin);
-            this.Controls.Add(pnl_HinhAnh);
-            this.Controls.Add(pnl_MoTa);
         }
 
         private void btnExit_Click_1(object sender, EventArgs e)
@@ -263,26 +243,26 @@ namespace BuyGear
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            unvisibleAllPnl();
             unvisibleALLPicL();
-            pnl_MoTa.Visible = true;
+            btnXemTruoc.Visible = true;
             picL_MoTa.Visible = true;
+            Page.PageIndex= 1;
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            unvisibleAllPnl();
             unvisibleALLPicL();
-            pnl_ThongTin.Visible = true;
+            btnXemTruoc.Visible = false;
             picL_ThongTin.Visible = true;
+            Page.PageIndex = 0;
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            unvisibleAllPnl();
             unvisibleALLPicL();
-            pnl_HinhAnh.Visible = true;
+            btnXemTruoc.Visible = false;
             picL_HinhAnh.Visible = true;
+            Page.PageIndex = 2;
         }
 
         void addPicture(int i)
@@ -352,10 +332,31 @@ namespace BuyGear
         {
             addPicture(4);
         }
+        bool checkFill()
+        {
+            if (txtLoaiSP.Text == "") return false;
+            if (txtMaSP.Text == "") return false;
+            if (txtTenSP.Text == "") return false;
+            if (txtDVT.Text == "") return false;
+            if (txtNhaSX.Text == "") return false;
+            if (txtXuatXu.Text == "") return false;
+            if (txtSoLuong.Text == "") return false;
+            if (txtGiaBan.Text == "") return false;
+            if (txtGiaNhap.Text == "") return false;
+            if (txtGiaBanBuon.Text == "") return false;
+            if (txtVat.Text == "") return false;
+            if (linkPicture.Count != 4) return false;
+            if (listObject.Count <= 0) return false;
+            return true;
+        }
         
         private void btnOK_Click(object sender, EventArgs e)
         {
-            
+            if(!checkFill())
+            {
+                MessageBox.Show("Bạn cần điền đủ thông tin!");
+                return;
+            }
             string _loaisp;
             switch(txtLoaiSP.Text)
             {
@@ -396,8 +397,8 @@ namespace BuyGear
                     }
             }
             s.setData(this.txtMaSP.Text, this.txtTenSP.Text, _loaisp, this.txtDVT.Text, this.txtXuatXu.Text, this.txtNhaSX.Text,
-                Int32.Parse(this.txtSoLuong.Text), Int32.Parse(this.txtGiaBan.Text), this.indexMota, "0:0:0",
-                "chua kiem duyet", parent._ID_me, 0, 0, 0);
+                Int32.Parse(this.txtSoLuong.Text), Int32.Parse(this.txtGiaBan.Text), this.indexMota, DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt"),
+                "chua kiem duyet", parent._ID_me, int.Parse(txtGiaNhap.ToString()), int.Parse(txtGiaBanBuon.ToString()), int.Parse(txtVat.ToString()));
             List<string> listmota = new List<string>();
             foreach (object ob in listObject)
             {
@@ -411,7 +412,7 @@ namespace BuyGear
             {
                 Data.Instance.UpSanPham(s,linkPicture , linkPictureMoTa, listmota );
                 MessageBox.Show("Đăng bán sản phẩm thành công!!\n " +
-                         "Sản phẩm sẽ được duyệt và bán!!"+s.IndexMoTa+" "+indexMota);
+                         "Sản phẩm sẽ được duyệt và bán!!");
             }
             
             if(toDo=="sua")
@@ -433,42 +434,30 @@ namespace BuyGear
                 }    
             }    
         }
-        bool isValid(char c)
-        {
-            int i;
-            if (int.TryParse(c.ToString(), out i))
-            {
-                return true;
-            }
-            if (c == Convert.ToChar(8))
-            {
-                return true;
-            }
-            return false;
-        }
+        
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !isValid(e.KeyChar);   
+            e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);   
         }
 
         private void txtGiaNhap_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !isValid(e.KeyChar);
+            e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
         }
 
         private void txtGiaBan_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !isValid(e.KeyChar);
+            e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
         }
 
         private void txtGiaBanBuon_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !isValid(e.KeyChar);
+            e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
         }
 
         private void txtVat_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !isValid(e.KeyChar);
+            e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
         }
 
         private void txtLoaiSP_SelectedIndexChanged(object sender, EventArgs e)
@@ -516,18 +505,33 @@ namespace BuyGear
         }
         private string indexMota;
         private List<BunifuTextBox> listTxtBox = new List<BunifuTextBox>();
-        private void btnAddtxb_Click(object sender, EventArgs e)
+
+        private void Form_AddSanPham_Load(object sender, EventArgs e)
+        {
+            btnAddtxb.PerformClick();
+
+        }
+        List<object> listObject = new List<object>();
+        List<Image> listImage = new List<Image>();
+
+
+        private void btnXemTruoc_Click(object sender, EventArgs e)
+        {
+            Form_XemTruocAddSanPham f = new Form_XemTruocAddSanPham(listObject);
+            f.ShowDialog();
+        }
+        void addtxt()
         {
             indexMota = "1" + indexMota;
             PanelDB pnl = new PanelDB();
-            pnl.Size= new Size(820, 210);
-           /* BunifuImageButton btn = new BunifuImageButton();
-            btn.ImageSize = new Size(50, 50);
-            btn.Zoom = 10;
-            btn.ImageZoomSize = new Size(60, 60);
-            //btn.BackgroundImage = BuyGear.Properties.Resources.tick4;
-            btn.Image = BuyGear.Properties.Resources.tick4;
-            btn.Location = new Point(720, 35);*/
+            pnl.Size = new Size(865, 210);
+            /* BunifuImageButton btn = new BunifuImageButton();
+             btn.ImageSize = new Size(50, 50);
+             btn.Zoom = 10;
+             btn.ImageZoomSize = new Size(60, 60);
+             //btn.BackgroundImage = BuyGear.Properties.Resources.tick4;
+             btn.Image = BuyGear.Properties.Resources.tick4;
+             btn.Location = new Point(720, 35);*/
             BunifuTextBox txtChiTietAdd = new BunifuTextBox();
             #region itemTxt
             txtChiTietAdd.AcceptsReturn = false;
@@ -555,7 +559,7 @@ namespace BuyGear
             txtChiTietAdd.IconRight = null;
             txtChiTietAdd.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             txtChiTietAdd.Lines = new string[0];
-            txtChiTietAdd.Location = new System.Drawing.Point(10, 10);
+            txtChiTietAdd.Location = new System.Drawing.Point(3, 3);
             txtChiTietAdd.MaxLength = 32767;
             txtChiTietAdd.MinimumSize = new System.Drawing.Size(100, 35);
             txtChiTietAdd.Modified = false;
@@ -570,14 +574,14 @@ namespace BuyGear
             txtChiTietAdd.SelectionLength = 0;
             txtChiTietAdd.SelectionStart = 0;
             txtChiTietAdd.ShortcutsEnabled = true;
-            txtChiTietAdd.Size = new System.Drawing.Size(690, 181);
+            txtChiTietAdd.Size = new System.Drawing.Size(859, 185);
             txtChiTietAdd.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             txtChiTietAdd.TabIndex = 0;
             txtChiTietAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             txtChiTietAdd.TextMarginBottom = 0;
             txtChiTietAdd.TextMarginLeft = 5;
             txtChiTietAdd.TextMarginTop = 0;
-            txtChiTietAdd.TextPlaceholder = "Enter text";
+            txtChiTietAdd.TextPlaceholder = "Nhập dữ liệu";
             txtChiTietAdd.UseSystemPasswordChar = false;
             txtChiTietAdd.WordWrap = true;
             #endregion
@@ -585,22 +589,17 @@ namespace BuyGear
             pnl.Controls.Add(txtChiTietAdd);
             listTxtBox.Add(txtChiTietAdd);
             listObject.Add(txtChiTietAdd);
-            btnXemTruoc_Click();
             fpnlTxt.Controls.Remove(pnlAdd);
             fpnlTxt.Controls.Add(pnlAdd);
             fpnlTxt.VerticalScroll.Value = fpnlTxt.VerticalScroll.Maximum;
-
         }
-
-        private void Form_AddSanPham_Load(object sender, EventArgs e)
+        private void btnAddtxb_Click_1(object sender, EventArgs e)
         {
-            btnAddtxb.PerformClick();
-
+            addtxt();
         }
-        List<object> listObject = new List<object>();
-        List<Image> listImage = new List<Image>();
-        private void btnAddPicture_Click(object sender, EventArgs e)
-        {            
+
+        private void btnAddPicture_Click_1(object sender, EventArgs e)
+        {
             string link = Picture.getLinkFromDialog();
             if (link == "")
             {
@@ -611,20 +610,19 @@ namespace BuyGear
                 PictureBox pic = new PictureBox();
                 pic.SizeMode = PictureBoxSizeMode.Zoom;
                 Image picLink = Picture.FromFile(link);
-                if (picLink.Width > fpnlTxt.Size.Width-40)
+                if (picLink.Width > fpnlTxt.Size.Width - 40)
                 {
-                    pic.Size = new Size(fpnlTxt.Size.Width - 40, (fpnlTxt.Size.Width - 40) 
+                    pic.Size = new Size(fpnlTxt.Size.Width - 40, (fpnlTxt.Size.Width - 40)
                         * picLink.Size.Height / (picLink.Size.Width - 40));
                 }
                 else
                 {
-                    pic.Size = new Size(fpnlTxt.Size.Width-40, fpnlTxt.Size.Height-40);
+                    pic.Size = new Size(fpnlTxt.Size.Width - 40, fpnlTxt.Size.Height - 40);
                 }
                 pic.Image = picLink;
                 fpnlTxt.Controls.Add(pic);
                 listImage.Add(picLink);
                 listObject.Add(picLink);
-                btnXemTruoc_Click();
                 fpnlTxt.Controls.Remove(pnlAdd);
                 fpnlTxt.Controls.Add(pnlAdd);
                 fpnlTxt.VerticalScroll.Value = fpnlTxt.VerticalScroll.Maximum;
@@ -635,44 +633,6 @@ namespace BuyGear
             {
                 MessageBox.Show("loi");
             }
-           
-        }
-
-        private void btnXemTruoc_Click()
-        {
-            fpnlXemTruoc.Controls.Clear();
-             foreach(object ob in listObject)
-            {
-
-                if(ob is BunifuTextBox)
-                {
-                    BunifuLabel lblmt = new BunifuLabel();
-                    lblmt.MaximumSize = new Size(fpnlXemTruoc.Size.Width-50, 1000);
-                    BunifuTextBox temp = (BunifuTextBox)ob;
-                    lblmt.Font= new Font("Arial", 12, FontStyle.Regular);
-                    lblmt.Text = temp.Text;
-                    this.fpnlXemTruoc.Controls.Add(lblmt);
-                }
-                else if(ob is Image)
-                {
-                    PictureBox pic = new PictureBox();
-                    Image img = (Image)ob;
-                    pic.Size = new Size((fpnlXemTruoc.Size.Width-50), (fpnlXemTruoc.Size.Width-50) * img.Size.Height / img.Size.Width);
-                    pic.Image = img;
-                    pic.SizeMode = PictureBoxSizeMode.Zoom;
-                    this.fpnlXemTruoc.Controls.Add(pic);
-                }
-            }
-            fpnlXemTruoc.VerticalScroll.Value = fpnlXemTruoc.VerticalScroll.Maximum;
-             
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            listObject = new List<object>();
-            fpnlTxt.Controls.Clear();
-            fpnlXemTruoc.Controls.Clear();
-            btnAddtxb.PerformClick();
         }
     }
 }

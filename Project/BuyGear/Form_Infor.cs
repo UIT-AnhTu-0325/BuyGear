@@ -6,6 +6,7 @@ using BuyGear.DAO;
 using BuyGear.DTO;
 using System.Drawing;
 using System.IO;
+using BuyGear.Something;
 
 namespace BuyGear
 {
@@ -242,6 +243,11 @@ namespace BuyGear
             Data.Instance.CheckThongBao("thongbaoxacnhan_xem", true);
             Data.Instance.CheckThongBao("thongbaodagiao_xem", true);
             Account.Instance.numberNotify = 0;
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
         }
     }
 }

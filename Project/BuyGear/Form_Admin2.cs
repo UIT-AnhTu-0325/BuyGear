@@ -328,6 +328,7 @@ namespace BuyGear
             if (MessageBox.Show("Bạn muốn đăng xuất khỏi tài khoản ?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 Account.Instance.userName = "";
+                Account.Instance.passWord = "";
                 this.Close();
             }
         }

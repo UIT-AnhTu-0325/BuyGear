@@ -47,13 +47,6 @@ namespace BuyGear
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void NameThongTin()
-        {
-            //if (btnMyInfor.Visible)
-            //{
-            //    btnMyInfor.Text = "Xin chào " + Account.Instance.userName;
-            //}
-        }
 
         private void btnMyInfor_Click(object sender, EventArgs e)
         {
@@ -79,16 +72,6 @@ namespace BuyGear
         {
             if (Account.Instance.userName != "")
                 return;
-            //Form_Login f = new Form_Login();
-            //  f.ShowDialog();
-            if (Account.Instance.userName != "")
-            {
-                //btnLogin.Visible = false;
-                //btnMyInfor.Visible = true;
-                NameThongTin();
-
-            }
-
             // new design login
             Form_Login frm = new Form_Login(this)
             { TopLevel = false, TopMost = true };
@@ -144,6 +127,7 @@ namespace BuyGear
             if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng ?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 bunifuFlatButton1.Enabled = false;
+                Application.Exit();
                 this.Close();
             }
         }
@@ -249,7 +233,7 @@ namespace BuyGear
         private void btnKhac_Click(object sender, EventArgs e)
         {
             UnvisionAll();
-            picLusb.Visible = true;
+            picLkhac.Visible = true;
             fpnlProduct.Controls.Clear();
             SearchButtonClear();
         }
@@ -423,11 +407,6 @@ namespace BuyGear
             txtSearch.Text = "";
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             Data.Instance.Setx(this.fpnlChiTiet.Size.Width);
@@ -496,7 +475,9 @@ namespace BuyGear
                 return;
             }
             Form_BanHang b = new Form_BanHang(int.Parse(Account.Instance.id));
-            b.Show();
+            this.Hide();
+            b.ShowDialog();
+            this.Show();
         }
         private void bunifuLabel2_Click(object sender, EventArgs e)
         {
@@ -505,13 +486,9 @@ namespace BuyGear
             fpnlProduct.Controls.Clear();
             topEvent();
         }
-        ucTopMain uctop; ucTabSanPham ucsp_tab; ucTabSanPham ucsp_ta1b;
-        ucTabSanPham ucsp_ta2b; ucTabSanPham ucsp_ta3b;
-        bool iscomplete = false;
+        ucTopMain uctop;
         private void topEvent()
         {
-            // bkgrnd_do_topevent.RunWorkerAsync();
-            //timer_do_topevent.Start();
             uctop = new ucTopMain();
             fpnlProduct.Controls.Add(uctop);
             ucTabSanPham ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
@@ -524,43 +501,7 @@ namespace BuyGear
             fpnlProduct.Controls.Add(ucsp_ta3b);
             fpnlProduct.Visible = true;
         }
-
-
-        private void bkgrnd_do_topevent_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
-            //ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
-            //uctop = new ucTopMain();
-            // ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
-            //  fpnlProduct.Controls.Add(ucsp_tab);
-            // ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "top");
-            //  fpnlProduct.Controls.Add(ucsp_ta1b);
-            //  ucsp_ta2b = new ucTabSanPham(this, "Dành riêng cho bạn: ", "top");
-            //  fpnlProduct.Controls.Add(ucsp_ta2b);
-            // ucsp_ta3b = new ucTabSanPham(this, "Các sản phẩm đã xem: ", "daxem");
-            // fpnlProduct.Controls.Add(ucsp_ta3b);
-            // fpnlProduct.Visible = true;
-        }
-
-        private void bkgrnd_do_topevent_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
-        {
-            iscomplete = true;
-        }
-
-        private void timer_do_topevent_Tick(object sender, EventArgs e)
-        {
-            if(iscomplete)
-            {
-                fpnlProduct.Visible = true;
-                fpnlProduct.Controls.Clear();
-                fpnlProduct.Controls.Add(uctop);
-                fpnlProduct.Controls.Add(ucsp_tab);
-               // fpnlProduct.Controls.Add(ucsp_ta1b);
-                //fpnlProduct.Controls.Add(ucsp_ta2b);
-                //fpnlProduct.Controls.Add(ucsp_ta3b);
-            }
-            timer_do_topevent.Stop();
-        }
-        private void LoadAvatar()
+       private void LoadAvatar()
         {
             if (!(Account.Instance.userName == ""))
             {

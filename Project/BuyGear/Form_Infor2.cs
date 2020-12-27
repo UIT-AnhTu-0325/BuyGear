@@ -4,6 +4,8 @@ using System.Data;
 using System.Windows.Forms;
 using BuyGear.DAO;
 using BuyGear.DTO;
+using BuyGear.Something;
+
 namespace BuyGear
 {
     public partial class Form_Infor2 : Form
@@ -232,5 +234,9 @@ namespace BuyGear
         public List<string> list_29 = new List<string>() { "Ngày", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29" };
         public List<string> list_28 = new List<string>() { "Ngày", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28" };
 
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
+        }
     }
 }

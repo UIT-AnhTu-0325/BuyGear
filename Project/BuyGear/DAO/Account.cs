@@ -59,8 +59,11 @@ namespace BuyGear.DAO
             string hashPass = Account.instance.Encode(password);
             string sqlQuery = "EXEC Pro_CheckLogin @username , @password";
             int count = Data.Instance.ExcuteQuery(sqlQuery, new object[] { username, hashPass }).Rows.Count;
-            string sqlQuery1 = "select id from dbo.Account where username= @username";
-            id = Data.Instance.ExcuteQuery(sqlQuery1, new object[] { username }).Rows[0]["id"].ToString();
+            if (count > 0)
+            {
+                string sqlQuery1 = "select id from dbo.Account where username= @username";
+                id = Data.Instance.ExcuteQuery(sqlQuery1, new object[] { username }).Rows[0]["id"].ToString();
+            }
             //id = Data.Instance.ExcuteQuery(sqlQuery1).Rows[0]["id"].ToString();
             return count;
         }
@@ -195,7 +198,7 @@ namespace BuyGear.DAO
         {
             string query = "select dataAva from Infor where username = @username ";
             DataTable v = Data.Instance.ExcuteQuery(query, new Object[] { this.userName });
-            if (v.Rows[0]["dataAva"] == DBNull.Value)
+            if (v.Rows.Count == 0)
             {
                 return Image.FromFile("../../Resources/usericon2.png");
             }

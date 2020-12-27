@@ -26,7 +26,9 @@ namespace BuyGear
             InitializeComponent();
             bunifuPages1.PageIndex = 2;
             loadDataHome(); bunifuPages1.PageIndex = 0;
-           // this.picAvatar.Image = Account.Instance.getAvatar();
+            this.picAvatar.Image = Account.Instance.getAvatar();
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
         public void LoadDS()
         {
@@ -306,6 +308,11 @@ namespace BuyGear
         private void btnAD_Click(object sender, EventArgs e)
         {
             pnlInfor.Visible = !pnlInfor.Visible;
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

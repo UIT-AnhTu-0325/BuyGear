@@ -30,8 +30,8 @@ namespace BuyGear
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.ucLoading1 = new BuyGear.uc.ucLoading();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ucLoading1 = new BuyGear.uc.ucLoading();
             this.SuspendLayout();
             // 
             // label1
@@ -45,6 +45,11 @@ namespace BuyGear
             this.label1.TabIndex = 1;
             this.label1.Text = "Waiting...";
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
             // ucLoading1
             // 
             this.ucLoading1.BackColor = System.Drawing.Color.Transparent;
@@ -52,11 +57,6 @@ namespace BuyGear
             this.ucLoading1.Name = "ucLoading1";
             this.ucLoading1.Size = new System.Drawing.Size(324, 320);
             this.ucLoading1.TabIndex = 0;
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // Form_Loading
             // 
@@ -66,9 +66,9 @@ namespace BuyGear
             this.ClientSize = new System.Drawing.Size(510, 426);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucLoading1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form_Loading";
-            this.Text = "Form_Loading";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

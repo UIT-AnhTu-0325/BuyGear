@@ -45,6 +45,7 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panelDB1 = new PanelDB();
             this.panelDB2 = new PanelDB();
+            this.lblErrorLogin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -231,6 +232,7 @@
             // panelDB2
             // 
             this.panelDB2.BackColor = System.Drawing.Color.White;
+            this.panelDB2.Controls.Add(this.lblErrorLogin);
             this.panelDB2.Controls.Add(this.label2);
             this.panelDB2.Controls.Add(this.label1);
             this.panelDB2.Controls.Add(this.bunifuButton1);
@@ -241,6 +243,18 @@
             this.panelDB2.Name = "panelDB2";
             this.panelDB2.Size = new System.Drawing.Size(481, 638);
             this.panelDB2.TabIndex = 17;
+            // 
+            // lblErrorLogin
+            // 
+            this.lblErrorLogin.AutoSize = true;
+            this.lblErrorLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorLogin.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorLogin.Location = new System.Drawing.Point(96, 354);
+            this.lblErrorLogin.Name = "lblErrorLogin";
+            this.lblErrorLogin.Size = new System.Drawing.Size(179, 17);
+            this.lblErrorLogin.TabIndex = 18;
+            this.lblErrorLogin.Text = "Sai tài khoản hoặc mật khẩu !";
+            this.lblErrorLogin.Visible = false;
             // 
             // label2
             // 
@@ -305,7 +319,7 @@
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(30, 377);
+            this.bunifuButton1.Location = new System.Drawing.Point(30, 393);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties1.BorderRadius = 60;
@@ -599,5 +613,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label lblErrorLogin;
     }
 }

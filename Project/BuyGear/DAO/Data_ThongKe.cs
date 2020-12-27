@@ -15,7 +15,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select sum (sl) as sl from CTHD where trangthai = 'da giao hang' and ngayhoanthanh <= @dateto and ngayhoanthanh >= @datefrom " +
                 "and masp in(select ma_sp from sanpham  where ID_ngban = @id )";
             int sl = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString("MM/dd/yyyy h:mm:ss tt"), from.ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
         public static int CountDonHangHoanThanh(int ID, DateTime from, DateTime to)
@@ -23,7 +23,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select count (masp) as sl from CTHD where trangthai = 'da giao hang' and ngayhoanthanh <= @dateto and ngayhoanthanh >= @datefrom " +
                 "and masp in(select ma_sp from sanpham  where ID_ngban = @id )";
             int sl = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString("MM/dd/yyyy h:mm:ss tt"), from.ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
         public static int CountDonHangDangGiao(int ID, DateTime from, DateTime to)
@@ -31,7 +31,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select count (masp) as sl from CTHD where trangthai = 'dang giao hang' and ngaybatdaugiao <= @dateto and ngayhoanthanh is NULL " +
                 "and masp in(select ma_sp from sanpham  where ID_ngban = @id )";
             int sl = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
         public static int CountDonHangTiepNhan(int ID, DateTime from, DateTime to)
@@ -39,7 +39,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select count (masp) as sl from CTHD C, hoadon H where H.nghd <= @dateto and nghd >= @datefrom " +
                 "and C.masp in(select ma_sp from sanpham  where ID_ngban = @id ) and C.sohd = H.sohd ";
             int sl = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString("MM/dd/yyyy h:mm:ss tt"), from.ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
         public static int CountDoanhThu(int ID, DateTime from, DateTime to)
@@ -47,7 +47,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select sum (trigia) as sl from CTHD where trangthai = 'da giao hang' and ngayhoanthanh <= @dateto and ngayhoanthanh >= @datefrom " +
                 "and masp in(select ma_sp from sanpham  where ID_ngban = @id )";
             int sl = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString("MM/dd/yyyy h:mm:ss tt"), from.ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
         public static int CountDonHangChoXuLy(int ID, DateTime from, DateTime to)
@@ -55,7 +55,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select count (masp) as sl from CTHD C, hoadon H where trangthai = 'cho xac nhan' and H.nghd <= @dateto and nghd >= @datefrom " +
                 "and C.masp in(select ma_sp from sanpham  where ID_ngban = @id ) and C.sohd=H.sohd";
             int sl = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString("MM/dd/yyyy h:mm:ss tt"), from.ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
         private static DateTime getNowMonth()
@@ -84,19 +84,19 @@ namespace BuyGear.DAO
             string sqlQuery1 = "Select count (masp) as sl from CTHD C, hoadon H where trangthai = 'cho xac nhan' and H.nghd <= @dateto and nghd >= @datefrom " +
                 "and C.masp in(select ma_sp from sanpham  where ID_ngban = @id ) and C.sohd=H.sohd";
             int sl1 = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery1, new object[] { getNowMonth().ToString(), get6MonthAgo().ToString(), ID }).Rows[0]["sl"].ToString(), out sl1);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery1, new object[] { getNowMonth().ToString("MM/dd/yyyy h:mm:ss tt"), get6MonthAgo().ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl1);
             v.Add("Chờ xác nhận", sl1);
             //==
             string sqlQuery2 = "Select count (masp) as sl from CTHD where trangthai = 'dang giao hang' and ngaybatdaugiao <= @dateto and ngayhoanthanh is NULL " +
                 "and masp in(select ma_sp from sanpham  where ID_ngban = @id )";
             int sl2 = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery2, new object[] { getNowMonth().ToString(), ID }).Rows[0]["sl"].ToString(), out sl2);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery2, new object[] { getNowMonth().ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl2);
             v.Add("Đang giao", sl2);
             //==
             string sqlQuery3 = "Select count (masp) as sl from CTHD where trangthai = 'da giao hang' and ngayhoanthanh <= @dateto and ngayhoanthanh >= @datefrom " +
                 "and masp in(select ma_sp from sanpham  where ID_ngban = @id )";
             int sl3 = 0;
-            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery3, new object[] { getNowMonth().ToString(), get6MonthAgo().ToString(), ID }).Rows[0]["sl"].ToString(), out sl3);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery3, new object[] { getNowMonth().ToString("MM/dd/yyyy h:mm:ss tt"), get6MonthAgo().ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl3);
             v.Add("Đã giao hàng", sl3);
             v.Add("Hủy bỏ", 0);
             return v;
@@ -257,7 +257,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select count (masp) as sl from CTHD C, hoadon H where H.nghd <= @dateto and nghd >= @datefrom " +
                 "and C.masp in(select ma_sp from sanpham  where ID_ngban = @id ) and C.sohd = H.sohd ";
             int sl = 0;
-           // int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString("MM/dd/yyyy h:mm:ss tt"), from.ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
         public static int CountSoSPDangBan(int ID)
@@ -274,7 +274,7 @@ namespace BuyGear.DAO
             string sqlQuery = "Select sum (trigia) as sl from CTHD where trangthai = 'da giao hang' and ngayhoanthanh <= @dateto and ngayhoanthanh >= @datefrom " +
                 "and masp in(select ma_sp from sanpham  where ID_ngban = @id )";
             int sl = 0;
-            //int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString(), from.ToString(), ID }).Rows[0]["sl"].ToString(), out sl);
+            int.TryParse(Data.Instance.ExcuteQuery(sqlQuery, new object[] { to.ToString("MM/dd/yyyy h:mm:ss tt"), from.ToString("MM/dd/yyyy h:mm:ss tt"), ID }).Rows[0]["sl"].ToString(), out sl);
             return sl;
         }
 

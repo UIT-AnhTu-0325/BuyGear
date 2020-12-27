@@ -61,10 +61,9 @@ namespace BuyGear.DAO
             return "Server=buygear-sever.database.windows.net;Database=BuyGear;UID=mini0212;Pwd=gaugau@123";
         }
 
-        public DataTable ExcuteQuery(string query, object[] parameters = null)
+        public DataTable ExcuteQuery (string query, object[] parameters = null)
         {
             DataTable dataTable = new DataTable();
-
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 connection.Open();
@@ -89,7 +88,6 @@ namespace BuyGear.DAO
                 adapter.Fill(dataTable);
                 connection.Close();
             }
-
             return dataTable;
         }
         public List<SanPham> loadSanPhamMain(string type)
