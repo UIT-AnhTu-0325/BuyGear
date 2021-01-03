@@ -66,5 +66,41 @@ namespace BuyGear.DAO
                 Data.Instance.ExcuteQuery(query2, new object[] {Account.Instance.id,  masp, id });
             }
         }
+        public int Rate1(string masp)
+        {
+            string query= "select sum(vote)/count(vote) as rate from sanpham sp, nhanxet nx " +
+                " where sp.ma_sp = nx.ma_sp and sp.ma_sp = @masp group by sp.ma_sp";
+            int r = 0;
+            if(Data.Instance.ExcuteQuery(query, new object[] { masp }).Rows.Count>0)
+            int.TryParse(Data.Instance.ExcuteQuery(query, new object[] { masp }).Rows[0]["rate"].ToString(), out r);
+            return r;
+        }  
+        public int Rate(string masp)
+        {
+            string query = "select rating from sanpham where ma_sp= @masp ";
+            int r = 0;
+            if(Data.Instance.ExcuteQuery(query, new object[] { masp }).Rows.Count>0)
+            int.TryParse(Data.Instance.ExcuteQuery(query, new object[] { masp }).Rows[0]["rating"].ToString(), out r);
+            return r;
+        }
+        public int countRate(string masp)
+        {
+            string query = "select count(vote) as c from sanpham sp, nhanxet nx " +
+               " where sp.ma_sp = nx.ma_sp and sp.ma_sp = @masp group by sp.ma_sp";
+            if (Data.Instance.ExcuteQuery(query, new object[] { masp }).Rows.Count > 0)
+                return int.Parse(Data.Instance.ExcuteQuery(query, new object[] { masp }).Rows[0]["c"].ToString());
+            else return 0;
+        }
+        
+        public string Name(string masp)
+        {
+            string query = "select tensp from sanpham where ma_sp= @masp ";
+            return Data.Instance.ExcuteQuery(query, new object[] { masp }).Rows[0]["tensp"].ToString();
+        }
+        public string IDAnh(string masp)
+        {
+            string query = "select data from sanpham sp , hinhanh ha where sp.ma_sp= ha.ma_sp and sp.ma_sp= @masp ";
+            return Data.Instance.ExcuteQuery(query, new object[] { masp }).Rows[0]["data"].ToString();
+        }
     }
 }

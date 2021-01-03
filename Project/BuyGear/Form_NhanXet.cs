@@ -22,6 +22,10 @@ namespace BuyGear
             this.parent = parent;
             this.ucparent = ucparent;
             this.masp = masp;
+            rateMain.Value = Data_NhanXet.Instance.Rate(masp);
+            lblDanhGia.Text = "( " + Data_NhanXet.Instance.countRate(masp).ToString() + " đánh giá )";
+            lblTenSanPham.Text = Data_NhanXet.Instance.Name(masp);
+            picSanPham.Image = Picture.LoadImage_by_ID(Data_NhanXet.Instance.IDAnh(masp));
         }
 
         private void bunifuLabel1_Click(object sender, EventArgs e)
@@ -71,7 +75,7 @@ namespace BuyGear
         private void btnUpHinh_Click(object sender, EventArgs e)
         {
             string link = Picture.getLinkFromDialog();
-            if (link == "")
+            if (link == "") 
             {
                 return;
             }
@@ -113,6 +117,11 @@ namespace BuyGear
             {
                 MessageBox.Show("loi");
             }
+        }
+
+        private void pnlComplete_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

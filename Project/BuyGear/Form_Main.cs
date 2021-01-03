@@ -493,8 +493,8 @@ namespace BuyGear
            // fpnlProduct.Controls.Add(uctop);
             ucTabSanPham ucsp_tab = new ucTabSanPham(this, "Sản phẩm bán chạy: ", "top");
             fpnlProduct.Controls.Add(ucsp_tab);
-            ucTabSanPham ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "daxem");
-            fpnlProduct.Controls.Add(ucsp_ta1b);
+            /*ucTabSanPham ucsp_ta1b = new ucTabSanPham(this, "Giá sốc hôm nay: ", "daxem");
+            fpnlProduct.Controls.Add(ucsp_ta1b);*/
             ucTabSanPham ucsp_ta2b = new ucTabSanPham(this, "Dành riêng cho bạn: ", "recommend");
             fpnlProduct.Controls.Add(ucsp_ta2b);
             ucTabSanPham ucsp_ta3b = new ucTabSanPham(this, "Các sản phẩm đã xem: ", "daxem");

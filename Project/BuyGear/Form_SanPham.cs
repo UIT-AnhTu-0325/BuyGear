@@ -20,7 +20,7 @@ namespace BuyGear
             this.parent = parent;
             InitializeComponent();
             this._masp = masp;
-            LoadNhanXetFull();
+            LoadNhanXetFull("somnhat");
             InitiativeYeuThich();
         }
         private void Load_Form()
@@ -35,6 +35,7 @@ namespace BuyGear
                 lblTenSanPham.Text = sp.TenSP;
                 //lblThuongHieuText.Text = sp.NhaSX;
                 lblGia.Text = giaFix(sp.Gia);
+                lblnhanxetnum.Text = Data_NhanXet.Instance.countRate(_masp).ToString() + " nhận xét";
                 //lblXuatXu.Text = sp.XuatXu;
                 picSanPhamMain.SizeMode = PictureBoxSizeMode.Zoom;
                 picSanPhamMain.Image = Picture.LoadImage_by_ID(sp.link_image[0]);
@@ -245,6 +246,11 @@ namespace BuyGear
         {
             if (Account.Instance.id != "")
             {
+                if (Data.Instance.ProductMyseft(_masp))
+                {
+                    MessageBox.Show("Bạn không thể tự mua sản phẩm của chính mình");
+                    return;
+                }
                 Data_gioHang.Instance.InsertToGioHang(Account.Instance.id, _masp);
                 this.parent.pnlAddThanhCong.Visible = true;
                 this.parent.pnlAddThanhCong.Location = new Point(this.parent.pnlTabGioHangThongBao.Location.X - 15,
@@ -278,8 +284,9 @@ namespace BuyGear
         }
 
 
-        private void LoadNhanXetFull()
+        private void LoadNhanXetFull(string type)
         {
+            this.fpnlNhanXet.Controls.Clear();
             int sum = 0, nrating = 0, nrate1 = 0, nrate2 = 0, nrate3 = 0, nrate4 = 0, nrate5 = 0; // "n" de phan biet voi rate toolbox
             List<NhanXet> listNhanXet = Data_NhanXet.Instance.loadNhanXet(_masp);
             for (int i = 0; i < 5; i++)
@@ -322,9 +329,17 @@ namespace BuyGear
                 
                 listvoting[5].Add(nx);
                 //  ucNhanXet ucnhanxet = new ucNhanXet(this, "hong", 1, "duoc", "duoc lam nha!!!",linkimage );
-                ucNhanXet ucnhanxet = new ucNhanXet(this, nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
-                
-                this.fpnlNhanXet.Controls.Add(ucnhanxet);
+                ucNhanXet ucnhanxet = new ucNhanXet(this, nx.Id, nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
+                if (type == "hinhanh")
+                {
+                    if (linkimage.Count > 0)
+                        this.fpnlNhanXet.Controls.Add(ucnhanxet);
+                }
+                else if (type == "somnhat")
+                {
+                    this.fpnlNhanXet.Controls.Add(ucnhanxet);
+
+                }
             }
             if (sum != 0)
             {
@@ -397,7 +412,7 @@ namespace BuyGear
                 foreach (NhanXet nx in listvoting[index - 1])
                 {
                     List<string> linkimage = Data_NhanXet.Instance.listImage(_masp, nx.Id);
-                    ucNhanXet ucnhanxet = new ucNhanXet(this, nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
+                    ucNhanXet ucnhanxet = new ucNhanXet(this,nx.Id, nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
                     this.fpnlNhanXet.Controls.Add(ucnhanxet);
                 }
             }
@@ -432,7 +447,7 @@ namespace BuyGear
                 foreach (NhanXet nx in listvoting[5])
                 {
                     List<string> linkimage = Data_NhanXet.Instance.listImage(_masp, nx.Id);
-                    ucNhanXet ucnhanxet = new ucNhanXet(this, nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
+                    ucNhanXet ucnhanxet = new ucNhanXet(this, nx.Id ,nx.TenKhachHang, nx.Vote, nx.NhanXetChinh, nx.NhanXetChiTiet, linkimage);
                     this.fpnlNhanXet.Controls.Add(ucnhanxet);
                 }
             }
@@ -517,5 +532,63 @@ namespace BuyGear
             c = 1;
         }
         #endregion
+
+       
+
+        private void btnCoAnh_Click(object sender, EventArgs e)
+        {
+            if (!b_coanh)
+            {
+                btnHinhAnh.Normalcolor = Color.FromArgb(0, 192, 192);
+                btnHinhAnh.Textcolor = Color.White;
+                b_coanh = true;
+
+                btnMoiNhat.Normalcolor = Color.WhiteSmoke;
+                btnMoiNhat.Textcolor = Color.Black;
+                b_moinhat = false;
+                LoadNhanXetFull("hinhanh");
+            }
+            else
+            {
+                btnHinhAnh.Normalcolor = Color.WhiteSmoke;
+                btnHinhAnh.Textcolor = Color.Black;
+                b_coanh = false;
+
+                btnMoiNhat.Normalcolor = Color.FromArgb(0, 192, 192);
+                btnMoiNhat.Textcolor = Color.White;
+                b_moinhat = true;
+                LoadNhanXetFull("somnhat");
+            }
+        }
+        bool b_moinhat = true;
+        bool b_coanh = false;
+        private void btnMoiNhat_Click(object sender, EventArgs e)
+        {
+            if (!b_moinhat)
+            {
+                btnMoiNhat.Normalcolor = Color.FromArgb(0, 192, 192);
+                btnMoiNhat.Textcolor = Color.White;
+                b_moinhat = true;
+
+                btnHinhAnh.Normalcolor = Color.WhiteSmoke;
+                btnHinhAnh.Textcolor = Color.Black;
+                b_coanh = false;
+
+                LoadNhanXetFull("somnhat");
+
+
+            }
+            else
+            {
+                btnMoiNhat.Normalcolor = Color.WhiteSmoke;
+                btnMoiNhat.Textcolor = Color.Black;
+                b_moinhat = false;
+
+                btnHinhAnh.Normalcolor = Color.FromArgb(0, 192, 192);
+                btnHinhAnh.Textcolor = Color.White;
+                b_coanh = true;
+                LoadNhanXetFull("hinhanh");
+            }
+        }
     }
 }

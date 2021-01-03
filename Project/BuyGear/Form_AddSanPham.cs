@@ -359,6 +359,11 @@ namespace BuyGear
         
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if(toDo=="sua")
+            {
+                MessageBox.Show("Sua thanh cong!");
+                return;
+            }    
             if(index==0)
             {
                 MoTa_click();
@@ -709,6 +714,54 @@ namespace BuyGear
             {
                 index++;
                 HinhAnh_click();
+            }
+        }
+
+        private void txtTenSP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtLoaiSP.Focus();
+            }
+        }
+
+        private void txtNhaSX_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtXuatXu.Focus();
+            }
+        }
+
+        private void txtGiaNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtGiaBan.Focus();
+            }
+        }
+
+        private void txtXuatXu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtGiaNhap.Focus();
+            }
+        }
+
+        private void txtGiaBan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtGiaBanBuon.Focus();
+            }
+        }
+
+        private void txtGiaBanBuon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtVat.Focus();
             }
         }
     }

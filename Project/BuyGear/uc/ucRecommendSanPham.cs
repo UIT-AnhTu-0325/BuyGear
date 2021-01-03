@@ -25,7 +25,7 @@ namespace BuyGear
             this.parent = parent;
             _masp = masp;
             this.lbName.Text = name;
-            this.lbPrice.Text = price;
+            this.lbPrice.Text = Data.Instance.giaFix(int.Parse(price));
             picProduct.Image = Picture.LoadImage_by_ID(link_image[0]);
 
         }

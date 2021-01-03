@@ -202,7 +202,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1477, 662);
+            this.tabPage4.Size = new System.Drawing.Size(1477, 629);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -282,6 +282,7 @@
             this.txtXuatXu.Name = "txtXuatXu";
             this.txtXuatXu.Size = new System.Drawing.Size(311, 29);
             this.txtXuatXu.TabIndex = 1;
+            this.txtXuatXu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtXuatXu_KeyDown);
             // 
             // panelDB10
             // 
@@ -339,6 +340,7 @@
             this.txtGiaBanBuon.Name = "txtGiaBanBuon";
             this.txtGiaBanBuon.Size = new System.Drawing.Size(242, 29);
             this.txtGiaBanBuon.TabIndex = 1;
+            this.txtGiaBanBuon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGiaBanBuon_KeyDown);
             this.txtGiaBanBuon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaBanBuon_KeyPress);
             // 
             // panelDB8
@@ -368,6 +370,7 @@
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.Size = new System.Drawing.Size(242, 29);
             this.txtGiaNhap.TabIndex = 1;
+            this.txtGiaNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGiaNhap_KeyDown);
             this.txtGiaNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaNhap_KeyPress);
             // 
             // panelDB7
@@ -397,6 +400,7 @@
             this.txtNhaSX.Name = "txtNhaSX";
             this.txtNhaSX.Size = new System.Drawing.Size(311, 29);
             this.txtNhaSX.TabIndex = 1;
+            this.txtNhaSX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNhaSX_KeyDown);
             // 
             // panelDB6
             // 
@@ -486,6 +490,7 @@
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(242, 29);
             this.txtGiaBan.TabIndex = 1;
+            this.txtGiaBan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGiaBan_KeyDown);
             this.txtGiaBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaBan_KeyPress);
             // 
             // pnl_1_2
@@ -551,6 +556,7 @@
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Size = new System.Drawing.Size(311, 29);
             this.txtTenSP.TabIndex = 1;
+            this.txtTenSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenSP_KeyDown);
             // 
             // bunifuLabel5
             // 
@@ -596,10 +602,12 @@
             // fpnlXemTruoc
             // 
             this.fpnlXemTruoc.AutoScroll = true;
-            this.fpnlXemTruoc.Location = new System.Drawing.Point(892, 52);
+            this.fpnlXemTruoc.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fpnlXemTruoc.Location = new System.Drawing.Point(885, 52);
             this.fpnlXemTruoc.Name = "fpnlXemTruoc";
-            this.fpnlXemTruoc.Size = new System.Drawing.Size(434, 559);
+            this.fpnlXemTruoc.Size = new System.Drawing.Size(441, 559);
             this.fpnlXemTruoc.TabIndex = 17;
+            this.fpnlXemTruoc.WrapContents = false;
             // 
             // pnlAdd
             // 
@@ -851,6 +859,7 @@
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReset.TextMarginLeft = 0;
             this.btnReset.UseDefaultRadiusAndThickness = true;
+            this.btnReset.Visible = false;
             // 
             // fpnlTxt
             // 
@@ -868,7 +877,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1477, 662);
+            this.tabPage6.Size = new System.Drawing.Size(1477, 629);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -889,7 +898,7 @@
             this.pnl_HinhAnh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_HinhAnh.Location = new System.Drawing.Point(3, 3);
             this.pnl_HinhAnh.Name = "pnl_HinhAnh";
-            this.pnl_HinhAnh.Size = new System.Drawing.Size(1471, 656);
+            this.pnl_HinhAnh.Size = new System.Drawing.Size(1471, 623);
             this.pnl_HinhAnh.TabIndex = 8;
             // 
             // btn_Pic4
