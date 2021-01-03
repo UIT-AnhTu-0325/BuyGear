@@ -32,14 +32,130 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>C:\Users\vanho\Documents\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyHTMLReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyHTMLReports.1.0.0\lib\EasyHTMLReports.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.49.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.49.0.2166, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.49.0.2166\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,49 +165,122 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="fanLaptop.cs" />
+    <Compile Include="Bug_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bug_form.Designer.cs">
+      <DependentUpon>Bug_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\Account.cs" />
+    <Compile Include="DAO\Data_gioHang.cs" />
+    <Compile Include="DAO\Data_NhanXet.cs" />
+    <Compile Include="DAO\Data_ThongKe.cs" />
+    <Compile Include="DTO\Infor.cs" />
+    <Compile Include="DTO\ItemInGioHang.cs" />
+    <Compile Include="DTO\ItemThongBao.cs" />
+    <Compile Include="DTO\NhanXet.cs" />
+    <Compile Include="DTO\SanPhamRecommend.cs" />
+    <Compile Include="DTO\ThongBao.cs" />
     <Compile Include="FlowPanelDB.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Monitor.cs" />
-    <Compile Include="PanelDB.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Storage.cs" />
-    <Compile Include="ucfanLaptop.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucfanLaptop.Designer.cs">
-      <DependentUpon>ucfanLaptop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Keyboard.cs" />
-    <Compile Include="Data.cs" />
     <Compile Include="Form_AddSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_AddSanPham.Designer.cs">
       <DependentUpon>Form_AddSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Admin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Admin2.Designer.cs">
+      <DependentUpon>Form_Admin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BanHang.Designer.cs">
+      <DependentUpon>Form_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DiaChiGiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DiaChiGiaoHang.Designer.cs">
+      <DependentUpon>Form_DiaChiGiaoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DKBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DKBH.Designer.cs">
+      <DependentUpon>Form_DKBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GioHang.Designer.cs">
+      <DependentUpon>Form_GioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Infor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Infor2.Designer.cs">
+      <DependentUpon>Form_Infor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Loading.Designer.cs">
+      <DependentUpon>Form_Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MuaHang.Designer.cs">
+      <DependentUpon>Form_MuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NhanXet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NhanXet.Designer.cs">
+      <DependentUpon>Form_NhanXet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ThanhToanThanhCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThanhToanThanhCong.Designer.cs">
+      <DependentUpon>Form_ThanhToanThanhCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_XemTruocAddSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_XemTruocAddSanPham.Designer.cs">
+      <DependentUpon>Form_XemTruocAddSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientPanelDB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Something\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Something\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox_form.Designer.cs">
+      <DependentUpon>MessageBox_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelDB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAO\Data.cs" />
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,49 +311,149 @@
     <Compile Include="Form_SanPham.Designer.cs">
       <DependentUpon>Form_SanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucMonitor.cs">
+    <Compile Include="DTO\Picture.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Something\Utilities.cs" />
+    <Compile Include="ucBanHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucMonitor.Designer.cs">
-      <DependentUpon>ucMonitor.cs</DependentUpon>
+    <Compile Include="ucBanHang.Designer.cs">
+      <DependentUpon>ucBanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mouse.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ucDuyetSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDuyetSP.Designer.cs">
+      <DependentUpon>ucDuyetSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucThongBaoDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucThongBaoDonHang.Designer.cs">
+      <DependentUpon>ucThongBaoDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucRecommendSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucRecommendSanPham.Designer.cs">
+      <DependentUpon>ucRecommendSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTaiKhoan.Designer.cs">
+      <DependentUpon>ucTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucLoading.Designer.cs">
+      <DependentUpon>ucLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucTabSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucTabSanPham.Designer.cs">
+      <DependentUpon>ucTabSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucTopMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucTopMain.Designer.cs">
+      <DependentUpon>ucTopMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucDaXemYeuThich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucDaXemYeuThich.Designer.cs">
+      <DependentUpon>ucDaXemYeuThich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucSanphamdaxem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucSanphamdaxem.Designer.cs">
+      <DependentUpon>ucSanphamdaxem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucNhanXet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucNhanXet.Designer.cs">
+      <DependentUpon>ucNhanXet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucMuaBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucMuaBan.Designer.cs">
+      <DependentUpon>ucMuaBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucSanPhamDaGiao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucSanPhamDaGiao.Designer.cs">
+      <DependentUpon>ucSanPhamDaGiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc\ucSanPham.Designer.cs">
+      <DependentUpon>ucSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SanPham.cs" />
-    <Compile Include="ucItemMouse.cs">
+    <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="uc\ucSanPhamDangBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucItemMouse.Designer.cs">
-      <DependentUpon>ucItemMouse.cs</DependentUpon>
+    <Compile Include="uc\ucSanPhamDangBan.Designer.cs">
+      <DependentUpon>ucSanPhamDangBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucItemKeyboard.cs">
+    <Compile Include="uc\ucSanPhamDangGiao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucItemKeyboard.Designer.cs">
-      <DependentUpon>ucItemKeyboard.cs</DependentUpon>
+    <Compile Include="uc\ucSanPhamDangGiao.Designer.cs">
+      <DependentUpon>ucSanPhamDangGiao.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucUSB.cs">
+    <Compile Include="uc\ucSanPhamTrongGio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucUSB.Designer.cs">
-      <DependentUpon>ucUSB.cs</DependentUpon>
+    <Compile Include="uc\ucSanPhamTrongGio.Designer.cs">
+      <DependentUpon>ucSanPhamTrongGio.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucStorage.cs">
+    <Compile Include="uc\ucSanPhamTrongGio_DatHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucStorage.Designer.cs">
-      <DependentUpon>ucStorage.cs</DependentUpon>
+    <Compile Include="uc\ucSanPhamTrongGio_DatHang.Designer.cs">
+      <DependentUpon>ucSanPhamTrongGio_DatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="USB.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Bug_form.resx">
+      <DependentUpon>Bug_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_AddSanPham.resx">
       <DependentUpon>Form_AddSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Admin2.resx">
+      <DependentUpon>Form_Admin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BanHang.resx">
+      <DependentUpon>Form_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DiaChiGiaoHang.resx">
+      <DependentUpon>Form_DiaChiGiaoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DKBH.resx">
+      <DependentUpon>Form_DKBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GioHang.resx">
+      <DependentUpon>Form_GioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Infor2.resx">
+      <DependentUpon>Form_Infor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Loading.resx">
+      <DependentUpon>Form_Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
@@ -175,35 +464,90 @@
     <EmbeddedResource Include="Form_Infor.resx">
       <DependentUpon>Form_Infor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_MuaHang.resx">
+      <DependentUpon>Form_MuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NhanXet.resx">
+      <DependentUpon>Form_NhanXet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Register.resx">
       <DependentUpon>Form_Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_SanPham.resx">
       <DependentUpon>Form_SanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThanhToanThanhCong.resx">
+      <DependentUpon>Form_ThanhToanThanhCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_XemTruocAddSanPham.resx">
+      <DependentUpon>Form_XemTruocAddSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Something\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox_form.resx">
+      <DependentUpon>MessageBox_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucfanLaptop.resx">
-      <DependentUpon>ucfanLaptop.cs</DependentUpon>
+    <EmbeddedResource Include="ucBanHang.resx">
+      <DependentUpon>ucBanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucItemKeyboard.resx">
-      <DependentUpon>ucItemKeyboard.cs</DependentUpon>
+    <EmbeddedResource Include="ucDuyetSP.resx">
+      <DependentUpon>ucDuyetSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucItemMouse.resx">
-      <DependentUpon>ucItemMouse.cs</DependentUpon>
+    <EmbeddedResource Include="ucTaiKhoan.resx">
+      <DependentUpon>ucTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucMonitor.resx">
-      <DependentUpon>ucMonitor.cs</DependentUpon>
+    <EmbeddedResource Include="uc\ucThongBaoDonHang.resx">
+      <DependentUpon>ucThongBaoDonHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucStorage.resx">
-      <DependentUpon>ucStorage.cs</DependentUpon>
+    <EmbeddedResource Include="uc\ucLoading.resx">
+      <DependentUpon>ucLoading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucUSB.resx">
-      <DependentUpon>ucUSB.cs</DependentUpon>
+    <EmbeddedResource Include="uc\ucTabSanPham.resx">
+      <DependentUpon>ucTabSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucTopMain.resx">
+      <DependentUpon>ucTopMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucDaXemYeuThich.resx">
+      <DependentUpon>ucDaXemYeuThich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucSanphamdaxem.resx">
+      <DependentUpon>ucSanphamdaxem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucNhanXet.resx">
+      <DependentUpon>ucNhanXet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucMuaBan.resx">
+      <DependentUpon>ucMuaBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucSanPham.resx">
+      <DependentUpon>ucSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucSanPhamDaGiao.resx">
+      <DependentUpon>ucSanPhamDaGiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucSanPhamDangBan.resx">
+      <DependentUpon>ucSanPhamDangBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucSanPhamDangGiao.resx">
+      <DependentUpon>ucSanPhamDangGiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucSanPhamTrongGio.resx">
+      <DependentUpon>ucSanPhamTrongGio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc\ucSanPhamTrongGio_DatHang.resx">
+      <DependentUpon>ucSanPhamTrongGio_DatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="conect_API.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -219,23 +563,51 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="BB.ico" />
+    <Content Include="Image\1.png" />
+    <Content Include="Image\120432393_2608457889406826_5564424658962382122_n.png" />
+    <Content Include="Image\2.png" />
+    <Content Include="Image\3.png" />
+    <Content Include="Image\4.png" />
+    <Content Include="Image\5.png" />
+    <Content Include="Image\account.png" />
     <Content Include="Image\address.png" />
+    <Content Include="Image\avatar.png" />
+    <Content Include="Image\avatar2.png" />
     <Content Include="Image\B.png" />
+    <Content Include="Image\BB.ico" />
     <Content Include="Image\birthday.png" />
+    <Content Include="Image\caidat.png" />
     <Content Include="Image\capnhat.png" />
+    <Content Include="Image\chi.png" />
+    <Content Include="Image\chichi.png" />
+    <Content Include="Image\cuahang.png" />
+    <Content Include="Image\d.png" />
     <Content Include="Image\dangky.png" />
+    <Content Include="Image\dangkyad.png" />
     <Content Include="Image\dangnhap.png" />
     <Content Include="Image\dangnhap2.png" />
     <Content Include="Image\dangnhap3.png" />
+    <Content Include="Image\dangxuatad.png" />
+    <Content Include="Image\daux.png" />
     <Content Include="Image\diachi.png" />
+    <Content Include="Image\doanhthu.png" />
+    <Content Include="Image\dongy.png" />
+    <Content Include="Image\dongy2.png" />
+    <Content Include="Image\down.png" />
+    <Content Include="Image\duyetsp.png" />
     <Content Include="Image\email.png" />
     <Content Include="Image\exit.png" />
     <Content Include="Image\female.png" />
+    <Content Include="Image\find.png" />
     <Content Include="Image\gioitinh.png" />
+    <Content Include="Image\history.png" />
     <Content Include="Image\hoten.png" />
+    <Content Include="Image\huy.png" />
     <Content Include="Image\icons8_contact_details_30px.png" />
     <Content Include="Image\icons8_contact_details_80px_3.png" />
     <Content Include="Image\icons8_exit_100px.png" />
+    <Content Include="Image\icons8_search_property_30px.png" />
     <Content Include="Image\InMain\backIcon.png" />
     <Content Include="Image\InMain\electric.png" />
     <Content Include="Image\InMain\fan.png" />
@@ -246,25 +618,106 @@
     <Content Include="Image\InMain\searchIcon.png" />
     <Content Include="Image\InMain\storage.png" />
     <Content Include="Image\InMain\usb.png" />
+    <Content Include="Image\link.png" />
+    <Content Include="Image\ls.png" />
     <Content Include="Image\mail.png" />
     <Content Include="Image\male.png" />
+    <Content Include="Image\management.png" />
     <Content Include="Image\matkhau.png" />
     <Content Include="Image\matkhau2.png" />
     <Content Include="Image\matkhau3.png" />
+    <Content Include="Image\menu.png" />
     <Content Include="Image\name.png" />
     <Content Include="Image\ngaysinh.png" />
+    <Content Include="Image\nguoiban.png" />
     <Content Include="Image\ok.png" />
+    <Content Include="Image\per.png" />
     <Content Include="Image\phone.png" />
+    <Content Include="Image\product.png" />
     <Content Include="Image\profile.png" />
+    <Content Include="Image\quanly.png" />
     <Content Include="Image\redcircle.png" />
     <Content Include="Image\sdt.png" />
     <Content Include="Image\sexual.png" />
+    <Content Include="Image\sign_out.png" />
+    <Content Include="Image\store.png" />
     <Content Include="Image\tentaikhoan.png" />
     <Content Include="Image\thongtin.png" />
+    <Content Include="Image\thu.png" />
+    <Content Include="Image\timkiem.png" />
+    <Content Include="Image\tk.png" />
+    <Content Include="Image\trash.png" />
+    <Content Include="Image\ttch.png" />
+    <Content Include="Image\tuchoi.png" />
+    <Content Include="Image\up.png" />
     <Content Include="Image\Update.png" />
     <Content Include="Image\update2.png" />
     <Content Include="Image\x.png" />
     <Content Include="Image\xx.png" />
+    <None Include="Resources\mh1.jpg" />
+    <None Include="Resources\store.png" />
+    <None Include="Resources\store1.png" />
+    <None Include="Resources\login2.png" />
+    <None Include="Resources\login3.png" />
+    <None Include="Resources\usericon.png" />
+    <None Include="Resources\passwordicon.png" />
+    <None Include="Resources\logoutIcon.png" />
+    <None Include="Resources\logoutIcon1.png" />
+    <None Include="Resources\setting1.png" />
+    <None Include="Resources\loveIcon.png" />
+    <None Include="Resources\orderIcon.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\tick1.png" />
+    <None Include="Resources\tick3.png" />
+    <None Include="Resources\tick4.png" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\location1.png" />
+    <None Include="Resources\purchase.png" />
+    <None Include="Resources\cash.png" />
+    <None Include="Resources\momo.png" />
+    <None Include="Resources\cash1.png" />
+    <None Include="Resources\giohang.png" />
+    <None Include="Resources\notification.png" />
+    <None Include="Resources\locationshop.png" />
+    <None Include="Resources\locationshop1.png" />
+    <None Include="Resources\starvote.png" />
+    <None Include="Resources\starvote1.png" />
+    <None Include="Resources\loveIcon1.png" />
+    <None Include="Resources\love2.png" />
+    <None Include="Resources\product1.png" />
+    <None Include="Resources\rating1.png" />
+    <None Include="Resources\Menu2.png" />
+    <None Include="Resources\UI.menu.png" />
+    <None Include="Resources\ui.expand1.png" />
+    <None Include="Resources\ui.exit.png" />
+    <None Include="Resources\ui.minus.png" />
+    <None Include="Resources\lapasus.png" />
+    <None Include="Resources\solid1.png" />
+    <None Include="Resources\solid2.png" />
+    <None Include="Resources\solid11.png" />
+    <None Include="Resources\solid3.png" />
+    <None Include="Resources\ui.Minus2.png" />
+    <None Include="Resources\ui.return.png" />
+    <None Include="Resources\ui.return1.png" />
+    <None Include="Resources\B.add.png" />
+    <None Include="Resources\B.dagiao.png" />
+    <None Include="Resources\B.danggiao.png" />
+    <None Include="Resources\B.dashboard.png" />
+    <None Include="Resources\B.hienban.png" />
+    <None Include="Resources\B.order.png" />
+    <Content Include="Image\yc.png" />
+    <None Include="Resources\B.preview1.png" />
+    <None Include="Resources\ui.down1.png" />
+    <None Include="Resources\ui.up1.png" />
+    <None Include="Resources\userLogo1.png" />
+    <None Include="Resources\UI.new.png" />
+    <None Include="Resources\B.checkk.png" />
+    <None Include="Resources\B.loading.png" />
+    <None Include="Resources\B.watingg.png" />
+    <None Include="Resources\B.addImage.png" />
+    <None Include="Resources\B.addText.png" />
+    <Content Include="Tools\Bunifu_UI_v1.5.3.dll" />
     <None Include="Resources\search1.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\N2.minus.png" />
@@ -274,8 +727,6 @@
     <None Include="Resources\N1.expand.png" />
     <None Include="Resources\N.expand.png" />
     <None Include="Resources\N.expand1.png" />
-    <None Include="Resources\Minus.png" />
-    <None Include="Resources\Expand1.png" />
     <None Include="Resources\cartIcon1.png" />
     <None Include="Resources\cart1.jpg" />
     <None Include="Resources\cart.png" />

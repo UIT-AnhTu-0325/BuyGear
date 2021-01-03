@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace BuyGear
+using BuyGear.DAO;
+namespace BuyGear.DTO
 {
     static class Program
     {
@@ -14,10 +14,9 @@ namespace BuyGear
         [STAThread]
         static void Main()
         {
-            Application.Run(new Form_Main());
-           Application.EnableVisualStyles();
-          Application.SetCompatibleTextRenderingDefault(false);
-           
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.EnableVisualStyles();
+            Application.Run(new Form_Loading());
         }
     }
 }

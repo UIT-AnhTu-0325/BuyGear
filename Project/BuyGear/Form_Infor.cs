@@ -2,14 +2,30 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using BuyGear.DAO;
+using BuyGear.DTO;
+using System.Drawing;
+using System.IO;
+using BuyGear.Something;
 
 namespace BuyGear
 {
     public partial class Form_Infor : Form
     {
+        Form_Main parent;
         public Form_Infor()
         {
             InitializeComponent();
+        }
+        public Form_Infor(Form_Main parent)
+        {
+            this.parent = parent;
+
+            InitializeComponent();
+            txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = true;
+            rdoNam.Enabled = rdoNu.Enabled = true;
+            chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = true;
+            lblWelcome.Text = "Welcome " + Account.Instance.userName;
         }
 
         //
@@ -17,28 +33,36 @@ namespace BuyGear
         //
         private void Form_Load(object sender, EventArgs e)
         {
-            string sqlQuery = @"SELECT * FROM dbo.Infor WHERE username = N'" + Account.Instance.userName + "'";
-            DataTable dataTable = Data.Instance.ExcuteQuery(sqlQuery);
-            DataRow row = dataTable.Rows[0];
-            txtName.Text = row["name"].ToString();
-            txtAddress.Text = row["address"].ToString();
-            txtEmail.Text = row["email"].ToString();
-            txtSDT.Text = row["numberphone"].ToString();
-            string gioiTinh = row["sexual"].ToString();
-            if (gioiTinh == "Nam")
+            //btnUpdate.PerformClick();
+            try
             {
-                rdoNam.Checked = true;
+                DataTable dataTable = Account.Instance.Load_Info();
+                DataRow row = dataTable.Rows[0];
+                txtName.Text = row["name"].ToString();
+                txtAddress.Text = row["address"].ToString();
+                txtEmail.Text = row["email"].ToString();
+                txtSDT.Text = row["numberphone"].ToString();
+                string gioiTinh = row["sexual"].ToString();
+                if (gioiTinh == "Nam")
+                {
+                    rdoNam.Checked = true;
+                }
+                else if (gioiTinh == "Nữ")
+                {
+                    rdoNu.Checked = true;
+                }
+                if (row["birthday"].ToString() != "")
+                {
+                    string[] ngaySinh = row["birthday"].ToString().Split('/', ' ');
+                    chkThang.Text = ngaySinh[0];
+                    chkNgay.Text = ngaySinh[1];
+                    chkNam.Text = ngaySinh[2];
+                }
+                this.picAvatar.Image = Account.Instance.getAvatar();
             }
-            else if (gioiTinh == "Nữ")
+            catch
             {
-                rdoNu.Checked = true;
-            }
-            if (row["birthday"].ToString() != "")
-            {
-                string[] ngaySinh = row["birthday"].ToString().Split('/', ' ');
-                chkThang.Text = ngaySinh[0];
-                chkNgay.Text = ngaySinh[1];
-                chkNam.Text = ngaySinh[2];
+
             }
 
         }
@@ -52,124 +76,9 @@ namespace BuyGear
             this.Close();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (btnUpdate.Text == "Chỉnh sửa")
-            {
-                txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = true;
-                rdoNam.Enabled = rdoNu.Enabled = true;
-                chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = true;
-                btnUpdate.Text = "Cập nhật";
-            }
-            else
-            {
-                if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
-                {
-                    txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = false;
-                    rdoNam.Enabled = rdoNu.Enabled = false;
-                    chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = false;
-                    btnUpdate.Text = "Chỉnh sửa";
-                    string sqlQuery = "UPDATE dbo.Infor SET name = N'" + txtName.Text + "',address = N'" + txtAddress.Text + "',email = N'" + txtEmail.Text + "',numberphone = N'" + txtSDT.Text + "' WHERE username = N'" + Account.Instance.userName + "'";
-                    Data.Instance.ExcuteQuery(sqlQuery);
-                    if (rdoNam.Checked)
-                    {
-                        sqlQuery = "UPDATE dbo.Infor SET sexual = N'Nam' WHERE username = N'" + Account.Instance.userName + "'";
-                        Data.Instance.ExcuteQuery(sqlQuery);
-                    }
-                    else if (rdoNu.Checked)
-                    {
-                        sqlQuery = "UPDATE dbo.Infor SET sexual = N'Nữ' WHERE username = N'" + Account.Instance.userName + "'";
-                        Data.Instance.ExcuteQuery(sqlQuery);
-                    }
-                    sqlQuery = "UPDATE dbo.Infor SET birthday = N'" + chkNam.Text + "-" + chkThang.Text + "-" + chkNgay.Text + "' WHERE username = N'" + Account.Instance.userName + "'";
-                    Data.Instance.ExcuteQuery(sqlQuery);
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng nhập đủ thông tin !");
-                }
-
-            }
-        }
-
-        private void chkNam_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (chkThang.SelectedIndex == 2)
-            {
-                if (chkNam.SelectedIndex % 4 == 3)
-                {
-                    int i = chkNgay.SelectedIndex;
-                    chkNgay.DataSource = list_29;
-                    if (i > 29)
-                        chkNgay.SelectedIndex = 0;
-                    else
-                        chkNgay.SelectedIndex = i;
-                }
-                else
-                {
-                    int i = chkNgay.SelectedIndex;
-                    chkNgay.DataSource = list_28;
-                    if (i > 28)
-                        chkNgay.SelectedIndex = 0;
-                    else
-                        chkNgay.SelectedIndex = i;
-                }
-            }
-            else if (chkThang.SelectedIndex == 1 || chkThang.SelectedIndex == 3 || chkThang.SelectedIndex == 5 || chkThang.SelectedIndex == 7 || chkThang.SelectedIndex == 8 || chkThang.SelectedIndex == 10 || chkThang.SelectedIndex == 12 || chkThang.SelectedIndex == 0)
-            {
-                int i = chkNgay.SelectedIndex;
-                chkNgay.DataSource = list_30;
-                chkNgay.SelectedIndex = i;
-            }
-            else
-            {
-                int i = chkNgay.SelectedIndex;
-                chkNgay.DataSource = list_30;
-                if (i > 30)
-                    chkNgay.SelectedIndex = 0;
-                else
-                    chkNgay.SelectedIndex = i;
-            }
-        }
-
         private void chkThang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (chkThang.SelectedIndex == 2)
-            {
-                if (chkNam.SelectedIndex % 4 == 3)
-                {
-                    int i = chkNgay.SelectedIndex;
-                    chkNgay.DataSource = list_29;
-                    if (i > 29)
-                        chkNgay.SelectedIndex = 0;
-                    else
-                        chkNgay.SelectedIndex = i;
-                }
-                else
-                {
-                    int i = chkNgay.SelectedIndex;
-                    chkNgay.DataSource = list_28;
-                    if (i > 28)
-                        chkNgay.SelectedIndex = 0;
-                    else
-                        chkNgay.SelectedIndex = i;
-                }
-            }
-            else if (chkThang.SelectedIndex == 1 || chkThang.SelectedIndex == 3 || chkThang.SelectedIndex == 5 || chkThang.SelectedIndex == 7 || chkThang.SelectedIndex == 8 || chkThang.SelectedIndex == 10 || chkThang.SelectedIndex == 12 || chkThang.SelectedIndex == 0)
-            {
-                int i = chkNgay.SelectedIndex;
-                chkNgay.DataSource = list_30;
-                chkNgay.SelectedIndex = i;
-            }
-            else
-            {
-                int i = chkNgay.SelectedIndex;
-                chkNgay.DataSource = list_30;
-                if (i > 30)
-                    chkNgay.SelectedIndex = 0;
-                else
-                    chkNgay.SelectedIndex = i;
-            }
+
         }
 
         private void chkChangePass_CheckedChanged(object sender, EventArgs e)
@@ -184,16 +93,16 @@ namespace BuyGear
                 if (txtOldPass.Text == Account.Instance.passWord)
                 {
                     Account.Instance.passWord = txtNewPass.Text;
-                    string sqlQuery = "EXEC Pro_UpdatePass  @password , @username";
-                    string hashPass = Account.Instance.Encode(txtNewPass.Text);
-                    Data.Instance.ExcuteQuery(sqlQuery, new object[] { hashPass, Account.Instance.userName });
+                    Account.Instance.UpdatePassword(txtNewPass.Text);
                     MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK);
                     txtOldPass.Text = "";
                     txtNewPass.Text = "";
                     txtConfirm.Text = "";
+                    MessageBox_form frm = new MessageBox_form();
+                    frm.Show();
                 }
                 else
-                    MessageBox.Show("Mật khẩu cũ chưa chính xác !"+'\n'+txtOldPass.Text+'\n'+Account.Instance.passWord, "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Mật khẩu cũ chưa chính xác !" + '\n' + txtOldPass.Text + '\n' + Account.Instance.passWord, "Thông báo", MessageBoxButtons.OK);
             }
             else
                 MessageBox.Show("Mật khẩu chưa trùng khớp !", "Thông báo", MessageBoxButtons.OK);
@@ -233,5 +142,138 @@ namespace BuyGear
         public List<string> list_29 = new List<string>() { "Ngày", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29" };
         public List<string> list_28 = new List<string>() { "Ngày", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28" };
 
+        private void bunifuButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private Color colnew = Color.FromArgb(150, 145, 187);
+        private Color coldefault = Color.White;
+        private void btnThongTin_Click(object sender, EventArgs e)
+        {
+            pageTab.SetPage(0);
+        }
+
+        private void btnThongTin_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnThongTin.OnIdleState.BorderColor = colnew;
+            btnThongTin.OnIdleState.FillColor = colnew;
+            btnThongTin.OnIdleState.ForeColor = Color.White;
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
+                {
+                    MessageBox_form frm = new MessageBox_form();
+                    frm.Show();
+                    //btnUpdate.Text = "Chỉnh sửa";
+                    Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
+                    if (rdoNam.Checked)
+                    {
+                        Account.Instance.UpdateSexual("Nam");
+                    }
+                    else if (rdoNu.Checked)
+                    {
+                        Account.Instance.UpdateSexual("Nữ");
+                    }
+                    Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng nhập đủ thông tin !");
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+
+
+        private void btnThoats_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void chkChangePass_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            pageTab.SetPage(1);
+        }
+
+        private void ckbHienMatKhau_OnChange(object sender, EventArgs e)
+        {
+            txtOldPass.UseSystemPasswordChar = !txtOldPass.UseSystemPasswordChar;
+            txtNewPass.UseSystemPasswordChar = !txtNewPass.UseSystemPasswordChar;
+            txtConfirm.UseSystemPasswordChar = !txtConfirm.UseSystemPasswordChar;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!(Account.Instance.userName == ""))
+            {
+                string path = Picture.getLinkFromDialog();
+                try
+                {
+                    picAvatar.Image = Picture.FromFile(path);
+                    Account.Instance.changeAvatar(path);
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            pageTab.SetPage(2);
+            this.fpnlThongBao.Controls.Clear();
+            List<ItemThongBao> listThongBao = Data.Instance.listItemThongBao();
+            foreach (ItemThongBao item in listThongBao)
+            {
+                ucThongBaoDonHang uc = new ucThongBaoDonHang(item, this);
+                this.fpnlThongBao.Controls.Add(uc);
+            }
+            Data.Instance.CheckThongBao("thongbaoxacnhan_xem", true);
+            Data.Instance.CheckThongBao("thongbaodagiao_xem", true);
+            Account.Instance.numberNotify = 0;
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Something.Utilities.isValid_forNumbertext(e.KeyChar);
+        }
+
+        private void bunifuButton2_Click_1(object sender, EventArgs e)
+        {
+            if (chkNam.Text != "" && chkNgay.Text != "" && chkThang.Text != "" && chkNam.Text != "Năm" && chkNgay.Text != "Ngày" && chkThang.Text != "Tháng" && (rdoNam.Checked == true || rdoNu.Checked == true) && txtAddress.Text != "" && txtName.Text != "" && txtEmail.Text != "" && txtSDT.Text != "")
+            {
+                txtAddress.Enabled = txtName.Enabled = txtEmail.Enabled = txtSDT.Enabled = false;
+                rdoNam.Enabled = rdoNu.Enabled = false;
+                chkNam.Enabled = chkNgay.Enabled = chkThang.Enabled = false;
+                Account.Instance.Update(txtName.Text, txtAddress.Text, txtEmail.Text, txtSDT.Text);
+                if (rdoNam.Checked)
+                {
+                    Account.Instance.UpdateSexual("Nam");
+                }
+                else if (rdoNu.Checked)
+                {
+                    Account.Instance.UpdateSexual("Nữ");
+                }
+                Account.Instance.UpdateBirthday(chkNgay.Text, chkThang.Text, chkNam.Text);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin !");
+            }
+        }
     }
 }
