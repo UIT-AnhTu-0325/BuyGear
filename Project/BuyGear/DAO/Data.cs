@@ -385,10 +385,12 @@ namespace BuyGear.DAO
             return dataTable;
         }
 
-        public SanPham Load_SP_byMaSP(string masp)
+        public SanPham Load_SP_byMaSP(string masp, int c)
         {
             SanPham s = new SanPham();
-            string sqlQuery = @"SELECT * FROM dbo.SanPham where ma_sp='" + masp + "' and trangthaikiemduyet='da kiem duyet'";
+                string sqlQuery = @"SELECT * FROM dbo.SanPham where ma_sp='" + masp + "' and trangthaikiemduyet='da kiem duyet'";
+            if(c == 1)
+                sqlQuery = @"SELECT * FROM dbo.SanPham where ma_sp='" + masp + "' and trangthaikiemduyet='chua kiem duyet'";
             DataTable dataTable = Data.Instance.ExcuteQuery(sqlQuery);
             DataRow row = dataTable.Rows[0];
             s.setData(row["ma_sp"].ToString(), row["tensp"].ToString(), row["loaisp"].ToString(), row["dvt"].ToString(), row["xuatxu"].ToString(), row["nhasx"].ToString(),

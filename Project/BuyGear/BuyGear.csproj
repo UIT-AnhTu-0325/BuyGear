@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9">
+
       <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.Core.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
@@ -108,6 +109,7 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
       <HintPath>..\..\..\..\..\FRAMEWORD\BunifuUI\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>

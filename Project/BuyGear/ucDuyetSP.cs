@@ -36,6 +36,7 @@ namespace BuyGear.uc
             Form_SanPham f = new Form_SanPham(this.lbMaSP.Text, parent,1) { TopLevel = false, TopMost = true };
             f.Dock = DockStyle.Fill;
             f.bunifuButton1.Visible = f.bunifuButton2.Visible = false;
+            parent.fpnlItem.Visible = false;
             this.parent.panel2.Controls.Clear();
             this.parent.panel2.Controls.Add(f);
             f.Show();
@@ -51,6 +52,21 @@ namespace BuyGear.uc
         {
             Data.Instance.CapNhatTrangThaiSP("tu choi kiem duyet", lbMaSP.Text);
             parent.loadDuyetSP();
+        }
+
+        private void ucDuyetSP_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

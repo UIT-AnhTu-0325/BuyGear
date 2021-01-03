@@ -48,20 +48,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(80, 3);
+            this.label2.Location = new System.Drawing.Point(274, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 32);
+            this.label2.Size = new System.Drawing.Size(32, 25);
             this.label2.TabIndex = 27;
-            this.label2.Text = "ID:";
+            this.label2.Text = "ID";
             // 
             // lbID
             // 
             this.lbID.AutoSize = true;
             this.lbID.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbID.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbID.Location = new System.Drawing.Point(120, 3);
+            this.lbID.Location = new System.Drawing.Point(245, 107);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(85, 32);
             this.lbID.TabIndex = 22;
@@ -70,51 +70,53 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(81, 44);
+            this.label3.Location = new System.Drawing.Point(16, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 30);
+            this.label3.Size = new System.Drawing.Size(62, 25);
             this.label3.TabIndex = 30;
-            this.label3.Text = "MASP:";
+            this.label3.Text = "MASP";
             // 
             // lbMaSP
             // 
             this.lbMaSP.AutoSize = true;
             this.lbMaSP.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lbMaSP.Location = new System.Drawing.Point(165, 44);
+            this.lbMaSP.Location = new System.Drawing.Point(16, 107);
             this.lbMaSP.Name = "lbMaSP";
-            this.lbMaSP.Size = new System.Drawing.Size(73, 30);
+            this.lbMaSP.Size = new System.Drawing.Size(57, 30);
             this.lbMaSP.TabIndex = 29;
-            this.lbMaSP.Text = "12345";
+            this.lbMaSP.Text = "M15";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 92);
+            this.label1.Location = new System.Drawing.Point(129, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 21);
+            this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Ngày đăng:";
+            this.label1.Text = "Ngày đăng";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbTG
             // 
             this.lbTG.AutoSize = true;
-            this.lbTG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTG.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbTG.ForeColor = System.Drawing.Color.Black;
-            this.lbTG.Location = new System.Drawing.Point(100, 92);
+            this.lbTG.Location = new System.Drawing.Point(116, 49);
             this.lbTG.Name = "lbTG";
-            this.lbTG.Size = new System.Drawing.Size(55, 21);
+            this.lbTG.Size = new System.Drawing.Size(64, 25);
             this.lbTG.TabIndex = 31;
             this.lbTG.Text = "12345";
+            this.lbTG.Click += new System.EventHandler(this.lbTG_Click);
             // 
             // picTuChoi
             // 
             this.picTuChoi.Image = ((System.Drawing.Image)(resources.GetObject("picTuChoi.Image")));
-            this.picTuChoi.Location = new System.Drawing.Point(259, 81);
+            this.picTuChoi.Location = new System.Drawing.Point(185, 90);
             this.picTuChoi.Name = "picTuChoi";
             this.picTuChoi.Size = new System.Drawing.Size(42, 41);
             this.picTuChoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,7 +127,7 @@
             // picChapNhan
             // 
             this.picChapNhan.Image = ((System.Drawing.Image)(resources.GetObject("picChapNhan.Image")));
-            this.picChapNhan.Location = new System.Drawing.Point(192, 80);
+            this.picChapNhan.Location = new System.Drawing.Point(109, 90);
             this.picChapNhan.Name = "picChapNhan";
             this.picChapNhan.Size = new System.Drawing.Size(46, 45);
             this.picChapNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,9 +138,9 @@
             // picBan
             // 
             this.picBan.Image = ((System.Drawing.Image)(resources.GetObject("picBan.Image")));
-            this.picBan.Location = new System.Drawing.Point(248, 7);
+            this.picBan.Location = new System.Drawing.Point(3, 6);
             this.picBan.Name = "picBan";
-            this.picBan.Size = new System.Drawing.Size(71, 68);
+            this.picBan.Size = new System.Drawing.Size(85, 68);
             this.picBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBan.TabIndex = 24;
             this.picBan.TabStop = false;
@@ -147,7 +149,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(259, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -172,7 +174,8 @@
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Blue;
             this.Name = "ucDuyetSP";
-            this.Size = new System.Drawing.Size(333, 123);
+            this.Size = new System.Drawing.Size(333, 141);
+            this.Load += new System.EventHandler(this.ucDuyetSP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picTuChoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picChapNhan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBan)).EndInit();
