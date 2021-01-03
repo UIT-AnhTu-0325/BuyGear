@@ -117,11 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Kết Nối Linh Hoạt Được trang bị đầy đủ các cổng HDMI và D-sub, màn hình LS24R350 cho phép doanh nghiệp bạn kết nối trực tiếp nhiều thiết bị cùng lúc để thực hiện đa nhiệm dễ dàng. Giải quyết công việc hiệu quả và linh hoạt hơn.
-Bảo vệ tối ưu đôi mắt của bạn. Công nghệ tiên tiến trên màn hình LS22R350FHEXXV giảm thiểu độ mỏi cho mắt, giúp tăng cường sự thoải mái khi bạn làm việc trong thời gian dài. Công nghệ Chống Nhấp Nháy giúp loại bỏ các nhấp nháy khó chịu thường thấy khi sử dụng màn hình, trong khi Chế Độ Bảo Vệ Mắt hạn chế lượng ánh sáng xanh dễ khiến mắt mỏi mệt. Mang đến bạn trải nghiệm xem thoải mái trong mọi điều kiện sáng.
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuVScrollBar2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -133,86 +128,6 @@ Bảo vệ tối ưu đôi mắt của bạn. Công nghệ tiên tiến trên m�
         EXKEHCFHyBFyhBwhR8gRcoQcIUfIEXKEHCFHyBFyhBwhR8gRcoQcIUfIEfqHkb8cMWmESN1/ONIiRM57
         D0cJZ13CWZUd3fz26M1a83vtGZ6ZvCQ2DambQFgKTGQ+MnSr/dOY+Fh6sCEzvRz6a49SI9BdermrTVe6
         rjqD4QOGcz5h+CBujSvL3gEkgpmaO+gsTQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="bunifuButton4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFUAAAAhCAYAAACoRueNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHxSURBVGhD7ZqxSsNQFIYzOjo6+ggdO/oEpaOPIG6Ogg/g
-        5uZQcHByENwEp4KTY4cOgoMvUEts0iagQ/zP7S+28dDkpkGHe374KPSee0O/3tybNoks/5jFYtHPsuwW
-        ryNSBID7rPK50zQ9LIpihzqaJ47jXQx2Pp/PP8F76YChMQM5GMDFHhX5BZ176BxzIO0gQZIkiUywGV6P
-        qape0PkETFcHM34xxbJwRWWbg2ITWhPM2BzcUJ0eFPaACfVDloJTKlyPLL6yViidjArg7Q10qPInaBzI
-        IlzuYNQDUodUuYxcf6HBdvktgNQ0z/N9Ko0iubBFg5362yGb1hmVulP/Hm9ohYYfIyp1m9SzUmD4M6FS
-        N1MnpUajIVTqpKoFhj9UalLbhEpNaptQqUltEyo1qW1Cpe6Syi78W4JKndRXrcDwQyYnlTqpT1qR4YdM
-        Tip1a+oRkKjFRjVpmsptlgsqXf6XigaJ2sGohdzP61LpMhA7LBUZHqyd+t/Bmx0Q+m3oRtBbnyrXk2XZ
-        JRqT1Q7GZrCWfkDqHRXqQcGjFGoDGCrjyidXpEDEgkwZwCCcoS/yFA/VVUceFEBn2dHUQUMGMmUNfWj0
-        bBW+jQN0loe0YgykHiAwxIP8+tQ3JZ9gkC43sVDvEEwwwa5lklGJ5W8TRV9zA/m+OmiXHwAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <data name="bunifuButton3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFUAAAAhCAYAAACoRueNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHxSURBVGhD7ZqxSsNQFIYzOjo6+ggdO/oEpaOPIG6Ogg/g
-        5uZQcHByENwEp4KTY4cOgoMvUEts0iagQ/zP7S+28dDkpkGHe374KPSee0O/3tybNoks/5jFYtHPsuwW
-        ryNSBID7rPK50zQ9LIpihzqaJ47jXQx2Pp/PP8F76YChMQM5GMDFHhX5BZ176BxzIO0gQZIkiUywGV6P
-        qape0PkETFcHM34xxbJwRWWbg2ITWhPM2BzcUJ0eFPaACfVDloJTKlyPLL6yViidjArg7Q10qPInaBzI
-        IlzuYNQDUodUuYxcf6HBdvktgNQ0z/N9Ko0iubBFg5362yGb1hmVulP/Hm9ohYYfIyp1m9SzUmD4M6FS
-        N1MnpUajIVTqpKoFhj9UalLbhEpNaptQqUltEyo1qW1Cpe6Syi78W4JKndRXrcDwQyYnlTqpT1qR4YdM
-        Tip1a+oRkKjFRjVpmsptlgsqXf6XigaJ2sGohdzP61LpMhA7LBUZHqyd+t/Bmx0Q+m3oRtBbnyrXk2XZ
-        JRqT1Q7GZrCWfkDqHRXqQcGjFGoDGCrjyidXpEDEgkwZwCCcoS/yFA/VVUceFEBn2dHUQUMGMmUNfWj0
-        bBW+jQN0loe0YgykHiAwxIP8+tQ3JZ9gkC43sVDvEEwwwa5lklGJ5W8TRV9zA/m+OmiXHwAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <data name="voteBar1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
-        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
-        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
-        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
-        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="voteBar2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
-        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
-        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
-        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
-        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="voteBar3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
-        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
-        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
-        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
-        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="voteBar4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
-        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
-        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
-        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
-        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="voteBar5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
-        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
-        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
-        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
-        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuVScrollBar1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -267,6 +182,61 @@ Bảo vệ tối ưu đôi mắt của bạn. Công nghệ tiên tiến trên m�
         re7i/BijQwnRTuEhysjqbnnop+PiwyIogwMO+GahLQ3HrfCpaPcLFnwS9eQAUxR2JeyktvFQIjm98ifx
         7yQ+4aHM9lIuCOAq0HHqN4jwnat1T8bap/NKK2yJ6ObD0s9+D371IgEmETpRHiLTgn+kLYlDoVDDlSS/
         AbwVD7nemmAjAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Kết Nối Linh Hoạt Được trang bị đầy đủ các cổng HDMI và D-sub, màn hình LS24R350 cho phép doanh nghiệp bạn kết nối trực tiếp nhiều thiết bị cùng lúc để thực hiện đa nhiệm dễ dàng. Giải quyết công việc hiệu quả và linh hoạt hơn.
+Bảo vệ tối ưu đôi mắt của bạn. Công nghệ tiên tiến trên màn hình LS22R350FHEXXV giảm thiểu độ mỏi cho mắt, giúp tăng cường sự thoải mái khi bạn làm việc trong thời gian dài. Công nghệ Chống Nhấp Nháy giúp loại bỏ các nhấp nháy khó chịu thường thấy khi sử dụng màn hình, trong khi Chế Độ Bảo Vệ Mắt hạn chế lượng ánh sáng xanh dễ khiến mắt mỏi mệt. Mang đến bạn trải nghiệm xem thoải mái trong mọi điều kiện sáng.
+</value>
+  </data>
+  <data name="voteBar1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
+        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
+        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
+        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
+        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="voteBar2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
+        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
+        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
+        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
+        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="voteBar3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
+        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
+        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
+        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
+        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="voteBar4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
+        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
+        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
+        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
+        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="voteBar5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAS0AAAAMCAYAAAA3ZOvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVGhD7doxCsIwGMXxjo49gqOjJ3H2CC6eRfAMXsG1
+        q0foljaDCIpIBRV00Jc2RRo62wj/Bz+k+ZL1EYIJIYT8dYqimJdlmclJ3gAwENdBO3XSwtdTNxqkboNU
+        /gAAxOAmuTpq7OuqiRZdYfUdAIAYWBXXqC4sY8xSC9dgAwBEQz31sNau69LSArcsANHTTWvflhbvWAD+
+        QltaeTgAgAhVbWmtdO16BUMAiM22Li33Iq+PQzAEgJhcOn970MdUjvLs2QwAg1EvnY0xM19X32iQykbu
+        fQcB4JfURe7ZKtPvpGmpJPkAMmRrxkTUBekAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="lblGia.BaseStylesheet" xml:space="preserve">

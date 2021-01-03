@@ -30,6 +30,7 @@ namespace BuyGear
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             lblWelcome.Text = "Welcome " + Account.Instance.userName;
+            Unset();
         }
         public void LoadDS()
         {
@@ -47,10 +48,14 @@ namespace BuyGear
         }
         private void btnDS_Click(object sender, EventArgs e)
         {
+            Unset();
+            pHienBan.Visible = true;
             LoadDS();
         }
         private void btnAddSP_Click(object sender, EventArgs e)
         {
+            Unset();
+            pTHem.Visible = true;
             bunifuPages1.PageIndex = 1;
             Form_AddSanPham frm = new Form_AddSanPham(this)
             {
@@ -105,14 +110,20 @@ namespace BuyGear
 
         private void btnDSChoXacNhan_Click(object sender, EventArgs e)
         {
+            Unset();
+            pDonMoi.Visible = true;
             loadSanPham("cho xac nhan");
         }
         private void btnDSDangGiao_Click(object sender, EventArgs e)
         {
+            Unset();
+            pDangGiao.Visible = true;
             loadSanPham("dang giao hang");
         }
         private void btndagiao_Click(object sender, EventArgs e)
         {
+            Unset();
+            pDaGiao.Visible = true;
             loadSanPham("da giao hang");
         }
 
@@ -124,9 +135,19 @@ namespace BuyGear
 
         //Thống Kê
         Func<ChartPoint, string> labelPoint = chartpoint => string.Format("{0} ({1:P})", chartpoint.Y, chartpoint.Participation);
-
+        private void Unset()
+        {
+            pThongKe.Visible = false;
+            pDonMoi.Visible = false;
+            pDaGiao.Visible = false;
+            pDangGiao.Visible = false;
+            pHienBan.Visible = false;
+            pTHem.Visible = false;
+        }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            Unset();
+            pThongKe.Visible = true;
             //Load Số Sản Phẩm
             bunifuPages1.PageIndex = 3;
             pageDS.Hide();
@@ -287,6 +308,7 @@ namespace BuyGear
         private void btnHome_Click(object sender, EventArgs e)
         {
             bunifuPages1.PageIndex = 0;
+            Unset();
             loadDataHome();
         }
         private void loadDataHome()

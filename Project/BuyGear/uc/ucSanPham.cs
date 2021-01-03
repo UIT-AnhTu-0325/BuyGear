@@ -33,6 +33,13 @@ namespace BuyGear
             this.lbPrice.Text = giafix;
             this._link_image = link_image;
             this.picProduct.Image = Picture.LoadImage_by_ID(link_image[0]);
+            if(Data_NhanXet.Instance.Rate(masp)>0)
+            this.rating.Value = Data_NhanXet.Instance.Rate(masp);
+            else
+            {
+                lbPrice.Location = new Point(5, 270);
+                rating.Visible = false;
+            }    
         }
         private void picProduct_Click(object sender, EventArgs e)
         {
@@ -58,8 +65,14 @@ namespace BuyGear
 
         private void btn_AddSanPham(object sender, EventArgs e)
         {
+            
             if (Account.Instance.id != "")
             {
+                if(Data.Instance.ProductMyseft(_masp))
+                {
+                    MessageBox.Show("Bạn không thể tự mua sản phẩm của chính mình");
+                    return;
+                }
                 Data_gioHang.Instance.InsertToGioHang(Account.Instance.id, _masp);
                 this.parent.pnlAddThanhCong.Visible = true;
                 this.parent.pnlAddThanhCong.Location = new Point(this.parent.pnlTabGioHangThongBao.Location.X - 15,

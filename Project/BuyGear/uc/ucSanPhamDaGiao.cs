@@ -51,6 +51,7 @@ namespace BuyGear
                 TopLevel = false,
                 TopMost = true
             };
+            this.parent.fpnlChiTiet1.Controls.Clear();
             this.parent.fpnlChiTiet1.Controls.Add(frm);
             frm.Show();
         }

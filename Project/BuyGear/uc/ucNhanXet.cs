@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BuyGear.DTO;
+using BuyGear.uc;
+using BuyGear.DAO;
 
 namespace BuyGear
 {
     public partial class ucNhanXet : UserControl
     {
         Form_SanPham parent;
-        public ucNhanXet(Form_SanPham parent, string name, int vote, string danhGiaChinh, string danhGiaChiTiet,
+        public ucNhanXet(Form_SanPham parent,string id,  string name, int vote, string danhGiaChinh, string danhGiaChiTiet,
                 List<string> link_image)
         {
             InitializeComponent();
@@ -23,8 +25,14 @@ namespace BuyGear
             rating.Value = vote;
             lblDanhGia.Text = danhGiaChinh;
             lblDanhGiaChiTiet.Text = danhGiaChiTiet;
+            string idAvar = Data.Instance.loadImageAvarFromID(id);
+            if (idAvar != "")
+                picAnhDaiDien.Image = Picture.LoadImage_by_ID(idAvar);
             switch (link_image.Count)
             {
+                case 0:
+                    this.Size = new Size(1231, 237);
+                    break;
                 case 1:
                     pic1.Visible = true;
                     pic1.Image = Picture.LoadImage_by_ID(link_image[0]);

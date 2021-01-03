@@ -110,18 +110,20 @@ namespace BuyGear.DAO
             {
                 string sqlQuery = @"select * from dbo.sanpham sp, (select top 8 masp from
                 dbo.cthd where trangthai='da giao hang' group by masp order by sum(sl) desc) xx
-                where sp.ma_sp=xx.masp";
+                where sp.ma_sp=xx.masp and sp.trangthaikiemduyet='da kiem duyet' ";
                 dataTable = Data.Instance.ExcuteQuery(sqlQuery);
             }
             else if (type == "daxem")
             {
-                string query = "select * from dbo.sanpham sp, dbo.sanphamdaxem yt where yt.ma_sp=sp.ma_sp and yt.idnguoimua= @id" +
+                string query = "select * from dbo.sanpham sp, dbo.sanphamdaxem yt where " +
+                    " sp.trangthaikiemduyet='da kiem duyet' and yt.ma_sp=sp.ma_sp and yt.idnguoimua= @id" +
                     " order by yt.ma_sanphamdaxem desc ";
                 dataTable = Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id });
             }
             else if (type == "recommend")
             {
-                string query = "select top 2 sp.ma_sp from sanphamdaxem dx, sanpham sp where idnguoimua= @id and  " +
+                string query = "select top 2 sp.ma_sp from sanphamdaxem dx, sanpham sp where " +
+                    " sp.trangthaikiemduyet='da kiem duyet' and idnguoimua= @id and  " +
                     "sp.ma_sp = dx.ma_sp and " +
                     " day(getdate()- thoigian_daxem)< 20 order by solanxem desc";
                 dataTable = Data.Instance.ExcuteQuery(query, new object[] { Account.Instance.id });
@@ -220,9 +222,10 @@ namespace BuyGear.DAO
         public List<SanPhamRecommend> loadRecommend(string masp)
         {
             List<SanPhamRecommend> listSp = new List<SanPhamRecommend>();
-            string query = "select tensp, loaisp, gia, ma_sp from sanpham sp where (sp.gia between " +
-                "(select 75* sp1.gia/100 from sanpham sp1 where sp1.ma_sp = @masp ) and " +
-                "(select sp2.gia * 125 / 100 from sanpham sp2 where sp2.ma_sp = @masp1 ) and " +
+            string query = "select tensp, loaisp, gia, ma_sp from sanpham sp where " +
+                " sp.trangthaikiemduyet='da kiem duyet' and (sp.gia between " +
+                "(select 15* sp1.gia/100 from sanpham sp1 where sp1.ma_sp = @masp ) and " +
+                "(select sp2.gia * 225 / 100 from sanpham sp2 where sp2.ma_sp = @masp1 ) and " +
                 " sp.ma_sp <> @masp2 and sp.loaisp = (select sp3.loaisp from sanpham sp3 " +
                 " where sp3.ma_sp = @masp3 )) or(sp.nhasx = (select sp1.nhasx from sanpham " +
                 " sp1 where sp1.ma_sp = @masp4 ) and sp.ma_sp <> @masp5 ) order by newid()";
@@ -331,6 +334,14 @@ namespace BuyGear.DAO
                 this.ExcuteQuery(query, new object[] { tb.Mahd, tb.Masp });
             }
         }
+        public bool ProductMyseft(string masp)
+        {
+            string query = "select id_ngban from sanpham where ma_sp= @masp ";
+            string id=this.ExcuteQuery(query, new object[] { masp }).Rows[0]["id_ngban"].ToString();
+            if (id == Account.Instance.id)
+                return true;
+            else return false;
+        }
 
         #endregion 
         public List<SanPham> loadDataSanPham(string loaisp)
@@ -420,6 +431,16 @@ namespace BuyGear.DAO
                 this.ExcuteQuery(query2, new object[] { s.MASP, mota[i] });
             }
 
+        }
+        public string loadImageAvarFromID(string id)
+        {
+            string query = "select dataAva from infor inf, account ac" +
+                " where ac.username=inf.username and ac.id= @id ";
+            if (this.ExcuteQuery(query, new object[] { id }).Rows.Count > 0)
+            {
+                return this.ExcuteQuery(query, new object[] { id }).Rows[0]["dataAva"].ToString();
+            }
+            else return "";
         }
 
 
@@ -633,7 +654,7 @@ namespace BuyGear.DAO
         public int getlastIDSanPham()
         {
             string query = "select count(ma_sp) as mx from sanpham";
-            return int.Parse(Data.Instance.ExcuteQuery(query).Rows[0]["mx"].ToString());
+            return 1+int.Parse(Data.Instance.ExcuteQuery(query).Rows[0]["mx"].ToString());
         }
 
         public void choicucsuc()

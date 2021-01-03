@@ -63,6 +63,11 @@ namespace BuyGear
         }
         private void btnDatMua_Click(object sender, EventArgs e)
         {
+            if(lblDiaChi.Text.Length<10)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ địa chỉ !");
+                return;
+            }
             Data_gioHang.Instance.MakeInvoice_HoaDon(Data_gioHang.Instance.loadSoTien(), lblDiaChi.Text);
             List<ItemInGioHang> listItem = new List<ItemInGioHang>();
             listItem = Data_gioHang.Instance.loadDataSanPhamTrongGioNoPic();

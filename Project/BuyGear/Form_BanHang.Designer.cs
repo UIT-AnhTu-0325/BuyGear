@@ -97,9 +97,6 @@
             this.elementHost4 = new System.Windows.Forms.Integration.ElementHost();
             this.chartDH_today = new LiveCharts.Wpf.PieChart();
             this.lblDoanhThuHome = new System.Windows.Forms.Label();
-            this.pnlThongBao = new PanelDB();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblSanPhamHome = new System.Windows.Forms.Label();
             this.lblDonHangHome = new System.Windows.Forms.Label();
             this.gradientPanelDB3 = new GradientPanelDB();
@@ -172,6 +169,9 @@
             this.bunifuButton17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pnlThongBao = new PanelDB();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlInfor = new PanelDB();
@@ -198,10 +198,14 @@
             this.easyHTMLReports1 = new KimToo.EasyHTMLReports(this.components);
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAD = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pThongKe = new System.Windows.Forms.PictureBox();
+            this.pDonMoi = new System.Windows.Forms.PictureBox();
+            this.pDangGiao = new System.Windows.Forms.PictureBox();
+            this.pDaGiao = new System.Windows.Forms.PictureBox();
+            this.pHienBan = new System.Windows.Forms.PictureBox();
+            this.pTHem = new System.Windows.Forms.PictureBox();
             this.bunifuPages1.SuspendLayout();
             this.pageHome.SuspendLayout();
-            this.pnlThongBao.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gradientPanelDB3.SuspendLayout();
             this.gradientPanelDB2.SuspendLayout();
             this.gradientPanelDB1.SuspendLayout();
@@ -218,12 +222,20 @@
             this.pnlSelectMonth.SuspendLayout();
             this.panelDB14.SuspendLayout();
             this.gradientPanelDB10.SuspendLayout();
+            this.pnlThongBao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlInfor.SuspendLayout();
             this.panelDB1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.panelDB13.SuspendLayout();
             this.panelDB15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pThongKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDonMoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDangGiao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDaGiao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHienBan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pTHem)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPages1
@@ -315,36 +327,6 @@
             this.lblDoanhThuHome.Size = new System.Drawing.Size(134, 47);
             this.lblDoanhThuHome.TabIndex = 1;
             this.lblDoanhThuHome.Text = "150000";
-            // 
-            // pnlThongBao
-            // 
-            this.pnlThongBao.Controls.Add(this.pictureBox1);
-            this.pnlThongBao.Controls.Add(this.label2);
-            this.pnlThongBao.Location = new System.Drawing.Point(682, 3);
-            this.pnlThongBao.Name = "pnlThongBao";
-            this.pnlThongBao.Size = new System.Drawing.Size(312, 76);
-            this.pnlThongBao.TabIndex = 0;
-            this.pnlThongBao.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BuyGear.Properties.Resources.tick4;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Xác nhận thành công";
             // 
             // lblSanPhamHome
             // 
@@ -1985,6 +1967,36 @@
             this.bunifuButton15.TextMarginLeft = 0;
             this.bunifuButton15.UseDefaultRadiusAndThickness = true;
             // 
+            // pnlThongBao
+            // 
+            this.pnlThongBao.Controls.Add(this.pictureBox1);
+            this.pnlThongBao.Controls.Add(this.label2);
+            this.pnlThongBao.Location = new System.Drawing.Point(682, 3);
+            this.pnlThongBao.Name = "pnlThongBao";
+            this.pnlThongBao.Size = new System.Drawing.Size(312, 76);
+            this.pnlThongBao.TabIndex = 0;
+            this.pnlThongBao.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BuyGear.Properties.Resources.tick4;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(104, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Xác nhận thành công";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -2142,6 +2154,12 @@
             // panelDB1
             // 
             this.panelDB1.BackColor = System.Drawing.Color.White;
+            this.panelDB1.Controls.Add(this.pTHem);
+            this.panelDB1.Controls.Add(this.pHienBan);
+            this.panelDB1.Controls.Add(this.pDaGiao);
+            this.panelDB1.Controls.Add(this.pDangGiao);
+            this.panelDB1.Controls.Add(this.pDonMoi);
+            this.panelDB1.Controls.Add(this.pThongKe);
             this.panelDB1.Controls.Add(this.bunifuGradientPanel1);
             this.panelDB1.Controls.Add(this.btnDashboard);
             this.panelDB1.Controls.Add(this.btnDSChoXacNhan);
@@ -2693,6 +2711,60 @@
             this.btnAD.UseDefaultRadiusAndThickness = true;
             this.btnAD.Click += new System.EventHandler(this.btnAD_Click);
             // 
+            // pThongKe
+            // 
+            this.pThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.pThongKe.Location = new System.Drawing.Point(6, 186);
+            this.pThongKe.Name = "pThongKe";
+            this.pThongKe.Size = new System.Drawing.Size(10, 51);
+            this.pThongKe.TabIndex = 21;
+            this.pThongKe.TabStop = false;
+            // 
+            // pDonMoi
+            // 
+            this.pDonMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.pDonMoi.Location = new System.Drawing.Point(6, 268);
+            this.pDonMoi.Name = "pDonMoi";
+            this.pDonMoi.Size = new System.Drawing.Size(10, 51);
+            this.pDonMoi.TabIndex = 21;
+            this.pDonMoi.TabStop = false;
+            // 
+            // pDangGiao
+            // 
+            this.pDangGiao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.pDangGiao.Location = new System.Drawing.Point(6, 354);
+            this.pDangGiao.Name = "pDangGiao";
+            this.pDangGiao.Size = new System.Drawing.Size(10, 51);
+            this.pDangGiao.TabIndex = 21;
+            this.pDangGiao.TabStop = false;
+            // 
+            // pDaGiao
+            // 
+            this.pDaGiao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.pDaGiao.Location = new System.Drawing.Point(6, 451);
+            this.pDaGiao.Name = "pDaGiao";
+            this.pDaGiao.Size = new System.Drawing.Size(10, 51);
+            this.pDaGiao.TabIndex = 21;
+            this.pDaGiao.TabStop = false;
+            // 
+            // pHienBan
+            // 
+            this.pHienBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.pHienBan.Location = new System.Drawing.Point(6, 537);
+            this.pHienBan.Name = "pHienBan";
+            this.pHienBan.Size = new System.Drawing.Size(10, 51);
+            this.pHienBan.TabIndex = 21;
+            this.pHienBan.TabStop = false;
+            // 
+            // pTHem
+            // 
+            this.pTHem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(56)))), ((int)(((byte)(133)))));
+            this.pTHem.Location = new System.Drawing.Point(6, 619);
+            this.pTHem.Name = "pTHem";
+            this.pTHem.Size = new System.Drawing.Size(10, 51);
+            this.pTHem.TabIndex = 21;
+            this.pTHem.TabStop = false;
+            // 
             // Form_BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2713,9 +2785,6 @@
             this.bunifuPages1.ResumeLayout(false);
             this.pageHome.ResumeLayout(false);
             this.pageHome.PerformLayout();
-            this.pnlThongBao.ResumeLayout(false);
-            this.pnlThongBao.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gradientPanelDB3.ResumeLayout(false);
             this.gradientPanelDB3.PerformLayout();
             this.gradientPanelDB2.ResumeLayout(false);
@@ -2745,6 +2814,9 @@
             this.panelDB14.PerformLayout();
             this.gradientPanelDB10.ResumeLayout(false);
             this.gradientPanelDB10.PerformLayout();
+            this.pnlThongBao.ResumeLayout(false);
+            this.pnlThongBao.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlInfor.ResumeLayout(false);
             this.panelDB1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -2753,6 +2825,12 @@
             this.panelDB13.ResumeLayout(false);
             this.panelDB13.PerformLayout();
             this.panelDB15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pThongKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDonMoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDangGiao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDaGiao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHienBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pTHem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2865,5 +2943,11 @@
         private KimToo.EasyHTMLReports easyHTMLReports1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pTHem;
+        private System.Windows.Forms.PictureBox pHienBan;
+        private System.Windows.Forms.PictureBox pDaGiao;
+        private System.Windows.Forms.PictureBox pDangGiao;
+        private System.Windows.Forms.PictureBox pDonMoi;
+        private System.Windows.Forms.PictureBox pThongKe;
     }
 }
