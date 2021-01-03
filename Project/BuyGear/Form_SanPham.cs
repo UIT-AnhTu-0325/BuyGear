@@ -31,7 +31,7 @@ namespace BuyGear
             {
                 DataRow row = dataTable.Rows[0];
                 sp = new SanPham();
-                sp = Data.Instance.Load_SP_byMaSP(_masp);
+                sp = Data.Instance.Load_SP_byMaSP(_masp,c);
                 lblTenSanPham.Text = sp.TenSP;
                 //lblThuongHieuText.Text = sp.NhaSX;
                 lblGia.Text = giaFix(sp.Gia);
@@ -142,12 +142,17 @@ namespace BuyGear
 
         private void btnReturn_main_Click(object sender, EventArgs e)
         {
-            if (this.parent != null)
+            if (this.parent != null && this.grandparent == null)
             {
                 this.parent.fpnlChiTiet.Visible = false;
                 this.parent.fpnlProduct.Visible = true;
                 this.parent.pnlChiTietChange.Visible = false;
                 this.Close();
+            }
+            else if (this.grandparent != null && this.parent == null)
+            {
+                this.Close();
+                grandparent.loadDuyetSP();
             }
             else
             {
