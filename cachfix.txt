@@ -1,7 +1,0 @@
-cách fix khi bị exeption trong ảnh
-B1: vào file temp_dataimage tìm tên ảnh bị xóa
-B2: vào driver : https://drive.google.com/drive/folders/1xFrywthrka6T7WYxKxgZCUdD0nLhqYHh?usp=sharing
-B3: vào select * from hinhanh hoặc hinhanhchitiet, tìm dòng data có tên giống tên ảnh
-B4: up lên driver ảnh mới, lấy id, ghi lại data của sql 
-
-Nguyên nhân : ảnh bị xóa, id chưa đổi => ảnh bị lỗi, cần đổi id mới.
